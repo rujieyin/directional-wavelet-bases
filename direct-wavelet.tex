@@ -1,0 +1,97 @@
+\documentclass[]{article}
+
+\renewcommand\abstractname{\textit{Abstract}}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsfonts, amssymb}
+\usepackage{color}
+\usepackage{bbm}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{{./orth-frame/figure/}{./bi-orth/figure/}}
+\makeatletter
+\newcommand*{\ov}[1]{\m@th\overline{\mbox{#1}\raisebox{.8em}{}}}
+\newcommand{\V}[1]{\boldsymbol{#1}}% boldface for vector and matrix
+\usepackage[toc,page]{appendix}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{caption}
+
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+\newcommand{\mo}[1]{m_{#1}(\boldsymbol{\omega})}
+\newcommand{\m}[1]{\widetilde{m_{#1}}(\boldsymbol{\omega})}
+\renewcommand{\mp}[2]{\widetilde{m_{#1}}(\boldsymbol{\omega}+\boldsymbol{\pi}_{#2})}
+\newcommand{\mc}[1]{\widetilde{m_{#1}}^C(\boldsymbol{\omega})}
+\newcommand{\barm}[1]{\overline{\widetilde{m_{#1}}(\boldsymbol{\omega})}}
+\newcommand{\sbarm}[1]{\overline{\widetilde{m_{#1}}}(\boldsymbol{\omega})}
+\newcommand{\barmp}[2]{\overline{\widetilde{m_{#1}}(\boldsymbol{\omega} + \boldsymbol{\pi}_{#2})}}
+\newcommand{\barmn}[2]{\overline{\widetilde{m_{#1}}(\boldsymbol{\omega} + \boldsymbol{\nu}_{#2})}}
+\newcommand{\sbarmp}[2]{\overline{\widetilde{m_{#1}}}(\boldsymbol{\omega} + \boldsymbol{\pi}_{#2})}
+\newcommand{\sbarmn}[2]{\overline{\widetilde{m_{#1}}}(\boldsymbol{\omega} + \boldsymbol{\nu}_{#2})}
+\newcommand{\M}{\widetilde{\mathbf{M}}}
+\newcommand{\Msub}{\widetilde{\mathbf{M}}^{\Box}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\mvec}[1]{\mathbf{\widetilde{m_{#1}}}}
+\newcommand{\mhat}[1]{\widehat{\widetilde{m_{#1}}}(\boldsymbol{\omega})}
+\newcommand{\xvec}{\mathbf{x}}
+\newcommand{\wvec}{\mathbf{w}}
+\newcommand{\mrow}[1]{\widetilde{\mathbf{m}}^{#1}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\renewcommand{\qed}{\hfill\ensuremath{\square}}
+
+
+\begin{document}
+
+\newtheorem{lem}{Lemma}
+\newtheorem*{mydef}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+\newtheorem*{notat}{Notation}
+
+\abovedisplayskip=2pt
+\belowdisplayskip=2pt
+\abovedisplayshortskip=2pt
+\belowdisplayshortskip=2pt
+
+
+\title{Directional Wavelet Bases Construction on Dyadic Quincunx Lattice}
+\author{Rujie Yin, Ingrid Daubechies}
+\maketitle
+
+\begin{abstract}
+We construct directional wavelet systems that have the same direction selectivity as shearlets in the first frequency dyadic ring and non-uniform directional wavelet filterbanks(nuDFB). In particular, dilated quincunx downsampling is used to construct orthonormal and bi-orthogonal bases and standard dyadic downsampling for low-redundancy frames. We prove that the support of orthonormal and bi-orthogonal wavelets is discontinuous in the frequency domain, which can be avoided in frames of redundancy as low as 2. These are the first step towards the construction of efficient shearlet systems.
+\end{abstract}
+
+\input{intro}
+%\include{intro}%\input{intro}
+
+\input{setup}
+%\include{setup}
+
+\input{orthonormal}
+%\include{orthonormal}
+
+\input{frame}
+%\include{frame}
+
+\input{bi-orth}
+%\include{bi-orth}
+
+\input{conclusion}
+%\include{conclusion}
+%\section{Conclusion}\label{sec: end}
+
+\begin{appendices}
+\input{parseval-cond}
+\input{m0-opt}
+%\include{parseval-cond}
+%\include{m0-opt}
+\end{appendices}
+
+\bibliographystyle{IEEEtran}%bib/te}
+\bibliography{ref}
+\end{document}

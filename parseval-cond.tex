@@ -1,0 +1,63 @@
+\section{Proof of Theorem \ref{thm: conds}}\label{app: cond-thm}
+Take the Fourier transform of both sides of \eqref{eq: PR}, we have 
+\begin{align*}
+\sum_{\V{k}}\langle f,\phi_{\V{k}}\rangle\hat{\phi}(\V{\omega})e^{-i\V{\omega}^T\V{k}} = \sum_{\V{k}}&\langle f,\phi_{1,\V{k}}\rangle e^{-i\V{\omega}^T\V{D_2k}}|\V{D_2}|^{1/2}\hat{\phi}(\V{D_2}^T\V{\omega}) \\
+&+ \sum_{j=1}^J\sum_{\V{k}}\langle f,\psi^j_{1,\V{k}}\rangle e^{-i\V{\omega}^T\V{Dk}}|\V{D}|^{1/2}\hat{\phi}(\V{D}^T\V{\omega})
+\end{align*}
+Suppose $m_j$ are trigonometric series
+\begin{align}\label{eq: mra1}
+m_0(\V{\omega}) = \sum_{\V{k}} c_{\V{k}}e^{-i \V{\omega}^T\V{k}} \hfill
+m_j(\V{\omega}) = \sum_{\V{k}} g_{\V{k}}e^{-i \V{\omega}^T\V{k}},\quad j=1,\cdots,J
+\end{align}
+The first term on the right hand side can be represented by $\hat{\phi}(\V{\omega})$ and $\langle f,\phi_k\rangle$ using \eqref{eq: m0} and \eqref{eq: mra1}.
+
+\begin{align*}
+\text{the first term on R.H.S. } = \sum_{\V{k}}\langle f,\phi_{1,\V{k}}\rangle e^{-i\V{\omega}^T\V{D_2k}}|\V{D_2}|^{1/2}m_0(\V{\omega})\hat{\phi}(\V{\omega}) \\= \sum_{\V{k}}\Big(\sum_{\V{k}'}\langle f,\phi_{\V{k}'}\rangle\overline{c_{\V{k'-D_2k}}}|\V{D_2}|^{1/2}\Big)e^{-i\V{\omega}^T\V{D_2k}}|\V{D_2}|^{1/2}m_0(\V{\omega})\hat{\phi}(\V{\omega})\\
+=\sum_{\V{k}'}\langle f,\phi_{\V{k}'}\rangle\Big(|\V{D_2}|\sum_{\V{k}}\overline{c_{\V{k'-D_2k}}}e^{i\V{\omega}^T(\V{k'-D_2k})}\Big)e^{-i\V{\omega} ^T\V{k}'} m_0(\V{\omega})\hat{\phi}(\V{\omega}).
+\end{align*}
+{\it Remark}.
+If we have a shift $\V{k}_0$ in the down-sample scheme, i.e. $\V{D_2}\mathbb{Z}^2 - \V{k}_0$ instead of $\V{D_2}\mathbb{Z}^2$, so that we obtain coefficient of $\tilde{\phi}_{1,\V{k}} = \phi_{1,\V{k}+\V{k}_0}$ instead of $\phi_{1,\V{k}}$, and $\tilde{\phi}_1(\V{x}) =\phi_1(\V{x}-\V{k}_0)= |\V{D_2}|^{1/2}\sum_{\V{k}}c_{\V{k}}\phi(\V{x-k-k}_0) = |\V{D_2}|^{1/2}\sum_{\V{k}}c_{\V{k}-\V{k}_0}\phi(\V{x-k})$. This change of down-sample scheme results in an extra phase term $e^{-i\V{\omega}^T \V{k}_0}$ in $m_0$. Here, we use the down-sample scheme without translation.
+
+Since $\bigcup_{\V{\beta}\in B} \{\V{\beta}\} :=\bigcup_{\V{\beta}\in B}(\V{D_2}\mathbb{Z}^2+\V{\beta}) = \mathbb{Z}^2$, where $B = \{ (0,0),\,(1,0),\,(0,1),\,(1,1)\}$, the summation over $\V{k}'\in \mathbb{Z}^2$ can be written as a double sum $\sum_{\V{\beta}\in B}\sum_{\V{k}'\in \{\V{\beta}\}}$,
+\begin{align*}
+\sum_{\V{\beta}\in B}\sum_{\V{k}'\in\{\V{\beta}\}} \langle f,\phi_{\V{k}'}\rangle\sum_{\V{k}}\overline{c_{\V{k'-D_2k}}}e^{i\V{\omega}^T(\V{k}'-\V{D_2k})}e^{-i\V{\omega}^T\V{k}'}|\V{D_2}|m_0(\V{\omega})\hat{\phi}(\V{\omega})\\
+=\sum_{\V{\beta}\in B}\sum_{\V{k}'\in\{\V{\beta}\}} \langle f,\phi_{\V{k}'}\rangle\sum_{\V{k}\in\{\V{\beta}\}}\overline{c_{\V{k}}}e^{i\V{\omega}^T\V{k}}e^{-i\V{\omega}^T\V{k}'}|\V{D_2}|m_0(\V{\omega})\hat{\phi}(\V{\omega})
+\end{align*}
+The summation over $\V{k}$ in the middle is similar to the trigonometric form of $m_0$ in \eqref{eq: mra1}, but $\V{k}$ takes value on the shifted sub-lattice $\{\V{\beta}\}$ instead of $\mathbb{Z}^2$. Therefore, the summation equals to instead a linear combination of $m_0$ with shifts $\Gamma_0$,
+\begin{align}\label{eq:eq1}
+\sum_{\V{\pi}\in\Gamma_0}m_0(\V{\omega}+\V{\pi})\;e^{i\V{\beta}^T\V{\pi}} = \sum_{\V{k}\in \{\V{\beta}\}}c_{\V{k}}e^{-i\V{\omega}^T\V{k}}
+\end{align}
+Substitute \eqref{eq:eq1} into the previous expression,
+\begin{align*}
+\sum_{\V{\beta}\in B}\sum_{\V{k}'\in \{\V{\beta}\}}\langle f,\phi_{\V{k}'}\rangle\sum_{\V{\pi}\in\Gamma_0}\overline{m_0(\V{\omega}+\V{\pi})\;}e^{-i\V{\beta}^T\V{\pi}}\,e^{-i\V{\omega}^T\V{k}'}m_0(\V{\omega})\hat{\phi}(\V{\omega})
+\end{align*}
+Since $e^{i \V{\pi}^{T}\V{\beta}}=e^{i\V{\pi}^T\V{k}'},\; \forall \V{k}'\in \{\V{\beta}\} $, after rewriting the double sum over $\V{k}'$ back to a unit sum on $\mathbb{Z}^2$, we get
+\begin{align*}
+\sum_{\V{k}'}\langle f,\phi_{\V{k}'}\rangle e^{-i\V{\omega} ^T\V{k}'}\hat{\phi}(\V{\omega})\Big(\sum_{\V{\pi}\in\Gamma_0}\overline{m_0(\V{\omega}+\V{\pi})}m_0(\V{\omega})e^{-i\V{\pi}^T\V{k}'} \Big)
+\end{align*}
+
+Similarly, the second term on the R.H.S. of \eqref{eq: PR} equals to 
+\begin{align*}
+\sum_{j=1}^J\sum_{\V{k}'}\langle f,\phi_{\V{k}'}\rangle e^{-i\V{\omega}^T \V{k}'}\hat{\phi}(\V{\omega})\Big(\sum_{\V{\pi}\in\Gamma_1} \overline{m_j(\V{\omega}+\V{\pi})}m_j(\V{\omega})e^{-i\V{\pi}^T\V{k}'} \Big)
+\end{align*}
+(For Theorem \ref{thm: frame-conds} on frame construction, the summation of shifts $\V{\pi}$ is over $\Gamma_0$ instead of $\Gamma_1$.) 
+Combining the two terms on the R.H.S. of \eqref{eq: PR}, and compare the coefficients of $\langle f,\phi_{\V{k}'}\rangle e^{-i\V{\omega}^T \V{k}'}\hat{\phi}(\V{\omega})$ on both sides, the perfect reconstruction condition is then equivalent to $\forall \V{k}'$,
+\begin{align*}
+\sum_{\V{\pi}\in\Gamma_0}e^{-i\V{\pi}^T\V{k}'}\overline{m_0(\V{\omega}+\V{\pi})}m_0(\V{\omega}) + \sum_j\sum_{\V{\pi}\in\Gamma_1} e^{-i\V{\pi}^T\V{k}'}\overline{m_j(\V{\omega}+\V{\pi})}m_j(\V{\omega}) = 1. 
+%\sum_{l=0}^{3}e^{-i\gamma_l^T(k'-k_0)}\overline{M_0(\xi+\gamma_l)}M_0(\xi) + \sum_j\sum_{s=0}^7 e^{-i\nu_s^T(k'-k_j)}\overline{M_j(\xi+\nu_s)}M_j(\xi) = 1. 
+\end{align*} 
+This is equivalent to 
+\begin{align*}
+&|m_0(\V{\omega})|^2 + \sum_j|m_j(\V{\omega})|^2 = 1
+\end{align*}
+and
+\begin{align*}
+\sum_{j=0}^J\overline{m_j(\V{\omega}+\V{\pi})}m_j(\V{\omega}) = 0, 
+%+ \overline{m_0(\V{\omega}+\V{\pi})}m_0(\V{\omega}) = 0, 
+\,\V{\pi}\in \Gamma_0\setminus\{\V{0}\}\\
+\sum_{j=1}^J\overline{m_j(\V{\omega}+\V{\pi})}m_j(\V{\omega}) = 0,\,\V{\pi}\in \Gamma_1\setminus \Gamma_0
+\end{align*}
+
+{\it Remark}.
+Because each $m_j$ is $(2\pi,2\pi)$ periodic, we only need to check the above equality $\forall \V{\omega}\in S_0$.
+If we downsample $\psi_1^j$ on a shifted sub-lattice $\V{D}\mathbb{Z}^2-\V{k}_j$, we then have an extra phase $e^{i\V{\pi}^T\V{k}_j}$ before $\overline{m_j(\V{\omega}+\V{\pi})}m_j(\V{\omega})$ in shift cancellation condition. This provides additional freedom in the construction yet it is not substantial.

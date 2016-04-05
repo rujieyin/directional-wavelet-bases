@@ -1,0 +1,36 @@
+\section{Low-redundancy frame construction}\label{sec: frame}
+Consider the $L-$level directional wavelet MRA system
+ \begin{align}\label{eq: MRA-frame}
+ \{\phi_{L,\boldsymbol{k}}\,,\psi^j_{l,\boldsymbol{k'}}\,, \, {\small 1\leq l \leq L,\, \boldsymbol{k},\,\boldsymbol{k'}\in \mathbb{Z}^2,\,1\leq j \leq J\}}.
+\end{align}  
+where $\phi,\psi^j$ satisfy \eqref{eq: m0} and \eqref{eq: mj} as before. Instead of taking the dilated quincunx subsampling of directional wavelet coefficients of  \eqref{eq: MRA}, a dyadic subsampling is taken instead. A 1-level MRA frame \eqref{eq: MRA-frame} has redundancy $\frac{1}{|D|} + \frac{J}{|D|} = 1/4 + 6/4 = 7/4$, and the redundancy for any $L-$level MRA frame doesn't exceed $\frac{J/|D|}{1-1/|D|} = \frac{6/4}{1-1/4} = 2$. 
+We have now
+\begin{thm}\label{thm: frame-conds}
+%Set $\Gamma = (D\mathbb{Z}^2)^*/(\mathbb{Z}^2)^*.$ 
+The perfect reconstruction condition holds for \eqref{eq: MRA-frame} iff the following both hold
+\begin{align}
+\textstyle |m_0(\boldsymbol{\omega})|^2 + \sum_{j = 1}^6|m_j(\boldsymbol{\omega})|^2 &= 1 \\
+\textstyle\sum_{j = 0}^6\,m_j(\boldsymbol{\omega})\overline{m_j(\boldsymbol{\omega} + \boldsymbol{\pi})} &= 0,\quad  \boldsymbol{\pi}\in \Gamma_0\setminus\{\boldsymbol{0}\} \label{eq: reduced-shift-cancel}
+\end{align}
+\end{thm}
+Thmeorem \ref{thm: frame-conds} can be proved analogously to Thmeorem \ref{thm: conds}, 
+with fewer shift cancellation constraints now. 
+We can define {\it singular} boundaries as before, %and Lemma \ref{lem: singular-bdy} holds for \eqref{eq: reduced-shift-cancel} as well.
+but only $\{\mathcal{B}(j,\boldsymbol{\pi})\}_{\boldsymbol{\pi}\in\Gamma_0\setminus\{\boldsymbol{0}\}}$ need to be considered, which results in fewer singular boundaries $\{\mathcal{C}_s(j,\boldsymbol{\pi})\}_{\boldsymbol{\pi}\in\Gamma\setminus\{\boldsymbol{0}\}}$; 
+% In particular, we construct a directional wavelet tight frame with redundancy of 2 by using the classical dyadic downsampling $D_2$, with shift cancellaiton constraints \eqref{eq: shift-cancel} only on set $\Gamma\setminus\{\boldsymbol{0}\}$. 
+%We check that within these singular boundaries, 
+and no "double" singular boundaries now.
+
+This means that even though $supp(m_0)$ still cannot be extended outside of the four corners of $S_1$ due to $\mathcal{C}_s(0,(\pi,0))$ and $\mathcal{C}_s(0,(0,\pi))$, $m_1$ can penetrate into the inside of $S_1$ because $\mathcal{C}_s(1,(\pi/2,3\pi/2))$ is not a singular boundary in \eqref{eq: MRA-frame}. The same is true for $m_3,m_4$ and $m_6$. This makes smoothing the boundaries of $m_0$ inwards possible without violating \eqref{eq: id-sum}, see Fig. \ref{fig: many-squares}(c). At the price of double redundancy, we obtain directional wavelets with much better spatial localization; see Fig. \ref{fig: many-squares}(d)(e):
+the discontinuities of a directional wavelets basis in the frequency domain around the singular boundaries can be removed in a low redundant directional wavelet tight frame.
+
+Heretofore, we have considered two directional wavelet MRA systems \eqref{eq: MRA} and \eqref{eq: MRA-frame} such that the directional wavelets characterize 2D signals in six equi-angled directions. 
+The orthonormal basis we construct has better frequency localization than the one constructed by Durand in \cite{durand2007} ( see Fig. \ref{fig: design} and \ref{fig: many-squares}(b)(c)), but has long tails in certain spatial directions, unavoidable because of "double" singular boundaries. 
+By doubling the redundancy we obtain spatially well localized directional wavelets.
+Furthermore, these wavelets are well localized in the frequency domain such that $supp(m_j)$ is convex and $\exists\epsilon\, s.t.$
+\begin{align}\label{eq: no-alians}
+ \sup_{\boldsymbol{\omega}'\in supp(m_j)}\inf_{\boldsymbol{\omega}\in C_j}\Vert\boldsymbol{\omega'} - \boldsymbol{\omega}\Vert < \epsilon,\quad  0\leq j\leq 6.
+\end{align}
+This desirable condition is hard to obtain by multi-directional filter bank assembly of several elementary filter banks.
+
+In the next section, we analyze the more general case of directional bi-orthorgonal filters constructed with respect to the same frequency partition. 
