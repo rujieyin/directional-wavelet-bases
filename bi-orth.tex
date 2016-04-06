@@ -54,7 +54,7 @@ m_0\sbarm{0} + m_0\sbarmp{0}{2} + m_0\sbarmp{0}{4} + m_0\sbarmp{0}{6} = 1.
 We thus consider feasible solutions of \eqref{eq: LS-new} with constraint \eqref{eq: identity-cond} using the same approach in \cite{cohen1993compactly}, which solves compactly supported symmetric bi-orthogonal filters on hexagon lattice. We next review the main scheme in \cite{cohen1993compactly} and extend it to our setup of directional wavelet filter.
 
 \subsection{Summary of Cohen et al's construction}\label{subsec: cohen-summary}
-We summerize the main setup and the approach in \cite{cohen1993compactly}. Consider a bi-orthogonal scheme consists of 3 high-pass filters $m_1,m_2$ and $m_3$ and a low-pass filter $m_0$ together with their bi-orthogonal duals, s.t.
+We summerize the main setup and the approach in \cite{cohen1993compactly}. Consider a bi-orthogonal scheme consists of 3 high-pass filters $m_1,m_2$ and $m_3$ and a low-pass filter $m_0$ together with their bi-orthogonal duals $\widetilde{m_j}$, s.t.
 $m_0$ is $\frac{2\pi}{3}$-rotation invariant and $m_1,\, m_2,\, m_3$ are $\frac{2\pi}{3}$-rotation co-variant.
 
 This bi-orthogonal scheme satisfies the following linear system (
@@ -108,29 +108,29 @@ vanishing points of the $z$-transform of $m_0$.
 In general, there is no efficient algorithm to solve {\it Hilbert's Nullstellensatz}, and how \eqref{eq: identity-cond} is solved exactly is not mentioned in \cite{cohen1993compactly}.
 
 We propose an optimization approach, where \eqref{eq: identity-cond} is equivalent to a linear constraint and the objective function imposes regularity on $\widetilde{m_0}$.
-On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G.$, \eqref{eq: identity-cond} is reformulated as
+On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: identity-cond} is reformulated as
 \begin{align}
 \hspace*{10em} \V{A}\, \mathbf{\widetilde{m}_0}&= \mathbf{1}_{4N^2}, \label{eq: m0-A}\\ 
 \mathbf{\widetilde{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2} \quad &\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V{\nu}_k) \notag
 \end{align}
-Because the set $\{\V{\omega}+\V{\nu}_k,k=0,1,2,3\}$ is invariant under the shift $\V{\nu}_i,\, i = 1,2,3,$ the rows of $\V{A}$ corresponding to $\V{\omega}$ and $\V{\omega}+\V{\nu}_i$ are identical and we only need to consider rows corresponds to $\V{\omega}\in [-\pi,\pi)\times[-\pi,\pi)/\{\V{\nu}_i,i=0,1,2,3\}$. Therefore, $\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ and \eqref{eq: m0-A} is under-determinant. \\
+Because the set $\{\V{\omega}+\V{\nu}_k,k=0,1,2,3\}$ is invariant under the shift $\V{\nu}_i,\, i = 1,2,3,$ the rows of $\V{A}$ corresponding to $\V{\omega}$ and $\V{\omega}+\V{\nu}_i$ are identical and we only need to consider rows corresponds to $\V{\omega}\in [-\pi,\pi)\times[-\pi,\pi)/\{\V{\nu}_i,i=0,1,2,3\}$. Therefore, after removing the duplicate rows, $\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ and \eqref{eq: m0-A} is under-determinant. \\
 We thus use \eqref{eq: m0-A} as a linear constraint in quadratic optimization to solve $\mathbf{\widetilde{m}_0}$. Suppose that $\m{0}$ should is smooth, and we build a differential operator $\V{D}$ and solve the following minimization problem:
 \begin{align}
 &\min_{\mvec{0}}\; \Vert \V{D}\mvec{0}\Vert^2,\quad s.t. \; \V{A}\mvec{0} = \mathbf{1} \label{eq: opt-diff}
 \end{align}
-or
-\begin{align}
-&\min_{\mvec{0}}\; \Vert \V{D}\mvec{0}\Vert^2 + \lambda \Vert \V{A}\mvec{0} - \mathbf{1}\Vert^2 \label{eq: m0-smooth-relaxed}
-\end{align}
-The solution of \eqref{eq: m0-smooth-relaxed} is $\mvec{0} = \lambda(\lambda \V{A}^\top \V{A} + \V{D}^\top \V{D})^{-1}\V{A}^\top\mathbf{1}$.
+%or
+%\begin{align}
+%&\min_{\mvec{0}}\; \Vert \V{D}\mvec{0}\Vert^2 + \lambda \Vert \V{A}\mvec{0} - \mathbf{1}\Vert^2 \label{eq: m0-smooth-relaxed}
+%\end{align}
+%The solution of \eqref{eq: m0-smooth-relaxed} is $\mvec{0} = \lambda(\lambda \V{A}^\top \V{A} + \V{D}^\top \V{D})^{-1}\V{A}^\top\mathbf{1}$.
 
-Suppose $\m{0}$ decays away from the origin, then we build a diagonal weighting operator $\V{W}$, and solve the following minimization problem:
+Or suppose $\m{0}$ decays away from the origin, then we build a diagonal weighting operator $\V{W}$, and solve the following minimization problem:
 \begin{align}\label{eq: opt-weight}
 &\min_{\mvec{0}}\; \Vert \V{W}\mvec{0}\Vert^2,\quad s.t. \; \V{A}\mvec{0} = \mathbf{1}
 \end{align}
 Supplementary numerical results on solving $\m{0}$ by optimization are provided in Appendix \ref{app: supp-numerical}, where we test this optimization method on pre-designed bi-orthogonal filters $m_0$ and $\widetilde{m_0}$.
 
-\section{Extension to dilated quincunx scheme}
+\section{Adaptation to dilated quincunx scheme}
 Following the same approach, we focus on the design of $m_i,\,i=0,\cdots,6$ and the low pass dual function $\m{0}$, given the high pass directional dual functions $\m{i},\,i=1,\cdots,6$. Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.\\
 {\bf Definition.}
 The {\it essential support} $\Omega_i$ of a function $\widetilde{m_i}$ is the set $\{\V{\omega}:\,|\widetilde{m_i}(\V{\omega})|> |\widetilde{m_j}(\V{\omega})|,\,\forall j\neq i\}$. 
@@ -307,7 +307,7 @@ If  $\m{i}$ concentrates in $T_i$ with essential support $\Omega_i\subset T_i$ a
 \end{theorem}
 
 \subsection{Design of input $\m{i}$}\label{sec: phase-design}
-Following the previous orthonormal construction in Section \ref{sec: design}, we consider $\m{1},$ $\cdots,\m{6}$ in the form 
+Following the orthonormal construction in \cite{yin2014orthshear}, we consider $\m{1},$ $\cdots,\m{6}$ in the form 
 \begin{align}\label{eq: m-form}
 \m{k} = e^{-i\eta_k^\top\omega}|\m{k}|,
 \end{align}
