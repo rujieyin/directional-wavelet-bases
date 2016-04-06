@@ -1,42 +1,46 @@
 \section{Framework Setup}\label{sec: setup}
-\begin{itemize}
-
-\item MRA, dilated quincun lattice, shifts associated with lattice
-\end{itemize}
-We summarize 2D-MRA systems, matrix representations of sub-lattices of $\mathbb{Z}^2$ and the relation between frequency domain partition and sub-lattice with critical downsampling.
+We summarize 2D-MRA systems and the relation between frequency domain partition and sub-lattice of $\mathbb{Z}^2$ with critical downsampling following \cite{yin2014orthshear}.
 
 \subsection{Notation}
 Throughout this paper, we use lower case normal font for function, normal font for scalar, upper case bold font for matrix, lower case bold font for vector and upper case normal font for frequency domain.
 
-\subsection{Multi-resolution analysis and critical downsampling}
+\subsection{Multi-resolution analysis and sub-lattice sampling}
 In an MRA, given a scaling function $\phi\in L^2(\mathbb{R}^2)$, s.t. $\Vert\phi\Vert_2=1$,
-the base approximation space is defined as $V_0 = \overline{span\{\phi_{0,\boldsymbol{k}}\}}_{\boldsymbol{k}\in\mathbb{Z}^2}$, where $\phi_{0,\boldsymbol{k}} = \phi(\boldsymbol{x}-\boldsymbol{k})$. If $\langle \phi_{0,\boldsymbol{k}},\phi_{0,\boldsymbol{k'}}\rangle = \delta_{\boldsymbol{k,k'}}$, then $\{\phi_{0,\boldsymbol{k}}\}$ is an orthogonal basis of $V_0$. Moreover, $\phi$ is associated with a scaling matrix $\mathbf{D}\in\mathbb{Z}^{2\times 2}$ with determinant $|\mathbf{D}|$, s.t. the rescaled 
+the base approximation space is defined as $V_0 = \overline{span\{\phi_{0,\boldsymbol{k}}\}}_{\boldsymbol{k}\in\mathbb{Z}^2}$, where $\phi_{0,\boldsymbol{k}} = \phi(\boldsymbol{x}-\boldsymbol{k})$. If $\langle \phi_{0,\boldsymbol{k}},\phi_{0,\boldsymbol{k'}}\rangle = \delta_{\boldsymbol{k,k'}}$, then $\{\phi_{0,\boldsymbol{k}}\}$ is an orthonormal basis of $V_0$. In addition, $\phi$ is associated with a scaling matrix $\mathbf{D}\in\mathbb{Z}^{2\times 2}$, s.t. the dilated scaling function
  $\phi_1(\boldsymbol{x}) = |\mathbf{D}|^{-1/2}\phi(\mathbf{D}^{-1}\boldsymbol{x})$ is a linear combination of $\phi_{0,\boldsymbol{k}}$.
-Equivalently, in the frequency domain
+Equivalently, $\exists\,m_0(\boldsymbol{\omega}) = m_0(\omega_1,\omega_2)$, $2\pi-$periodic in $\omega_1,\omega_2$, s.t. in the frequency domain
 \begin{align}\label{eq: m0}
-\widehat{\phi}(\mathbf{D}^T\boldsymbol{\omega}) = m_0(\boldsymbol{\omega})\widehat{\phi}(\boldsymbol{\omega}),
+\widehat{\phi}(\mathbf{D}^T\boldsymbol{\omega}) = m_0(\boldsymbol{\omega})\widehat{\phi}(\boldsymbol{\omega}).
 \end{align}
-where $m_0(\boldsymbol{\omega}) = m_0(\omega_1,\omega_2)$, $2\pi-$periodic in $\omega_1,\omega_2$. Hence
+Hence
 \begin{align}\label{eq: phi-m0}
 \textstyle \hat{\phi}(\boldsymbol{\omega}) = (2\pi)^{-1}\prod_{k=1}^{\infty}m_0(\mathbf{D}^{-k} \boldsymbol{\omega}).
 \end{align}
-\\[2em]
-The MRA uses the nested approximation spaces $V_l = \overline{span\{\phi(\mathbf{D}^{-l}\boldsymbol{x}-\boldsymbol{k});\boldsymbol{k}\in\mathbb{Z}^2\}},\,l\in\mathbb{Z}$. 
-Next, suppose there are wavelet functions $\psi^j\in L^2(\mathbb{R}^2)$, {\small $1 \leq j \leq J$}, and $\mathbf{Q}\in\mathbb{Z}^{2\times2}$, s.t. the space $W_1 = \bigcup_{j=1}^J W_1^j = \bigcup_{j=1}^J \overline{span\{\psi^j(\mathbf{D}^{-1}\boldsymbol{x-k});\boldsymbol{ k}\in \mathbf{Q}\mathbb{Z}^2\}}$ is the orthogonal complement of $V_1$ with respect to $V_0$. Let $\psi^j_{l,\boldsymbol{k'}} = |\mathbf{D}|^{-l/2}\psi^j(\mathbf{D}^{-l}\boldsymbol{x-k'})$; an $L$-level multi-resolution system with base space $V_0$ is then spanned by
+\\[.2em]
+Define the nested approximation spaces $V_l = \overline{span\{\phi(\mathbf{D}^{-l}\boldsymbol{x}-\boldsymbol{k});\boldsymbol{k}\in\mathbb{Z}^2\}},\,l\in\mathbb{Z}$ and $W_l$ as the orthogonal complement of $V_l$ with respect to $V_{l-1}$ in MRA. 
+Suppose there are $J$ wavelet functions $\psi^j\in L^2(\mathbb{R}^2)$, {\small $1 \leq j \leq J$}, and $\mathbf{Q}\in\mathbb{Z}^{2\times2}$, s.t.
+\begin{align*}
+\hspace{-1em} W_1 = \bigcup_{j=1}^J W_1^j = \bigcup_{j=1}^J \overline{span\{\psi^j_{1,\boldsymbol{k}};\boldsymbol{ k}\in \mathbf{Q}\mathbb{Z}^2\}}= \bigcup_{j=1}^J \overline{span\{\psi^j(\mathbf{D}^{-1}\boldsymbol{x-k});\boldsymbol{ k}\in \mathbf{Q}\mathbb{Z}^2\}}.
+\end{align*}
+  An $L$-level multi-resolution system with base space $V_0$ is then spanned by
  \begin{align}\label{eq: MRA}
  \{\phi_{L,\boldsymbol{k}}\,,\psi^j_{l,\boldsymbol{k'}}\,, \, {\small 1\leq l \leq L,\, \boldsymbol{k}\in \mathbb{Z}^2,\,\boldsymbol{k'}\in \mathbf{Q}\mathbb{Z}^2,\,1\leq j \leq J\}}.
 \end{align}  
- As $W_1\subset V_0$, each rescaled wavelet $\psi^j(\mathbf{D}^{-1}\cdot)$ is also a linear combination of $\phi_{0,\boldsymbol{k}}$, so that $\exists m_j$ analogous to $m_0$
+In particular, we set $\mathbf{D} = \mathbf{D_2}\doteq\bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)$ and $\mathbf{Q}:=\bigl(\begin{smallmatrix} 1&1\\-1&1\end{smallmatrix}\bigr)$.
+As $W_1\subset V_0$, each rescaled wavelet $\psi^j(\mathbf{D}^{-1}\cdot)$ is also a linear combination of $\phi_{0,\boldsymbol{k}}$, so that $\exists m_j$ analogous to $m_0$
 satisfying 
 \begin{align}\label{eq: mj}
 \widehat{\psi}^j(\mathbf{D}^T\boldsymbol{\omega}) = m_j(\boldsymbol{\omega})\widehat{\phi}(\boldsymbol{\omega}),\hspace{1cm} 1\leq j \leq J.
 \end{align}
-In this construction of MRA, the scaling function $\phi$ and all the wavelet functions $\psi^j$ share the same scaling matrix $\mathbf{D}$, yet the family of shifted $\phi_{\boldsymbol{k}}$ is defined on $\mathbb{Z}^2$, whereas the family of shifted $\psi^j_{\boldsymbol{k}}$ is defined on a sub-integer lattice $\mathbf{Q}\mathbb{Z}^2$. Hence the corresponding subsampling matrix  of $\phi_{1,\boldsymbol{k}}$ is $\mathbf{D}$ and that of $\psi^j_{1,\boldsymbol{k}}$ is $\mathbf{QD}$, as in \cite{durand2007}. We haven't yet imposed any condition on this MRA, or equivalently, on $m-$functions and the subsampling matrices $\mathbf{D}$ and $\mathbf{Q}$; this comes next.
+In this construction of MRA,
+% the scaling function $\phi$ and all the wavelet functions $\psi^j$ share the same scaling matrix $\mathbf{D}$, yet the family of shifted $\phi_{\boldsymbol{k}}$ is defined on $\mathbb{Z}^2$, whereas the family of shifted $\psi^j_{\boldsymbol{k}}$ is defined on a sub-integer lattice $\mathbf{Q}\mathbb{Z}^2$. Hence 
+ the corresponding subsampling matrix of $\phi_{1,\boldsymbol{k}}$ is $\mathbf{D}$ and that of $\psi^j_{1,\boldsymbol{k}}$ is $\mathbf{QD}$, the dilated quincunx subsample (see the right panel in Fig.\ref{fig: partition}), as in \cite{durand2007}. 
+% We haven't yet imposed any condition on this MRA, or equivalently, on $m-$functions and the subsampling matrices $\mathbf{D}$ and $\mathbf{Q}$; this comes next.
 
-If the MRA generated by \eqref{eq: MRA} achieves critical downsampling, then $ |\mathbf{D}|^{-1} + J|\mathbf{QD}|^{-1} = 1$ (\cite{durand2007}); 
-critical downsampling thus depends only on the subsampling matrices $\mathbf{D}$ and $\mathbf{Q}$. The space decomposition structure $V_0 = V_1\bigoplus W_1$ in MRA and \eqref{eq: m0}, \eqref{eq: mj} require consistency between the $m-$functions and the subsampling matrices $\mathbf{D}$ and $\mathbf{Q}$. 
 
-\subsection{Frequency domain partition and sub-lattice sampling}
+\subsection{Frequency domain partition and critical downsampling}
+
+%critical downsampling thus depends only on the subsampling matrices $\mathbf{D}$ and $\mathbf{Q}$. The space decomposition structure $V_0 = V_1\bigoplus W_1$ in MRA and \eqref{eq: m0}, \eqref{eq: mj} require consistency between the $m-$functions and the subsampling matrices $\mathbf{D}$ and $\mathbf{Q}$. 
 
 \begin{figure}[!t]
 \centering
@@ -51,35 +55,40 @@ critical downsampling thus depends only on the subsampling matrices $\mathbf{D}$
 \vspace*{-5mm}
 \end{figure}
 
-\begin{mydef}
-If $\mathcal{L}$ is the lattice generated by $\boldsymbol{a}_1,\boldsymbol{a}_2$, i.e. $\mathcal{L} = \sum_{i=1,2}k_i\boldsymbol{a}_i,\,k_i\in\mathbb{Z}$,
-the {\bf reciprocal lattice} $\mathcal{L}^*$ of $\mathcal{L}$ is the lattice generated by the vectors $\boldsymbol{b}_1,\boldsymbol{b}_2$, s.t. $\boldsymbol{b}_i^T\boldsymbol{a}_j = 2\pi\delta_{ij}$. 
+%\begin{mydef}
+%If $\mathcal{L}$ is the lattice generated by $\boldsymbol{a}_1,\boldsymbol{a}_2$, i.e. $\mathcal{L} = \sum_{i=1,2}k_i\boldsymbol{a}_i,\,k_i\in\mathbb{Z}$,the {\bf reciprocal lattice} $\mathcal{L}^*$ of $\mathcal{L}$ is the lattice generated by the vectors $\boldsymbol{b}_1,\boldsymbol{b}_2$, s.t. $\boldsymbol{b}_i^T\boldsymbol{a}_j = 2\pi\delta_{ij}$. 
+%\end{mydef}
 
-\end{mydef}
 %\begin{mydef}
 %Given a lattice $\mathcal{L}$, a {\bf fundamental domain} $S$ in $\mathbb{R}^2$ with respect to $\mathcal{L}$, denoted as $S = \mathbb{R}^2/\mathcal{L}$, is a subset of $\mathbb{R}^2$, such that $\bigcup_{l\in\mathcal{L}}(S+l) = \mathbb{R}^2$ and $S\cap(S+l)=\varnothing,\,\forall l\in\mathcal{L}\setminus\{\mathbf{0}\}$.
 %A set $S$ is a {\bf frequency support} of $\mathcal{L}$ if $S = \mathbb{R}^2/\mathcal{L}^*$.
 %\end{mydef}
 %Furthermore, each sub-lattice $\mathcal{L}$ of $\mathbb{Z}^2$ is associated with a set of shifts $\Gamma, \, s.t. \bigcup_{\V{\gamma}\in\Gamma}\mathcal{L}+\V{\gamma} = \mathbb{Z}^2$ and $|\Gamma| = |\mathbb{Z}^2/\mathcal{L}|$.
 
-To build our first example, in which $\hat{\phi},\,\widehat{\psi}^j$ are indicator functions in $\mathbb{R}^2$, we consider the case where $\mathcal{L} = \mathbb{Z}^2,\,\mathcal{L}^* = 2\pi\mathbb{Z}^2$ and we pick
-$S_0=\mathbb{R}^2/(\mathbb{Z}^2)^*$, the canonical frequency square, $[-\pi,\pi)\times[-\pi,\pi)$. 
-Since $\phi_1,\psi^j_1$ and their shifts span the space $V_0$, $supp(\widehat{\phi}_1)$ and $supp(\widehat{\psi}^j)$, together, should thus cover $S_0$. Due to \eqref{eq: m0} and \eqref{eq: mj}, this is equivalent to $S_0=\bigcup_{0\leq j\leq J} supp(m_j\vert_{S_0})$. That is, if $C_j,\,{\small 0\leq j\leq J}$ are the main support of $m_j,\,0\leq j\leq J$ respectively, then they form a partition of $S_0$. An non-uniform admissible partition is defined as follows,
+Consider the canonical frequency square, $S_0 = [-\pi,\pi)\times[-\pi,\pi)$ associated with lattice $\mathcal{L} = \mathbb{Z}^2$. 
+%Due to \eqref{eq: m0} and \eqref{eq: mj}, this is equivalent to $S_0=\bigcup_{0\leq j\leq J} supp(m_j\vert_{S_0})$.That is, 
+If $C_j$ are the main support of $m_j,\,0\leq j\leq J$, then due to \eqref{eq: m0} and \eqref{eq: mj} they form a partition of $S_0$.
+To build an orthonormal basis with good directional selectivity, we choose the partition of $S_0$ to be that of the least redundant shearlet system, see Fig.\ref{fig: partition} left, which is also Example B in \cite{durand2007}. In this partition, $S_0$ is divided into a central square $C_0 = S_1 := \bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)^{-1}S_0$ and a ring: the ring is further cut into six pairs of directional trapezoids $C_j$'s by lines passing through the origin with slopes $\pm 1, \pm 3$ and $\pm \frac{1}{3}$. The central square $S_1$ can be further partitioned in the same way to obtain a two-level multi-resolution system, as shown in Fig.\ref{fig: partition}. 
 
-\begin{mydef}
-$C_j, 0\leq j\leq J$ is an {\bf admissible} partition of $S_0$ if and only if $\exists \mathbf{D}, \mathbf{Q}\in\mathbb{Z}^{2\times 2}$, s.t. the low frequency piece $C_0 = \mathbb{R}^2/(\mathbf{D}\mathbb{Z}^2)^*,$ and the high frequency pieces $C_j = \mathbb{R}^2/(\mathbf{QD}\mathbb{Z}^2)^*,\,j = 1,\cdots,J$.
-\end{mydef}
-Let {\small $\V{\pi}_0 = (0,0), \V{\pi}_1 = (\pi/2,\pi/2), \V{\pi}_2 = (\pi,0),\V{\pi}_3 = (-\pi/2,\pi/2), \V{\pi}_4 = (0,\pi), \V{\pi}_5 = (\pi/2,-\pi/2),\V{\pi}_6 = (\pi,\pi), \V{\pi}_7=(-\pi/2,-\pi/2)$}, then 
+
+%To build our first example, in which $\hat{\phi},\,\widehat{\psi}^j$ are indicator functions in $\mathbb{R}^2$, we consider the case where  and we pick $S_0=\mathbb{R}^2/(\mathbb{Z}^2)^*$, . 
+%Since $\phi_1,\psi^j_1$ and their shifts span the space $V_0$, $supp(\widehat{\phi}_1)$ and $supp(\widehat{\psi}^j)$, together, should thus cover $S_0$. Due to \eqref{eq: m0} and \eqref{eq: mj}, this is equivalent to $S_0=\bigcup_{0\leq j\leq J} supp(m_j\vert_{S_0})$. That is, if $C_j,\,{\small 0\leq j\leq J}$ are the main support of $m_j,\,0\leq j\leq J$ respectively, then they form a partition of $S_0$. An non-uniform admissible partition is defined as follows,
+
+%\begin{mydef}
+%$C_j, 0\leq j\leq J$ is an {\bf admissible} partition of $S_0$ if and only if $\exists \mathbf{D}, \mathbf{Q}\in\mathbb{Z}^{2\times 2}$, s.t. the low frequency piece $C_0 = \mathbb{R}^2/(\mathbf{D}\mathbb{Z}^2)^*,$ and the high frequency pieces $C_j = \mathbb{R}^2/(\mathbf{QD}\mathbb{Z}^2)^*,\,j = 1,\cdots,J$.
+%\end{mydef}
+Here $J= 6$ and $ |\mathbf{D}|^{-1} + J|\mathbf{QD}|^{-1} = 1/4 + 6/ (2\cdot 4) = 1$, hence the corresponding MRA generated by \eqref{eq: MRA} achieves critical downsampling(\cite{durand2007}). 
+Furthermore, let {\small $\V{\pi}_0 = (0,0), \V{\pi}_1 = (\pi/2,\pi/2), \V{\pi}_2 = (\pi,0),\V{\pi}_3 = (-\pi/2,\pi/2), \V{\pi}_4 = (0,\pi), \V{\pi}_5 = (\pi/2,-\pi/2),\V{\pi}_6 = (\pi,\pi), \V{\pi}_7=(-\pi/2,-\pi/2)$}, then each piece $C_j$ together with its shifts form a tiling of $S_0$, i.e.
 \begin{align*}
-\mathbb{R}^2/(\mathbb{Z}^2)^*=\bigcup_{\V{\pi}\in\Gamma_0}\left(\mathbb{R}^2/(\V{D_2}\mathbb{Z}^2)^* + \V{\pi}\right)
-=\bigcup_{\V{\pi}'\in\Gamma_1}\left(\mathbb{R}^2/(\V{QD_2}\mathbb{Z}^2)^* + \V{\pi}'\right),
+S_0 = \bigcup_{\V{\pi}\in\Gamma_0}\left(C_j + \V{\pi}\right) = \bigcup_{\V{\pi}\in\Gamma_1}\left(C_0 + \V{\pi}\right),\quad j = 1,\cdots,6
+%\mathbb{R}^2/(\mathbb{Z}^2)^*=\bigcup_{\V{\pi}\in\Gamma_0}\left(\mathbb{R}^2/(\V{D_2}\mathbb{Z}^2)^* %+ \V{\pi}\right)
+%=\bigcup_{\V{\pi}'\in\Gamma_1}\left(\mathbb{R}^2/(\V{QD_2}\mathbb{Z}^2)^* + \V{\pi}'\right),
 \end{align*}
 where
 %then $\mathbf{D_2}\mathbb{Z}^2$ is associated with the set of shifts 
 $\Gamma_0= \{\V{\pi}_i,\, i = 0,2,4,6\}$ and 
 %$\mathbf{QD_2}\mathbb{Z}^2$ is associated with 
 $\Gamma_1 = \{\V{\pi}_i,\, i = 0,\cdots,7\}$.
-To build an orthonormal basis with good directional selectivity, we choose the partition of $S_0$ to be that of the least redundant shearlet system, see Fig.\ref{fig: partition} left, which is also Example B in \cite{durand2007}. In this partition, $S_0$ is divided into a central square $C_0 = S_1 := \bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)^{-1}S_0$ and a ring: the ring is further cut into six pairs of directional trapezoids $C_j$'s by lines passing through the origin with slopes $\pm 1, \pm 3$ and $\pm \frac{1}{3}$. The central square $S_1$ can be further partitioned in the same way to obtain a two-level multi-resolution system, as shown in Fig.\ref{fig: partition}. 
 
-This partition is admissible and corresponds to $\mathbf{D} = \mathbf{D_2}\doteq\bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)$ and $\mathbf{Q}:=\bigl(\begin{smallmatrix} 1&1\\-1&1\end{smallmatrix}\bigr)$. The wavelet coefficients are taken on the dilated quincunx sub-lattice $\mathbf{QD_2}\mathbb{Z}^2$ (see the right panel in Fig.\ref{fig: partition}).
-In addition, $|\mathbf{D_2}| = 4,\,|\mathbf{Q}| = 2$ so that $1/4 + 6/ (2\cdot 4) = 1$, and the system is critical downsampling.
+%This partition is admissible and corresponds to $\mathbf{D} = \mathbf{D_2}\doteq\bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)$ and $\mathbf{Q}:=\bigl(\begin{smallmatrix} 1&1\\-1&1\end{smallmatrix}\bigr)$. The wavelet coefficients are taken on the dilated quincunx sub-lattice $\mathbf{QD_2}\mathbb{Z}^2$ (see the right panel in Fig.\ref{fig: partition}).
+%In addition, $|\mathbf{D_2}| = 4,\,|\mathbf{Q}| = 2$ so that $1/4 + 6/ (2\cdot 4) = 1$, and the system is critical downsampling.
