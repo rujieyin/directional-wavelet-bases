@@ -1,7 +1,11 @@
 \section{Bi-orthogonal Bases}\label{sec: bi-orth}
-In this section, we analyze the bi-orthogonal bases $\{\phi_{L,\V{k}},\widetilde{\phi}_{L,\V{k}}, \psi_{l,\V{k}},\widetilde{\psi}_{l,\V{k}},\, 1\leq l\leq L,\,\V{k}\in\mathbb{Z}^2,\,1\leq j\leq J \}$, where $\phi,\psi$ satisfy \eqref{eq: m0} and \eqref{eq: mj}, and $\widetilde{\phi},\widetilde{\psi}$ satisfy the same MRA,
-$$\widehat{\widetilde{\phi}}(\V{D}^T\V{\omega}) = \widetilde{m_0}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}),\quad \widehat{\widetilde{\phi}}(\V{D}^T\V{\omega}) = \widetilde{m_0}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}).$$
-For bi-orthogonal bases, we have the similar identity summation and shift cancellation condition to Theorem \ref{thm: conds}.
+In this section, we analyze bi-orthogonal bases in the following form of MRA,
+\begin{align}\label{eq: bi-orth MRA}
+\{\phi_{L,\V{k}},\widetilde{\phi}_{L,\V{k}}, \psi_{l,\V{k}'}^j,\widetilde{\psi}_{l,\V{k}'}^j,\, 1\leq l\leq L,\,\V{k}\in\mathbb{Z}^2,\, \V{k}'\in\mathbf{Q}\mathbb{Z}^2,\,1\leq j\leq J \},
+\end{align}
+where $\phi$ and $\psi^j$ satisfy \eqref{eq: m0} and \eqref{eq: mj}, as well as $\widetilde{\phi}$ and $\widetilde{\psi^j}$, respectively,
+$$\widehat{\widetilde{\phi}}(\V{D}^T\V{\omega}) = \widetilde{m_0}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}),\quad \widehat{\widetilde{\psi^j}}(\V{D}^T\V{\omega}) = \widetilde{m_j}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}).$$
+For bi-orthogonal bases, we have the similar identity summation and shift cancellation condition to those in Theorem \ref{thm: conds}.
 \begin{thm}\label{thm: bi-orth conds}
 The perfect reconstruction iff the following two conditions hold
 \begin{align}\label{eq: id-sum 2}
@@ -41,7 +45,7 @@ The conditions \eqref{eq: id-sum 2} and \eqref{eq: shift-cancel 2} can be combin
 \end{bmatrix}
 \end{align}
 %where $\M\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}_0\in\mathbb{C}^7$.
-In addition, the orthogonal condition on $m_j,\widetilde{m_j}$ is an analogue of Theorem \ref{thm: basis cond}.
+In addition, we have the following condition when \eqref{eq: bi-orth MRA} is bi-orthogonal, an analogue of Theorem \ref{thm: basis cond}.
 \begin{thm}\label{thm: basis cond 2}
 Assume that $m_0, \widetilde{m_0}$ are trigonometric polynomials with $m_0(0)=\widetilde{m_0}(0) = 1$, which generate $\phi,\widetilde{\phi}$ respectively.\\
 If $\phi(\cdot - \boldsymbol{k}),\widetilde{\phi}(\cdot - \boldsymbol{k})\boldsymbol{k}\in\mathbb{Z}^2$ are bi-orthogonal, then $\exists K$ containing a neighborhood of 0, s.t. $\forall\boldsymbol{\omega}\in S_0,\,\boldsymbol{\omega}+2\pi\mathbf{n}\in K$ for some $\mathbf{n}\in\mathbb{Z}^2, $ and $\inf_{k>0,\,\boldsymbol{\omega}\in K}|m_0(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$, $\inf_{k>0,\,\boldsymbol{\omega}\in K}|\widetilde{m_0}(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$. 
