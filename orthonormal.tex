@@ -13,7 +13,7 @@ In MRA, \eqref{eq: MRA} is PR if $\forall f\in L_2(\mathbb{R}^2)$,
 \begin{equation}
 \textstyle \sum_k\langle f,\phi_{0,k}\rangle\phi_{0,k} = \sum_k\langle f,\phi_{1,k}\rangle\phi_{1,k} + \sum_j\sum_k\langle f,\psi^{j}_{1,k}\rangle\psi^j_{1,k}.\label{eq: PR}
 \end{equation}
-Using \eqref{eq: m0} and \eqref{eq: mj} together with the admissibility of the frequency partition, this condition on $\phi$ and $\psi^j$'s yields:
+Using \eqref{eq: m0} and \eqref{eq: mj} together with the admissibility of the frequency partition \eqref{eq: tiling}, condition \eqref{eq: PR} on $\phi$ and $\psi^j$'s yields:
 \begin{thm}\label{thm: conds}
 The perfect reconstruction condition holds for \eqref{eq: MRA} iff the following two conditions hold
 \begin{align}\label{eq: id-sum}
@@ -30,7 +30,7 @@ The perfect reconstruction condition holds for \eqref{eq: MRA} iff the following
 \end{thm}
 
 Theorem \ref{thm: conds} is a corollary of Prop. 1 and Prop. 2 in \cite{durand2007}. We give an alternate proof in Appendix \ref{app: cond-thm}.
-In Theorem \ref{thm: conds}, Eq. \eqref{eq: id-sum} is the {\it identity summation} condition, guaranteeing conservation of $l_2$ energy; Eq. \eqref{eq: shift-cancel} is the {\it shift cancellation} condition such that aliasing is canceled correctly in reconstruction. %, such that downsampling of scaling and shearlet coefficients is valid. 
+In Theorem \ref{thm: conds}, Eq. \eqref{eq: id-sum} is the {\it identity summation} condition, guaranteeing conservation of $l_2$ energy; Eq. \eqref{eq: shift-cancel} is the {\it shift cancellation} condition such that aliasing is canceled correctly in reconstruction from wavelet coefficients. %, such that downsampling of scaling and shearlet coefficients is valid. 
  %$\Lambda = \{(\frac{\pi}{2},\frac{\pi}{2}),(\frac{3\pi}{2},\frac{\pi}{2}),(\frac{\pi}{2},\frac{3\pi}{2}),(\frac{3\pi}{2},\frac{3\pi}{2}),$ $(0,0),(0,\pi),(\pi,0),(\pi,\pi)\},\Gamma = \{(0,0),(0,\pi),(\pi,0),(\pi,\pi)\}$ are the sets of shifts associated to quincunx-dyadic dilation $QD$ and dyadic dilation $D$ respectively.
 %Each $M_j$ contributes a term $M_j(\boldsymbol{omega})\overline{M_j(\boldsymbol{omega} + \boldsymbol{\nu})}$ in the cancellation condition of any shift $\boldsymbol{\nu}$ corresponding to the downsampling scheme of $M_j$.
 
@@ -51,7 +51,7 @@ If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal,
 %In this section, we define Shannon-type directional orthonormal basis same as in \cite{durand2007} and \cite{nuDFB05}. Then, we apply direct smoothing to its $m-$functions to improve spatial localization, this leads to a critical analysis of the boundary regularity of $S_1$ and the $C_j$'s.
 
 %\subsection{Shannon-type wavelets and smoothing}
-Let each $m_j$ be an indicator function, $m_0 = \mathbbm{1}_{S_1},\, m_j = \mathbbm{1}_{C_j},\,1\leq j \leq 6,\,$ and we use the boundary assignment of $C_j$ in Fig.\ref{fig: partition},
+Let each $m_j$ be an indicator function, $ m_j = \mathbbm{1}_{C_j},\,0\leq j \leq 6,\,$ and we use the boundary assignment of $C_j$ in Fig.\ref{fig: partition},
 then the identity summation follows from the frequency partition, and the shift cancellation follows from \eqref{eq: tiling}.% which implies $m_j(\boldsymbol{\omega})\overline{m_j(\boldsymbol{\omega} + \boldsymbol{\pi}_i)}\equiv 0,\,\forall j,\, i\neq 0.$ %Let $\partial\mathbf{C}_j = \overline{\mathbf{C}_j}-\mathbf{C}_j^{\circ}$ be the boundary of $\mathbf{C}_j$,  
 Applying Theorem \ref{thm: basis cond} to $m_0$, we check that the Shannon-type wavelets generated from these $m-$functions form an orthonormal basis.
 
@@ -59,7 +59,7 @@ Applying Theorem \ref{thm: basis cond} to $m_0$, we check that the Shannon-type 
 In order to improve their spatial localization, $m_j$ need to be regularized, or equivalently, the discontinuity of $m_j$ on $\partial C_j$, the boundaries of $C_j$, need to be smoothed. 
 %We take a different regularization approach from Durand's \cite{durand2007}, where three regular quincunx filter banks are constructed and then composed to obtain the desired regular quincunx dyadic filter banks. Here, we smooth the discontinuous boundaries of $m-$functions directly. 
 As shown in Proposition 3 in \cite{durand2007}, it is not possible to smooth all the discontinuous boundaries if $m_j$ satisfy the perfect reconstruction condition.
-In \cite{yin2014orthshear}, $\partial C_j$ are segmented into {\it singular} and {\it regular} pieces. On those {\it singular} pieces, it is shown that $m_j$ cannot be smoothed without violating the shift cancellation condition. Yet, on regular boundaries, $m_j$ can be smoothed in a coherent way such that all the constraints are satisfied. Fig. \ref{fig: boundary} shows the boundary classification, where the corners of $S_0$ and $S_1$ are singular, hence $m_0$ and the diagonal $m-$ functions of an orthonormal bases are discontinuous there. A mechanism of constructing orthonormal bases by smoothing $m_j$ on regular boundaries from indicator functions is provided in \cite{yin2014orthshear}.%However, it remains unclear if some of the discontinuity can be removed by direct smoothing.
+In \cite{yin2014orthshear}, $\partial C_j$ are segmented into {\it singular} and {\it regular} pieces. On those {\it singular} pieces, it is shown that $m_j$ cannot be smoothed without violating the shift cancellation condition. Yet, on regular boundaries, $m_j$ can be smoothed in a coherent way such that all the constraints are satisfied. Fig. \ref{fig: boundary} shows the boundary classification, where the corners of $S_0$ and $C_0$ are singular, hence $m_0$ and the diagonal $m-$ functions of an orthonormal bases are discontinuous there. A mechanism of constructing orthonormal bases by smoothing $m_j$ on regular boundaries from indicator functions is provided in \cite{yin2014orthshear}.%However, it remains unclear if some of the discontinuity can be removed by direct smoothing.
 
 %Next, we analyze the limitation of direct smoothing in detail and show that there are regular boundaries which can be smoothed without violating \eqref{eq: id-sum} and \eqref{eq: shift-cancel}, and singular boundaries which cannot be smoothed.
 
