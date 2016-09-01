@@ -1,14 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  31 AUG 2016 10:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 SEP 2016 11:47
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **direct-wavelet.tex
 (./direct-wavelet.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9l> and hyphenation patterns for 2 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,24 +24,24 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks14
 \ex@=\dimen103
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen104
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count87
@@ -81,43 +82,43 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 142.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count99
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks19
 \thm@bodyfont=\toks20
@@ -129,20 +130,20 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip48
 \dth@everypar=\toks24
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
@@ -150,13 +151,13 @@ Package graphics Info: Driver file: pdftex.def on input line 94.
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \c@@pps=\count100
 \c@@ppsavesec=\count101
 \c@@ppsaveapp=\count102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen114
 \WF@size=\dimen115
 \c@WF@wrappedlines=\count103
@@ -164,16 +165,16 @@ Package: appendix 2009/09/02 v1.2b extra appendix facilities
 \WF@everypar=\toks26
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks27
 \verbatim@line=\toks28
 \verbatim@in@stream=\read1
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen116
@@ -205,7 +206,7 @@ LaTeX Font Info:    ... okay on input line 47.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
 LaTeX Font Info:    ... okay on input line 47.
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
 \scratchdimen=\dimen123
@@ -218,15 +219,15 @@ LaTeX Font Info:    ... okay on input line 47.
 \MPnumerator=\count110
 \makeMPintoPDFobject=\count111
 \everyMPtoPDFconversion=\toks30
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -235,22 +236,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -262,7 +263,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -273,18 +274,18 @@ Package caption Info: End \AtBeginDocument code.
 \c@prop=\count114
 LaTeX Font Info:    Try loading font information for U+msa on input line 63.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 63.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./intro.tex
 [1
 
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]) [2]
-(./setup.tex
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+[2] (./setup.tex
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 30.
 
@@ -317,7 +318,7 @@ e 53.
 -frame/figure/sublattice-2.jpg>]
 LaTeX Font Info:    Try loading font information for U+bbm on input line 55.
 
-(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [5]
 <./orth-frame/figure/bdyclass.jpg, id=53, 226.2051pt x 226.9278pt>
@@ -340,11 +341,6 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 7.
 LaTeX Font Warning: Command \small invalid in math mode on input line 7.
 
 [6 <./orth-frame/figure/bdyclass.jpg>]) (./bi-orth.tex
-
-LaTeX Warning: Reference `eq: bi-orth MRA' on page 7 undefined on input line 48
-.
-
-
 Overfull \hbox (7.27878pt too wide) in paragraph at lines 50--53
 \OT1/cmr/m/it/10 of 0, s.t. $\OMS/cmsy/m/n/10 8[] 2 \OML/cmm/m/it/10 S[];  [] \
 OT1/cmr/m/n/10 + 2\OML/cmm/m/it/10 ^^Y\OT1/cmr/bx/n/10 n \OMS/cmsy/m/n/10 2 \OM
@@ -360,68 +356,29 @@ Overfull \hbox (0.74136pt too wide) in paragraph at lines 61--63
 der a bi-orthogonal
  []
 
-[8] <./bi-orth/figure/triangle-partition.png, id=66, 1076.823pt x 1057.551pt>
+[8] [9]
+LaTeX Font Info:    Try loading font information for U+euf on input line 182.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+<./bi-orth/figure/triangle-partition.png, id=72, 1076.823pt x 1057.551pt>
 File: ./bi-orth/figure/triangle-partition.png Graphic file (type png)
 
 <use ./bi-orth/figure/triangle-partition.png>
 Package pdftex.def Info: ./bi-orth/figure/triangle-partition.png used on input 
-line 144.
+line 218.
 (pdftex.def)             Requested size: 137.9979pt x 135.51775pt.
- [9]
-Overfull \hbox (9.59454pt too wide) in paragraph at lines 171--172
-[]\OT1/cmr/bx/n/10 Proposition 5.3. []$\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ([])
-\OML/cmm/m/it/10 ;  []\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ; m[]\OT1/cmr/m/n/10
- ([])\OML/cmm/m/it/10 ;  i \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 ; :::; \OT1/cmr/
-m/n/10 6$ \OT1/cmr/m/it/10 sat-isfy [] given $[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/
-it/10 ;  i \OT1/cmr/m/n/10 =
- []
 
-
-Overfull \hbox (9.11008pt too wide) in paragraph at lines 177--177
-[] 
- []
-
-[10 <./bi-orth/figure/triangle-partition.png>]
-Overfull \hbox (0.68471pt too wide) in paragraph at lines 197--197
-[] 
- []
-
-
-Overfull \hbox (19.09059pt too wide) detected at line 198
-\OML/cmm/m/it/10 d[]\OT1/cmr/m/n/10 ([]) = []([[]([])[]\OML/cmm/m/it/10 ; []  ;
- []\OT1/cmr/m/n/10 ([])[]])\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/
-10 ^^T \OML/cmm/m/it/10 k[] < [] < k[] < [] < k[] \OMS/cmsy/m/n/10 ^^T \OT1/cmr
-/m/n/10 7\OML/cmm/m/it/10 ; k[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/
-it/10 i; j;
- []
-
-
-Overfull \hbox (14.74138pt too wide) in paragraph at lines 202--202
-[] 
- []
-
-
-Overfull \hbox (5.52618pt too wide) in paragraph at lines 206--206
-[] 
- []
-
-LaTeX Font Info:    Try loading font information for U+euf on input line 232.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-[11] <./bi-orth/figure/S_shifts2.png, id=86, 217.7736pt x 206.9331pt>
+<./bi-orth/figure/S_shifts2.png, id=74, 217.7736pt x 206.9331pt>
 File: ./bi-orth/figure/S_shifts2.png Graphic file (type png)
 
 <use ./bi-orth/figure/S_shifts2.png>
-Package pdftex.def Info: ./bi-orth/figure/S_shifts2.png used on input line 246.
+Package pdftex.def Info: ./bi-orth/figure/S_shifts2.png used on input line 229.
 
 (pdftex.def)             Requested size: 137.9979pt x 131.13266pt.
- [12 <./bi-orth/figure/S_shifts2.png>]
-Overfull \hbox (36.12695pt too wide) in paragraph at lines 285--286
+ [10] [11 <./bi-orth/figure/triangle-partition.png> <./bi-orth/figure/S_shifts2
+.png>]
+Overfull \hbox (36.12695pt too wide) in paragraph at lines 268--269
 []$\OML/cmm/m/it/10 span\OMS/cmsy/m/n/10 f[]\OML/cmm/m/it/10 ; []; []\OMS/cmsy/
 m/n/10 g ? \OML/cmm/m/it/10 span\OMS/cmsy/m/n/10 f[]\OML/cmm/m/it/10 ; []\OMS/c
 msy/m/n/10 g$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 rank\OT1/cmr/m/n/10 ([]\OML
@@ -431,7 +388,7 @@ msy/m/n/10 g$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 rank\OT1/cmr/m/n/10 ([]\OML
  []
 
 
-Overfull \hbox (9.60413pt too wide) in paragraph at lines 288--290
+Overfull \hbox (9.60413pt too wide) in paragraph at lines 271--273
 \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ;  \OMS/cmsy/m/n/10 8\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 i; j\OT1/cmr/m/n/10 )$ ex-cept $(0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 
 6)$, so $\U/euf/m/n/10 D\OT1/cmr/m/n/10 ([]) = [\OML/cmm/m/it/10 d[]; \OT1/cmr/
@@ -444,7 +401,7 @@ m/it/10 ; \OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0]$.
  []
 
 
-Overfull \hbox (7.91522pt too wide) in paragraph at lines 293--295
+Overfull \hbox (7.91522pt too wide) in paragraph at lines 276--278
 [][] \OMS/cmsy/m/n/10 j[]\OT1/cmr/m/n/10 ([])\OMS/cmsy/m/n/10 j$\OT1/cmr/m/n/10
  . Since $[]([])$ con-cen-trates in $\OML/cmm/m/it/10 T[]$\OT1/cmr/m/n/10 , we 
 know $[][] \OMS/cmsy/m/n/10 j[]\OT1/cmr/m/n/10 ([])\OMS/cmsy/m/n/10 j \OML/cmm/
@@ -453,35 +410,35 @@ cmr/m/n/10 .
  []
 
 
-Overfull \hbox (17.03232pt too wide) in paragraph at lines 293--295
+Overfull \hbox (17.03232pt too wide) in paragraph at lines 276--278
 \OT1/cmr/m/n/10 On the other hand, due to the sym-me-try of $[]([])\OML/cmm/m/i
 t/10 ; []\OT1/cmr/m/n/10 ([])$ and $\OML/cmm/m/it/10 B[]; B[]$\OT1/cmr/m/n/10 ,
  $[][] \OMS/cmsy/m/n/10 j[]\OT1/cmr/m/n/10 ([])\OMS/cmsy/m/n/10 j \OT1/cmr/m/n/
 10 =
  []
 
-
-Overfull \hbox (5.2554pt too wide) in paragraph at lines 303--304
-[]\OT1/cmr/bx/n/10 Proposition 5.8. []$[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ;
+[12]
+Overfull \hbox (5.2554pt too wide) in paragraph at lines 286--287
+[]\OT1/cmr/bx/n/10 Proposition 5.7. []$[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ;
  []\OT1/cmr/m/n/10 ([])$ \OT1/cmr/m/it/10 are not con-tin-u-ous at $[][]\OML/cm
 m/m/it/10 ; [][]$ \OT1/cmr/m/it/10 and $[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 
 ; []\OT1/cmr/m/n/10 ([])$
  []
 
-[13]
-Overfull \hbox (38.07832pt too wide) in paragraph at lines 344--346
+
+Overfull \hbox (38.07832pt too wide) in paragraph at lines 327--329
 \OT1/cmr/m/n/10 Therefore, $[][:\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1]$ and $[][
 :\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6]$ are lin-early in-de-pen-dent im-plies t
 hat $\OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--346
+Underfull \hbox (badness 10000) in paragraph at lines 327--329
 
  []
 
-[14]
-Overfull \hbox (22.46526pt too wide) in paragraph at lines 363--366
+[13]
+Overfull \hbox (22.46526pt too wide) in paragraph at lines 346--349
 \OT1/cmr/m/n/10 spec-tively for tu-ples $( [][]\OML/cmm/m/it/10 ;  [][]; \OT1/c
 mr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^Y=\OT1/cmr/m/n/10 2\OML/cmm/m
 /it/10 ; ^^Y=\OT1/cmr/m/n/10 2) )\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 ( [][]\OML
@@ -491,49 +448,63 @@ L/cmm/m/it/10 ; ^^Y=\OT1/cmr/m/n/10 2) )\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 ([]
 10 2\OML/cmm/m/it/10 ; ^^Y=\OT1/cmr/m/n/10 2) )$
  []
 
-[15]
-Overfull \hbox (7.62056pt too wide) in paragraph at lines 416--416
+[14]
+Overfull \hbox (7.62056pt too wide) in paragraph at lines 399--399
 [] 
  []
 
-<./bi-orth/figure/feasible_mi.pdf, id=101, 377.24939pt x 247.88611pt>
+
+Overfull \hbox (15.34451pt too wide) in paragraph at lines 421--422
+[]\OT1/cmr/bx/n/10 Proposition 5.12. []$\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ([]
+)\OML/cmm/m/it/10 ;  []\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ; m[]\OT1/cmr/m/n/1
+0 ([])\OML/cmm/m/it/10 ;  i \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 ; :::; \OT1/cmr
+/m/n/10 6$ \OT1/cmr/m/it/10 sat-isfy [] given $[]\OT1/cmr/m/n/10 ([])\OML/cmm/m
+/it/10 ;  i \OT1/cmr/m/n/10 =
+ []
+
+[15]
+Overfull \hbox (9.11008pt too wide) in paragraph at lines 427--427
+[] 
+ []
+
+[16] <./bi-orth/figure/feasible_mi.pdf, id=104, 377.24939pt x 247.88611pt>
 File: ./bi-orth/figure/feasible_mi.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_mi.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_mi.pdf used on input line 45
+Package pdftex.def Info: ./bi-orth/figure/feasible_mi.pdf used on input line 47
 0.
 (pdftex.def)             Requested size: 165.59853pt x 108.81679pt.
 
-<./bi-orth/figure/feasible_m0.pdf, id=102, 344.7279pt x 345.4506pt>
+<./bi-orth/figure/feasible_m0.pdf, id=105, 344.7279pt x 345.4506pt>
 File: ./bi-orth/figure/feasible_m0.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m0.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_m0.pdf used on input line 45
+Package pdftex.def Info: ./bi-orth/figure/feasible_m0.pdf used on input line 47
 4.
 (pdftex.def)             Requested size: 60.72057pt x 60.84482pt.
 
-<./bi-orth/figure/feasible_m0_log.pdf, id=103, 448.07399pt x 347.61871pt>
+<./bi-orth/figure/feasible_m0_log.pdf, id=106, 448.07399pt x 347.61871pt>
 File: ./bi-orth/figure/feasible_m0_log.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m0_log.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_m0_log.pdf used on input lin
-e 458.
+e 478.
 (pdftex.def)             Requested size: 77.27995pt x 59.95367pt.
- [16]
+
 <./bi-orth/figure/feasible_check.pdf, id=107, 402.54391pt x 365.6862pt>
 File: ./bi-orth/figure/feasible_check.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_check.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_check.pdf used on input line
- 477.
+ 498.
 (pdftex.def)             Requested size: 82.80115pt x 75.21724pt.
 
 <./bi-orth/figure/feasible_tm0.pdf, id=108, 344.7279pt x 345.4506pt>
 File: ./bi-orth/figure/feasible_tm0.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_tm0.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_tm0.pdf used on input line 4
-82.
+Package pdftex.def Info: ./bi-orth/figure/feasible_tm0.pdf used on input line 5
+03.
 (pdftex.def)             Requested size: 82.5947pt x 82.76752pt.
 
 <./bi-orth/figure/feasible_m0tm0.pdf, id=109, 396.0396pt x 365.6862pt>
@@ -541,50 +512,52 @@ File: ./bi-orth/figure/feasible_m0tm0.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m0tm0.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_m0tm0.pdf used on input line
- 483.
+ 504.
 (pdftex.def)             Requested size: 91.28731pt x 84.29019pt.
  [17 <./bi-orth/figure/feasible_mi.pdf> <./bi-orth/figure/feasible_m0.pdf
 
-pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_m0.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bi-orth/figure/feasible_m0
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./bi-orth/figure/feasible_m0_log.pdf
 
-pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_m0_log.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./bi-orth/figure/feasible_check.pdf
-
-pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_check.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
-> <./bi-orth/figure/feasible_tm0.pdf
-
-pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_tm0.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
-> <./bi-orth/figure/feasible_m0tm0.pdf
-
-pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_m0tm0.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
->] <./bi-orth/figure/feasible_m.pdf, id=150, 406.88008pt x 255.8358pt>
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bi-orth/figure/feasible_m0
+_log.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+>] <./bi-orth/figure/feasible_m.pdf, id=132, 406.88008pt x 255.8358pt>
 File: ./bi-orth/figure/feasible_m.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_m.pdf used on input line 502
+Package pdftex.def Info: ./bi-orth/figure/feasible_m.pdf used on input line 523
 .
 (pdftex.def)             Requested size: 155.24895pt x 97.61679pt.
 
-<./bi-orth/figure/feasible_mi_time.pdf, id=151, 404.712pt x 258.72661pt>
+<./bi-orth/figure/feasible_mi_time.pdf, id=133, 404.712pt x 258.72661pt>
 File: ./bi-orth/figure/feasible_mi_time.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_mi_time.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_mi_time.pdf used on input li
-ne 505.
+ne 526.
 (pdftex.def)             Requested size: 149.03766pt x 95.27728pt.
-) (./conclusion.tex)
-(./parseval-cond.tex [18 <./bi-orth/figure/feasible_m.pdf> <./bi-orth/figure/fe
-asible_mi_time.pdf
+) (./conclusion.tex) [18 <./bi-orth/figure/feasible_check.pdf> <./bi-orth/figur
+e/feasible_tm0.pdf
 
-pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_mi_time.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->]
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bi-orth/figure/feasible_tm
+0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bi-orth/figure/feasible_m0tm0.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bi-orth/figure/feasible_m0
+tm0.pdf): PDF inclusion: multiple pdfs with page group included in a single pag
+e
+> <./bi-orth/figure/feasible_m.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bi-orth/figure/feasible_m.
+pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./bi-orth/figure/feasible_mi_time.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./bi-orth/figure/feasible_mi
+_time.pdf): PDF inclusion: multiple pdfs with page group included in a single p
+age
+>] (./parseval-cond.tex
 Overfull \hbox (9.85329pt too wide) in paragraph at lines 17--20
 []\OT1/cmr/m/n/10 ([]) = \OML/cmm/m/it/10 ^^^[]\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/
 n/10 ^^@ [][]\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 j[]j[] [][] \OML/cmm/m/it/10 
@@ -642,7 +615,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-1.jpg used on input line
  36.
 (pdftex.def)             Requested size: 155.24895pt x 64.72993pt.
  [21 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-o
-rth/figure/1d-filter-compare.jpg> <./bi-orth/figure/2d-m-compare-1.jpg>]
+rth/figure/1d-filter-compare.jpg>]
 <./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf, id=183, 703.62875pt x 
 128.48pt>
 File: ./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf Graphic file (type
@@ -679,7 +652,8 @@ Package pdftex.def Info: ./bi-orth/figure/2d-filter-compare-2-2-eps-converted-t
 o.pdf used on input line 66.
 (pdftex.def)             Requested size: 279.4462pt x 51.99097pt.
 
-<./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf, id=187, 722.7pt x 128.48
+[22 <./bi-orth/figure/2d-m-compare-1.jpg>]
+<./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf, id=190, 722.7pt x 128.48
 pt>
 File: ./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf Graphic file (type p
 df)
@@ -688,7 +662,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf u
 sed on input line 78.
 (pdftex.def)             Requested size: 310.4979pt x 55.20023pt.
 
-<./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf, id=188, 723.70375pt x 
+<./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf, id=191, 723.70375pt x 
 128.48pt>
 File: ./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -696,77 +670,76 @@ File: ./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf Graphic file (type
 Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf
  used on input line 79.
 (pdftex.def)             Requested size: 310.4979pt x 55.12376pt.
- [22 <./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure
-/2d-filter-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure/2d-m-compare-2-2
--eps-converted-to.pdf> <./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to
-.pdf>])
-(./direct-wavelet.bbl
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[23 <./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure/
+2d-filter-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure/2d-m-compare-2-2-
+eps-converted-to.pdf> <./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.
+pdf>]) (./direct-wavelet.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-[23 <./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf> <./bi-orth/figure/2d
--m-compare-3-2-eps-converted-to.pdf>]) [24] (./direct-wavelet.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[24 <./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf> <./bi-orth/figure/2d
+-m-compare-3-2-eps-converted-to.pdf>]) [25] (./direct-wavelet.aux) ) 
 Here is how much of TeX's memory you used:
- 4136 strings out of 495005
- 63084 string characters out of 6181431
- 129096 words of memory out of 5000000
- 7223 multiletter control sequences out of 15000+600000
+ 4138 strings out of 493089
+ 63596 string characters out of 6134842
+ 134925 words of memory out of 5000000
+ 7474 multiletter control sequences out of 15000+600000
  23396 words of font info for 90 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  38i,19n,38p,985b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/grad/rachel/.texlive2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.6
-00pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msbm7.pfb>
-Output written on direct-wavelet.pdf (24 pages, 1410420 bytes).
+ </Users/Ru
+jieYin/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy5.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy
+6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/c
+mbsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7
+.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cm
+ex9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib5.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmm
+ib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on direct-wavelet.pdf (25 pages, 1412024 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
+ 404 PDF objects out of 1000 (max. 8388607)
+ 251 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
