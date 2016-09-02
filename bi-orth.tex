@@ -85,7 +85,7 @@ Lemma 2.2.2 in \cite{cohen1993compactly} )
 \end{bmatrix}
 \end{align}
  where $\V{\nu}_1 = (\pi,0),\V{\nu}_2 = (0,\pi),\V{\nu}_3=(\pi,\pi)$.
- Let $\widetilde{\mathbf{M}}\in\mathbb{C}^{4\times 4}$ be the matrix with $\barm{j}$ entries and $\mathbf{m}\in\mathbb{C}^4$ be the vector with $m_j$ entries in \eqref{eq: LS}, then \eqref{eq: LS} can be written as \(\widetilde{\mathbf{M}}\, \mathbf{m} = [1,0,0,0]^\top\).\\
+ Let $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{4\times 4}$ be the matrix with $\barm{j}$ entries and $\mathbf{m}(\V{\omega})\in\mathbb{C}^4$ be the vector with $m_j$ entries in \eqref{eq: LS}, then \eqref{eq: LS} can be written as \(\widetilde{\mathbf{M}}\, \mathbf{m} (\V{\omega})= [1,0,0,0]^\top\).\\
 Given $\m{1}$, $\m{2},\,\m{3}$ are determined by symmetry, and Lemma 2.2.2 in \cite{cohen1993compactly} shows that
 \begin{align}\label{eq: m0-sol}
 m_0(\V{\omega}) &= D^{-1}%\propto 
@@ -98,7 +98,7 @@ m_0(\V{\omega}) &= D^{-1}%\propto
 \right| \notag\\
 &= D^{-1}\det(\widetilde{\mathbf{M}}_{1,1}(\V{\omega})),
 \end{align}
-where $ D = \det(\widetilde{\mathbf{M}})\in \mathbb{C}^* = \mathbb{C}\setminus\{0\}$.
+where $ D \equiv \det(\widetilde{\mathbf{M}})\in \mathbb{C}^* = \mathbb{C}\setminus\{0\}$.
 %{\it Remark.} 
 %For \eqref{eq: m0-sol} to hold, $m_0(\mathbf{\omega})$ and $\det(\widetilde{\mathbf{M}}_{1,1}(\V{\omega}))$ having the same phase suffices, which is implied by the symmetry of $m_0$ and $\widetilde{m_j} $'s.\\ % Both $\mo{0}$ and $\det(\widetilde{\mathbf{M}}_{1,1}(\V{\omega}))$ are $\frac{2\pi}{3}-$rotation invariant. \\
 If $\widetilde{m_0}$ is solved, then $m_1,m_2$ and $m_3$ are obtained by solving the linear system \eqref{eq: LS}.
@@ -140,9 +140,19 @@ Supplementary numerical results on solving $\m{0}$ by optimization are provided 
 
 \textcolor{red}{Replace by an overview of this section}
 
-Following the same approach, we focus on the design of $m_i,\,i=0,\cdots,6$ and the low pass dual function $\m{0}$, given the high pass directional dual functions $\m{i},\,i=1,\cdots,6$. Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
+Following the same approach of Cohen et al, we focus on solving $m_i$'s and $\widetilde{m_0}$ in \eqref{eq: LS-new} given pre-designed $\m{i},\,i=1,\cdots,6$. %Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
 
-We first set up our notations. For simplicity, in the rest of this paper, we reuse notations for \eqref{eq: LS} to express \eqref{eq: LS-new} in the same form as $\widetilde{\mathbf{M}}\mathbf{m} = [1,0,\cdots,0]^T$, where $\widetilde{\mathbf{M}}\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}\in\mathbb{C}^7$. In addition, for a matrix $\mathbf{A}$, we denote its sub-matrix containing all but the $k-$th column(row) as $\mathbf{A}[-k,:]\, (\mathbf{A}[:,-k])$ and its minor with respect to its $(i,j)-$th entry as $A_{-i,-j} = \det(\mathbf{A}[-i,-j])$. In particular, we denote $\M[-1,-1]$ as $\Msub$.
+For simplicity, in the rest of this paper, we reuse notations for \eqref{eq: LS} to express \eqref{eq: LS-new} in the same form as $\widetilde{\mathbf{M}}\mathbf{m}(\V{\omega}) = [1,0,\cdots,0]^T$, where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, for a matrix $\mathbf{A}$, we denote its sub-matrix containing all but the $k-$th column(row) as $\mathbf{A}[-k,:]\, (\mathbf{A}[:,-k])$.% and its minor with respect to its $(i,j)-$th entry as $A_{-i,-j} = \det(\mathbf{A}[-i,-j])$. 
+In particular, we denote $\M[-1,-1]$ as $\Msub$.
+
+As in Section \ref{subsec: cohen-summary}, we implicitly assume that $\M(\V{\omega})$ is full rank for any $\V{\omega}$ so that \eqref{eq: LS-new} has unique solution $\V{m}$ and Cramer's rule can be applied to compute $m_0$ with respect to a non-singular sub-matrix of $\M$. That is, $\exists\, k_\omega\in\{2,\cdots,8\}$ such that $\M[-k_{\V{\omega}},:]$ is non-singular\footnote{Lemma \ref{lem: subM-singular} shows that $k_\omega\neq 1$}. Therefore, 
+%there is a unique row $\M[k_{\V{\omega}},:],\,k_\omega\in\{2,\cdots,8\}$ such that removing it from $\M$ gives a non-singular square matrix $\M[-k_{\V{\omega}},:]$. By Cramer's rule, 
+\begin{align}\label{eq: m0-cramer}
+m_0(\V{\omega}) = \det(\Msub[-k_{\V{\omega}},:])/\det(\M[-k_{\V{\omega}},:]).
+\end{align}
+Instead of requiring strong symmetries of $\m{i}$'s as in Section \ref{subsec: cohen-summary}, we only ask for a minimum symmetry of $\m{i}$ such that $\m{1}$ and $\m{6}$ are symmetric with respect to the diagonal, and so are $\m{3}$ and $\m{4}$.
+
+In the following subsections, we first show our main result that the pre-designed $\widetilde{m_i}$'s are discontinuous for \eqref{eq: LS-new} to be solvable. We then discuss how to design $\widetilde{m_i}$'s and solve the corresponding system \eqref{eq: LS-new}.
 
 \subsection{Singularity of $\M[-1,:]$ and discontinuity of $\m{i}$}
 
@@ -185,9 +195,11 @@ $\M[-1,:](\V{\omega})$ is singular $\forall \V{\omega}$ if and only if \vspace{.
 The singularity condition on  $\M[-1,:](\V{\omega})$ can be rewritten as follows,
 \begin{align}\label{eq: singular-omega}
 0 &=\det(\M[-1,:]) \notag\\
-&= \widetilde{m_0}(\V{\omega})\cdot 0 \,+\, \widetilde{m_0}(\V{\omega}+\V{\pi}_2)\cdot\det(\Msub[-2,:])\notag\\
+&=  \widetilde{m_0}(\V{\omega}+\V{\pi}_2)\cdot\det(\Msub[-2,:])\notag\\
 &\quad+ \,\widetilde{m_0}(\V{\omega}\,+\,\V{\pi}_4)\cdot\det(\Msub[-4,:])
-+ \widetilde{m_0}(\V{\omega}+\V{\pi}_6)\cdot\det(\Msub[-6,:]). 
++ \widetilde{m_0}(\V{\omega}+\V{\pi}_6)\cdot\det(\Msub[-6,:])\notag\\
+&= 0\cdot\widetilde{m_0}(\V{\omega})\,+\,d_{0,2}\cdot\widetilde{m_0}(\V{\omega}+\V{\pi}_2) \notag\\
+&\quad+\,d_{0,4}\cdot \widetilde{m_0}(\V{\omega} + \V{\pi}_4)\,+\, d_{0,6}\cdot\widetilde{m_0}(\V{\omega} + \V{\pi}_6) 
 \end{align}
 This is the first equation in the linear system \eqref{eq: singular-cond}. Substitute $\V{\omega}$ by $\V{\omega + \pi_2}$ in \eqref{eq: singular-omega} and use the $2\pi-$periodicity of $\V{\omega}$, we have the singularity condition on $\M[-1,:](\V{\omega+\pi_2})$ as follows
 %then the above singularity condition on $\M[-1,:]$ at $\V{\omega}$ can be rewritten as follows,
@@ -199,7 +211,7 @@ This is the first equation in the linear system \eqref{eq: singular-cond}. Subst
 -d_{0,2}(\V{\omega})\cdot \widetilde{m_0}(\V{\omega}) + d_{2,4}(\V{\omega})\cdot \widetilde{m_0}(\V{\omega}+\V{\pi}_4) + d_{2,6}(\V{\omega})\cdot\widetilde{m_0}(\V{\omega}+\V{\pi}_6) = 0,
 %[-d_{0,2}(\V{\omega}),\, 0,\,d_{2,4}(\V{\omega}),\,d_{2,6}][\widetilde{m_0}(\V{\omega}),\,\widetilde{m_0}(\V{\omega}+\V{\pi}_2),\, \widetilde{m_0}(\V{\omega}+\V{\pi}_4),\,\widetilde{m_0}(\V{\omega}+\V{\pi}_6)]^\top = 0,
 \end{align*}
-which is second linear equation in  \eqref{eq: singular-cond}.
+which is the second linear equation in  \eqref{eq: singular-cond}.
 Similarly, the third and fourth equations can be obtained by rewriting the singularity condition at $\V{\omega}+\V{\pi}_4$ and $\V{\omega}+\V{\pi}_6$ in the coordinate of $\V{\omega}$.\qed
 %where $\mathfrak{D}(\V{\omega})$ is anti-symmetric. Because $\mathfrak{D}(\V{\omega})$ is independent of $m_0(\V{\omega})$, \eqref{eq: singular-cond} holds for $\mc{0}$ as well.
 
@@ -207,90 +219,105 @@ Similarly, the third and fourth equations can be obtained by rewriting the singu
 The identity constraint \eqref{eq: identity-cond} on $m_0$ and the singularity condition \eqref{eq: singular-cond} together imply the following proposition,
 %Due to the periodic wrapping of the frequency square $S_0$, we only need to consider \eqref{eq: singular-cond} and \eqref{eq: identity-cond} on $S_1$ and they imply the following proposition,
 \begin{proposition}\label{prop: feasibility}
-Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: LS-new} has no solution for any $\widetilde{m_0}$, if $\exists\,\omega, \,s.t. [m_0(\omega), m_0(\omega+\pi_2),m_0(\omega+\pi_4),m_0(\omega+\pi_6)]$ is a linear combination of the conjugate of the rows of $\mathfrak{D}(\omega)$.% in \eqref{eq: singular-cond}.
+Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: LS-new} has no solution for $\widetilde{m_0}$, if $\exists\,\omega, \,s.t. [m_0(\omega), m_0(\omega+\pi_2),m_0(\omega+\pi_4),m_0(\omega+\pi_6)]$ is a linear combination of the conjugate of the rows of $\mathfrak{D}(\omega)$.% in \eqref{eq: singular-cond}.
 \end{proposition}
 %Proposition \ref{prop: feasibility} provides a necessary condition such that the numerical optimization solving $\widetilde{m_0}$ is feasible.
-\noindent{\bf Definition.}
-The {\it essential support} $\Omega_i$ of a function $\widetilde{m_i}$ is the set $\{\V{\omega}:\,|\widetilde{m_i}(\V{\omega})|> |\widetilde{m_j}(\V{\omega})|,\,\forall j\neq i\}$. 
-
 \begin{figure}
 \centering
 \includegraphics[width = .4\textwidth]{triangle-partition.png}
 \caption{partition of frequency square in six directions, where the essential support of $\m{i}$ is contained in each pair of triangles $T_i$}
 \label{fig: partition 2}
 \end{figure}
-Let pairs of triangles $T_i$ in Fig.\ref{fig: partition 2} contain the essential support of $\widetilde{m_i},\,i=1,\cdots,6$.
-A minimum symmetry of $\m{i}$ is required such that $\m{1}$ and $\m{6}$ are symmetric with respect to the diagonal, and so are $\m{3}$ and $\m{4}$.\\
-\eqref{eq: LS-new} takes a similar form to \eqref{eq: LS}, but with $\M\in\mathbb{C}^{8\times 7}$, which is an over-determinant linear system.
+%Let pairs of triangles $T_i$ in Fig.\ref{fig: partition 2} contain the essential support of $\widetilde{m_i},\,i=1,\cdots,6$.
+%\eqref{eq: LS-new} takes a similar form to \eqref{eq: LS}, but with $\M\in\mathbb{C}^{8\times 7}$, which is an over-determinant linear system.
 
-{\bf Definition} Let the cone $T_i = T_i^-\bigcup T_i^+$, where $T_i^-, T_i^+$ are halves of $T_i$ adjacent  to $T_{i-1}$ and $T_{i+1}$ respectively.  $\widetilde{m_i}$ {\it concentrates} within cone $T_i$ if $\text{supp}(\widetilde{m_i})\subset T_{i-1}^+\bigcup T_i\bigcup T_{i+1}^-$ and $\int_\Omega|\widetilde{m_i}| > \int_{\Omega'}|\widetilde{m_i}|, \forall \Omega\subset T_i\bigcap\text{supp}(\widetilde{m_i}), |\Omega|>0$, where $\Omega'$ is symmetric to $\Omega$ with respect to the boundary of $T_i$.\\[.5em]
+\noindent{\bf Definition.}
+The {\it essential support} $\Omega_i$ of a function $\widetilde{m_i}$ is the set $\{\V{\omega}:\,|\widetilde{m_i}(\V{\omega})|> |\widetilde{m_j}(\V{\omega})|,\,\forall j\neq i\}$. \vspace{.5em}
+
+Let $T_i$ be pairs of triangles shown in Figure \ref{fig: partition 2}, such that $C_i\subset T_i,\, i = 1,\cdots,6.$ Consider its decomposition, $T_i = T_i^-\bigcup T_i^+$, where $T_i^-, T_i^+$ are halves of $T_i$ adjacent  to $T_{i-1}$ and $T_{i+1}$ respectively.\\[.5em]
+\noindent{\bf Definition.}  $\widetilde{m_i}$ {\it concentrates} within cone $T_i$ if 
+\begin{itemize}
+\item[(i)] $\Omega_i\subset T_i$;
+\item[(ii)]$\text{supp}(\widetilde{m_i})\subset T_{i-1}^+\bigcup T_i\bigcup T_{i+1}^-$ and $\int_\Omega|\widetilde{m_i}| > \int_{\Omega'}|\widetilde{m_i}|, \forall\, \Omega\subset T_i\bigcap\text{supp}(\widetilde{m_i})$, where $\Omega' \subset T_{i-1}^+\bigcup T_{i+1}^-$ is symmetric to $\Omega$ with respect to the boundary of $T_i$.
+\end{itemize}
+
 \begin{figure}
 \centering
 \includegraphics[width = .4\textwidth]{S_shifts2.png}
 \caption{$S_{\rho}$ and its shifts}
 \label{fig: S-shifts}
 \end{figure}
-Given directional selective $\m{i}$ that concentrates in $T_i$, we study the feasibility condition in Proposition \ref{prop: feasibility} specifically on the domain $S_{\rho} = \{(\omega_x,\omega_y)|\;\Vert\omega\Vert < \rho, \omega_x <0,\,\omega_y<0\}$. When $\rho$ is small enough, $\m{i}$ is zero on all but a few sets $S_\rho + \V{\pi}_j$ (see Fig.\ref{fig: S-shifts} for reference of $S_\rho$ and its shifts), thus $\mrow{i}(\V{\omega})$ is sparse on $S_\rho$ in the following form
+Given $\m{i}$ that concentrates in $T_i$, we study the feasibility condition in Proposition \ref{prop: feasibility} specifically on the domain $S_{\rho} = \{(\omega_1,\omega_2)|\;\Vert\omega\Vert < \rho, \omega_1 <0,\,\omega_2<0\}$, see Figure \ref{fig: S-shifts}. 
+
+\begin{lemma}\label{lem: rank1}
+$\exists\, \rho>0$ s.t. $\forall \omega\in S_\rho$, $rank(\mrow{1},\mrow{7})=1$.
+\end{lemma}
+\noindent{\it Proof.}
+When $\rho$ is small enough, due to the concentration property, $\m{i}$ is zero on all but a few sets $S_\rho + \V{\pi}_j$ (see Fig.\ref{fig: S-shifts} for reference of $S_\rho$ and its shifts), thus $\mrow{i}(\V{\omega})$ is sparse on $S_\rho$ and $\M[-1,:]$ takes the following form
 \begin{align}
 \label{eq: sparse-mat}
+\M[-1,:](\V{\omega})=
 \begin{bmatrix}
 \mrow{0}\\
-\mrow{2}\\
-\mrow{4}\\
-\mrow{6}\\
 \mrow{1}\\
+\mrow{2}\\
 \mrow{3}\\
+\mrow{4}\\
 \mrow{5}\\
+\mrow{6}\\
 \mrow{7}
 \end{bmatrix}
 =
 \begin{bmatrix}
 0 & 0 & 0 & 0 & 0 & 0\\
+* & 0 & 0 & 0 & 0 & *\\
 0 & * & * & 0 & 0 & 0\\
+0 & 0 & * & * & 0 & 0\\
 0 & 0 & 0 & * & * & 0\\
-* & 0 & 0 & 0 & 0 & *\\
-* & 0 & 0 & 0 & 0 & *\\
 0 & 0 & * & * & 0 & 0\\
-0 & 0 & * & * & 0 & 0\\
+* & 0 & 0 & 0 & 0 & *\\
+%0 & * & * & 0 & 0 & 0\\
+%0 & 0 & 0 & * & * & 0\\
+%* & 0 & 0 & 0 & 0 & *\\
+%* & 0 & 0 & 0 & 0 & *\\
+%0 & 0 & * & * & 0 & 0\\
+%0 & 0 & * & * & 0 & 0\\
 * & 0 & 0 & 0 & 0 & *
 \end{bmatrix}
-=\V{P}\,\widetilde{\mathbf{M}}[:,2:7],
+%=\V{P}\,\widetilde{\mathbf{M}}[:,2:7],
 \end{align}
-where $\V{P}$ is a row permutation matrix. 
-\begin{lemma}\label{lem: rank1}
-$rank(\mrow{1},\mrow{7}) = 1$ in \eqref{eq: sparse-mat}.
-\end{lemma}
-\noindent{\it Proof.}
-We make the following observation of $\mrow{i}$ in \eqref{eq: sparse-mat}:
+where $*$s denote possible non-zero entries.
+%where $\V{P}$ is a row permutation matrix. 
+We make the following observation of $\mrow{i}$:
 \begin{itemize}
 \item[(i)] $\mrow{0}$ is a zero vector
 \item[(ii)] $\mrow{2}$ and $\mrow{4}$ are linearly independent of each other and the rest of $\mrow{i}$
-\item[(iii)] $span\{\mrow{1},\mrow{6},\mrow{7}\} \perp span\{\mrow{3},\mrow{5}\}$ and $rank(\mrow{1},\mrow{6},\mrow{7}) \leq 2$, $rank(\mrow{3},\mrow{5})\leq 2$
+\item[(iii)] $span\{\mrow{1},\mrow{6},\mrow{7}\} \perp span\{\mrow{3},\mrow{5}\}$ and $rank(\mrow{1},\mrow{6},\mrow{7}) \leq 2$, \\$rank(\mrow{3},\mrow{5})\leq 2$
 \end{itemize}
-Because $\widetilde{\mathbf{M}}[2:8,2:7]$ consists of rows $\mrow{i},\,i\neq 0$, and the low-pass function $m_0(\V{\omega})\neq 0,\, \forall\V{\omega}\in S_\rho$, or equivalently $rank(\widetilde{\mathbf{M}}[2:8,2:7](\V{\omega})) = 6$, it follows from  (ii) and (iii) that $rank(\mrow{1},\mrow{6},\mrow{7}) = 2$ and $rank(\mrow{3},\mrow{5})= 2$.\\
-On the other hand, (ii) implies that $$rank(\widetilde{\mathbf{M}}[2:8,2:7](\V{\omega}+\V{\pi}_2))=rank(\mrow{4},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})\leq 5$$ and $rank(\widetilde{\mathbf{M}}[2:8,2:7](\V{\omega}+\V{\pi}_4))=rank(\mrow{2},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})\leq 5$ likewise. Therefore, $m_0(\V{\omega}+\V{\pi}_2) = m_0(\V{\omega}+\V{\pi}_4) = 0$.\\
-If $\mrow{1}$ and $\mrow{7}$ are linearly independent, then $rank(\mrow{2},\mrow{4},\mrow{1},\mrow{3},\mrow{5},\mrow{7}) = 6$ and $m_0^C(\V{\omega}+\V{\pi}_6)\neq 0$, hence $m_0(\V{\omega}+\V{\pi}_6)\neq 0$. Therefore, $[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)] = [m_0(\V{\omega}),0,0,m_0(\V{\omega}+\V{\pi}_6)]$. In addition, $d_{i,j} = 0,\, \forall(i,j)$ except $(0,6)$, so $\mathfrak{D}(\V{\omega}) = [d_{0,6}, 0, 0,0]^\top [0,0,0,1] + [0,0,0,d_{0,6}]^\top [-1,0,0,0]$.  By Prop.\ref{prop: feasibility}, the linear system \eqref{eq: LS-new} has no solution $\forall \widetilde{m_0}$ and the lemma is proofed.\qed
+Since $S_\rho$ is in the low frequency domain, $m_0(\V{\omega})\neq 0$. \eqref{eq: m0-cramer} then implies that $\Msub$ is full rank, or equivantly, $rank(\M[-1,:]) = 6$. It follows from  (ii) and (iii) that $rank(\mrow{1},\mrow{6},\mrow{7}) = 2$ and $rank(\mrow{3},\mrow{5})= 2$.\\
+On the other hand, (ii) implies that $$rank(\Msub(\V{\omega}+\V{\pi}_2))=rank(\mrow{4},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})\leq 5$$ and likewise $$rank(\Msub(\V{\omega}+\V{\pi}_4))=rank(\mrow{2},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})\leq 5.$$ Therefore, $\det(\Msub(\V{\omega} + \V{\pi}_2)) = \det(\Msub(\V{\omega} + \V{\pi}_4)) = 0$ and \eqref{eq: m0-cramer} implies $m_0(\V{\omega}+\V{\pi}_2) = m_0(\V{\omega}+\V{\pi}_4) = 0$.\\
+If $\mrow{1}$ and $\mrow{7}$ are linearly independent, then $rank(\mrow{2},\mrow{4},\mrow{1},\mrow{3},\mrow{5},\mrow{7}) = 6$, hence $m_0(\V{\omega}+\V{\pi}_6)\neq 0$. Therefore, $[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)] = [*,0,0,*]$. In addition, $d_{i,j} = 0,\, \forall(i,j)$ except $(0,6)$, so $$\mathfrak{D}(\V{\omega}) = [d_{0,6}, 0, 0,0]^\top [0,0,0,1] + [0,0,0,d_{0,6}]^\top [-1,0,0,0].$$  By Proposition \ref{prop: feasibility}, the linear system \eqref{eq: LS-new} has no solution $\widetilde{m_0}$ and this proofs the lemma.\qed
 \begin{lemma}\label{lem: concentrate}
-If $\m{1} (\m{6})$ concentrates in $T_1 (T_6)$ and its essential support $\Omega_1\subset T_1 (\Omega_6\subset T_6)$, then $|\m{6}| > |\m{1}|\, a.e.$ on $T_6\bigcap \text{supp}(\widetilde{m_6})$ ($|\m{1}| > |\m{6}|\,a.e.$ on $T_1\bigcap\text{supp}(\widetilde{m_1})$).
+If $\m{1} (\m{6})$ concentrates in $T_1 (T_6)$, then $|\m{6}| > |\m{1}|\,$ a.e. on $T_6\bigcap \text{supp}(\widetilde{m_6})$ ($|\m{1}| > |\m{6}|$ 
+a.e. on $T_1\bigcap\text{supp}(\widetilde{m_1})$).
 \end{lemma}
 \noindent{\it Proof}
-Let $B_6=\{\V{\omega}: |\m{6}| \leq |\m{1}|, \m{1}\neq 0\}\bigcap T_6$ and $B_1$ be its mirror set with respect to $\omega_y = \omega_x$ and suppose $|B_6|>0$, then $\int_{B_6}|\m{6}|\leq \int_{B_6}|\m{1}|$. Since $\m{1}$ concentrates in $T_1$, we know $\int_{B_1}|\m{1}| > \int_{B_6}|\m{1}|$. On the other hand, due to the symmetry of $\m{1},\m{6}$ and $B_1,B_6$, $\int_{B_1}|\m{1}| = \int_{B_6}|\m{6}|$, hence $\int_{B_6}|\m{1}| \geq \int_{B_1}|\m{1}| $ which results in contradiction.\qed
+Let $B_6=\{\V{\omega}: |\m{6}| \leq |\m{1}|\}\bigcap T_6\bigcap supp(\widetilde{m_1})$ and $B_1$ be its mirror set with respect to $\omega_1 = \omega_2$ and suppose $|B_6|>0$, then $\int_{B_6}|\m{6}|\leq \int_{B_6}|\m{1}|$. Since $\m{1}$ concentrates in $T_1$, we know $\int_{B_1}|\m{1}| > \int_{B_6}|\m{1}|$. On the other hand, due to the symmetry of $\m{1},\m{6}$ and $B_1,B_6$, $\int_{B_1}|\m{1}| = \int_{B_6}|\m{6}|$, hence $\int_{B_6}|\m{1}| \geq\int_{B_6}|\m{6}| = \int_{B_1}|\m{1}| $ which results in contradiction.\qed
 
 \begin{proposition}
-If  $m_1\,(m_6)$ concentrates within $T_1\,(T_6)$ and $\Omega_1\subset T_1\,(\Omega_6\subset T_6)$, then $\m{1} = \m{6} = 0,\, a.e. \,\V{\omega}\in S_\rho + \V{\pi}_1$.
+If  $m_1\,(m_6)$ concentrates within $T_1\,(T_6)$, then $\m{1} = \m{6} = 0,\, a.e. \,\V{\omega}\in S_\rho + \V{\pi}_1$.
 \end{proposition}
 \noindent{\it Proof.}
-By Lemma \ref{lem: concentrate}, $|\m{1}| > |\m{6}|\, a.e.$ on $\Omega_1':= (S_\rho + \V{\pi}_7)\bigcap T_1 = (S_\rho+\V{\pi}_1)\bigcap T_6+(\pi,\pi)$. By Lemma \ref{lem: rank1}, $\exists\,\alpha_{\V{\omega}}\in\mathbb{C}, s.t.\,\mrow{1}(\V{\omega}) = \alpha_{\V{\omega}}\,\mrow{7}(\V{\omega})$, hence $|\widetilde{m_1}(\V{\omega})| = |\alpha_{\V{\omega}}|\cdot|\widetilde{m_1}(\V{\omega}-(\pi,\pi))| \geq |\alpha_{\V{\omega}}|\cdot|\widetilde{m_6}(\V{\omega}-(\pi,\pi))| = |\m{6}|, a.e. $ on $\Omega_6':= (S_\rho+\pi_1)\bigcap T_6$. Therefore, $\int_{\Omega_6'}|\widetilde{m_1}| \geq \int_{\Omega_6'}|\widetilde{m_6}|$, which will contradict Lemma \ref{lem: concentrate} unless $|\Omega_6'\bigcap\text{supp}(\widetilde{m_6})| = 0$, or equivalently $\alpha_{\V{\omega}}=0$ and so $\m{6} = \m{1} = 0,\,a.e.$ on $(S_\rho+\V{\pi}_1)\bigcap T_6$. By symmetry, $\m{6}=\m{1} = 0,\,a.e. $ on $(S_\rho+\V{\pi}_1)\bigcap T_1$ as well.\qed
+Consider frequency domain $S_\rho' = S_\rho\bigcap\{\omega_1<\omega_2\}.$ By Lemma \ref{lem: rank1}, $\exists\,\alpha_{\V{\omega}}\in\mathbb{C}, s.t.\,\mrow{1}(\V{\omega}) = \alpha_{\V{\omega}}\,\mrow{7}(\V{\omega}),\, \forall\, \V{\omega}\in S_\rho',$ i.e. $\widetilde{m_1}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_1}(\V{\omega} + \V{\pi}_7)$ and $\widetilde{m_6}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_6}(\V{\omega} + \V{\pi}_7)$. On the other hand, Lemma \ref{lem: concentrate} implies that $|\widetilde{m_1}(\V{\omega} + \V{\pi}_7)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_7)|$, hence $|\widetilde{m_1}(\V{\omega} + \V{\pi}_1)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_1)|$. Let $\Omega_6':= (S_\rho+\pi_1)\bigcap T_6$, then $\int_{\Omega_6'}|\m{1}| \geq\int_{\Omega_6'}|\m{6}|$, which will contradict Lemma \ref{lem: concentrate} unless $|\Omega_6'\bigcap\text{supp}(\widetilde{m_6})| = 0$, or equivalently $\alpha_{\V{\omega}}=0$ and so $\m{6} = \m{1} = 0,\,a.e.$ on $\Omega_6'$. By symmetry, $\m{6}=\m{1} = 0,\,a.e. $ on $(S_\rho+\V{\pi}_1)\setminus \Omega_6'$ as well.\qed
 
 \begin{proposition}
-$\m{1},\m{3}$ are not continuous at $\V{\pi}_1,\V{\pi}_7$ and $\m{5},\m{7}$ are not continuous at $\V{\pi}_3,\V{\pi}_5$.
+$\m{1},\m{6}$ are not continuous at both $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 \end{proposition}
 \noindent{\it Proof}
-If $\m{1}$ is continuous at $\V{\pi}_1$, then $\widetilde{m_1}(\V{\pi}_1) = \lim_{\alpha\rightarrow 1^-}\widetilde{m_1}(\V{\omega}(\alpha)) = 0$, where $\{\V{\omega}(\alpha),\,0\leq \alpha<1\} \subset S_\rho + \V{\pi}_1$ and $\V{\omega}(1^-) = \V{\pi}_1$. Similarly, we have $\widetilde{m_6}(\V{\pi}_1) = 0$. Applying the same argument of $S_\rho$ to its rotation of 180 degree, we have $\widetilde{m_1}(\V{\pi}_7) = \widetilde{m_6}(\V{\pi}_7) = 0$. Therefore $\mrow{1}(0) = \mrow{7}(0) = \mathbf{0}$ and from \eqref{eq: m0C} $m_0^C(0)=0$ so that $m_0(0)=0$, %  On the other hand, Proposition\ref{prop: origin-det} implies that $m_0(0) = 0$ as $a = |\widetilde{m_1}(\pi_1)| = 0$,
- which results in contradiction.\qed\\[1em]
-The following theorem summarizes the necessary condition derived from the singularity condition of $\M[2:8,:] $\eqref{eq: singular-cond}. 
+If $\m{1}$ is continuous at $(\frac{\pi}{2},\frac{\pi}{2})$, then $\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2}) = \lim_{\alpha\rightarrow 1^-}\widetilde{m_1}(\V{\omega}(\alpha)) = 0$, where $\{\V{\omega}(\alpha),\,0\leq \alpha<1\} \subset S_\rho + \V{\pi}_1$ and $\V{\omega}(1) = (\frac{\pi}{2},\frac{\pi}{2})$. Similarly, we have $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2}) = 0$. The continuity at $(-\frac{\pi}{2},-\frac{\pi}{2})$ implies $\widetilde{m_1}(-\frac{\pi}{2},-\frac{\pi}{2}) = \widetilde{m_6}(-\frac{\pi}{2},-\frac{\pi}{2}) = 0$. Therefore $\mrow{1}(0) = \mrow{7}(0) = \mathbf{0}$ which results in contradiction with Lemma \ref{lem: rank1}.\qed\\[1em]%and from \eqref{eq: m0C} $m_0^C(0)=0$ so that $m_0(0)=0$, %  On the other hand, Proposition\ref{prop: origin-det} implies that $m_0(0) = 0$ as $a = |\widetilde{m_1}(\pi_1)| = 0$, which results in contradiction.
+The following theorem summarizes our main result.
 \begin{theorem}\label{thm: thm}
-If  $\m{i}$ concentrates in $T_i$ with essential support $\Omega_i\subset T_i$ and $m_1,m_6$ are symmetric to each other or $m_3,m_4$ are symmetric to each other,  then  \eqref{eq: LS-new} doesn't have feasible solution given continuous $\m{i}$.
+If  $\m{i}$ concentrates in $T_i$ and $\m{1},\m{6}$ are symmetric to each other,  then  \eqref{eq: LS-new} doesn't have feasible solution given continuous $\m{1}$ and $\m{6}$.
 \end{theorem}
 
 \subsection{Design of input $\m{i}$}\label{sec: phase-design}
@@ -406,7 +433,6 @@ where we require strong orthogonal constraints on pair of shifts corresponding t
 \subsection{Computing $m_0$}\label{subsec: compute-m0}
 \textcolor{red}{Remove this sub-section, or place it after the main result on discontinuity}.
 
-Therefore, there is a unique row $\M[k_{\V{\omega}},:],\,k_\omega\in\{2,\cdots,8\}$ such that removing it from $\M$ gives a non-singular square matrix $\M[-k_{\V{\omega}},:]$. By Cramer's rule, $$m_0(\V{\omega}) = det(\M_{1,1}[-k_{\V{\omega}},:])/det(\M[-k_{\V{\omega}},:]),$$ where $\det(\M_{1,1}[-k_{\V{\omega}},:])$ is the minor of $\M[-k_{\V{\omega}},:]$ associated with $\m{0}$. 
 Let $C_{\V{\omega}} = det(\M[-k_{\V{\omega}},:])$, then we have the following observation.
 \begin{lemma}\label{lem: equal-det}
 $C_{\V{\omega}} = C_{\V{\omega}+\V{\pi}_2} = C_{\V{\omega}+\V{\pi}_4} = C_{\V{\omega}+\V{\pi}_6}$
