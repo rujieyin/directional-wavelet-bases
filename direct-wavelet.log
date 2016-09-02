@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 SEP 2016 08:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 SEP 2016 08:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -361,13 +361,14 @@ LaTeX Font Info:    Try loading font information for U+euf on input line 192.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[10] <./bi-orth/figure/triangle-partition.png, id=80, 1076.823pt x 1057.551pt>
-File: ./bi-orth/figure/triangle-partition.png Graphic file (type png)
+[10]
+<./bi-orth/figure/triangle-partition-new.png, id=80, 154.6578pt x 156.8259pt>
+File: ./bi-orth/figure/triangle-partition-new.png Graphic file (type png)
 
-<use ./bi-orth/figure/triangle-partition.png>
-Package pdftex.def Info: ./bi-orth/figure/triangle-partition.png used on input 
-line 227.
-(pdftex.def)             Requested size: 137.9979pt x 135.51775pt.
+<use ./bi-orth/figure/triangle-partition-new.png>
+Package pdftex.def Info: ./bi-orth/figure/triangle-partition-new.png used on in
+put line 227.
+(pdftex.def)             Requested size: 137.9979pt x 139.93114pt.
 
 <./bi-orth/figure/S_shifts2.png, id=82, 217.7736pt x 206.9331pt>
 File: ./bi-orth/figure/S_shifts2.png Graphic file (type png)
@@ -376,8 +377,8 @@ File: ./bi-orth/figure/S_shifts2.png Graphic file (type png)
 Package pdftex.def Info: ./bi-orth/figure/S_shifts2.png used on input line 246.
 
 (pdftex.def)             Requested size: 137.9979pt x 131.13266pt.
- [11 <./bi-orth/figure/triangle-partition.png>] [12 <./bi-orth/figure/S_shifts2
-.png>]
+ [11 <./bi-orth/figure/triangle-partition-new.png>] [12 <./bi-orth/figure/S_shi
+fts2.png>]
 Overfull \hbox (7.91522pt too wide) in paragraph at lines 304--306
 [][] \OMS/cmsy/m/n/10 j[]\OT1/cmr/m/n/10 ([])\OMS/cmsy/m/n/10 j$\OT1/cmr/m/n/10
  . Since $[]([])$ con-cen-trates in $\OML/cmm/m/it/10 T[]$\OT1/cmr/m/n/10 , we 
@@ -671,7 +672,7 @@ pdf>]) (./direct-wavelet.bbl
 -m-compare-3-2-eps-converted-to.pdf>]) [25] (./direct-wavelet.aux) ) 
 Here is how much of TeX's memory you used:
  4139 strings out of 493089
- 63611 string characters out of 6134842
+ 63631 string characters out of 6134842
  132935 words of memory out of 5000000
  7475 multiletter control sequences out of 15000+600000
  23396 words of font info for 90 fonts, out of 8000000 for 9000
@@ -723,7 +724,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 e/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on direct-wavelet.pdf (25 pages, 1422220 bytes).
+Output written on direct-wavelet.pdf (25 pages, 1197515 bytes).
 PDF statistics:
  408 PDF objects out of 1000 (max. 8388607)
  254 compressed objects within 3 object streams
