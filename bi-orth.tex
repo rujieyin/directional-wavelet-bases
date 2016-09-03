@@ -333,7 +333,7 @@ Following the orthonormal construction in \cite{yin2014orthshear}, we consider $
  and $|\m{k}|$ have certain symmetry. We want to design the phase $\V{\eta}_k$ such that $m_0(\V{\omega}) > 0, \; \forall \omega\in S_1$. This is the same as requiring $\Msub$ to be full rank.
  We first show the necessary conditions on phases $\V{\eta}$ of the full rank requirement on $\Msub$.
  
-\begin{lemma}
+\begin{lemma}\label{lem: phase-ineq}
 If $\exists\,\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2},0)\},\,s.t. \,m_0(\V{\omega})>0,$ then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}\,2\pi)$. 
 \end{lemma} 
 \noindent {\it Proof}
@@ -415,31 +415,41 @@ The product of singular values of $\V{B}$ is
 \sqrt{\text{det}(\V{B}^* \V{B})} = 4a^3\sqrt{a^2 K_1^2K_2^2 + b^2(Q_1K_2^2 + Q_2K_1^2)},
 \end{align}
 where $ Q_1 = 1 - \cos(\V{\pi}_6^\top(\V{\eta}_1-\V{\eta}_6))\cos(\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)), Q_2 = 1 - \cos(\V{\pi}_6^\top(\V{\eta}_3-\V{\eta}_4))\cos(\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)), K_1 = \sin(\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)), K_2 = \sin(\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)).$ If $\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6) = \V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4) = \pi (mod\, 2\pi)$, then $K_1 = K_2 = 0$ and $\V{B}$ becomes singular.\qed\\
-
-A stronger condition is to require $\Msub[:,1]$ and $\Msub[:,6]$ be orthogonal, which is equivalent to 
+In Lemma \ref{lem: phase-ineq}, $\Msub[:,1]$ and $\Msub[:,6]$ being independent only guarantees $\det(\Msub[-k_{\V{\omega}},:])\neq 0$. However, \eqref{eq: m0-cramer} implies that $|m_0(\V{\omega})|\propto \det(\Msub[-k_{\V{\omega}},:])$ hence it is preferred to maximize the determinant. Since
+\begin{align*}
+\det(\Msub[-k_{\V{\omega}}, :]) = \det\big(\big[\, \Msub[-k_{\V{\omega}},-6], \;\Msub[-k_{\V{\omega}},6] + c \cdot\Msub[-k_{\V{\omega}},1]  \,\big]\big),\quad 
+\end{align*}
+$\forall c\in \mathbb{C}$, the angle between $\Msub[:,1]$ and $\Msub[:,6]$ should be maximized.
+Therefore, a stronger condition than ({\bf c1.1}) is to require $\Msub[:,1]$ and $\Msub[:,6]$ be orthogonal, which is equivalent to 
 \begin{align*}
 (\V{\eta}_1-\V{\eta}_6)^\top(\pi/2, \pi/2) = \pi \,(\text{mod}\, 2\pi).\tag{\bf c2.1}
 \end{align*}
-and 
+The stronger condition corresponding to ({\bf c1.2}) is 
 \begin{align*}
-(\V{\eta}_3-\V{\eta}_4)^\top(-\pi/2,\pi/2)=\pi(\text{mod},\,2\pi)\tag{\bf c2.2}
-\end{align*} from the stronger orthogonal condition.
-{\it Remark}
-If $|\m{1}| = |\m{2}|$ on $\{\omega_y = 3\omega_x,\,|\omega_x| > \frac{\pi}{2}\}$ and $m_0(\V{\omega}) > 0$ on $\{\omega_y = 3\omega_x\pm \pi,\,|\omega_y| <\frac{\pi}{2}\}$, then the same conditions ({\bf c1}) and ({\bf c2}) can be derived from full rank and orthogonal conditions respectively for tuples $(\,\V{\eta}_1,\,\V{\eta}_2,(-\pi/2,\pi/2)\,),\,(\,\V{\eta}_2,\V{\eta}_3,(\pi/2,\pi/2)\,),\,(\V{\eta}_4,\V{\eta}_5,\,(\pi/2,\pi/2)\,)$ and $(\,\V{\eta}_5,\V{\eta}_6,\,(-\pi/2,\pi/2)\,)$. 
+(\V{\eta}_3-\V{\eta}_4)^\top(-\pi/2,\pi/2)=\pi(\text{mod},\,2\pi).\tag{\bf c2.2}
+\end{align*} %from the stronger orthogonal condition.
 
- If the previous strong orthogonal condition on $\V{\eta}_1, \V{\eta}_3, \V{\eta}_4,\V{\eta}_6$ holds, then $K_1 = K_2 = 0$ and $m_0(0)=m_0^C(0)= 0$. Therefore, the strong orthogonal condition ({\bf c2}) cannot be satisfied at the same time. 
-In particular, we consider the following constraints on phase $\V{\eta}_k\in \mathbb{Z}^2,\, k = 1,\cdots,6$:
-\begin{align}
-\label{eq: phase-constraint}
-&(\V{\eta}_1-\V{\eta}_2)^\top(-\pi/2, \pi/2) = (\V{\eta}_5-\V{\eta}_6)^\top(-\pi/2,\pi/2) = \pi\, (\text{mod}\, 2\pi)\notag\\
-&(\V{\eta}_2-\V{\eta}_3)^\top(\pi/2,\pi/2) = (\V{\eta}_4-\V{\eta}_5)^\top(\pi/2,\pi/2) = \pi\, (\text{mod}\, 2\pi)\\
-&(\V{\eta}_3-\V{\eta}_4)^\top(-\pi/2, \pi/2) =-\pi/2\,(\text{mod}\,2\pi)\quad (\V{\eta}_6 - \V{\eta}_1)^\top(\pi/2,\pi/2) = \pi/2\, (\text{mod}\,2\pi) \notag
-\end{align}
-where we require strong orthogonal constraints on pair of shifts corresponding to $\widetilde{m}$ function with non-diagonal common boundary and weaker constraints on $(\V{\eta}_1,\V{\eta}_6)$ and $(\V{\eta}_3,\V{\eta}_4)$. A solution to \eqref{eq: phase-constraint} is 
+%{\it Remark}
+%f $|\m{1}| = |\m{2}|$ on $\{\omega_y = 3\omega_x,\,|\omega_x| > \frac{\pi}{2}\}$ and $m_0(\V{\omega}) > 0$ on $\{\omega_y = 3\omega_x\pm \pi,\,|\omega_y| <\frac{\pi}{2}\}$, then the same conditions ({\bf c1}) and ({\bf c2}) can be derived from full rank and orthogonal conditions respectively for tuples $(\,\V{\eta}_1,\,\V{\eta}_2,(-\pi/2,\pi/2)\,),\,(\,\V{\eta}_2,\V{\eta}_3,(\pi/2,\pi/2)\,),\,(\V{\eta}_4,\V{\eta}_5,\,(\pi/2,\pi/2)\,)$ and $(\,\V{\eta}_5,\V{\eta}_6,\,(-\pi/2,\pi/2)\,)$. 
+
+% If the previous strong orthogonal condition on $\V{\eta}_1, \V{\eta}_3, \V{\eta}_4,\V{\eta}_6$ holds, then $K_1 = K_2 = 0$ and $m_0(0)=m_0^C(0)= 0$. Therefore, the strong orthogonal conditions ({\bf c2}) cannot be satisfied at the same time. 
+%In particular, we consider the following constraints on phase $\V{\eta}_k\in \mathbb{Z}^2,\, k = 1,\cdots,6$:
+Unfortunately, Proposition \ref{prop: origin-det} prevents ({\bf c2.1}) and ({\bf c2.2}) from holding simultaneously.
+We propose the following set of phases
 \begin{align}\label{eq: phase-sol}
 \V{\eta}_1 = (0,0),\; \V{\eta}_2 = (-1,1),\; \V{\eta}_3 = (0,2),\notag\\
 \V{\eta}_4 = (1,0),\; \V{\eta}_5 = (0,-1),\; \V{\eta}_6 = (0,1).
 \end{align}
+where
+\begin{align*}
+%\label{eq: phase-constraint}
+%&(\V{\eta}_1-\V{\eta}_2)^\top(-\pi/2, \pi/2) = (\V{\eta}_5-\V{\eta}_6)^\top(-\pi/2,\pi/2) = \pi\, (\text{mod}\, 2\pi)\notag\\
+%&(\V{\eta}_2-\V{\eta}_3)^\top(\pi/2,\pi/2) = (\V{\eta}_4-\V{\eta}_5)^\top(\pi/2,\pi/2) = \pi\, (\text{mod}\, 2\pi)\\
+%&
+(\V{\eta}_3-\V{\eta}_4)^\top(-\pi/2, \pi/2) &=-\pi/2\,(\text{mod}\,2\pi)\notag\\
+ (\V{\eta}_6 - \V{\eta}_1)^\top(\pi/2,\pi/2) &= \pi/2\, (\text{mod}\,2\pi)\notag
+\end{align*}
+%where we require strong orthogonal constraints on pair of shifts corresponding to $\widetilde{m}$ function with non-diagonal common boundary and weaker constraints on $(\V{\eta}_1,\V{\eta}_6)$ and $(\V{\eta}_3,\V{\eta}_4)$. A solution to \eqref{eq: phase-constraint} is 
 
 \subsection{Computing $m_0$}\label{subsec: compute-m0}
 \textcolor{red}{Remove this sub-section, or place it after the main result on discontinuity}.

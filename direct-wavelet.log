@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 SEP 2016 19:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  2 SEP 2016 23:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -411,28 +411,14 @@ Overfull \hbox (15.92499pt too wide) in paragraph at lines 376--377
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 416--418
-
- []
-
-
-Overfull \hbox (22.46526pt too wide) in paragraph at lines 426--429
-\OT1/cmr/m/n/10 spec-tively for tu-ples $( [][]\OML/cmm/m/it/10 ;  [][]; \OT1/c
-mr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 ^^Y=\OT1/cmr/m/n/10 2\OML/cmm/m
-/it/10 ; ^^Y=\OT1/cmr/m/n/10 2) )\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 ( [][]\OML
-/cmm/m/it/10 ; [][]; \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Y=\OT1/cmr/m/n/10 2\OM
-L/cmm/m/it/10 ; ^^Y=\OT1/cmr/m/n/10 2) )\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 ([]
-[]\OML/cmm/m/it/10 ; [][];  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^Y=\OT1/cmr/m/n/
-10 2\OML/cmm/m/it/10 ; ^^Y=\OT1/cmr/m/n/10 2) )$
- []
-
-
-Overfull \hbox (7.62056pt too wide) in paragraph at lines 437--437
-[] 
+Overfull \hbox (28.43977pt too wide) in paragraph at lines 416--419
+\OT1/cmr/m/n/10 In Lemma 5.9[], $[][:\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1]$ and
+ $[][:\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6]$ be-ing in-de-pen-dent only guar-an
+-tees $[]([][\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 k[]; \OT1/cmr/m/n/10 :
  []
 
 [15]
-Overfull \hbox (15.34451pt too wide) in paragraph at lines 458--459
+Overfull \hbox (15.34451pt too wide) in paragraph at lines 468--469
 []\OT1/cmr/bx/n/10 Proposition 5.12. []$\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ([]
 )\OML/cmm/m/it/10 ;  []\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ; m[]\OT1/cmr/m/n/1
 0 ([])\OML/cmm/m/it/10 ;  i \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 ; :::; \OT1/cmr
@@ -441,7 +427,7 @@ Overfull \hbox (15.34451pt too wide) in paragraph at lines 458--459
  []
 
 
-Overfull \hbox (9.11008pt too wide) in paragraph at lines 464--464
+Overfull \hbox (9.11008pt too wide) in paragraph at lines 474--474
 [] 
  []
 
@@ -449,7 +435,7 @@ Overfull \hbox (9.11008pt too wide) in paragraph at lines 464--464
 File: ./bi-orth/figure/feasible_mi.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_mi.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_mi.pdf used on input line 50
+Package pdftex.def Info: ./bi-orth/figure/feasible_mi.pdf used on input line 51
 7.
 (pdftex.def)             Requested size: 165.59853pt x 108.81679pt.
 
@@ -457,7 +443,7 @@ Package pdftex.def Info: ./bi-orth/figure/feasible_mi.pdf used on input line 50
 File: ./bi-orth/figure/feasible_m0.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m0.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_m0.pdf used on input line 51
+Package pdftex.def Info: ./bi-orth/figure/feasible_m0.pdf used on input line 52
 1.
 (pdftex.def)             Requested size: 60.72057pt x 60.84482pt.
 
@@ -466,7 +452,7 @@ File: ./bi-orth/figure/feasible_m0_log.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m0_log.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_m0_log.pdf used on input lin
-e 515.
+e 525.
 (pdftex.def)             Requested size: 77.27995pt x 59.95367pt.
 
 <./bi-orth/figure/feasible_check.pdf, id=108, 402.54391pt x 365.6862pt>
@@ -474,7 +460,7 @@ File: ./bi-orth/figure/feasible_check.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_check.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_check.pdf used on input line
- 535.
+ 545.
 (pdftex.def)             Requested size: 82.80115pt x 75.21724pt.
 
 <./bi-orth/figure/feasible_tm0.pdf, id=109, 344.7279pt x 345.4506pt>
@@ -482,7 +468,7 @@ File: ./bi-orth/figure/feasible_tm0.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_tm0.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_tm0.pdf used on input line 5
-40.
+50.
 (pdftex.def)             Requested size: 82.5947pt x 82.76752pt.
 
 <./bi-orth/figure/feasible_m0tm0.pdf, id=110, 396.0396pt x 365.6862pt>
@@ -490,7 +476,7 @@ File: ./bi-orth/figure/feasible_m0tm0.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m0tm0.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_m0tm0.pdf used on input line
- 541.
+ 551.
 (pdftex.def)             Requested size: 91.28731pt x 84.29019pt.
  [17 <./bi-orth/figure/feasible_mi.pdf> <./bi-orth/figure/feasible_m0.pdf
 
@@ -505,7 +491,7 @@ ge
 File: ./bi-orth/figure/feasible_m.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_m.pdf used on input line 560
+Package pdftex.def Info: ./bi-orth/figure/feasible_m.pdf used on input line 570
 .
 (pdftex.def)             Requested size: 155.24895pt x 97.61679pt.
 
@@ -514,7 +500,7 @@ File: ./bi-orth/figure/feasible_mi_time.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_mi_time.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_mi_time.pdf used on input li
-ne 563.
+ne 573.
 (pdftex.def)             Requested size: 149.03766pt x 95.27728pt.
 ) (./conclusion.tex) [18 <./bi-orth/figure/feasible_check.pdf> <./bi-orth/figur
 e/feasible_tm0.pdf
@@ -663,8 +649,8 @@ pdf>]) (./direct-wavelet.bbl
 -m-compare-3-2-eps-converted-to.pdf>]) [25] (./direct-wavelet.aux) ) 
 Here is how much of TeX's memory you used:
  4140 strings out of 493089
- 63645 string characters out of 6134842
- 131945 words of memory out of 5000000
+ 63640 string characters out of 6134842
+ 131946 words of memory out of 5000000
  7476 multiletter control sequences out of 15000+600000
  23396 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -715,7 +701,7 @@ e/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 e/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
 /texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on direct-wavelet.pdf (25 pages, 1197917 bytes).
+Output written on direct-wavelet.pdf (25 pages, 1197733 bytes).
 PDF statistics:
  408 PDF objects out of 1000 (max. 8388607)
  254 compressed objects within 3 object streams
