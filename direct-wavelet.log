@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  4 SEP 2016 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  4 SEP 2016 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -369,7 +369,7 @@ l-umn $[][]$ yields $[]([][\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0\OML/cmm/m/it/1
 0 ; \OT1/cmr/m/n/10 :
  []
 
-LaTeX Font Info:    Try loading font information for U+euf on input line 212.
+LaTeX Font Info:    Try loading font information for U+euf on input line 211.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [10]
@@ -378,26 +378,26 @@ File: ./bi-orth/figure/triangle-partition-new.png Graphic file (type png)
 
 <use ./bi-orth/figure/triangle-partition-new.png>
 Package pdftex.def Info: ./bi-orth/figure/triangle-partition-new.png used on in
-put line 247.
+put line 248.
 (pdftex.def)             Requested size: 137.9979pt x 139.93114pt.
  [11 <./bi-orth/figure/triangle-partition-new.png>]
 <./bi-orth/figure/S_shifts2.png, id=84, 217.7736pt x 206.9331pt>
 File: ./bi-orth/figure/S_shifts2.png Graphic file (type png)
 
 <use ./bi-orth/figure/S_shifts2.png>
-Package pdftex.def Info: ./bi-orth/figure/S_shifts2.png used on input line 266.
+Package pdftex.def Info: ./bi-orth/figure/S_shifts2.png used on input line 267.
 
 (pdftex.def)             Requested size: 172.5pt x 163.9174pt.
  [12 <./bi-orth/figure/S_shifts2.png>]
-Overfull \hbox (9.23888pt too wide) in paragraph at lines 330--331
+Overfull \hbox (9.23888pt too wide) in paragraph at lines 331--332
 []\OT1/cmr/bx/n/10 Proposition 5.7. []\OT1/cmr/m/it/10 If $\OML/cmm/m/it/10 m[]
  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 con-c
 en-trates within $\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]\OT
 1/cmr/m/n/10 )$\OT1/cmr/m/it/10 , then $[]\OT1/cmr/m/n/10 ([]) = []([]) =
  []
 
-[13]
-Overfull \hbox (8.38548pt too wide) in paragraph at lines 336--337
+
+Overfull \hbox (8.38548pt too wide) in paragraph at lines 337--338
 []\OT1/cmr/bx/n/10 Proposition 5.8. []$[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ;
  []\OT1/cmr/m/n/10 ([])$ \OT1/cmr/m/it/10 are not con-tin-u-ous at both $\OT1/c
 mr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 and $\OT1
@@ -405,14 +405,14 @@ mr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 and $\OT1
 1/cmr/m/n/10 )$\OT1/cmr/m/it/10 . 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 379--383
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 380--384
 
  []
 
-[14] [15]
-Overfull \hbox (15.34451pt too wide) in paragraph at lines 491--492
-[]\OT1/cmr/bx/n/10 Proposition 5.13. []$\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ([]
+[14] [15] [16]
+Overfull \hbox (15.34451pt too wide) in paragraph at lines 568--569
+[]\OT1/cmr/bx/n/10 Proposition 5.14. []$\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ([]
 )\OML/cmm/m/it/10 ;  []\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ; m[]\OT1/cmr/m/n/1
 0 ([])\OML/cmm/m/it/10 ;  i \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 ; :::; \OT1/cmr
 /m/n/10 6$ \OT1/cmr/m/it/10 sat-isfy [] given $[]\OT1/cmr/m/n/10 ([])\OML/cmm/m
@@ -420,75 +420,34 @@ Overfull \hbox (15.34451pt too wide) in paragraph at lines 491--492
  []
 
 
-Overfull \hbox (9.11008pt too wide) in paragraph at lines 497--497
+Overfull \hbox (9.11008pt too wide) in paragraph at lines 574--574
 [] 
  []
 
-[16] <./bi-orth/figure/feasible_mi.pdf, id=104, 377.24939pt x 247.88611pt>
+[17] <./bi-orth/figure/feasible_mi.pdf, id=107, 377.24939pt x 247.88611pt>
 File: ./bi-orth/figure/feasible_mi.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_mi.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_mi.pdf used on input line 54
-0.
+Package pdftex.def Info: ./bi-orth/figure/feasible_mi.pdf used on input line 61
+7.
 (pdftex.def)             Requested size: 165.59853pt x 108.81679pt.
 
-<./bi-orth/figure/feasible_m0.pdf, id=105, 344.7279pt x 345.4506pt>
+<./bi-orth/figure/feasible_m0.pdf, id=108, 344.7279pt x 345.4506pt>
 File: ./bi-orth/figure/feasible_m0.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m0.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_m0.pdf used on input line 54
-4.
+Package pdftex.def Info: ./bi-orth/figure/feasible_m0.pdf used on input line 62
+1.
 (pdftex.def)             Requested size: 60.72057pt x 60.84482pt.
 
-<./bi-orth/figure/feasible_m0_log.pdf, id=106, 448.07399pt x 347.61871pt>
+<./bi-orth/figure/feasible_m0_log.pdf, id=109, 448.07399pt x 347.61871pt>
 File: ./bi-orth/figure/feasible_m0_log.pdf Graphic file (type pdf)
 
 <use ./bi-orth/figure/feasible_m0_log.pdf>
 Package pdftex.def Info: ./bi-orth/figure/feasible_m0_log.pdf used on input lin
-e 548.
+e 625.
 (pdftex.def)             Requested size: 77.27995pt x 59.95367pt.
- [17]
-<./bi-orth/figure/feasible_check.pdf, id=110, 402.54391pt x 365.6862pt>
-File: ./bi-orth/figure/feasible_check.pdf Graphic file (type pdf)
-
-<use ./bi-orth/figure/feasible_check.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_check.pdf used on input line
- 568.
-(pdftex.def)             Requested size: 82.80115pt x 75.21724pt.
-
-<./bi-orth/figure/feasible_tm0.pdf, id=111, 344.7279pt x 345.4506pt>
-File: ./bi-orth/figure/feasible_tm0.pdf Graphic file (type pdf)
-
-<use ./bi-orth/figure/feasible_tm0.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_tm0.pdf used on input line 5
-73.
-(pdftex.def)             Requested size: 82.5947pt x 82.76752pt.
-
-<./bi-orth/figure/feasible_m0tm0.pdf, id=112, 396.0396pt x 365.6862pt>
-File: ./bi-orth/figure/feasible_m0tm0.pdf Graphic file (type pdf)
-
-<use ./bi-orth/figure/feasible_m0tm0.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_m0tm0.pdf used on input line
- 574.
-(pdftex.def)             Requested size: 91.28731pt x 84.29019pt.
-
-<./bi-orth/figure/feasible_m.pdf, id=113, 406.88008pt x 255.8358pt>
-File: ./bi-orth/figure/feasible_m.pdf Graphic file (type pdf)
-
-<use ./bi-orth/figure/feasible_m.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_m.pdf used on input line 593
-.
-(pdftex.def)             Requested size: 155.24895pt x 97.61679pt.
-
-<./bi-orth/figure/feasible_mi_time.pdf, id=114, 404.712pt x 258.72661pt>
-File: ./bi-orth/figure/feasible_mi_time.pdf Graphic file (type pdf)
-
-<use ./bi-orth/figure/feasible_mi_time.pdf>
-Package pdftex.def Info: ./bi-orth/figure/feasible_mi_time.pdf used on input li
-ne 596.
-(pdftex.def)             Requested size: 149.03766pt x 95.27728pt.
-) (./conclusion.tex [18 <./bi-orth/figure/feasible_mi.pdf> <./bi-orth/figure/fe
-asible_m0.pdf
+ [18 <./bi-orth/figure/feasible_mi.pdf> <./bi-orth/figure/feasible_m0.pdf
 
 pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_m0.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
@@ -496,11 +455,47 @@ pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_m0.pdf): PDF inclusion
 
 pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_m0_log.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
-> <./bi-orth/figure/feasible_check.pdf
+>] <./bi-orth/figure/feasible_check.pdf, id=132, 402.54391pt x 365.6862pt>
+File: ./bi-orth/figure/feasible_check.pdf Graphic file (type pdf)
 
-pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_check.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
-> <./bi-orth/figure/feasible_tm0.pdf
+<use ./bi-orth/figure/feasible_check.pdf>
+Package pdftex.def Info: ./bi-orth/figure/feasible_check.pdf used on input line
+ 645.
+(pdftex.def)             Requested size: 82.80115pt x 75.21724pt.
+
+<./bi-orth/figure/feasible_tm0.pdf, id=133, 344.7279pt x 345.4506pt>
+File: ./bi-orth/figure/feasible_tm0.pdf Graphic file (type pdf)
+
+<use ./bi-orth/figure/feasible_tm0.pdf>
+Package pdftex.def Info: ./bi-orth/figure/feasible_tm0.pdf used on input line 6
+50.
+(pdftex.def)             Requested size: 82.5947pt x 82.76752pt.
+
+<./bi-orth/figure/feasible_m0tm0.pdf, id=134, 396.0396pt x 365.6862pt>
+File: ./bi-orth/figure/feasible_m0tm0.pdf Graphic file (type pdf)
+
+<use ./bi-orth/figure/feasible_m0tm0.pdf>
+Package pdftex.def Info: ./bi-orth/figure/feasible_m0tm0.pdf used on input line
+ 651.
+(pdftex.def)             Requested size: 91.28731pt x 84.29019pt.
+
+<./bi-orth/figure/feasible_m.pdf, id=135, 406.88008pt x 255.8358pt>
+File: ./bi-orth/figure/feasible_m.pdf Graphic file (type pdf)
+
+<use ./bi-orth/figure/feasible_m.pdf>
+Package pdftex.def Info: ./bi-orth/figure/feasible_m.pdf used on input line 670
+.
+(pdftex.def)             Requested size: 155.24895pt x 97.61679pt.
+
+<./bi-orth/figure/feasible_mi_time.pdf, id=136, 404.712pt x 258.72661pt>
+File: ./bi-orth/figure/feasible_mi_time.pdf Graphic file (type pdf)
+
+<use ./bi-orth/figure/feasible_mi_time.pdf>
+Package pdftex.def Info: ./bi-orth/figure/feasible_mi_time.pdf used on input li
+ne 673.
+(pdftex.def)             Requested size: 149.03766pt x 95.27728pt.
+) (./conclusion.tex [19 <./bi-orth/figure/feasible_check.pdf> <./bi-orth/figure
+/feasible_tm0.pdf
 
 pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_tm0.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
@@ -508,7 +503,7 @@ n: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_m0tm0.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
->]) (./parseval-cond.tex [19 <./bi-orth/figure/feasible_m.pdf> <./bi-orth/figur
+>]) (./parseval-cond.tex [20 <./bi-orth/figure/feasible_m.pdf> <./bi-orth/figur
 e/feasible_mi_time.pdf
 
 pdfTeX warning: pdflatex (file ./bi-orth/figure/feasible_mi_time.pdf): PDF incl
@@ -532,22 +527,22 @@ mm/m/it/10 ; \OT1/cmr/m/n/10 0)\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 (0\OML/cmm/m
 10 ; \OT1/cmr/m/n/10 1)\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 ,
  []
 
-[20]) (./m0-opt.tex
-<./bi-orth/figure/filters.jpg, id=175, 562.1pt x 421.575pt>
+[21]) (./m0-opt.tex
+<./bi-orth/figure/filters.jpg, id=179, 562.1pt x 421.575pt>
 File: ./bi-orth/figure/filters.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/filters.jpg>
 Package pdftex.def Info: ./bi-orth/figure/filters.jpg used on input line 6.
 (pdftex.def)             Requested size: 137.9979pt x 103.49583pt.
 
-<./bi-orth/figure/m-funcs.jpg, id=176, 562.1pt x 421.575pt>
+<./bi-orth/figure/m-funcs.jpg, id=180, 562.1pt x 421.575pt>
 File: ./bi-orth/figure/m-funcs.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/m-funcs.jpg>
 Package pdftex.def Info: ./bi-orth/figure/m-funcs.jpg used on input line 14.
 (pdftex.def)             Requested size: 172.5pt x 129.37462pt.
 
-<./bi-orth/figure/1d-m-compare.jpg, id=177, 546.04pt x 265.99374pt>
+<./bi-orth/figure/1d-m-compare.jpg, id=181, 546.04pt x 265.99374pt>
 File: ./bi-orth/figure/1d-m-compare.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/1d-m-compare.jpg>
@@ -555,24 +550,24 @@ Package pdftex.def Info: ./bi-orth/figure/1d-m-compare.jpg used on input line 2
 0.
 (pdftex.def)             Requested size: 137.9979pt x 67.22072pt.
 
-<./bi-orth/figure/1d-filter-compare.jpg, id=178, 527.9725pt x 231.86626pt>
+<./bi-orth/figure/1d-filter-compare.jpg, id=182, 527.9725pt x 231.86626pt>
 File: ./bi-orth/figure/1d-filter-compare.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/1d-filter-compare.jpg>
 Package pdftex.def Info: ./bi-orth/figure/1d-filter-compare.jpg used on input l
 ine 21.
 (pdftex.def)             Requested size: 137.9979pt x 60.60222pt.
- [21 <./bi-orth/figure/filters.jpg>] <./bi-orth/figure/2d-m-compare-1.jpg, id=1
-82, 308.15125pt x 128.48pt>
+ [22 <./bi-orth/figure/filters.jpg>] <./bi-orth/figure/2d-m-compare-1.jpg, id=1
+86, 308.15125pt x 128.48pt>
 File: ./bi-orth/figure/2d-m-compare-1.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/2d-m-compare-1.jpg>
 Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-1.jpg used on input line
  36.
 (pdftex.def)             Requested size: 155.24895pt x 64.72993pt.
- [22 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-o
+ [23 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-o
 rth/figure/1d-filter-compare.jpg> <./bi-orth/figure/2d-m-compare-1.jpg>]
-<./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf, id=186, 703.62875pt x 
+<./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf, id=190, 703.62875pt x 
 128.48pt>
 File: ./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -581,7 +576,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf
  used on input line 56.
 (pdftex.def)             Requested size: 279.4462pt x 51.02448pt.
 
-<./bi-orth/figure/2d-filter-compare-2-1-eps-converted-to.pdf, id=187, 706.64pt 
+<./bi-orth/figure/2d-filter-compare-2-1-eps-converted-to.pdf, id=191, 706.64pt 
 x 128.48pt>
 File: ./bi-orth/figure/2d-filter-compare-2-1-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -590,7 +585,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-filter-compare-2-1-eps-converted-t
 o.pdf used on input line 57.
 (pdftex.def)             Requested size: 279.4462pt x 50.80882pt.
 
-<./bi-orth/figure/2d-m-compare-2-2-eps-converted-to.pdf, id=188, 691.58376pt x 
+<./bi-orth/figure/2d-m-compare-2-2-eps-converted-to.pdf, id=192, 691.58376pt x 
 128.48pt>
 File: ./bi-orth/figure/2d-m-compare-2-2-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -599,7 +594,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-2-2-eps-converted-to.pdf
  used on input line 65.
 (pdftex.def)             Requested size: 279.4462pt x 51.91452pt.
 
-<./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.pdf, id=189, 690.58pt 
+<./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.pdf, id=193, 690.58pt 
 x 128.48pt>
 File: ./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.pdf Graphic file 
 (type pdf)
@@ -608,7 +603,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-filter-compare-2-2-eps-converted-t
 o.pdf used on input line 66.
 (pdftex.def)             Requested size: 279.4462pt x 51.99097pt.
 
-<./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf, id=190, 722.7pt x 128.48
+<./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf, id=194, 722.7pt x 128.48
 pt>
 File: ./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf Graphic file (type p
 df)
@@ -617,7 +612,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf u
 sed on input line 78.
 (pdftex.def)             Requested size: 310.4979pt x 55.20023pt.
 
-<./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf, id=191, 723.70375pt x 
+<./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf, id=195, 723.70375pt x 
 128.48pt>
 File: ./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -629,20 +624,20 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure/
+[24 <./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure/
 2d-filter-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure/2d-m-compare-2-2-
 eps-converted-to.pdf> <./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.
 pdf>]) (./direct-wavelet.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-[24 <./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf> <./bi-orth/figure/2d
--m-compare-3-2-eps-converted-to.pdf>]) [25] (./direct-wavelet.aux) ) 
+[25 <./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf> <./bi-orth/figure/2d
+-m-compare-3-2-eps-converted-to.pdf>]) [26] (./direct-wavelet.aux) ) 
 Here is how much of TeX's memory you used:
- 4141 strings out of 495005
- 63189 string characters out of 6181431
- 129161 words of memory out of 5000000
- 7228 multiletter control sequences out of 15000+600000
+ 4143 strings out of 495005
+ 63222 string characters out of 6181431
+ 129183 words of memory out of 5000000
+ 7230 multiletter control sequences out of 15000+600000
  23396 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,19n,38p,1187b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -689,10 +684,10 @@ ols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
 ls/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm7.pfb>
-Output written on direct-wavelet.pdf (25 pages, 1188592 bytes).
+Output written on direct-wavelet.pdf (26 pages, 1192994 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 251 compressed objects within 3 object streams
+ 408 PDF objects out of 1000 (max. 8388607)
+ 254 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
