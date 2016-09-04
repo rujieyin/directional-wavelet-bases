@@ -326,18 +326,21 @@ If  $\m{i}$ concentrates in $T_i$ and $\m{1},\m{6}$ are symmetric to each other,
 \end{theorem}
 
 \subsection{Design of input $\m{i}$}\label{sec: phase-design}
-Following the orthonormal construction in \cite{yin2014orthshear}, we consider $\m{1},$ $\cdots,\m{6}$ in the form 
+In this sub-section, we construct $\m{j},\, j = 1,\cdots,6,$ which concentrate in $T_i$ with high symmetry.
+Specifically, following the orthonormal construction in \cite{yin2014orthshear}, we consider $\m{j}$ in the form 
 \begin{align}\label{eq: m-form}
-\m{k} = e^{-i\V{\eta}_k^\top\V{\omega}}|\m{k}|,
+\m{k} = e^{-i\V{\eta}_j^\top\V{\omega}}|\m{k}|,\quad j = 1,\cdots,6
 \end{align}
- and $|\m{k}|$ have certain symmetry. We want to design the phase $\V{\eta}_k$ such that $m_0(\V{\omega}) > 0, \; \forall \omega\in S_1$. This is the same as requiring $\Msub$ to be full rank.
- We first show the necessary conditions on phases $\V{\eta}$ of the full rank requirement on $\Msub$.
+ where $|\m{j}|$'s have symmetries with respect to the two diagonals and the two axis. Figure \ref{fig: tm_i_m_0} shows such a design of $|\m{j}|$ in the left.
+ 
+Given the symmetries of $\m{j}$, for $|m_0(\V{\omega})| > 0,\, \forall\, |\V{\omega}| < \rho$, $\V{\eta}_j$ have to satisfy certain constraints.
+% We want to design the phase $\V{\eta}_k$ such that $m_0(\V{\omega}) > 0, \; \forall \omega\in S_1$. This is the same as requiring $\Msub$ to be full rank. We first show the necessary conditions on phases $\V{\eta}$ of the full rank requirement on $\Msub$.
  
 \begin{lemma}\label{lem: phase-ineq}
 If $\exists\,\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2},0)\},\,s.t. \,m_0(\V{\omega})>0,$ then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}\,2\pi)$. 
 \end{lemma} 
-\noindent {\it Proof}
-  If $m_0(\V{\omega})>0, \,\V{\omega}\in D_1$ then $\Msub$ is full rank, hence its columns are linearly independent. Due to symmetry, $|\widetilde{m_1}(\V{\omega})| = |\widetilde{m_6}(\V{\omega})|$ on $\{\omega_1=\omega_2\}$. Let $A = |\widetilde{m_1}(\V{\omega}+\V{\pi}_7)| = |\widetilde{m_6}(\V{\omega}+\V{\pi}_7)|$ and $B=|\widetilde{m_1}(\V{\omega}+\V{\pi}_6)| = |\widetilde{m_6}(\V{\omega}+\V{\pi}_6)|$, then the first and the last columns of $\Msub$ are
+\noindent {\it Proof.}
+As $\m{1}$ and $\m{6}$ concentrate in $T_1$ and $T_6$ respectively, $\widetilde{m_1}(\V{\omega} + \V{\pi}_i) = 0$ and  $\widetilde{m_6}(\V{\omega} + \V{\pi}_i) = 0$, $i = 1,\cdots, 5$. Due to symmetry, $|\widetilde{m_1}(\V{\omega})| = |\widetilde{m_6}(\V{\omega})|$ on $\{\omega_1=\omega_2\}$. Let $A = |\widetilde{m_1}(\V{\omega}+\V{\pi}_7)| = |\widetilde{m_6}(\V{\omega}+\V{\pi}_7)|$ and $B=|\widetilde{m_1}(\V{\omega}+\V{\pi}_6)| = |\widetilde{m_6}(\V{\omega}+\V{\pi}_6)|$, then the first and the last columns of $\Msub$ are
   \begin{align*}
   \Msub[:,1] = 
  \begin{bmatrix}
@@ -357,8 +360,9 @@ If $\exists\,\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2}
  Be^{i\V{\eta}_6^\top(\V{\omega}+\V{\pi}_7)}
  \end{bmatrix} .
 \end{align*}   
-Therefore, $\Msub[:,1]$ and $\Msub[:,6]$ being linearly independent implies that \\$e^{i(\V{\eta}_1^\top\V{\pi}_6 + \V{\eta}_6^\top\V{\pi}_7)}\neq e^{i(\V{\eta}_6^\top\V{\pi}_6 + \V{\eta}_1^\top\V{\pi}_7)}$%$e^{i(\V{\eta}_1-\V{\eta}_6)^\top(\V{\omega}+\V{\pi}_6)}\neq e^{i(\V{\eta}_1-\V{\eta}_6)^\top(\V{\omega}+\V{\pi}_7)}$ 
-or equivalently $(\V{\eta}_1-\V{\eta}_6)^\top(\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}2\pi)$. \qed\\
+By \eqref{eq: m0-cramer}, if $m_0(\V{\omega})>0, \,\V{\omega}\in D_1$ then $\Msub(\V{\omega})$ is full rank, hence its columns are linearly independent.
+In particular, $\Msub[:,1]$ and $\Msub[:,6]$ are linearly independent, which implies that $e^{i(\V{\eta}_1^\top\V{\pi}_6 + \V{\eta}_6^\top\V{\pi}_7)}\neq e^{i(\V{\eta}_6^\top\V{\pi}_6 + \V{\eta}_1^\top\V{\pi}_7)}$%$e^{i(\V{\eta}_1-\V{\eta}_6)^\top(\V{\omega}+\V{\pi}_6)}\neq e^{i(\V{\eta}_1-\V{\eta}_6)^\top(\V{\omega}+\V{\pi}_7)}$ 
+ or equivalently $(\V{\eta}_1-\V{\eta}_6)^\top(\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}2\pi)$. \qed\\
 
 Similarly, if $\exists\,\V{\omega}\in \{\omega_1 = \omega_2,\, \omega_1\in(0,\frac{\pi}{2})\},\, s.t.\, m_0(\V{\omega}) > 0$, then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_1)\neq 0(\text{mod}\,2\pi)$. These two conditions are equivalent to 
 \begin{align*}
@@ -371,9 +375,10 @@ Considering the other diagonal segment $\{\omega_2 = -\omega_1, |\omega_1| <\fra
 \end{align*}
 %from the full rank condition.
 
-Next, we investigate $\Msub$ at the origin, where the two diagonals meet.
+Next, we investigate $\Msub(\V{\omega})$ at the origin.
 \begin{proposition}\label{prop: origin-det}
-If $|\widetilde{m_1}(\V{\pi}_1)| = |\widetilde{m_1}(\V{\pi}_7)| = |\widetilde{m_3}(\V{\pi}_3)| = |\widetilde{m_3}(\V{\pi}_5)|$ and $|\widetilde{m_1}(\V{\pi}_6)|= | \widetilde{m_3}(\V{\pi}_6)|$, then $\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)\neq \pi(\text{mod}\,2\pi)$ or $\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)\neq \pi(\text{mod}\,2\pi)$. 
+%If $|\widetilde{m_1}(\V{\pi}_1)| = |\widetilde{m_1}(\V{\pi}_7)| = |\widetilde{m_3}(\V{\pi}_3)| = |\widetilde{m_3}(\V{\pi}_5)|$ and $|\widetilde{m_1}(\V{\pi}_6)|= | \widetilde{m_3}(\V{\pi}_6)|$, then 
+$\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)\neq \pi(\text{mod}\,2\pi)$ or $\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)\neq \pi(\text{mod}\,2\pi)$. 
 \end{proposition}
 \noindent{\it Proof.}
 %$\Msub(\V{0})$ takes the following form
@@ -400,7 +405,8 @@ If $|\widetilde{m_1}(\V{\pi}_1)| = |\widetilde{m_1}(\V{\pi}_7)| = |\widetilde{m_
 0 & 0 & \widetilde{m_3}(\V{\pi}_5) & \widetilde{m_4}(\V{\pi}_5)\\
 \end{bmatrix}
 \end{align}
-Let $|\widetilde{m_1}(\V{\pi}_1)| = |\widetilde{m_1}(\V{\pi}_7)| = |\widetilde{m_6}(\V{\pi}_1)| = |\widetilde{m_6}(\V{\pi}_7)| = |\widetilde{m_3}(\V{\pi}_3)| = |\widetilde{m_3}(\V{\pi}_5)| = |\widetilde{m_4}(\V{\pi}_3)| = |\widetilde{m_4}(\V{\pi}_5)|= a$ and $|\widetilde{m_1}(\V{\pi}_6)|=| \widetilde{m_6}(\V{\pi}_6)|= | \widetilde{m_3}(\V{\pi}_6)|=| \widetilde{m_4}(\V{\pi}_6)|=b$. Rewrite $\V{B}$ as follows,
+Let $|\widetilde{m_1}(\V{\pi}_1)| = a, \, |\widetilde{m_1}(\V{\pi}_6)|=b$. Due to the symmetry of $\m{j}$,
+$|\widetilde{m_1}(\V{\pi}_1)| = |\widetilde{m_1}(\V{\pi}_7)| = |\widetilde{m_6}(\V{\pi}_1)| = |\widetilde{m_6}(\V{\pi}_7)| = |\widetilde{m_3}(\V{\pi}_3)| = |\widetilde{m_3}(\V{\pi}_5)| = |\widetilde{m_4}(\V{\pi}_3)| = |\widetilde{m_4}(\V{\pi}_5)|$ and $|\widetilde{m_1}(\V{\pi}_6)|=| \widetilde{m_6}(\V{\pi}_6)|= | \widetilde{m_3}(\V{\pi}_6)|=| \widetilde{m_4}(\V{\pi}_6)|$. Rewrite $\V{B}$ as follows,
 $$\V{B}=
 \begin{bmatrix}
 b e^{-i\V{\pi}_6^\top\V{\eta}_1} & b e^{-i\V{\pi}_6^\top\V{\eta}_6} & b e^{-i\V{\pi}_6^\top\V{\eta}_3} & b e^{-i\V{\pi}_6^\top\V{\eta}_4}\\
@@ -414,8 +420,8 @@ The product of singular values of $\V{B}$ is
 \begin{align}\label{eq: detB}
 \sqrt{\text{det}(\V{B}^* \V{B})} = 4a^3\sqrt{a^2 K_1^2K_2^2 + b^2(Q_1K_2^2 + Q_2K_1^2)},
 \end{align}
-where $ Q_1 = 1 - \cos(\V{\pi}_6^\top(\V{\eta}_1-\V{\eta}_6))\cos(\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)), Q_2 = 1 - \cos(\V{\pi}_6^\top(\V{\eta}_3-\V{\eta}_4))\cos(\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)), K_1 = \sin(\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)), K_2 = \sin(\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)).$ If $\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6) = \V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4) = \pi (mod\, 2\pi)$, then $K_1 = K_2 = 0$ and $\V{B}$ becomes singular.\qed\\
-In Lemma \ref{lem: phase-ineq}, $\Msub[:,1]$ and $\Msub[:,6]$ being independent only guarantees $\det(\Msub[-k_{\V{\omega}},:])\neq 0$. However, \eqref{eq: m0-cramer} implies that $|m_0(\V{\omega})|\propto \det(\Msub[-k_{\V{\omega}},:])$ hence it is preferred to maximize the determinant. Since
+where $ Q_1 = 1 - \cos(\V{\pi}_6^\top(\V{\eta}_1-\V{\eta}_6))\cos(\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)), Q_2 = 1 - \cos(\V{\pi}_6^\top(\V{\eta}_3-\V{\eta}_4))\cos(\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)), K_1 = \sin(\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)), K_2 = \sin(\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)).$ If $\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6) = \V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4) = \pi (mod\, 2\pi)$, then $K_1 = K_2 = 0$ and $\V{B}$ becomes singular.\qed\\[.5em]
+{\it Remark.} In Lemma \ref{lem: phase-ineq}, $\Msub[:,1]$ and $\Msub[:,6]$ being independent only guarantees $\det(\Msub[-k_{\V{\omega}},:])\neq 0$. However, \eqref{eq: m0-cramer} implies that $|m_0(\V{\omega})|\propto \det(\Msub[-k_{\V{\omega}},:])$ hence it is preferred to maximize the determinant. Since
 \begin{align*}
 \det(\Msub[-k_{\V{\omega}}, :]) = \det\big(\big[\, \Msub[-k_{\V{\omega}},-6], \;\Msub[-k_{\V{\omega}},6] + c \cdot\Msub[-k_{\V{\omega}},1]  \,\big]\big),\quad 
 \end{align*}
