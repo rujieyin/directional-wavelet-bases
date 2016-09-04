@@ -142,14 +142,36 @@ Supplementary numerical results on solving $\m{0}$ by optimization are provided 
 
 Following the same approach of Cohen et al, we focus on solving $m_i$'s and $\widetilde{m_0}$ in \eqref{eq: LS-new} given pre-designed $\m{i},\,i=1,\cdots,6$. %Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
 
-For simplicity, in the rest of this paper, we reuse notations for \eqref{eq: LS} to express \eqref{eq: LS-new} in the same form as $\widetilde{\mathbf{M}}\mathbf{m}(\V{\omega}) = [1,0,\cdots,0]^T$, where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, for a matrix $\mathbf{A}$, we denote its sub-matrix containing all but the $k-$th row(column) as $\mathbf{A}[-k,:]\, (\mathbf{A}[:,-k])$.% and its minor with respect to its $(i,j)-$th entry as $A_{-i,-j} = \det(\mathbf{A}[-i,-j])$. 
-In particular, we denote $\M[-1,-1]$ as $\Msub$.
+Since \eqref{eq: LS-new} takes the same form as \eqref{eq: LS}, for simplicity, in the rest of this paper, we reuse matrix and vector notations $\widetilde{\mathbf{M}}(\V{\omega}),\,\mathbf{m}(\V{\omega}) $ in \eqref{eq: LS} for those in \eqref{eq: LS-new}, where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, let $\V{b}_k \in\mathbb{R}^8,\, 0\leq k\leq 7$, whose only non-zero entry is $\V{b}_k[k] = 1$, where the indexing starts with zero. Note that $\M\,\mathbf{m}(\V{\omega}) = \V{b}_0\in\mathbb{R}^8$ is over-determined, and it has unique solution if and only if 
+\begin{itemize}
+\item[(i)] $\M(\V{\omega})$ is full rank,
+\item[(ii)] $[\M(\V{\omega}), \V{b}_0]$ is singular.
+\end{itemize}
+The matrix $\M(\V{\omega})$ is structured such that each row is associated with a shift $\V{\pi}_i,\,i=0\cdots,7$ and each column is associated with a dual function $\m{j},\,j=0,\cdots,7$. We introduce the following notation on $\M$. We denote a sub-matrix of $\M$ containing all but the row associated with $\V{\pi}_k$(the column associated with $\m{k}$) as $\M[-k,:]$($\M[:,-k]$).
+In particular, we denote $\M[-0,-0]$ as $\Msub$.
 
-As in Section \ref{subsec: cohen-summary}, we implicitly assume that $\M(\V{\omega})$ is full rank for any $\V{\omega}$ so that \eqref{eq: LS-new} has unique solution $\mathbf{m}$ and Cramer's rule can be applied to compute $m_0$ with respect to a non-singular sub-matrix of $\M$. That is, $\exists\, k_\omega\in\{2,\cdots,8\}$ such that $\M[-k_{\V{\omega}},:]$ is non-singular\footnote{Lemma \ref{lem: subM-singular} shows that $k_\omega\neq 1$}. Therefore, 
+\begin{lemma}\label{lem: subM-singular}
+If \eqref{eq: LS-new} is solvable, then $\M[-0,:](\V{\omega})$ is singular $\forall \V{\omega}$.
+\end{lemma}
+\noindent{\it Proof.}
+If \eqref{eq: LS-new} is solvable, then condition (ii) holds, which implies that $\det([\M,\V{b}_0]) = 0$. Expanding the determinant with respect to the last column $\V{b}_0$ yields $\det(\M[-0,:]) = 0$.\qed\\[1em]
+%If \eqref{eq: LS-new} has a solution, then $\forall \V{\omega}$,  $[1,0,\cdots,0]^\top\in \mathbb{R}^8$ is a linear combination of the columns of $\M$ hence the solution $\mathbf{m} \in Null(\M[-0,:])$ and it is non-zero. This implies that $\M[-0,:]$ is singular.\qed\\[1em]
+We have the following observation on the symmetry of $\M(\V{\omega})$ due to the $(2\pi,2\pi)$-periodicity of shifts $\V{\pi}_i$'s.
+\begin{lemma}\label{lem: M-symmetry}
+$\M(\V{\omega}),\,\M(\V{\omega}+\V{\pi}_2),\,\M(\V{\omega}+\V{\pi}_4)$ and $\M(\V{\omega}+\V{\pi}_6)$ are the same up to row permutations. \eqref{eq: LS-new} holds $\forall \, \V{\omega}$ if and only if 
+\begin{align*}
+\M(\V{\omega}) \big[\,\mathbf{m}(\V{\omega}),\mathbf{m}(\V{\omega}+\V{\pi}_2),\mathbf{m}(\V{\omega}+\V{\pi}_4),\mathbf{m}(\V{\omega}+\V{\pi}_6)\,\big] = \big[\,\V{b}_0,\V{b}_2,\V{b}_4,\V{b}_6\,\big]
+\end{align*}
+\end{lemma}
+
+Due to condition (i), $\forall\,\V{\omega}$, $\exists\, k_{\V{\omega}}$ such that $\M[-k_{\V{\omega}},:]$ is non-singular. On the other hand, Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry} together imply that $\M[-k,:],\,k=0,2,4,6$ are singular. Therefore, $k_{\V{\omega}} \in\{1,3,5,7\}$. 
+As in Section \ref{subsec: cohen-summary}, we compute $m_0$ by applying Cramer's rule to $\M[-k_{\V{\omega}},:]$, 
 %there is a unique row $\M[k_{\V{\omega}},:],\,k_\omega\in\{2,\cdots,8\}$ such that removing it from $\M$ gives a non-singular square matrix $\M[-k_{\V{\omega}},:]$. By Cramer's rule, 
 \begin{align}\label{eq: m0-cramer}
 m_0(\V{\omega}) = \det(\Msub[-k_{\V{\omega}},:])/\det(\M[-k_{\V{\omega}},:]).
 \end{align}
+
+\textcolor{green}{revised till here}
 Instead of requiring strong symmetries of $\m{i}$'s as in Section \ref{subsec: cohen-summary}, we only ask for a minimum symmetry of $\m{i}$ such that $|\m{1}|$ and $|\m{6}|$ are symmetric with respect to the diagonal $\omega_1=\omega_2$, i.e.
 $$ |\widetilde{m_1}(\V{\omega})| = |\widetilde{m_6}(\V{\omega}')|\quad \forall\, \omega_1=\omega_2', \,\omega_2=\omega_1',$$
 and likewise for $\m{3}$ and $\m{4}$,
@@ -160,11 +182,6 @@ In the following subsections, we first show our main result that for \eqref{eq: 
 \subsection{Singularity of $\M[-1,:]$ and discontinuity of $\m{i}$}
 
 %Same as in Section \ref{subsec: cohen-summary} , we first compute $m_0$ and assume that $\M$ is full rank, otherwise \eqref{eq: LS-new} has infinitely many solutions. Moreover, $\M[2:8,:]$ is singular. 
-\begin{lemma}\label{lem: subM-singular}
-If \eqref{eq: LS-new} is solvable, then $\M[-1,:](\V{\omega})$ is singular $\forall \V{\omega}$.
-\end{lemma}
-\noindent{\it Proof.}
-If \eqref{eq: LS-new} has a solution, then $\forall \V{\omega}$,  $[1,0,\cdots,0]^\top\in \mathbb{R}^8$ is a linear combination of the columns of $\M$ hence the solution $\mathbf{m} \in Null(\M[-1,:])$ and it is non-zero. This implies that $\M[-1,:]$ is singular.\qed\\[1em]
 Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\widetilde{m_6}(\V{\omega}+\V{\pi}_i)]\in\mathbb{C}^6,\, i = 0,\cdots,7$ be the rows of $\M[:,-1]$, and define $$d_{i,j}(\V{\omega}) = \det([\mrow{k_1}(\V{\omega})^\top,\cdots,\mrow{k_6}(\V{\omega})^\top]),\;$$ where $0\leq k_1<\cdots<k_6\leq 7,\, s.t.\,z k_l\neq i,j.$
 \begin{lemma}\label{lem: subM-singular-sys}
 $\M[-1,:](\V{\omega})$ is singular $\forall \V{\omega}$ if and only if \vspace{.5em}
