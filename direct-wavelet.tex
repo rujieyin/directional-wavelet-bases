@@ -7,6 +7,7 @@
 \usepackage{bbm}
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage{enumitem}
 \graphicspath{{./orth-frame/figure/}{./bi-orth/figure/}}
 \makeatletter
 \newcommand*{\ov}[1]{\m@th\overline{\mbox{#1}\raisebox{.8em}{}}}
@@ -42,6 +43,14 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \renewcommand{\qed}{\hfill\ensuremath{\square}}
+\newcommand{\mteven}{\overline{\widetilde{\mathbf{m}_0}}^{\mathcal{E}}}
+\newcommand{\meven}{\mathbf{m}_0^{\mathcal{E}}}
+\newcommand{\mtodd}{\overline{\widetilde{\mathbf{m}_0}}^{\mathcal{O}}}
+\newcommand{\modd}{\mathbf{m}_0^{\mathcal{O}}}
+\makeatletter
+
+\newcommand{\mylabel}[2]{#2\def\@currentlabel{#2}\label{#1}}
+\makeatother
 
 
 \begin{document}
@@ -87,6 +96,7 @@ We construct directional wavelet systems in the interest of building efficient s
 
 \begin{appendices}
 \input{parseval-cond}
+\input{lemmas}
 \input{m0-opt}
 %\include{parseval-cond}
 %\include{m0-opt}

@@ -497,17 +497,57 @@ m_6(\V{\omega})
 0\\
 \sbarmp{0}{6}\\
 0
-\end{bmatrix} \doteq \V{b}_0',
+\end{bmatrix} \doteq \V{b}_0'(\V{\omega}),
 \end{align*}
 and $m_j,\,j=1,\cdots,6$ can be uniquely solved if and only if
-\begin{itemize}
-\item[(i)] $\M[:,-0]$ is full rank,
-\item[(ii)] $\V{b}_0'$ is in $col\big(\M[:,-0](\V{\omega})\big)$, the column space of $\M[:,-0]$.
-\end{itemize}
-Because $\M[:,-0]$ is determined by $\m{j},\,j = 1,\cdots,6$, (i) can be easily checked by computing $\det(\M[:,-0]^\top\M[:,-0])$ and see if it is non-zero. Next, we show that (ii) provides an explicit way of computing $m_0(\V{\omega})$ without knowing $\m{0}$.
+\hspace{-1em}
+\begin{enumerate}[leftmargin=.5in]
+\item[\mylabel{cond: i}{(\ref{subsec: compute-m0}.i)}] $\M[:,-0]$ is full rank,%
+\item[\mylabel{cond: ii}{(\ref{subsec: compute-m0}.ii)}] $\V{b}_0'(\V{\omega})$ is in $col\big(\M[:,-0](\V{\omega})\big)$, the column space of $\M[:,-0]$.%
+\end{enumerate}
+Because $\M[:,-0]$ is determined by $\m{j},\,j = 1,\cdots,6$, \ref{cond: i} can be easily checked by computing $\det(\M[:,-0]^\top\M[:,-0])$ and see if it is non-zero. Next, we show that (ii) provides an explicit way of computing $m_0(\V{\omega})$ without knowing $\m{0}$.
 \begin{proposition}\label{prop: m0_formula}
+Let $\M[odd,-0],\M[even,-0]\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,-0]$ consisting of odd and even rows respectively, then \ref{cond: ii} holds if and only if $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$ and 
+\begin{align}\label{eq: m0-even-null}
+[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,-0] = \V{0},
+\end{align}
+\begin{align}\label{eq: m0-odd-null}
+[m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7)] \,\M[odd,-0] = \V{0}.
+\end{align}
 \end{proposition}
 \noindent{\it Proof.}
+Note that $\M[:,-0]$ have the same rows at $\V{\omega} + \V{\pi}_i,\,i = 0,\cdots,7$, we define row permutation matrix $\V{P}_i,\; s.t.\,$ $\V{P}_i\big(\M[:,-0](\V{\omega} + \V{\pi}_i)\big) = \M[:,-0](\V{\omega}). $ Let $\V{P}_{\M}(\V{\omega})$ be the projection matrix of the $col\big(\M[:,-0](\V{\omega})\big)^\bot = null(\M[:,-0]^*)$, then \ref{cond: ii} is equivalent to $\V{P}_{\M}\V{b}_0'(\V{\omega}) = \V{0}.$ Group this equality at $\V{\omega}+\V{\pi}_i$, we have 
+\begin{align}\label{eq: group-proj}
+\V{0} & = [\V{P}_i\V{P}_{\M}\V{b}_0'(\V{\omega} + \V{\pi}_i) ]_{i=0,\cdots,7}\notag\\
+&= [\V{P}_i\V{P}_{\M}(\V{\omega}+\V{\pi}_i)\V{P}_i^2\V{b}_0'(\V{\omega}+\V{\pi}_i) ]_{i = 0,\cdots,7}\notag\\
+&= [\V{P}_{\M}(\V{\omega})\V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i)]_{i = 0,\cdots,7}\notag\\
+&= \V{P}_{\M}(\V{\omega})[\V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i)]_{i = 0,\cdots,7}
+\end{align}
+Let 
+\begin{align*}
+\mteven&= [ (1 + i \bmod 2)\cdot\,\sbarmp{0}{i}]_{i=0,\cdots,7}^\top = \M[:,0](\V{\omega}),\\
+\mtodd&= [ (i \bmod 2)\cdot\,\sbarmp{0}{i}]_{i=0,\cdots,7}^\top,\\
+\meven&= [ (1 + i \bmod 2)\cdot\,m_0(\V{\omega} + \V{\pi}_i)]_{i=0,\cdots,7}^\top,\\
+\modd&= [ ( i \bmod 2)\cdot\,m_0(\V{\omega} + \V{\pi}_i)]_{i=0,\cdots,7}^\top.
+\end{align*}
+By definition, 
+$$ \V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i) = \V{P}_i\big(\V{b}_0 - m_0\M[:,0](\V{\omega}+\V{\pi}_i)\big)  = \V{b}_i - m_0(\V{\omega}+\V{\pi}_i)\V{P}_i\big(\M[:,0](\V{\omega}+\V{\pi}_i)\big)$$
+and 
+$$\V{P}_i\big(\M[:,0](\V{\omega}+\V{\pi}_i)\big) = 
+\begin{cases}
+   \M[:,0] = \mteven, &  i \text{ is even}\\[.2em]
+    \mtodd,              & i \text{ is odd}
+\end{cases}
+$$
+Substitute the above expression of $ \V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i)$ in \eqref{eq: group-proj} and we have
+\begin{align}
+\V{0}  
+%= \V{P}_{\M}(\omega)([\V{b}_i]_{i=0,\cdots,7} - \mteven\otimes\meven - \mtodd\otimes\modd) 
+= \V{P}_{\M}(\V{I}_8 -  \mteven\otimes\overline{\meven} - \mtodd\otimes\overline{\modd})
+\end{align}
+Due to the identity constraint \eqref{eq: identity-cond}, $(\overline{\meven})^*\,\mteven = 1$ and $(\overline{\modd})^*\,\mtodd = 1$. Therefore, by Lemma \ref{lem: null-space}, $\V{P}_{\M}$ is the projection of $span\{\overline{\modd},\overline{\meven}\}$. This is equivalent to \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null}.
+Finally, since $$6 = rank(\M[:,-0]) \leq rank(\M[odd,-0]) + rank(\M[even,-0]) \leq (4-1) + (4-1),$$ $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$.\qed
+\begin{comment}
 By Lemma \ref{lem: M-symmetry}, $\M[:,-0]$ are the same at $\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4$ and $\V{\omega} + \V{\pi}_6$ up to row permutations. Therefore, the columns of the matrix $\V{B}$ below should be in $col\big(\M[:,-0](\V{\omega})\big)$,
 \begin{align*}
 \V{B}&= \widetilde{\mathbf{m}_0}^\uparrow\otimes\mathbf{m}_0 - [\V{b}_0,\V{b}_2,\V{b}_4,\V{b}_6]\\
@@ -551,6 +591,7 @@ Let $\M[:,-0] = U\Sigma V^\top$ be the singular value decomposition of $\M[:,-0]
 \V{P}^\downarrow\V{B}^\downarrow = \V{P}^\downarrow \big(\widetilde{\mathbf{m}_0}\otimes \mathbf{m}_0 - \V{I}_4\big) = \V{0}\in\mathbb{C}^8
 \end{align}
 $\V{P}^\downarrow\in\mathbb{C}^{8\times 4}$ consists of odd columns of $\V{P}$ and $\V{B}^\downarrow\in\mathbb{C}^{4\times 4}$ consists of odd rows of $\V{B}$.
+\end{comment}
 
 \textcolor{red}{Remove this sub-section, or place it after the main result on discontinuity}.
 

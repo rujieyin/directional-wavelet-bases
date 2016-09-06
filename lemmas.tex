@@ -1,0 +1,15 @@
+\section{Lemmas}\label{app: lemmas}
+
+\begin{lemma}\label{lem: null-space}
+Let $\V{P}\in\mathbb{C}^{n\times n}$ be a projection matrix of rank $2$ and $\V{a},\V{b},\V{a}',\V{b}'\in\mathbb{C}^n,\, s.t.\, \V{a}^*\V{b} = (\V{a}')^*\V{b}'=1,\, \V{a}'^*\V{b} = \V{a}^*\V{b}' = \V{b}^*\V{b}' = 0.$ If $\V{P}(\V{I}_n - \V{a}\otimes\V{b} - \V{a}'\otimes\V{b}' ) = \V{0}$, then $\V{P}$ is the projection of $span\{\V{b},\V{b}'\}$.
+\end{lemma}
+\noindent{\it Proof.}
+Since $$rank(\V{I}_n) \leq rank(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}') + rank(\V{a}\otimes\V{b}) + rank(\V{a}'\otimes\V{b}'),$$
+it follows that $rank(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')\geq n - 2$. On the other hand, because $rank(\V{P}) = 2$, $\V{P}(\V{I}_n - \V{a}\otimes\V{b} - \V{a}'\otimes\V{b}' ) = \V{0}$ implies that $rank(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')\leq n - 2$. Hence $rank(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}') = n - 2$ and $\V{P}$ is the projection of $col(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')^\bot$. On the other hand,
+\begin{align*}
+\V{b}^*(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')
+&= \V{b}^* - (\V{b}^*\V{a})\V{b}^* - (\V{b}^*\V{a}')(\V{b}')^*\\
+&= \V{b}^* - \V{b}^* - 0\cdot (\V{b}')^* = \V{0}^*
+\end{align*}
+Therefore, $\V{P}\V{b} = \V{b}$.
+Similarly, $(\V{b}')^* (\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')=\V{0}^*$ and $\V{P}\V{b}' = \V{b}'$. Moreover, as $\V{b}^*\V{b}' = 0$ and $rank(\V{P}) = 2$, $\V{P} = \Vert\V{b}\Vert^{-2}\cdot\V{b}\otimes\V{b} + \Vert\V{b}'\Vert^{-2}\cdot\V{b}'\otimes\V{b}'.$\qed
