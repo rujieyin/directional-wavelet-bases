@@ -13,3 +13,9 @@ it follows that $rank(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')\geq n - 2$.
 \end{align*}
 Therefore, $\V{P}\V{b} = \V{b}$.
 Similarly, $(\V{b}')^* (\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')=\V{0}^*$ and $\V{P}\V{b}' = \V{b}'$. Moreover, as $\V{b}^*\V{b}' = 0$ and $rank(\V{P}) = 2$, $\V{P} = \Vert\V{b}\Vert^{-2}\cdot\V{b}\otimes\V{b} + \Vert\V{b}'\Vert^{-2}\cdot\V{b}'\otimes\V{b}'.$\qed
+
+\begin{lemma}
+Given $\M[:,-0](\V{\omega})$ is full rank $\forall \V{\omega}$, $\M[-0,:](\V{\omega})$ is singular if \eqref{eq: identity-cond} holds.
+\end{lemma}
+\noindent{\it Proof. }
+If \eqref{eq: identity-cond} holds, then by Lemma \ref{lem: null-space}, $\meven,\,\modd$ are orthogonal to \\$col(\M[:,-0])$, therefore $\big[\,\modd,\meven,\M[:,-0]\,\big]\in\mathbb{C}^{8\times 8}$ is full rank. Due to \eqref{eq: identity-cond}, $\meven$ and $\mteven$ are not orthogonal to each other, hence $\big[\,\modd,\mteven,\M[:,-0]\,\big] = \big[\,\modd, \M\,\big]$ is full rank as well. Because $(\modd)^*\M[:, i] = 0,\,i= 0,\cdots,7$ and $\modd[-0]^*\M[-0, i] = (\modd)^*\M[:,i]$, $\modd[-0]$ is orthogonal to $col(\M[-0,:])$. Since $\big[ \modd[-0], \M[-0,:]\,\big]\in\mathbb{C}^{7\times 8}$ is full rank, $\M[-0,:]$ must be singular.\qed

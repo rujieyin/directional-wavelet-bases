@@ -116,13 +116,13 @@ In general, there is no efficient algorithm to solve {\it Hilbert's Nullstellens
 We propose an optimization approach, where \eqref{eq: m0-sol} is equivalent to a linear constraint and the objective function imposes regularity on $\widetilde{m_0}$.
 On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
 \begin{align}
-\hspace*{10em} \V{A}\, \mathbf{\widetilde{m}_0}&= \mathbf{1}_{4N^2}, \label{eq: m0-A}\\ 
-\mathbf{\widetilde{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2} \quad &\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V{\nu}_k) \notag
+\hspace*{10em} \V{A}\, \overline{\widetilde{\mathbf{m}_0}}&= \mathbf{1}_{4N^2}, \label{eq: m0-A}\\ 
+\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2} \quad &\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V{\nu}_k) \notag
 \end{align}
 Because the set $\{\V{\omega},\, \V{\omega}+\V{\nu}_k,k=1,2,3\}$ is invariant under the shift $\V{\nu}_i,\, i = 1,2,3,$ the rows of $\V{A}$ corresponding to $\V{\omega}$ and $\V{\omega}+\V{\nu}_i$ are identical and we only need to consider rows corresponds to $\V{\omega}\in [-\pi,\pi)\times[-\pi,\pi)/\{\V{0},\,\V{\nu}_i,i=1,2,3\}$. Therefore, after removing the duplicate rows, $\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ and \eqref{eq: m0-A} is under-determinant. \\
 We thus use \eqref{eq: m0-A} as a linear constraint in quadratic optimization to solve $\mathbf{\widetilde{m}_0}$. Suppose that $\m{0}$ is smooth, then we build a differential operator $\V{D}$ and solve the following minimization problem:
 \begin{align}
-&\min_{\mvec{0}}\; \Vert \V{D}\mvec{0}\Vert^2,\quad s.t. \; \V{A}\mvec{0} = \mathbf{1} \label{eq: opt-diff}
+&\min_{\mvec{0}}\; \Vert \V{D}\widetilde{\mathbf{m}_0}\Vert^2,\quad s.t. \; \V{A}\overline{\widetilde{\mathbf{m}_0}} = \mathbf{1} \label{eq: opt-diff}
 \end{align}
 %or
 %\begin{align}
@@ -130,10 +130,10 @@ We thus use \eqref{eq: m0-A} as a linear constraint in quadratic optimization to
 %\end{align}
 %The solution of \eqref{eq: m0-smooth-relaxed} is $\mvec{0} = \lambda(\lambda \V{A}^\top \V{A} + \V{D}^\top \V{D})^{-1}\V{A}^\top\mathbf{1}$.
 
-Or suppose $\m{0}$ decays away from the origin, then we build a diagonal weighting operator $\V{W}$, and solve the following minimization problem:
-\begin{align}\label{eq: opt-weight}
-&\min_{\mvec{0}}\; \Vert \V{W}\mvec{0}\Vert^2,\quad s.t. \; \V{A}\mvec{0} = \mathbf{1}
-\end{align}
+%Or suppose $\m{0}$ decays away from the origin, then we build a diagonal weighting operator $\V{W}$, and solve the following minimization problem:
+%\begin{align}\label{eq: opt-weight}
+%&\min_{\mvec{0}}\; \Vert \V{W}\mvec{0}\Vert^2,\quad s.t. \; \V{A}\mvec{0} = \mathbf{1}
+%\end{align}
 Supplementary numerical results on solving $\m{0}$ by optimization are provided in Appendix \ref{app: supp-numerical}, where we test this optimization method on pre-designed bi-orthogonal filters $m_0$ and $\widetilde{m_0}$.
 
 \section{Adaptation to dilated quincunx scheme}
@@ -187,10 +187,10 @@ Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\w
 \begin{align}
 \label{eq: singular-cond}
 \mathfrak{D}(\omega)\begin{bmatrix}
-\m{0}\\
-\mp{0}{2}\\
-\mp{0}{4}\\
-\mp{0}{6}
+\sbarm{0}\\
+\sbarmp{0}{2}\\
+\sbarmp{0}{4}\\
+\sbarmp{0}{6}
 \end{bmatrix}
 \doteq
 \begin{bmatrix}
@@ -200,10 +200,10 @@ Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\w
 -d_{0,6} & -d_{2,6} & -d_{4,6} & 0
 \end{bmatrix}
 \begin{bmatrix}
-\m{0}\\
-\mp{0}{2}\\
-\mp{0}{4}\\
-\mp{0}{6}
+\sbarm{0}\\
+\sbarmp{0}{2}\\
+\sbarmp{0}{4}\\
+\sbarmp{0}{6}
 \end{bmatrix}
 = \begin{bmatrix}
 0\\0\\0\\0
@@ -215,11 +215,11 @@ By Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry},  $\M[-k,:],\,
 The singularity condition on  $\M[-0,:](\V{\omega})$ can be rewritten as follows,
 \begin{align}\label{eq: singular-omega}
 0 &=\det(\M[-0,:]) \notag\\
-&=  \widetilde{m_0}(\V{\omega}+\V{\pi}_2)\cdot\det(\Msub[-2,:])\notag\\
-&\quad+ \,\widetilde{m_0}(\V{\omega}\,+\,\V{\pi}_4)\cdot\det(\Msub[-4,:])
-+ \widetilde{m_0}(\V{\omega}+\V{\pi}_6)\cdot\det(\Msub[-6,:])\notag\\
-&= 0\cdot\widetilde{m_0}(\V{\omega})\,+\,d_{0,2}\cdot\widetilde{m_0}(\V{\omega}+\V{\pi}_2) \notag\\
-&\quad+\,d_{0,4}\cdot \widetilde{m_0}(\V{\omega} + \V{\pi}_4)\,+\, d_{0,6}\cdot\widetilde{m_0}(\V{\omega} + \V{\pi}_6) 
+&=  \sbarmp{0}{2}\cdot\det(\Msub[-2,:])\notag\\
+&\quad+ \,\sbarmp{0}{4}\cdot\det(\Msub[-4,:])
++ \sbarmp{0}{6}\cdot\det(\Msub[-6,:])\notag\\
+&= 0\cdot\sbarm{0}\,+\,d_{0,2}\cdot\sbarmp{0}{2} \notag\\
+&\quad+\,d_{0,4}\cdot \sbarmp{0}{4}\,+\, d_{0,6}\cdot\sbarmp{0}{6}
 \end{align}
 %This is the first equation in the linear system \eqref{eq: singular-cond}. Substitute $\V{\omega}$ by $\V{\omega + \pi_2}$ in \eqref{eq: singular-omega} and use the $2\pi-$periodicity of $\V{\omega}$, we have the singularity condition on $\M[-1,:](\V{\omega+\pi_2})$ as follows
 %then the above singularity condition on $\M[-1,:]$ at $\V{\omega}$ can be rewritten as follows,
@@ -240,7 +240,7 @@ Similarly, the second to fourth equations can be obtained by rewriting the singu
 The identity constraint \eqref{eq: identity-cond} on $m_0$ and the singularity condition \eqref{eq: singular-cond} together imply the following proposition,
 %Due to the periodic wrapping of the frequency square $S_0$, we only need to consider \eqref{eq: singular-cond} and \eqref{eq: identity-cond} on $S_1$ and they imply the following proposition,
 \begin{proposition}\label{prop: feasibility}
-Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: LS-new} has no solution for $\widetilde{m_0}$, if $\exists\,\omega, \,s.t. \; [m_0(\omega), m_0(\omega+\pi_2),m_0(\omega+\pi_4),m_0(\omega+\pi_6)]$ is a linear combination of the conjugate of the rows of $\mathfrak{D}(\omega)$.% in \eqref{eq: singular-cond}.
+Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: LS-new} has no solution for $\widetilde{m_0}$, if $\exists\,\omega, \,s.t. \; [m_0(\omega), m_0(\omega+\pi_2),m_0(\omega+\pi_4),m_0(\omega+\pi_6)]$ is a linear combination of the rows of $\mathfrak{D}(\omega)$.% in \eqref{eq: singular-cond}.
 \end{proposition}
 %Proposition \ref{prop: feasibility} provides a necessary condition such that the numerical optimization solving $\widetilde{m_0}$ is feasible.
 \begin{figure}
@@ -477,7 +477,7 @@ where
 
 \subsection{Computing $m_0$}\label{subsec: compute-m0}
 Once $\m{j}$ are fixed, \eqref{eq: LS-new} can be reformulated as follows,
-\begin{align*}
+\begin{align}\label{eq: mj-eq}
 \M[:,-0](\V{\omega}) 
 \begin{bmatrix}
 m_1(\V{\omega})\\
@@ -498,7 +498,7 @@ m_6(\V{\omega})
 \sbarmp{0}{6}\\
 0
 \end{bmatrix} \doteq \V{b}_0'(\V{\omega}),
-\end{align*}
+\end{align}
 and $m_j,\,j=1,\cdots,6$ can be uniquely solved if and only if
 \hspace{-1em}
 \begin{enumerate}[leftmargin=.5in]
@@ -530,7 +530,7 @@ Let
 \meven&= [ (1 + i \bmod 2)\cdot\,m_0(\V{\omega} + \V{\pi}_i)]_{i=0,\cdots,7}^\top,\\
 \modd&= [ ( i \bmod 2)\cdot\,m_0(\V{\omega} + \V{\pi}_i)]_{i=0,\cdots,7}^\top.
 \end{align*}
-By definition, 
+The identity constraint \eqref{eq: identity-cond} thus can be written as $(\overline{\meven})^*\,\mteven = 1$ and $(\overline{\modd})^*\,\mtodd = 1$. By definition, 
 $$ \V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i) = \V{P}_i\big(\V{b}_0 - m_0\M[:,0](\V{\omega}+\V{\pi}_i)\big)  = \V{b}_i - m_0(\V{\omega}+\V{\pi}_i)\V{P}_i\big(\M[:,0](\V{\omega}+\V{\pi}_i)\big)$$
 and 
 $$\V{P}_i\big(\M[:,0](\V{\omega}+\V{\pi}_i)\big) = 
@@ -545,7 +545,7 @@ Substitute the above expression of $ \V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i)$ in \
 %= \V{P}_{\M}(\omega)([\V{b}_i]_{i=0,\cdots,7} - \mteven\otimes\meven - \mtodd\otimes\modd) 
 = \V{P}_{\M}(\V{I}_8 -  \mteven\otimes\overline{\meven} - \mtodd\otimes\overline{\modd})
 \end{align}
-Due to the identity constraint \eqref{eq: identity-cond}, $(\overline{\meven})^*\,\mteven = 1$ and $(\overline{\modd})^*\,\mtodd = 1$. Therefore, by Lemma \ref{lem: null-space}, $\V{P}_{\M}$ is the projection of $span\{\overline{\modd},\overline{\meven}\}$. This is equivalent to \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null}.
+Therefore, by Lemma \ref{lem: null-space}, $\V{P}_{\M}$ is the projection of $span\{\overline{\modd},\overline{\meven}\}$. This is equivalent to \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null}.
 Finally, since $$6 = rank(\M[:,-0]) \leq rank(\M[odd,-0]) + rank(\M[even,-0]) \leq (4-1) + (4-1),$$ $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$.\qed
 \begin{comment}
 By Lemma \ref{lem: M-symmetry}, $\M[:,-0]$ are the same at $\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4$ and $\V{\omega} + \V{\pi}_6$ up to row permutations. Therefore, the columns of the matrix $\V{B}$ below should be in $col\big(\M[:,-0](\V{\omega})\big)$,
@@ -595,6 +595,7 @@ $\V{P}^\downarrow\in\mathbb{C}^{8\times 4}$ consists of odd columns of $\V{P}$ a
 
 \textcolor{red}{Remove this sub-section, or place it after the main result on discontinuity}.
 
+\begin{comment}
 Let $C_{\V{\omega}} = det(\M[-k_{\V{\omega}},:])$, then we have the following observation.
 \begin{lemma}\label{lem: equal-det}
 $C_{\V{\omega}} = C_{\V{\omega}+\V{\pi}_2} = C_{\V{\omega}+\V{\pi}_4} = C_{\V{\omega}+\V{\pi}_6}$
@@ -605,29 +606,37 @@ $C_{\V{\omega}} = det\big(\M[-k_{\V{\omega}},:](\V{\omega})\big) = det\big(\M[-k
 $\mathbf{1}_{k_{\V{\omega}+\V{\pi}_2}} = P_{\V{\pi}_2}\mathbf{1}_{k_{\V{\omega}}}$.
 \qed\\[1em]
 We assume that $m_0\in\mathbb{R}_{\geq 0}$ without phase. Let $m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}|\in \mathbb{R}_{\geq 0}$ and $\mc{0} = \m{0}/|C_{\V{\omega}}|$, then Lemma \ref{lem: equal-det} implies the following.
+\end{comment}
 \begin{proposition}\label{prop: mc}
-$m_0(\V{\omega}),\,\m{0}, m_i(\V{\omega}),\,  i = 1,...,6$ satisfy \eqref{eq: LS-new} given $\m{i},\,i=1,...,6$ if and only if $m_0^C(\V{\omega}),$ $\,\mc{0}, m_i(\V{\omega}),\,i = 1,...,6$ do. More generally, $m_0^C(\V{\omega})c(\V{\omega}),\,\mc{0}c(\V{\omega})^{-1}, m_i(\V{\omega}),\,i=1,...,6$ satisfy \eqref{eq: LS-new} if $c(\V{\omega}) = c(\V{\omega}+\V{\pi}_2)=c(\V{\omega}+\V{\pi}_4) = c(\V{\omega}+\V{\pi}_6) \neq 0$.
+Given $\m{i},\,i=1,...,6$, $m_0(\V{\omega}),\,\m{0}, m_i(\V{\omega}),\,  i = 1,...,6$ satisfy \eqref{eq: LS-new}  if and only if 
+%$m_0^C(\V{\omega}),$ $\,\mc{0}, m_i(\V{\omega}),\,i = 1,...,6$ do. More generally, 
+$m_0(\V{\omega})c(\V{\omega}),\,\m{0}c(\V{\omega})^{-1}, m_i(\V{\omega}),\,i=1,...,6$ satisfy \eqref{eq: LS-new}  $\forall\, c(\V{\omega})\, s.t.\; c(\V{\omega}) = c(\V{\omega}+\V{\pi}_2)=c(\V{\omega}+\V{\pi}_4) = c(\V{\omega}+\V{\pi}_6) \neq 0$.
 \end{proposition}
-According to Proposition \ref{prop: mc}, we can first solve $\mc{0}$ and $m_0^C(\V{\omega})$ and then construct $c(\V{\omega})$ for optimal $\m{0}$ and $m_0(\V{\omega})$. 
-In particular, $m_0^C$ can be computed without knowing $k_{\V{\omega}}$,
-\begin{align}\label{eq: m0C}
-m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}| = |det(\M_{1,1}[-k_{\V{\omega}},:])| = \prod_{i=1}^6\sigma_i(\M_{1,1}[-k_{\V{\omega}},:]) = \prod_{i=1}^6\sigma_i(\M_{1,1}).
-\end{align}
-In practice, we first perform QR decomposition on $\Msub:=\M_{1,1}$ and then take the absolute value of the product of the diagonal entries of the upper triangular matrix, $diag(R)$. 
+%According to Proposition \ref{prop: mc}, we can first solve $\mc{0}$ and $m_0^C(\V{\omega})$ and then construct $c(\V{\omega})$ for optimal $\m{0}$ and $m_0(\V{\omega})$. 
+%In particular, $m_0^C$ can be computed without knowing $k_{\V{\omega}}$,
+%\begin{align}\label{eq: m0C}
+%m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}| = |det(\M_{1,1}[-k_{\V{\omega}},:])| = \prod_{i=1}^6\sigma_i(\M_{1,1}[-k_{\V{\omega}},:]) = \prod_{i=1}^6\sigma_i(\M_{1,1}).
+%\end{align}
+%In practice, we first perform QR decomposition on $\Msub:=\M_{1,1}$ and then take the absolute value of the product of the diagonal entries of the upper triangular matrix, $diag(R)$. 
 We propose the following algorithm for bi-orthogonal directional filter construction with dilated quincunx downsampling scheme:
 \begin{description}% prevent items from splitting
 \item[construction of bi-orthogonal basis]\
 \begin{itemize}
 \item[Input:] $\m{i},\,i=1,...,6$
-\item[1.] compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
-\item[2.] compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
-\item[3.] solve $m_i(\V{\omega}),\, i=1,...,6$ according to \eqref{eq: LS-new}
-\item[4.] design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
+\item[1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check if $$rank(\M[:,-0]) = 6,\, rank(\M[odd,-0]) = rank(\M[even,-0]) = 3,$$%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
+\item[2.] solve $m_0(\V{\omega})$ at $\V{\omega}+\V{\pi}_i,\, i = 0,2,4,6$ simultaneously using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
+\item[3.] solve the following optimization for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$.
+\begin{align*}
+\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0^C\circ\xvec)\Vert^2,\quad 
+s.t. \; \V{A}\xvec = \mathbf{1},
+\end{align*}
+%solve $m_i(\V{\omega}),\, i=1,...,6$ according to \eqref{eq: LS-new}
+\item[4.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
 \end{itemize}
 \end{description}
 
 
-
+\begin{comment}
 \subsection{solving $m_i$}
 In the final step, we substitute $\mc{0}$ and $m_0^C(\V{\omega})$ into \eqref{eq: LS-new} and rewrite it into the following linear system,
 \begin{align}\label{eq: mi}
@@ -642,9 +651,10 @@ In the final step, we substitute $\mc{0}$ and $m_0^C(\V{\omega})$ into \eqref{eq
 =:\mathbf{b}(\V{\omega}).
 \end{align}
 The solution of \eqref{eq: mi} depends only on $m_0^C\overline{\widetilde{m_0}^C}$, or equivalently $m_0\overline{\widetilde{m_0}}$. 
-
+\end{comment}
 
 \section{Numerical Experiments}
+\begin{comment}
 \subsection{solving $m_0^C$}
 A set of $\m{i}$ that satisfy the conditions of Theorem \ref{thm: thm} with phase terms in \eqref{eq: phase-sol} is used as the input of \eqref{eq: LS-new}.
 The left figure in Fig.\ref{fig: tm_i_m_0} shows the absolute value of $\m{i}$. In particular, $\m{i} =0,\,\forall \omega\in S_1$. 
@@ -668,7 +678,6 @@ Fig.\ref{fig: feasible} shows the feasibility check $\vartheta$ of input $\m{i}$
 \caption{Left:  $|\m{i}|$, middle: computed $m_0^C$, right: $\log(m_0^C)$}
 \label{fig: tm_i_m_0}
 \end{figure}
-
 
 \subsection{solving $\mc{0}$ and $m_i$}
 We compute $\mc{0}$ by solving the following optimization problem similar to \eqref{eq: opt-diff} for the dyadic scheme,
@@ -716,3 +725,4 @@ The bi-orthogonal bases constructed is not ideal, despite the regularization on 
 \caption{Left: $|m_i|,\, i = 1,\cdots,6$, right:$|\mathcal{F}^{-1}m_i|$}
 \label{fig: m_i}
 \end{figure}
+\end{comment}
