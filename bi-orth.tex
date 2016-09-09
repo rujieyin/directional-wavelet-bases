@@ -110,31 +110,10 @@ from expanding $det(\widetilde{\mathbf{M}})$ with respect to the first column.
 According to Lemma 3.2.1 in \cite{cohen1993compactly} based on {\it Hilbert's Nullstellensatz}, \eqref{eq: bi-orth-eq} has a solution iff there does not exist $(z_1,z_2)\in (\mathbb{C}^*)^2,\, \mathbb{C}^* = \mathbb{C}\setminus\{0\}$\, s.t. $(\pm z_1,\pm z_2)$ are all 
 vanishing points of the $z$-transform of $m_0$.
 
-\subsubsection{Solving $\m{0}$}
+%\subsubsection{Solving $\m{0}$}
 In general, there is no efficient algorithm to solve {\it Hilbert's Nullstellensatz}, and how \eqref{eq: m0-sol} is solved exactly is not mentioned in \cite{cohen1993compactly}.
+In the next section, we propose an optimization approach, where \eqref{eq: m0-sol}(which is the same as \eqref{eq: identity-cond}) serves as a linear constraint and the objective function imposes regularity on $\widetilde{m_0}$.
 
-We propose an optimization approach, where \eqref{eq: m0-sol} is equivalent to a linear constraint and the objective function imposes regularity on $\widetilde{m_0}$.
-On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
-\begin{align}
-\hspace*{10em} \V{A}\, \overline{\widetilde{\mathbf{m}_0}}&= \mathbf{1}_{4N^2}, \label{eq: m0-A}\\ 
-\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2} \quad &\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V{\nu}_k) \notag
-\end{align}
-Because the set $\{\V{\omega},\, \V{\omega}+\V{\nu}_k,k=1,2,3\}$ is invariant under the shift $\V{\nu}_i,\, i = 1,2,3,$ the rows of $\V{A}$ corresponding to $\V{\omega}$ and $\V{\omega}+\V{\nu}_i$ are identical and we only need to consider rows corresponds to $\V{\omega}\in [-\pi,\pi)\times[-\pi,\pi)/\{\V{0},\,\V{\nu}_i,i=1,2,3\}$. Therefore, after removing the duplicate rows, $\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ and \eqref{eq: m0-A} is under-determinant. \\
-We thus use \eqref{eq: m0-A} as a linear constraint in quadratic optimization to solve $\mathbf{\widetilde{m}_0}$. Suppose that $\m{0}$ is smooth, then we build a differential operator $\V{D}$ and solve the following minimization problem:
-\begin{align}
-&\min_{\mvec{0}}\; \Vert \V{D}\widetilde{\mathbf{m}_0}\Vert^2,\quad s.t. \; \V{A}\overline{\widetilde{\mathbf{m}_0}} = \mathbf{1} \label{eq: opt-diff}
-\end{align}
-%or
-%\begin{align}
-%&\min_{\mvec{0}}\; \Vert \V{D}\mvec{0}\Vert^2 + \lambda \Vert \V{A}\mvec{0} - \mathbf{1}\Vert^2 \label{eq: m0-smooth-relaxed}
-%\end{align}
-%The solution of \eqref{eq: m0-smooth-relaxed} is $\mvec{0} = \lambda(\lambda \V{A}^\top \V{A} + \V{D}^\top \V{D})^{-1}\V{A}^\top\mathbf{1}$.
-
-%Or suppose $\m{0}$ decays away from the origin, then we build a diagonal weighting operator $\V{W}$, and solve the following minimization problem:
-%\begin{align}\label{eq: opt-weight}
-%&\min_{\mvec{0}}\; \Vert \V{W}\mvec{0}\Vert^2,\quad s.t. \; \V{A}\mvec{0} = \mathbf{1}
-%\end{align}
-Supplementary numerical results on solving $\m{0}$ by optimization are provided in Appendix \ref{app: supp-numerical}, where we test this optimization method on pre-designed bi-orthogonal filters $m_0$ and $\widetilde{m_0}$.
 
 \section{Adaptation to dilated quincunx scheme}
 
@@ -629,28 +608,59 @@ m_j^c(\V{\omega})\overline{\widetilde{m_j}^c}(\V{\omega} + \V{\pi}_i) = m_j(\V{\
 m_j^c(\V{\omega})\overline{\widetilde{m_j}^c}(\V{\omega} + \V{\pi}_i) = \big(m_j(\V{\omega})\sbarmp{j}{i}\big)c_j(\V{\omega})^{-1},\quad & i \text{ is odd.}
 \end{align*}
 \qed\\
+
+Next, we solve quadruple $(\m{0}, \mp{0}{2}, \mp{0}{4}, \mp{0}{6})$ from the identity condition \eqref{eq: identity-cond} on $[-\pi, 0)\times[-\pi, 0 )$. We reformulate it as a quadratic optimization problem that minimizes the total variation of $\sbarm{0}m_0(\V{\omega})$ as follows,
+%On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
+\begin{align}\label{eq: opt}
+\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
+s.t. \; \V{A}\xvec = \mathbf{1},
+\end{align}
+where $\V{D}$ is the gradient operator, $\circ$ is Hadamard product and $\V{A}$ is the linear operator from \eqref{eq: identity-cond}. In particular, on a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $ \eqref{eq: identity-cond} can be rewrite as
+\begin{align}
+\V{A}\, \overline{\widetilde{\mathbf{m}_0}}= \mathbf{1}_{4N^2}, \label{eq: m0-A}%\\ 
+%\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2}&\in\mathbb{C}^{4N^2} \notag
+\end{align}
+where $\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1}^{4N^2}$ and $\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ is a sparse matrix with entries 
+$$\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V{\pi}_{2k}), \quad \V{\omega}_j \in [-\pi,0)\times[-\pi,0).$$
+%Because the set $\{\V{\omega},\, \V{\omega}+\V{\nu}_k,k=1,2,3\}$ is invariant under the shift $\V{\nu}_i,\, i = 1,2,3,$ the rows of $\V{A}$ corresponding to $\V{\omega}$ and $\V{\omega}+\V{\nu}_i$ are identical and 
+%Because we only need to consider \eqref{eq: identity-cond} on $[-\pi,0)\times[-\pi,0)$, 
+%rows corresponds to $\V{\omega}\in [-\pi,\pi)\times[-\pi,\pi)/\{\V{0},\,\V{\nu}_i,i=1,2,3\}$. Therefore, after removing the duplicate rows, 
+%$\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ and \eqref{eq: m0-A} is under-determinant. \\
+%We thus use \eqref{eq: m0-A} as a linear constraint in quadratic optimization to solve $\mathbf{\widetilde{m}_0}$. Suppose that $\m{0}$ is smooth, then we build a differential operator $\V{D}$ and solve the following minimization problem:
+%or
+%\begin{align}
+%&\min_{\mvec{0}}\; \Vert \V{D}\mvec{0}\Vert^2 + \lambda \Vert \V{A}\mvec{0} - \mathbf{1}\Vert^2 \label{eq: m0-smooth-relaxed}
+%\end{align}
+%The solution of \eqref{eq: m0-smooth-relaxed} is $\mvec{0} = \lambda(\lambda \V{A}^\top \V{A} + \V{D}^\top \V{D})^{-1}\V{A}^\top\mathbf{1}$.
+
+%Or suppose $\m{0}$ decays away from the origin, then we build a diagonal weighting operator $\V{W}$, and solve the following minimization problem:
+%\begin{align}\label{eq: opt-weight}
+%&\min_{\mvec{0}}\; \Vert \V{W}\mvec{0}\Vert^2,\quad s.t. \; \V{A}\mvec{0} = \mathbf{1}
+%\end{align}
+Supplementary numerical results on solving $\m{0}$ by optimization are provided in Appendix \ref{app: supp-numerical}, where we test this optimization method on known bi-orthogonal filters $m_0$ and $\widetilde{m_0}$ and compare the solution from the optimization with the ground truth.
+
+
 %According to Proposition \ref{prop: mc}, we can first solve $\mc{0}$ and $m_0^C(\V{\omega})$ and then construct $c(\V{\omega})$ for optimal $\m{0}$ and $m_0(\V{\omega})$. 
 %In particular, $m_0^C$ can be computed without knowing $k_{\V{\omega}}$,
 %\begin{align}\label{eq: m0C}
 %m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}| = |det(\M_{1,1}[-k_{\V{\omega}},:])| = \prod_{i=1}^6\sigma_i(\M_{1,1}[-k_{\V{\omega}},:]) = \prod_{i=1}^6\sigma_i(\M_{1,1}).
 %\end{align}
 %In practice, we first perform QR decomposition on $\Msub:=\M_{1,1}$ and then take the absolute value of the product of the diagonal entries of the upper triangular matrix, $diag(R)$. 
-We propose the following algorithm for bi-orthogonal directional filter construction with dilated quincunx downsampling scheme:
+To sum up, we propose the following algorithm for bi-orthogonal directional filter construction with dilated quincunx downsampling scheme:\\
+\rule{\textwidth}{.5pt}
 \begin{description}% prevent items from splitting
 \item[construction of bi-orthogonal basis]\
 \begin{itemize}
 \item[Input:] $\m{i},\,i=1,...,6$
 \item[1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks}.%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
 \item[2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
-\item[3.] solve the following optimization for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$.
-\begin{align}\label{eq: opt}
-\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
-s.t. \; \V{A}\xvec = \mathbf{1},
-\end{align}
+\item[3.] solve the optimization \eqref{eq: opt} for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$.
 %solve $m_i(\V{\omega}),\, i=1,...,6$ according to \eqref{eq: LS-new}
 \item[4.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
 \end{itemize}
 \end{description}
+\rule{\textwidth}{.5pt}\\[.5em]
+
 Proposition \ref{prop: mc} suggests that a feasible set of $(m_j,\widetilde{m_j}), \, j = 0,1,\cdots,6$, constructed by the algorithm above can be used to generate new sets of $(m_j^c,\widetilde{m_j}^c)$. In particular, we can design $c_j(\V{\omega})$ such that $(m_j^c,\widetilde{m_j}^c)$ have desired properties, e.g. smoothness or fast decay rate.
 
 \begin{comment}
