@@ -343,7 +343,7 @@ The following theorem summarizes our main result.
 If  $\m{i}$ concentrates in $T_i$ and $\m{1},\m{6}$ are symmetric to each other,  then  \eqref{eq: LS-new} doesn't have feasible solution given continuous $\m{1}$ and $\m{6}$.
 \end{theorem}
 
-\subsection{Design of input $\m{i}$}\label{sec: phase-design}
+\subsection{Design of input $\m{j}$}\label{sec: phase-design}
 In this sub-section, we construct $\m{j},\, j = 1,\cdots,6,$ which concentrate in $T_i$ with high symmetry.
 Specifically, following the orthonormal construction in \cite{yin2014orthshear}, we consider $\m{j}$ in the form 
 \begin{align}\label{eq: m-form}
@@ -475,8 +475,8 @@ where
 \end{align*}
 %where we require strong orthogonal constraints on pair of shifts corresponding to $\widetilde{m}$ function with non-diagonal common boundary and weaker constraints on $(\V{\eta}_1,\V{\eta}_6)$ and $(\V{\eta}_3,\V{\eta}_4)$. A solution to \eqref{eq: phase-constraint} is 
 
-\subsection{Computing $m_0$}\label{subsec: compute-m0}
-Once $\m{j}$ are fixed, \eqref{eq: LS-new} can be reformulated as follows,
+\subsection{Solving \eqref{eq: LS-new} and \eqref{eq: identity-cond} for $m_0,\widetilde{m_0}$ and $m_j$}\label{subsec: compute-m0}
+Once $\m{j}, j= 1,\cdots, 6$ are fixed, \eqref{eq: LS-new} can be reformulated as follows,
 \begin{align}\label{eq: mj-eq}
 \M[:,-0](\V{\omega}) 
 \begin{bmatrix}
@@ -499,20 +499,22 @@ m_6(\V{\omega})
 0
 \end{bmatrix} \doteq \V{b}_0'(\V{\omega}),
 \end{align}
+where $\M[:,-0]$ is determined by $\m{j},\,j = 1,\cdots,6$ 
 and $m_j,\,j=1,\cdots,6$ can be uniquely solved if and only if
 \hspace{-1em}
 \begin{enumerate}[leftmargin=.5in]
 \item[\mylabel{cond: i}{(\ref{subsec: compute-m0}.i)}] $\M[:,-0]$ is full rank,%
 \item[\mylabel{cond: ii}{(\ref{subsec: compute-m0}.ii)}] $\V{b}_0'(\V{\omega})$ is in $col\big(\M[:,-0](\V{\omega})\big)$, the column space of $\M[:,-0]$.%
 \end{enumerate}
-Because $\M[:,-0]$ is determined by $\m{j},\,j = 1,\cdots,6$, \ref{cond: i} can be easily checked by computing $\det(\M[:,-0]^\top\M[:,-0])$ and see if it is non-zero. Next, we show that (ii) provides an explicit way of computing $m_0(\V{\omega})$ without knowing $\m{0}$.
+%Because , \ref{cond: i} can be easily checked by computing $\det(\M[:,-0]^\top\M[:,-0])$ and see if it is non-zero. Next, we show that (ii) provides an explicit way of computing $m_0(\V{\omega})$ without knowing $\m{0}$.
+Next, we show that \ref{cond: ii} breaks down to constraints on two submatrices of $\M[:,-0]$ and quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$.
 \begin{proposition}\label{prop: m0_formula}
-Let $\M[odd,-0],\M[even,-0]\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,-0]$ consisting of odd and even rows respectively, then \ref{cond: ii} holds if and only if $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$ and 
+Let $\M[odd,-0],\M[even,-0]\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,-0]$ consisting of odd and even rows respectively. Suppose \ref{cond: i} holds, then \ref{cond: ii} holds if and only if $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$ and 
 \begin{align}\label{eq: m0-even-null}
-[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,-0] = \V{0},
+[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,-0](\V{\omega}) = \V{0},
 \end{align}
 \begin{align}\label{eq: m0-odd-null}
-[m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7)] \,\M[odd,-0] = \V{0}.
+[m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7)] \,\M[odd,-0](\V{\omega}) = \V{0}.
 \end{align}
 \end{proposition}
 \noindent{\it Proof.}
@@ -546,7 +548,15 @@ Substitute the above expression of $ \V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i)$ in \
 = \V{P}_{\M}(\V{I}_8 -  \mteven\otimes\overline{\meven} - \mtodd\otimes\overline{\modd})
 \end{align}
 Therefore, by Lemma \ref{lem: null-space}, $\V{P}_{\M}$ is the projection of $span\{\overline{\modd},\overline{\meven}\}$. This is equivalent to \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null}.
-Finally, since $$6 = rank(\M[:,-0]) \leq rank(\M[odd,-0]) + rank(\M[even,-0]) \leq (4-1) + (4-1),$$ $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$.\qed
+Finally, since $$6 = rank(\M[:,-0]) \leq rank(\M[odd,-0]) + rank(\M[even,-0]) \leq (4-1) + (4-1),$$ $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$.\qed\\[.2em]
+\noindent{\it Remark.} Both conditions \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null} hold $\forall \V{\omega}\in[-\pi,\pi)\times[-\pi,\pi)$ if and only if \eqref{eq: m0-even-null} $\forall \V{\omega}\in [-\pi,0)\times[-\pi,0)$.
+
+According to Proposition \ref{prop: m0_formula}, $\M[:,-0]$ (or equivalently $\widetilde{m_j}$) has to satisfy the following rank constraints for \eqref{eq: mj-eq} to be uniquely solvable, 
+\begin{align}\label{eq: Mranks}
+rank(\M[:,-0]) = 6,\, rank(\M[odd,-0]) = rank(\M[even,-0]) = 3.
+\end{align}
+Furthermore, given \eqref{eq: Mranks} holds, the quadruple  $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ can be solved by \eqref{eq: m0-even-null} upto a constant $c(\V{\omega})$. The next proposition shows that this is sufficient to obtain a feasible $m_0(\V{\omega})$.
+
 \begin{comment}
 By Lemma \ref{lem: M-symmetry}, $\M[:,-0]$ are the same at $\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4$ and $\V{\omega} + \V{\pi}_6$ up to row permutations. Therefore, the columns of the matrix $\V{B}$ below should be in $col\big(\M[:,-0](\V{\omega})\big)$,
 \begin{align*}
@@ -591,11 +601,7 @@ Let $\M[:,-0] = U\Sigma V^\top$ be the singular value decomposition of $\M[:,-0]
 \V{P}^\downarrow\V{B}^\downarrow = \V{P}^\downarrow \big(\widetilde{\mathbf{m}_0}\otimes \mathbf{m}_0 - \V{I}_4\big) = \V{0}\in\mathbb{C}^8
 \end{align}
 $\V{P}^\downarrow\in\mathbb{C}^{8\times 4}$ consists of odd columns of $\V{P}$ and $\V{B}^\downarrow\in\mathbb{C}^{4\times 4}$ consists of odd rows of $\V{B}$.
-\end{comment}
 
-\textcolor{red}{Remove this sub-section, or place it after the main result on discontinuity}.
-
-\begin{comment}
 Let $C_{\V{\omega}} = det(\M[-k_{\V{\omega}},:])$, then we have the following observation.
 \begin{lemma}\label{lem: equal-det}
 $C_{\V{\omega}} = C_{\V{\omega}+\V{\pi}_2} = C_{\V{\omega}+\V{\pi}_4} = C_{\V{\omega}+\V{\pi}_6}$
@@ -607,11 +613,22 @@ $\mathbf{1}_{k_{\V{\omega}+\V{\pi}_2}} = P_{\V{\pi}_2}\mathbf{1}_{k_{\V{\omega}}
 \qed\\[1em]
 We assume that $m_0\in\mathbb{R}_{\geq 0}$ without phase. Let $m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}|\in \mathbb{R}_{\geq 0}$ and $\mc{0} = \m{0}/|C_{\V{\omega}}|$, then Lemma \ref{lem: equal-det} implies the following.
 \end{comment}
+
+
 \begin{proposition}\label{prop: mc}
-Given $\m{i},\,i=1,...,6$, $m_0(\V{\omega}),\,\m{0}, m_i(\V{\omega}),\,  i = 1,...,6$ satisfy \eqref{eq: LS-new}  if and only if 
+If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
 %$m_0^C(\V{\omega}),$ $\,\mc{0}, m_i(\V{\omega}),\,i = 1,...,6$ do. More generally, 
-$m_0(\V{\omega})c(\V{\omega}),\,\m{0}c(\V{\omega})^{-1}, m_i(\V{\omega}),\,i=1,...,6$ satisfy \eqref{eq: LS-new}  $\forall\, c(\V{\omega})\, s.t.\; c(\V{\omega}) = c(\V{\omega}+\V{\pi}_2)=c(\V{\omega}+\V{\pi}_4) = c(\V{\omega}+\V{\pi}_6) \neq 0$.
+%$m_0(\V{\omega})c(\V{\omega}),\,\m{0}c(\V{\omega})^{-1}, m_i(\V{\omega}),\,i=1,...,6$ 
+$m_j^c(\V{\omega})\doteq m_j(\V{\omega})c_j(\V{\omega}), \widetilde{m_j}^c(\V{\omega})\doteq \m{j}\overline{c_j}(\V{\omega})^{-1},\, j = 0,1,\cdots,6,$
+satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if and only if $\forall\, c_j(\V{\omega})\,\; c_j(\V{\omega}) = c_j(\V{\omega}+\V{\pi}_2)=c_j(\V{\omega}+\V{\pi}_4) = c_j(\V{\omega}+\V{\pi}_6) \neq 0$.
 \end{proposition}
+\noindent{\it Proof. }
+It suffices to show that
+\begin{align*}
+m_j^c(\V{\omega})\overline{\widetilde{m_j}^c}(\V{\omega} + \V{\pi}_i) = m_j(\V{\omega})\sbarmp{j}{i},\quad & i \text{ is even,}\\
+m_j^c(\V{\omega})\overline{\widetilde{m_j}^c}(\V{\omega} + \V{\pi}_i) = \big(m_j(\V{\omega})\sbarmp{j}{i}\big)c_j(\V{\omega})^{-1},\quad & i \text{ is odd.}
+\end{align*}
+\qed\\
 %According to Proposition \ref{prop: mc}, we can first solve $\mc{0}$ and $m_0^C(\V{\omega})$ and then construct $c(\V{\omega})$ for optimal $\m{0}$ and $m_0(\V{\omega})$. 
 %In particular, $m_0^C$ can be computed without knowing $k_{\V{\omega}}$,
 %\begin{align}\label{eq: m0C}
@@ -623,18 +640,18 @@ We propose the following algorithm for bi-orthogonal directional filter construc
 \item[construction of bi-orthogonal basis]\
 \begin{itemize}
 \item[Input:] $\m{i},\,i=1,...,6$
-\item[1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check if $$rank(\M[:,-0]) = 6,\, rank(\M[odd,-0]) = rank(\M[even,-0]) = 3,$$%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
-\item[2.] solve $m_0(\V{\omega})$ at $\V{\omega}+\V{\pi}_i,\, i = 0,2,4,6$ simultaneously using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
+\item[1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks}.%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
+\item[2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
 \item[3.] solve the following optimization for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$.
-\begin{align*}
-\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0^C\circ\xvec)\Vert^2,\quad 
+\begin{align}\label{eq: opt}
+\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
 s.t. \; \V{A}\xvec = \mathbf{1},
-\end{align*}
+\end{align}
 %solve $m_i(\V{\omega}),\, i=1,...,6$ according to \eqref{eq: LS-new}
 \item[4.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
 \end{itemize}
 \end{description}
-
+Proposition \ref{prop: mc} suggests that a feasible set of $(m_j,\widetilde{m_j}), \, j = 0,1,\cdots,6$, constructed by the algorithm above can be used to generate new sets of $(m_j^c,\widetilde{m_j}^c)$. In particular, we can design $c_j(\V{\omega})$ such that $(m_j^c,\widetilde{m_j}^c)$ have desired properties, e.g. smoothness or fast decay rate.
 
 \begin{comment}
 \subsection{solving $m_i$}
