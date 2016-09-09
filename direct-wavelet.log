@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 SEP 2016 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  8 SEP 2016 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -423,20 +423,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 380--384
 
  []
 
-[14] [15]
-
-LaTeX Warning: Reference `subsec: compute-m0' on page 16 undefined on input lin
-e 508.
-
-
-LaTeX Warning: Reference `subsec: compute-m0' on page 16 undefined on input lin
-e 510.
-
-
-LaTeX Warning: Reference `subsec: compute-m0' on page 16 undefined on input lin
-e 519.
-
-[16]
+[14] [15] [16]
 Overfull \hbox (21.64096pt too wide) in paragraph at lines 532--534
 \OT1/cmr/m/n/10 The iden-tity con-straint [] thus can be writ-ten as $([])[] []
 [] = 1$ and $([])[] [][] =
@@ -502,82 +489,58 @@ Package pdftex.def Info: ./bi-orth/figure/1d-filter-compare.jpg used on input l
 ine 21.
 (pdftex.def)             Requested size: 137.9979pt x 60.60222pt.
 
-<./bi-orth/figure/2d-m-compare-1.jpg, id=120, 308.15125pt x 128.48pt>
-File: ./bi-orth/figure/2d-m-compare-1.jpg Graphic file (type jpg)
+<./bi-orth/figure/2d-m-compare-vanilla.png, id=120, 1351.0475pt x 297.11pt>
+File: ./bi-orth/figure/2d-m-compare-vanilla.png Graphic file (type png)
 
-<use ./bi-orth/figure/2d-m-compare-1.jpg>
-Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-1.jpg used on input line
- 36.
-(pdftex.def)             Requested size: 155.24895pt x 64.72993pt.
+<use ./bi-orth/figure/2d-m-compare-vanilla.png>
+Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-vanilla.png used on inpu
+t line 36.
+(pdftex.def)             Requested size: 155.24895pt x 34.13745pt.
  [21 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-o
 rth/figure/1d-filter-compare.jpg> <./bi-orth/figure/filters.jpg>]
-<./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf, id=124, 703.62875pt x 
-128.48pt>
-File: ./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf Graphic file (type
- pdf)
- <use ./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf>
-Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf
- used on input line 56.
-(pdftex.def)             Requested size: 279.4462pt x 51.02448pt.
+<./bi-orth/figure/2d-m-compare-weightedl2.png, id=124, 1352.05125pt x 300.12125
+pt>
+File: ./bi-orth/figure/2d-m-compare-weightedl2.png Graphic file (type png)
+ <use ./bi-orth/figure/2d-m-compare-weightedl2.png>
+Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-weightedl2.png used on i
+nput line 66.
+(pdftex.def)             Requested size: 279.4462pt x 62.02899pt.
 
-<./bi-orth/figure/2d-filter-compare-2-1-eps-converted-to.pdf, id=125, 706.64pt 
-x 128.48pt>
-File: ./bi-orth/figure/2d-filter-compare-2-1-eps-converted-to.pdf Graphic file 
-(type pdf)
- <use ./bi-orth/figure/2d-filter-compare-2-1-eps-converted-to.pdf>
-Package pdftex.def Info: ./bi-orth/figure/2d-filter-compare-2-1-eps-converted-t
-o.pdf used on input line 57.
-(pdftex.def)             Requested size: 279.4462pt x 50.80882pt.
+<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=125, 1351.0475pt x 294.0
+9875pt>
+File: ./bi-orth/figure/2d-filter-compare-weightedl2.png Graphic file (type png)
 
-<./bi-orth/figure/2d-m-compare-2-2-eps-converted-to.pdf, id=126, 691.58376pt x 
-128.48pt>
-File: ./bi-orth/figure/2d-m-compare-2-2-eps-converted-to.pdf Graphic file (type
- pdf)
- <use ./bi-orth/figure/2d-m-compare-2-2-eps-converted-to.pdf>
-Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-2-2-eps-converted-to.pdf
- used on input line 65.
-(pdftex.def)             Requested size: 279.4462pt x 51.91452pt.
-
-<./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.pdf, id=127, 690.58pt 
-x 128.48pt>
-File: ./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.pdf Graphic file 
-(type pdf)
- <use ./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.pdf>
-Package pdftex.def Info: ./bi-orth/figure/2d-filter-compare-2-2-eps-converted-t
-o.pdf used on input line 66.
-(pdftex.def)             Requested size: 279.4462pt x 51.99097pt.
-
-[22 <./bi-orth/figure/2d-m-compare-1.jpg>]
-<./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf, id=131, 722.7pt x 128.48
+ <use ./bi-orth/figure/2d-filter-compare-weightedl2.png>
+Package pdftex.def Info: ./bi-orth/figure/2d-filter-compare-weightedl2.png used
+ on input line 67.
+(pdftex.def)             Requested size: 279.4462pt x 60.82913pt.
+ [22 <./bi-orth/figure/2d-m-compare-vanilla.png (PNG copy)> <./bi-orth/figure/2
+d-m-compare-weightedl2.png (PNG copy)> <./bi-orth/figure/2d-filter-compare-weig
+htedl2.png (PNG copy)>]
+<./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf, id=129, 722.7pt x 128.48
 pt>
 File: ./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf Graphic file (type p
 df)
  <use ./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf>
 Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf u
-sed on input line 78.
+sed on input line 79.
 (pdftex.def)             Requested size: 310.4979pt x 55.20023pt.
 
-<./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf, id=132, 723.70375pt x 
+<./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf, id=130, 723.70375pt x 
 128.48pt>
 File: ./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf Graphic file (type
  pdf)
  <use ./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf>
 Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf
- used on input line 79.
+ used on input line 80.
 (pdftex.def)             Requested size: 310.4979pt x 55.12376pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[23 <./bi-orth/figure/2d-m-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure/
-2d-filter-compare-2-1-eps-converted-to.pdf> <./bi-orth/figure/2d-m-compare-2-2-
-eps-converted-to.pdf> <./bi-orth/figure/2d-filter-compare-2-2-eps-converted-to.
-pdf>]) (./direct-wavelet.bbl
+)
+(./direct-wavelet.bbl [23 <./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf
+> <./bi-orth/figure/2d-m-compare-3-2-eps-converted-to.pdf>]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-[24 <./bi-orth/figure/2d-m-compare-3-eps-converted-to.pdf> <./bi-orth/figure/2d
--m-compare-3-2-eps-converted-to.pdf>]) [25] (./direct-wavelet.aux)
+) [24] (./direct-wavelet.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -586,10 +549,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 4397 strings out of 493089
- 67257 string characters out of 6134842
- 140325 words of memory out of 5000000
- 7734 multiletter control sequences out of 15000+600000
+ 4387 strings out of 493089
+ 66618 string characters out of 6134842
+ 140177 words of memory out of 5000000
+ 7726 multiletter control sequences out of 15000+600000
  23396 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,19n,38p,1187b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -637,10 +600,10 @@ ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.p
 fb>
-Output written on direct-wavelet.pdf (25 pages, 938876 bytes).
+Output written on direct-wavelet.pdf (24 pages, 965251 bytes).
 PDF statistics:
- 342 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
+ 292 PDF objects out of 1000 (max. 8388607)
+ 193 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

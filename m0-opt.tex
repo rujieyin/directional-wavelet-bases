@@ -33,7 +33,7 @@ where $\V{A}$ in the constraint is the matrix generated from \eqref{eq: identity
 \subsection{Numerical optimization of $\m{0}$ in 2D}
 \begin{minipage}[c]{.45\textwidth}
 \centering
-\includegraphics[width = \textwidth]{2d-m-compare-1.jpg}
+\includegraphics[width = \textwidth]{2d-m-compare-vanilla.png}
 \captionof{figure}{Left: result of \eqref{eq: opt-1d} in 2D, Right: target}
 \label{fig: 2d-compare-1}
 \end{minipage}
@@ -51,6 +51,7 @@ To enforce the support of $\mhat{0}$ concentrates within the low frequency domai
 \end{align} 
 where $\circ$ is Hadamard product and $\wvec$ is a weight vector. In particular, we choose $\forall \omega, \; \wvec(\V{\omega}) = \Vert\V{\omega}\Vert$. Fig.\ref{fig: 2d-compare-2} and Fig.\ref{fig: 2d-compare-2.2} show the minimizer of \eqref{eq: opt-2d-weight} with $\lambda=60$ and $600$ respectively. As $\lambda$ increases, the support of the minimizer concentrates more within the low frequency region. As shown in Fig.\ref{fig: 2d-compare-2}, when $\lambda$ is not huge, the minimizer achieves a certain level of but not full symmetry, whereas Fig.\ref{fig: 2d-compare-2.2} shows that huge $\lambda$ imposes full symmetry.
 
+\begin{comment}
 \begin{minipage}{.9\textwidth}
 \centering
 \includegraphics[width = .9\textwidth]{2d-m-compare-2-1-eps-converted-to.pdf}\\
@@ -58,12 +59,12 @@ where $\circ$ is Hadamard product and $\wvec$ is a weight vector. In particular,
 \captionof{figure}{result of \eqref{eq: opt-2d-weight} $\mhat{0}$ ($\lambda = 60$), target $\m{0}$ and their difference, Top: frequency domain, Bottom: time domain}
 \label{fig: 2d-compare-2}
 \end{minipage}
-
+\end{comment}
 \vspace*{2em}
 \begin{minipage}{.9\textwidth}
 \centering
-\includegraphics[width = .9\textwidth]{2d-m-compare-2-2-eps-converted-to.pdf}\\
-\includegraphics[width = .9\textwidth]{2d-filter-compare-2-2-eps-converted-to.pdf}
+\includegraphics[width = .9\textwidth]{2d-m-compare-weightedl2.png}\\
+\includegraphics[width = .9\textwidth]{2d-filter-compare-weightedl2.png}
 \captionof{figure}{result of \eqref{eq: opt-2d-weight} $\mhat{0}$ ($\lambda = 600$), target $\m{0}$ and their difference}
 \label{fig: 2d-compare-2.2}
 \end{minipage}
