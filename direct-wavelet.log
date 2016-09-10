@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 SEP 2016 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 SEP 2016 20:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -307,7 +307,7 @@ Overfull \hbox (1.98476pt too wide) in paragraph at lines 43--43
  []
 
 
-<./orth-frame/figure/shannon-marked-wcoord.jpg, id=42, 910.40125pt x 891.33pt>
+<./orth-frame/figure/shannon-marked-wcoord.jpg, id=41, 910.40125pt x 891.33pt>
 File: ./orth-frame/figure/shannon-marked-wcoord.jpg Graphic file (type jpg)
 
 <use ./orth-frame/figure/shannon-marked-wcoord.jpg>
@@ -315,15 +315,15 @@ Package pdftex.def Info: ./orth-frame/figure/shannon-marked-wcoord.jpg used on
 input line 50.
 (pdftex.def)             Requested size: 144.89937pt x 141.85408pt.
 
-<./orth-frame/figure/sublattice-2.jpg, id=43, 214.8025pt x 204.765pt>
+<./orth-frame/figure/sublattice-2.jpg, id=42, 214.8025pt x 204.765pt>
 File: ./orth-frame/figure/sublattice-2.jpg Graphic file (type jpg)
 
 <use ./orth-frame/figure/sublattice-2.jpg>
 Package pdftex.def Info: ./orth-frame/figure/sublattice-2.jpg used on input lin
 e 53.
 (pdftex.def)             Requested size: 103.50105pt x 98.66412pt.
-) (./orthonormal.tex [4 <./orth-frame/figure/shannon-marked-wcoord.jpg> <./orth
--frame/figure/sublattice-2.jpg>]
+) [4 <./orth-frame/figure/shannon-marked-wcoord.jpg> <./orth-frame/figure/subla
+ttice-2.jpg>] (./orthonormal.tex
 LaTeX Font Info:    Try loading font information for U+bbm on input line 55.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
@@ -359,98 +359,112 @@ n/10 j\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 ([][][])\OMS/cmsy/m/n/10 j \OML/cmm/m
  []
 
 [7]
+
+LaTeX Warning: Reference `eq: LS_new' on page 8 undefined on input line 58.
+
+
 Overfull \hbox (0.74136pt too wide) in paragraph at lines 61--63
 \OT1/cmr/m/n/10 We sum-mer-ize the main setup and the ap-proach in [[]]. Con-si
 der a bi-orthogonal
  []
 
 [8]
-Overfull \hbox (15.241pt too wide) in paragraph at lines 135--139
+Overfull \hbox (15.241pt too wide) in paragraph at lines 136--139
 \OT1/cmr/m/it/10 Proof. \OT1/cmr/m/n/10 If [] is solv-able, then con-di-tion (i
 i) holds, which im-plies that $[]([[]\OML/cmm/m/it/10 ; [][]\OT1/cmr/m/n/10 ]) 
 =
  []
 
 
-Overfull \hbox (11.71349pt too wide) in paragraph at lines 135--139
+Overfull \hbox (11.71349pt too wide) in paragraph at lines 136--139
 \OT1/cmr/m/n/10 0$. Ex-pand-ing the de-ter-mi-nant with re-spect to the last co
 l-umn $[][]$ yields $[]([][\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 0\OML/cmm/m/it/1
 0 ; \OT1/cmr/m/n/10 :
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--139
+
+ []
+
 [9]
-LaTeX Font Info:    Try loading font information for U+euf on input line 190.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-<./bi-orth/figure/triangle-partition-new.png, id=71, 154.6578pt x 156.8259pt>
+<./bi-orth/figure/triangle-partition-new.png, id=76, 154.6578pt x 156.8259pt>
 File: ./bi-orth/figure/triangle-partition-new.png Graphic file (type png)
 
 <use ./bi-orth/figure/triangle-partition-new.png>
 Package pdftex.def Info: ./bi-orth/figure/triangle-partition-new.png used on in
-put line 227.
+put line 168.
 (pdftex.def)             Requested size: 137.9979pt x 139.93114pt.
- [10]
-<./bi-orth/figure/S_shifts2.png, id=78, 217.7736pt x 206.9331pt>
+ [10 <./bi-orth/figure/triangle-partition-new.png>]
+<./bi-orth/figure/S_shifts2.png, id=82, 217.7736pt x 206.9331pt>
 File: ./bi-orth/figure/S_shifts2.png Graphic file (type png)
 
 <use ./bi-orth/figure/S_shifts2.png>
-Package pdftex.def Info: ./bi-orth/figure/S_shifts2.png used on input line 246.
+Package pdftex.def Info: ./bi-orth/figure/S_shifts2.png used on input line 188.
 
 (pdftex.def)             Requested size: 172.5pt x 163.9174pt.
- [11 <./bi-orth/figure/triangle-partition-new.png>] [12 <./bi-orth/figure/S_shi
-fts2.png>]
-Overfull \hbox (9.23888pt too wide) in paragraph at lines 310--311
-[]\OT1/cmr/bx/n/10 Proposition 5.7. []\OT1/cmr/m/it/10 If $\OML/cmm/m/it/10 m[]
- \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 con-c
-en-trates within $\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]\OT
-1/cmr/m/n/10 )$\OT1/cmr/m/it/10 , then $[]\OT1/cmr/m/n/10 ([]) = []([]) =
+
+Overfull \hbox (13.07018pt too wide) in paragraph at lines 195--196
+[]\OT1/cmr/bx/n/10 Lemma 5.3. []$\OMS/cmsy/m/n/10 9 \OML/cmm/m/it/10 ^^Z > \OT1
+/cmr/m/n/10 0$ \OT1/cmr/m/it/10 s.t. if $[]\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10 ^^
+@\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 :]([])$ \OT1/cmr/m/it/10 i
+s sin-gu-lar $\OMS/cmsy/m/n/10 8[] 2 \OML/cmm/m/it/10 S[]$\OT1/cmr/m/it/10 , th
+en $\OML/cmm/m/it/10 rank\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/1
+0 ) =
  []
 
 
-Overfull \hbox (8.38548pt too wide) in paragraph at lines 316--317
-[]\OT1/cmr/bx/n/10 Proposition 5.8. []$[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ;
+Overfull \hbox (11.37659pt too wide) in paragraph at lines 200--202
+[]\OT1/cmr/m/n/10 Without loss of gen-er-al-ity, in the fol-low-ing anal-y-sis,
+ we as-sume $\OML/cmm/m/it/10 rank\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/
+cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (8.38548pt too wide) in paragraph at lines 204--205
+[]\OT1/cmr/bx/n/10 Proposition 5.4. []$[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ;
  []\OT1/cmr/m/n/10 ([])$ \OT1/cmr/m/it/10 are not con-tin-u-ous at both $\OT1/c
 mr/m/n/10 ([]\OML/cmm/m/it/10 ; []\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 and $\OT1
 /cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@[]\OT
 1/cmr/m/n/10 )$\OT1/cmr/m/it/10 . 
  []
 
+[11 <./bi-orth/figure/S_shifts2.png>]
 
-LaTeX Warning: Reference `fig: tm_i_m_0' on page 13 undefined on input line 331
+LaTeX Warning: Reference `fig: tm_i_m_0' on page 12 undefined on input line 219
 .
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 359--363
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--251
 
  []
 
-[14] [15]
-Overfull \hbox (21.64096pt too wide) in paragraph at lines 513--515
+[12] [13] [14]
+Overfull \hbox (21.64096pt too wide) in paragraph at lines 401--403
 \OT1/cmr/m/n/10 The iden-tity con-straint [] thus can be writ-ten as $([])[] []
 [] = 1$ and $([])[] [][] =
  []
 
-[16]
-Overfull \hbox (10.74162pt too wide) in paragraph at lines 598--603
-[]\OT1/cmr/bx/n/10 Proposition 5.13. []\OT1/cmr/m/it/10 If $[]\OT1/cmr/m/n/10 (
-[])\OML/cmm/m/it/10 ; m[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ;  j \OT1/cmr/m/n
-/10 = 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; :::; \OT1/cmr/m/n
-/10 6$ \OT1/cmr/m/it/10 sat-isfy [] and [], $\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/1
-0 ([]) []
+
+Overfull \hbox (4.99165pt too wide) in paragraph at lines 486--491
+[]\OT1/cmr/bx/n/10 Proposition 5.9. []\OT1/cmr/m/it/10 If $[]\OT1/cmr/m/n/10 ([
+])\OML/cmm/m/it/10 ; m[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ;  j \OT1/cmr/m/n/
+10 = 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; :::; \OT1/cmr/m/n/
+10 6$ \OT1/cmr/m/it/10 sat-isfy [] and [], $\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10
+ ([]) []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--611
+Underfull \hbox (badness 10000) in paragraph at lines 497--499
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 662--663
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
-) (./conclusion.tex) (./parseval-cond.tex [18]
+) (./conclusion.tex) [16] (./parseval-cond.tex
 Overfull \hbox (9.85329pt too wide) in paragraph at lines 17--20
 []\OT1/cmr/m/n/10 ([]) = \OML/cmm/m/it/10 ^^^[]\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/
 n/10 ^^@ [][]\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 j[]j[] [][] \OML/cmm/m/it/10 
@@ -469,22 +483,44 @@ mm/m/it/10 ; \OT1/cmr/m/n/10 0)\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 (0\OML/cmm/m
 10 ; \OT1/cmr/m/n/10 1)\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 ,
  []
 
-[19]) (./lemmas.tex) (./m0-opt.tex [20]
-<./bi-orth/figure/filters.jpg, id=116, 562.1pt x 421.575pt>
+[17]) (./lemmas.tex [18]
+LaTeX Font Info:    Try loading font information for U+euf on input line 31.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [19]
+Overfull \hbox (1.66971pt too wide) in paragraph at lines 116--118
+[]\OT1/cmr/bx/n/10 Lemma B.3. []\OT1/cmr/m/it/10 If $[]\OT1/cmr/m/n/10 ([])([](
+[]))$ \OT1/cmr/m/it/10 con-cen-trates in $\OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 (
+\OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 )$\OT1/cmr/m/it/10 , then $\OMS/cmsy/m/n/10
+ j[]\OT1/cmr/m/n/10 ([])\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 > \OMS/cmsy/m/n/10 
+j[]\OT1/cmr/m/n/10 ([])\OMS/cmsy/m/n/10 j $
+ []
+
+
+Overfull \hbox (11.66942pt too wide) in paragraph at lines 123--124
+[]\OT1/cmr/bx/n/10 Proposition B.4. []\OT1/cmr/m/it/10 If $\OML/cmm/m/it/10 m[]
+ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 )$ \OT1/cmr/m/it/10 con-c
+en-trates within $\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]\OT
+1/cmr/m/n/10 )$\OT1/cmr/m/it/10 , then $[]\OT1/cmr/m/n/10 ([]) = []([]) =
+ []
+
+[20]) (./m0-opt.tex
+<./bi-orth/figure/filters.jpg, id=119, 562.1pt x 421.575pt>
 File: ./bi-orth/figure/filters.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/filters.jpg>
 Package pdftex.def Info: ./bi-orth/figure/filters.jpg used on input line 6.
 (pdftex.def)             Requested size: 137.9979pt x 103.49583pt.
 
-<./bi-orth/figure/m-funcs.jpg, id=117, 562.1pt x 421.575pt>
+<./bi-orth/figure/m-funcs.jpg, id=120, 562.1pt x 421.575pt>
 File: ./bi-orth/figure/m-funcs.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/m-funcs.jpg>
 Package pdftex.def Info: ./bi-orth/figure/m-funcs.jpg used on input line 18.
 (pdftex.def)             Requested size: 155.24895pt x 116.432pt.
 
-<./bi-orth/figure/1d-m-compare.jpg, id=118, 546.04pt x 265.99374pt>
+<./bi-orth/figure/1d-m-compare.jpg, id=121, 546.04pt x 265.99374pt>
 File: ./bi-orth/figure/1d-m-compare.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/1d-m-compare.jpg>
@@ -492,21 +528,21 @@ Package pdftex.def Info: ./bi-orth/figure/1d-m-compare.jpg used on input line 2
 5.
 (pdftex.def)             Requested size: 155.24895pt x 75.62636pt.
 
-<./bi-orth/figure/1d-filter-compare.jpg, id=119, 527.9725pt x 231.86626pt>
+<./bi-orth/figure/1d-filter-compare.jpg, id=122, 527.9725pt x 231.86626pt>
 File: ./bi-orth/figure/1d-filter-compare.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/1d-filter-compare.jpg>
 Package pdftex.def Info: ./bi-orth/figure/1d-filter-compare.jpg used on input l
 ine 26.
 (pdftex.def)             Requested size: 155.24895pt x 68.17705pt.
-
+ [21 <./bi-orth/figure/filters.jpg>]
 Underfull \hbox (badness 3240) in paragraph at lines 33--34
 []\OT1/cmr/m/n/10 Let $[]([])$ be the ap-prox-i-ma-tion of
  []
 
-[21 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-or
-th/figure/1d-filter-compare.jpg> <./bi-orth/figure/filters.jpg>]
-<./bi-orth/figure/2d-m-compare-vanilla.png, id=123, 1351.0475pt x 297.11pt>
+[22 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-or
+th/figure/1d-filter-compare.jpg>]
+<./bi-orth/figure/2d-m-compare-vanilla.png, id=129, 1351.0475pt x 297.11pt>
 File: ./bi-orth/figure/2d-m-compare-vanilla.png Graphic file (type png)
 
 <use ./bi-orth/figure/2d-m-compare-vanilla.png>
@@ -514,7 +550,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-vanilla.png used on inpu
 t line 71.
 (pdftex.def)             Requested size: 310.4979pt x 68.27945pt.
 
-<./bi-orth/figure/2d-m-compare-weightedl2.png, id=124, 1352.05125pt x 300.12125
+<./bi-orth/figure/2d-m-compare-weightedl2.png, id=130, 1352.05125pt x 300.12125
 pt>
 File: ./bi-orth/figure/2d-m-compare-weightedl2.png Graphic file (type png)
  <use ./bi-orth/figure/2d-m-compare-weightedl2.png>
@@ -522,7 +558,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-weightedl2.png used on i
 nput line 78.
 (pdftex.def)             Requested size: 310.4979pt x 68.9211pt.
 
-<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=125, 1351.0475pt x 294.0
+<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=131, 1351.0475pt x 294.0
 9875pt>
 File: ./bi-orth/figure/2d-filter-compare-weightedl2.png Graphic file (type png)
 
@@ -535,25 +571,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--104
 
  []
 
-(./direct-wavelet.bbl [22 <./bi-orth/figure/2d-m-compare-vanilla.png (PNG copy)
-> <./bi-orth/figure/2d-m-compare-weightedl2.png (PNG copy)> <./bi-orth/figure/2
-d-filter-compare-weightedl2.png (PNG copy)>]
+(./direct-wavelet.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-) [23] (./direct-wavelet.aux)
+[23 <./bi-orth/figure/2d-m-compare-vanilla.png (PNG copy)> <./bi-orth/figure/2d
+-m-compare-weightedl2.png (PNG copy)> <./bi-orth/figure/2d-filter-compare-weigh
+tedl2.png (PNG copy)>]) [24] (./direct-wavelet.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4373 strings out of 493089
- 65999 string characters out of 6134842
- 141157 words of memory out of 5000000
- 7715 multiletter control sequences out of 15000+600000
+ 4377 strings out of 493089
+ 66050 string characters out of 6134842
+ 139193 words of memory out of 5000000
+ 7719 multiletter control sequences out of 15000+600000
  23228 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,19n,38p,1187b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,19n,38p,1186b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/RujieYin/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/b
 bm10.600pk></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmex
@@ -564,43 +600,46 @@ msfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmbx5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbxti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cmextra/cmex7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
-ts/cmextra/cmex9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-ib10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextr
-a/cmmib7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-extra/cmmib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.
-pfb>
-Output written on direct-wavelet.pdf (23 pages, 935997 bytes).
+s/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbxti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+extra/cmex7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cmextra/cmex8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cmextra/cmex9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mib10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmext
+ra/cmmib7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+mextra/cmmib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/
+texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.p
+fb>
+Output written on direct-wavelet.pdf (24 pages, 965859 bytes).
 PDF statistics:
- 263 PDF objects out of 1000 (max. 8388607)
- 180 compressed objects within 2 object streams
+ 278 PDF objects out of 1000 (max. 8388607)
+ 191 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,131 @@
-\section{Lemmas}\label{app: lemmas}
+\section{Proof of lemmas and propositions}\label{app: lemmas}
 
+\subsection{Discontinuity of $\m{j}$}
+\begin{lemma}\label{lem: subM-singular-sys}
+Define $d_{i,j}(\V{\omega}) = \det([\mrow{k_1}(\V{\omega})^\top,\cdots,\mrow{k_6}(\V{\omega})^\top]),\;$ where $0\leq k_1<\cdots<k_6\leq 7,\, s.t.\, k_l\neq i,j.$
+\eqref{eq: LS-new} is solvable $\forall \V{\omega}$ if and only if \vspace{.5em}
+\begin{align}
+\label{eq: singular-cond}
+\mathfrak{D}(\omega)\begin{bmatrix}
+\sbarm{0}\\
+\sbarmp{0}{2}\\
+\sbarmp{0}{4}\\
+\sbarmp{0}{6}
+\end{bmatrix}
+\doteq
+\begin{bmatrix}
+0 & d_{0,2} & d_{0,4} & d_{0,6}\\
+-d_{0,2} & 0 & d_{2,4} & d_{2,6}\\
+-d_{0,4} & -d_{2,4} & 0 & d_{4,6}\\
+-d_{0,6} & -d_{2,6} & -d_{4,6} & 0
+\end{bmatrix}
+\begin{bmatrix}
+\sbarm{0}\\
+\sbarmp{0}{2}\\
+\sbarmp{0}{4}\\
+\sbarmp{0}{6}
+\end{bmatrix}
+= \begin{bmatrix}
+0\\0\\0\\0
+\end{bmatrix}.
+\end{align}
+\end{lemma}
+\noindent{\it Proof.}
+By Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry},  $\M[-k,:],\,k=0,2,4,6$ are singular,
+The singularity condition on  $\M[-0,:](\V{\omega})$ can be rewritten as follows,
+\begin{align}\label{eq: singular-omega}
+0 &=\det(\M[-0,:]) \notag\\
+&=  \sbarmp{0}{2}\cdot\det(\Msub[-2,:])\notag\\
+&\quad+ \,\sbarmp{0}{4}\cdot\det(\Msub[-4,:])
++ \sbarmp{0}{6}\cdot\det(\Msub[-6,:])\notag\\
+&= 0\cdot\sbarm{0}\,+\,d_{0,2}\cdot\sbarmp{0}{2} \notag\\
+&\quad+\,d_{0,4}\cdot \sbarmp{0}{4}\,+\, d_{0,6}\cdot\sbarmp{0}{6}
+\end{align}
+%This is the first equation in the linear system \eqref{eq: singular-cond}. Substitute $\V{\omega}$ by $\V{\omega + \pi_2}$ in \eqref{eq: singular-omega} and use the $2\pi-$periodicity of $\V{\omega}$, we have the singularity condition on $\M[-1,:](\V{\omega+\pi_2})$ as follows
+%then the above singularity condition on $\M[-1,:]$ at $\V{\omega}$ can be rewritten as follows,
+%\begin{align*}
+%[0,\, d_{0,2}(\V{\omega}),\, d_{0,4}(\V{\omega}),\, d_{0,6}(\V{\omega})]\,[\widetilde{m_0}(\V{\omega}),\,\widetilde{m_0}(\V{\omega}+\V{\pi}_2),\, \widetilde{m_0}(\V{\omega}+\V{\pi}_4),\,\widetilde{m_0}(\V{\omega}+\V{\pi}_6)]^\top = 0
+%\end{align*}
+%It is easy to verify that the above singular condition at $\V{\omega}+\V{\pi}_2$ is equivalent to 
+%\begin{align*}
+%-d_{0,2}(\V{\omega})\cdot \widetilde{m_0}(\V{\omega}) + d_{2,4}(\V{\omega})\cdot \widetilde{m_0}(\V{\omega}+\V{\pi}_4) + d_{2,6}(\V{\omega})\cdot\widetilde{m_0}(\V{\omega}+\V{\pi}_6) = 0,
+%[-d_{0,2}(\V{\omega}),\, 0,\,d_{2,4}(\V{\omega}),\,d_{2,6}][\widetilde{m_0}(\V{\omega}),\,\widetilde{m_0}(\V{\omega}+\V{\pi}_2),\, \widetilde{m_0}(\V{\omega}+\V{\pi}_4),\,\widetilde{m_0}(\V{\omega}+\V{\pi}_6)]^\top = 0,
+%\end{align*}
+%which is the second linear equation in  \eqref{eq: singular-cond}.
+Similarly, the second to fourth equations can be obtained by rewriting the singularity condition on $\M[-2,:]$, $\M[-4,:]$ and $\M[-6,:]$ respectively.\qed
+% at $\V{\omega}+\V{\pi}_4$ and $\V{\omega}+\V{\pi}_6$ in the coordinate of $\V{\omega}$.\qed
+%where $\mathfrak{D}(\V{\omega})$ is anti-symmetric. Because $\mathfrak{D}(\V{\omega})$ is independent of $m_0(\V{\omega})$, \eqref{eq: singular-cond} holds for $\mc{0}$ as well.
+
+%On the other hand, given $m_0$, $\widetilde{m_0}$ has to satisfy the identity constraint \eqref{eq: identity-cond}.
+The identity constraint \eqref{eq: identity-cond} on $m_0$ and the singularity condition \eqref{eq: singular-cond} together imply the following proposition,
+%Due to the periodic wrapping of the frequency square $S_0$, we only need to consider \eqref{eq: singular-cond} and \eqref{eq: identity-cond} on $S_1$ and they imply the following proposition,
+\begin{proposition}\label{prop: feasibility}
+Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: LS-new} has no solution for $\widetilde{m_0}$, if $\exists\,\omega, \,s.t. \; [m_0(\omega), m_0(\omega+\pi_2),m_0(\omega+\pi_4),m_0(\omega+\pi_6)]$ is a linear combination of the rows of $\mathfrak{D}(\omega)$.% in \eqref{eq: singular-cond}.
+\end{proposition}
+
+\noindent{\bf Proof of Lemma \ref{lem: rank1}}:\\
+$\exists\, \rho>0$ s.t.  if $\M[-0,:](\V{\omega})$ is singular $\forall \V{\omega}\in S_\rho$, then $rank(\mrow{1},\mrow{7})=1$ or $rank(\mrow{3},\mrow{5}) = 1$.\\
+\noindent{\it Proof.}
+When $\rho$ is small enough, due to the concentration property, $\m{i}$ is zero on all but a few sets $S_\rho + \V{\pi}_j$ (see Fig.\ref{fig: S-shifts} for reference of $S_\rho$ and its shifts), thus $\mrow{i}(\V{\omega})$ is sparse on $S_\rho$ and $\M[-0,:]$ takes the following form
+\begin{align}
+\label{eq: sparse-mat}
+\M[-0,:](\V{\omega})=
+\begin{bmatrix}
+\mrow{0}\\
+\mrow{1}\\
+\mrow{2}\\
+\mrow{3}\\
+\mrow{4}\\
+\mrow{5}\\
+\mrow{6}\\
+\mrow{7}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 & 0 & 0 & 0 & 0 & 0\\
+* & 0 & 0 & 0 & 0 & *\\
+0 & 0 & 0 & * & * & 0\\
+0 & 0 & * & * & 0 & 0\\
+0 & * & * & 0 & 0 & 0\\
+0 & 0 & * & * & 0 & 0\\
+* & 0 & * & * & 0 & *\\
+%0 & * & * & 0 & 0 & 0\\
+%0 & 0 & 0 & * & * & 0\\
+%* & 0 & 0 & 0 & 0 & *\\
+%* & 0 & 0 & 0 & 0 & *\\
+%0 & 0 & * & * & 0 & 0\\
+%0 & 0 & * & * & 0 & 0\\
+* & 0 & 0 & 0 & 0 & *
+\end{bmatrix}
+%=\V{P}\,\widetilde{\mathbf{M}}[:,2:7],
+\end{align}
+where $*$s denote possible non-zero entries.
+%where $\V{P}$ is a row permutation matrix. 
+We make the following observation of $\mrow{i}$:
+\begin{itemize}
+\item[(i)] $\mrow{0}$ is a zero vector
+\item[(ii)] $\mrow{2}$ and $\mrow{4}$ are linearly independent of each other and the rest of $\mrow{i}$
+\item[(iii)] $span\{\mrow{1},\mrow{7}\} \perp span\{\mrow{3},\mrow{5}\}$ and $rank(\mrow{1},\mrow{7}) \leq 2$, \\$rank(\mrow{3},\mrow{5})\leq 2$
+\item[(iv)] $span\{\mrow{1}, \mrow{7}, \mrow{3},\mrow{5},\mrow{6}\} \leq 4$
+\end{itemize}
+Since $S_\rho$ is in the low frequency domain, $m_0(\V{\omega})\neq 0$. \eqref{eq: m0-cramer} then implies that $\Msub$ is full rank, or equivantly, $rank(\M[-0,:]) = 6$. It follows from  (ii) and (iv) that $rank(\mrow{1},\mrow{6},\mrow{7},\mrow{3},\mrow{5})= 4$.\\
+On the other hand, (ii) and (iv) imply that $$rank(\Msub(\V{\omega}+\V{\pi}_2))=rank(\mrow{0},\mrow{4},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})= 5$$ and likewise $$rank(\Msub(\V{\omega}+\V{\pi}_4))=rank(\mrow{0},\mrow{2},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})= 5.$$ Therefore, $\det(\Msub(\V{\omega} + \V{\pi}_2)) = \det(\Msub(\V{\omega} + \V{\pi}_4)) = 0$ and \eqref{eq: m0-cramer} implies $m_0(\V{\omega}+\V{\pi}_2) = m_0(\V{\omega}+\V{\pi}_4) = 0$.\\
+If $\mrow{1}$ and $\mrow{7}$ are linearly independent and so are $\mrow{3}$ and $\mrow{5}$, then $$rank(\Msub(\V{\omega}+\V{\pi}_6))=rank(\mrow{2},\mrow{4},\mrow{1},\mrow{3},\mrow{5},\mrow{7}) = 6,$$ hence $m_0(\V{\omega}+\V{\pi}_6)\neq 0$. Therefore, $$[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)] = [*,0,0,*].$$ In addition, $d_{i,j} = 0,\, \forall(i,j)$ except $(0,6)$, so in \eqref{eq: singular-cond} $$\mathfrak{D}(\V{\omega}) = [d_{0,6}, 0, 0,0]^\top [0,0,0,1] + [0,0,0,d_{0,6}]^\top [-1,0,0,0].$$  By Proposition \ref{prop: feasibility}, the linear system \eqref{eq: LS-new} has no solution $\widetilde{m_0}$ and this proofs the lemma.\qed
+
+\begin{lemma}\label{lem: concentrate}
+If $\m{1} (\m{6})$ concentrates in $T_1 (T_6)$, then $|\m{6}| > |\m{1}|\,$ a.e. on $T_6\bigcap \text{supp}(\widetilde{m_6})$ ($|\m{1}| > |\m{6}|$ 
+a.e. on $T_1\bigcap\text{supp}(\widetilde{m_1})$).
+\end{lemma}
+\noindent{\it Proof}
+Let $B_6=\{\V{\omega}: |\m{6}| \leq |\m{1}|\}\bigcap T_6\bigcap supp(\widetilde{m_1})$ and $B_1$ be its mirror set with respect to $\omega_1 = \omega_2$ and suppose $|B_6|>0$, then $\int_{B_6}|\m{6}|\leq \int_{B_6}|\m{1}|$. On the other hand, since $\m{1}$ concentrates in $T_1$, we know $\int_{B_1}|\m{1}| > \int_{B_6}|\m{1}|$. Moreover, due to the symmetry of $\m{1},\m{6}$ and $B_1,B_6$, $\int_{B_1}|\m{1}| = \int_{B_6}|\m{6}|$, hence $\int_{B_6}|\m{1}| \geq\int_{B_6}|\m{6}| = \int_{B_1}|\m{1}| $ which results in contradiction.\qed
+
+\begin{proposition}
+If  $m_1\,(m_6)$ concentrates within $T_1\,(T_6)$, then $\m{1} = \m{6} = 0,\, a.e. $ on $ S_\rho + \V{\pi}_1$.
+\end{proposition}
+\noindent{\it Proof.}
+Consider frequency domain $S_\rho' = S_\rho\bigcap\{\omega_1<\omega_2\}.$ By Lemma \ref{lem: rank1}, $\exists\,\alpha_{\V{\omega}}\in\mathbb{C}, s.t.\,\mrow{1}(\V{\omega}) = \alpha_{\V{\omega}}\,\mrow{7}(\V{\omega}),\, \forall\, \V{\omega}\in S_\rho',$ i.e. $\widetilde{m_1}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_1}(\V{\omega} + \V{\pi}_7)$ and $\widetilde{m_6}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_6}(\V{\omega} + \V{\pi}_7)$. On the other hand, Lemma \ref{lem: concentrate} implies that $|\widetilde{m_1}(\V{\omega} + \V{\pi}_7)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_7)|$, hence $|\widetilde{m_1}(\V{\omega} + \V{\pi}_1)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_1)|$. Let $\Omega_6':= (S_\rho+\pi_1)\bigcap T_6$, then $\int_{\Omega_6'}|\m{1}| \geq\int_{\Omega_6'}|\m{6}|$, which will contradict Lemma \ref{lem: concentrate} unless $|\Omega_6'\bigcap\text{supp}(\widetilde{m_6})| = 0$, or equivalently $\alpha_{\V{\omega}}=0$ and so $\m{6} = \m{1} = 0,\,a.e.$ on $\Omega_6'$. By symmetry, $\m{6}=\m{1} = 0,\,a.e. $ on $(S_\rho+\V{\pi}_1)\setminus \Omega_6'$ as well.\qed
+
+\subsection{Solving \eqref{eq: LS-new} and \eqref{eq: identity-cond} for $m_0,\widetilde{m_0}$ and $m_j$}
 \begin{lemma}\label{lem: null-space}
 Let $\V{P}\in\mathbb{C}^{n\times n}$ be a projection matrix of rank $2$ and $\V{a},\V{b},\V{a}',\V{b}'\in\mathbb{C}^n,\, s.t.\, \V{a}^*\V{b} = (\V{a}')^*\V{b}'=1,\, \V{a}'^*\V{b} = \V{a}^*\V{b}' = \V{b}^*\V{b}' = 0.$ If $\V{P}(\V{I}_n - \V{a}\otimes\V{b} - \V{a}'\otimes\V{b}' ) = \V{0}$, then $\V{P}$ is the projection of $span\{\V{b},\V{b}'\}$.
 \end{lemma}
