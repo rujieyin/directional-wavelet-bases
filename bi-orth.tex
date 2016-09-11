@@ -330,7 +330,7 @@ According to Proposition \ref{prop: m0_formula}, $\M[:,-0]$ (or equivalently $\w
 \begin{align}\label{eq: Mranks}
 rank(\M[:,-0]) = 6,\, rank(\M[odd,-0]) = rank(\M[even,-0]) = 3.
 \end{align}
-Furthermore, given \eqref{eq: Mranks} holds, the quadruple  $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ can be solved by \eqref{eq: m0-even-null} upto a constant $c(\V{\omega})$. The next proposition shows that this is sufficient to obtain a feasible $m_0(\V{\omega})$.
+Furthermore, given \eqref{eq: Mranks} holds, the quadruple  $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ can be solved by \eqref{eq: m0-even-null} upto a non-zero constant $c(\V{\omega})$. The next proposition shows that this is sufficient to obtain a feasible $m_0(\V{\omega})$.
 
 \begin{comment}
 By Lemma \ref{lem: M-symmetry}, $\M[:,-0]$ are the same at $\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4$ and $\V{\omega} + \V{\pi}_6$ up to row permutations. Therefore, the columns of the matrix $\V{B}$ below should be in $col\big(\M[:,-0](\V{\omega})\big)$,
@@ -394,15 +394,16 @@ We assume that $m_0\in\mathbb{R}_{\geq 0}$ without phase. Let $m_0^C(\V{\omega})
 If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
 %$m_0^C(\V{\omega}),$ $\,\mc{0}, m_i(\V{\omega}),\,i = 1,...,6$ do. More generally, 
 %$m_0(\V{\omega})c(\V{\omega}),\,\m{0}c(\V{\omega})^{-1}, m_i(\V{\omega}),\,i=1,...,6$ 
-$m_j^c(\V{\omega})\doteq m_j(\V{\omega})c(\V{\omega}), \widetilde{m_j}^c(\V{\omega})\doteq \m{j}\overline{c}(\V{\omega})^{-1},\, j = 0,1,\cdots,6,$
-satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if and only if $\forall\, c(\V{\omega})\,\; c(\V{\omega}) = c(\V{\omega}+\V{\pi}_2)=c(\V{\omega}+\V{\pi}_4) = c(\V{\omega}+\V{\pi}_6) \neq 0$.
+$m_0^c(\V{\omega})\doteq m_0(\V{\omega})c(\V{\omega}), \widetilde{m_0}^c(\V{\omega})\doteq \m{0}\overline{c}(\V{\omega})^{-1}$ and $m_j(\V{\omega}),\m{j}, \, j = 1,\cdots,6$ 
+satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if $ c(\V{\omega}) = c(\V{\omega}+\V{\pi}_2)=c(\V{\omega}+\V{\pi}_4) = c(\V{\omega}+\V{\pi}_6) \neq 0$, i.e. $c(\V{\omega})$ is $\pi$-periodic in both $\omega_1$ and $\omega_2$.
 \end{proposition}
 \noindent{\it Proof. }
-It suffices to show that
-\begin{align*}
-m_j^c(\V{\omega})\overline{\widetilde{m_j}^c}(\V{\omega} + \V{\pi}_i) = m_j(\V{\omega})\sbarmp{j}{i},\quad & i \text{ is even,}\\
-\hspace{1em}m_j^c(\V{\omega})\overline{\widetilde{m_j}^c}(\V{\omega} + \V{\pi}_i) = \big(m_j(\V{\omega})\sbarmp{j}{i}\big)c(\V{\omega})c(\V{\omega}+\V{\pi}_1)^{-1},\quad & i \text{ is odd.}\qedhere\hspace{2em}\qed
-\end{align*}
+It suffices to show that $m_0^c(\V{\omega})\overline{\widetilde{m_0}^c}(\V{\omega} + \V{\pi}_i) = m_0(\V{\omega})\sbarmp{0}{i},\, i$ is even.\qed
+
+%\begin{align*}
+%m_0^c(\V{\omega})\overline{\widetilde{m_0}^c}(\V{\omega} + \V{\pi}_i) = m_0(\V{\omega})\sbarmp{0}{i},\quad & i \text{ is even,}\hspace{4em}\qed
+%\hspace{1em}m_j^c(\V{\omega})\overline{\widetilde{m_j}^c}(\V{\omega} + \V{\pi}_i) = \big(m_j(\V{\omega})\sbarmp{j}{i}\big)c(\V{\omega})c(\V{\omega}+\V{\pi}_1)^{-1},\quad & i \text{ is odd.}\qedhere\hspace{2em}\qed
+%\end{align*}
 
 Next, we solve quadruple $(\m{0}, \mp{0}{2}, \mp{0}{4}, \mp{0}{6})$ from the identity condition \eqref{eq: identity-cond} on $[-\pi, 0)\times[-\pi, 0 )$. We reformulate it as a quadratic optimization problem that minimizes the total variation of $\sbarm{0}m_0(\V{\omega})$ as follows,
 %On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
@@ -434,6 +435,7 @@ $$\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V
 %\end{align}
 Supplementary numerical results on solving $\m{0}$ by optimization are provided in Appendix \ref{app: supp-numerical}, where we test this optimization method on known bi-orthogonal filters $m_0$ and $\widetilde{m_0}$ and compare the solution from the optimization with the ground truth.
 
+Finally, we plug $m_0(\V{\omega})$ and $\m{0}$ into $\V{b}_0'(\V{\omega})$ on the right of \eqref{eq: mj-eq} and solve the linear system, which has guaranteed unique solution.
 
 %According to Proposition \ref{prop: mc}, we can first solve $\mc{0}$ and $m_0^C(\V{\omega})$ and then construct $c(\V{\omega})$ for optimal $\m{0}$ and $m_0(\V{\omega})$. 
 %In particular, $m_0^C$ can be computed without knowing $k_{\V{\omega}}$,
@@ -444,19 +446,19 @@ Supplementary numerical results on solving $\m{0}$ by optimization are provided 
 To sum up, we propose the following algorithm for bi-orthogonal directional filter construction with dilated quincunx downsampling scheme:\\
 \rule{\textwidth}{.5pt}
 \begin{description}% prevent items from splitting
-\item[construction of bi-orthogonal basis]\
+\item[construction of $m$-, $\widetilde{m}$-functions in bi-orthogonal basis]\
 \begin{itemize}
-\item[Input:] $\m{i},\,i=1,...,6$
-\item[1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks}.%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
-\item[2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
-\item[3.] solve the optimization \eqref{eq: opt} for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$.
+\item[Input:] $\m{j},\,j=1,...,6$
+\item[step 1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks}.%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
+\item[step 2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
+\item[step 3.] solve the optimization \eqref{eq: opt} for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$.
 %solve $m_i(\V{\omega}),\, i=1,...,6$ according to \eqref{eq: LS-new}
-\item[4.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
+\item[step 4.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
 \end{itemize}
 \end{description}
 \rule{\textwidth}{.5pt}\\[.5em]
 
-Proposition \ref{prop: mc} suggests that a feasible set of $(m_j,\widetilde{m_j}), \, j = 0,1,\cdots,6$, constructed by the algorithm above can be used to generate new sets of $(m_j^c,\widetilde{m_j}^c)$. In particular, we can design $c(\V{\omega})$ such that $(m_j^c,\widetilde{m_j}^c)$ have desired properties, e.g. smoothness or fast decay rate.
+Proposition \ref{prop: mc} suggests that we can design $c(\V{\omega})$ such that $(m_0^c,\widetilde{m_0}^c)$ have desired properties, e.g. continuity, smoothness or fast decay rate. In practice, we compute $m_0(\V{\omega})\sbarm{0}$ from $m_0(\V{\omega})$ and $\m{0}$ obtained in step 2 and 3, then re-decompose the product into $m_0^c(\V{\omega})$ and $\overline{\widetilde{m_0}^c}(\V{\omega})$.
 
 \begin{comment}
 \subsection{solving $m_i$}
@@ -476,12 +478,42 @@ The solution of \eqref{eq: mi} depends only on $m_0^C\overline{\widetilde{m_0}^C
 \end{comment}
 
 \section{Numerical Experiments}
+
+In this section, we show an example of the numerical construction of biorthogonal directional wavelets on quincunx lattice using our proposed algorithm in Matlab.
+
+We design $\widetilde{m_j}$'s in the form of \eqref{eq: m-form}, using phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: tm_i_m_0}. For the construction of $|\widetilde{m_j}|$, we start with $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry along the diagonal. This is the same approach used in the shearlet construction. Furthermore, $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\frac{\pi}{2},\frac{\pi}{2})\times [-\frac{\pi}{2},\frac{\pi}{2}).$
+
+Using these $\m{j},\,j = 1,\cdots,6$ as input, the main algorithm in Section \ref{subsec: compute-m0} yields $m_0,\widetilde{m_0}$ and $m_j, \, j = 1,\cdots, 6$. As the first step, we numerically check that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}. Figure \ref{fig: m_0} shows $m_0(\V{\omega})$ obtained in step 2; figure  whose support is the central square $C_0$. Moreover, $\m{0}$ solved in step 3 is numerically the same as $m_0(\V{\omega})$, see Figure \ref{m_0_m0dual}. Finally, 
+The real part and imaginary part of the solution are not continuous, but it can be fixed later 
+
 \begin{figure}
 \centering
 \includegraphics[width=.8\textwidth]{initialize_mdual.png}
-\caption{ Input $\m{i}$ }
+\caption{ Input $|\m{j}|$ constructed in the same way as shearlets.}
 \label{fig: tm_i_m_0}
 \end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\textwidth]{m0.png}
+\caption{ $m_0(\V{\omega})$ constructed from $\widetilde{m_j}$ up to $c(\V{\omega})$}
+\label{fig: m_0}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\textwidth]{m0_m0dual.png}
+\caption{ $m_0(\V{\omega})\sbarm{0}$ }
+\label{fig: m_0_m0dual}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\textwidth]{m.png}
+\caption{ $m_j(\V{\omega})$ }
+\label{fig: m_j}
+\end{figure}
+
 
 \begin{comment}
 \subsection{solving $m_0^C$}
