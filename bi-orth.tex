@@ -486,7 +486,7 @@ We design $\widetilde{m_j}$'s in the form of \eqref{eq: m-form}, using phases in
 Using these $\m{j},\,j = 1,\cdots,6$ as input, the main algorithm in Section \ref{subsec: compute-m0} yields $m_0,\widetilde{m_0}$ and $m_j, \, j = 1,\cdots, 6$. As the first step, we numerically check that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}. As shown in Figure \ref{fig: m_0} $m_0(\V{\omega})$ obtained in step 2 is supported on the central square $C_0$, where $|m_0(\V{\omega})| = 1$. Moreover, Figure \ref{fig: m_0_m0dual} shows that $\m{0} = \overline{m_0^{-1}}(\V{\omega}) = m_0(\V{\omega})$ on $C_0$, i.e. $\m{0}$ solved in step 3 is numerically the same as $m_0(\V{\omega})$.
 Figure \ref{fig: m_j} and Figure \ref{fig: m_j_mjdual} show $|\m{j}|$ and $|m_j\m{j}|$ for $\m{j}$ obtained by solving \eqref{eq: mj-eq}. We also numerically check that $m_j(\V{\omega})$ and $\m{j}$ have the same phase, i.e. $m_j\m{j}\in \mathbb{R}$.
 
-So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: phi-m0} and \eqref{eq: mj}. However, $m_0$ and $\widetilde{m_0}$ here are not continuous. To improve the regularity of the corresponding wavelets, by Proposition \ref{prop: mc} and the observation $m_0\sbarm{0} = \V{1}_{C_0}$, we substitute $(m_0,\widetilde{m_0})$ by $((\widetilde{m_0}')^{-1}, \widetilde{m_0}')$, where $\widetilde{m_0}'$ is a smooth real function supported on $C_0$.
+So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: phi-m0} and \eqref{eq: mj}. However, $m_0$ and $\widetilde{m_0}$ here are not continuous. To improve the regularity of the corresponding wavelets, by Proposition \ref{prop: mc} and the observation $m_0\sbarm{0} = \V{1}_{C_0}$, we substitute $(m_0,\widetilde{m_0})$ by $(m_0', \widetilde{m_0}')$, where $\widetilde{m_0}'$ is a smooth real function supported on $C_0$ and $m_0'(\V{\omega}) = \V{1}_{C_0}(\overline{\widetilde{m_0}'})^{-1}(\V{\omega})$. Figure \ref{fig: smooth_m0dual} shows such a pair of $(m_0',\widetilde{m_0}')$, where $\widetilde{m_0'}$ is the low pass $m$-function corresponding to a known 2D biorthogonal tensor filter.
 
 \begin{figure}
 \centering
@@ -521,6 +521,13 @@ So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that sati
 \includegraphics[width=\textwidth]{m_mdual.png}
 \caption{ $|m_j(\V{\omega})\m{j}|$ }
 \label{fig: m_j_mjdual}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.66\textwidth]{smooth_m0dual.png}
+\caption{ Left: $\widetilde{m_0}'$, a tensor product of low-pass $m$-function associated to an 1D biorthogonal filter, right: $m_0'$, $s.t. m_0'\overline{\widetilde{m_0}'}(\V{\omega})  =  m_0\overline{\widetilde{m_0}}(\V{\omega})= \V{1}_{C_0}(\V{\omega})$. } 
+\label{fig: smooth_m0dual}
 \end{figure}
 
 \begin{comment}
