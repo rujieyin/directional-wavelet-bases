@@ -1,4 +1,8 @@
 cvx_path ='~/matlab/cvx';% '~/Documents/MATLAB/cvx';
+shearlab_path ='~/matlab/ShearLab-1.1';% '~/Documents/MATLAB/ShearLab-1.1';
+
+% initialize_shearlet; % => dshear
+% m_dual = add_phase(dshear);
 
 initialize_mdual; % => m_dual
 
@@ -21,3 +25,6 @@ solve_m ;
 
 %%
 build_m0_smooth;
+
+figure; subplot(1,2,1); imagesc(fftshift(abs(ifft2(fftshift(m0_smooth))))); axis image; axis off;
+subplot(1,2,2); imagesc(fftshift(abs(ifft2(fftshift(m0dual_smooth))))); axis image; axis off;
