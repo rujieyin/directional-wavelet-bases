@@ -4,7 +4,9 @@ In this section, we analyze bi-orthogonal bases in the following form of MRA,
 \{\phi_{L,\V{k}},\widetilde{\phi}_{L,\V{k}}, \psi_{l,\V{k}'}^j,\widetilde{\psi}_{l,\V{k}'}^j,\, 1\leq l\leq L,\,\V{k}\in\mathbb{Z}^2,\, \V{k}'\in\mathbf{Q}\mathbb{Z}^2,\,1\leq j\leq J \},
 \end{align}
 where $\phi$ and $\psi^j$ satisfy \eqref{eq: m0} and \eqref{eq: mj}, as well as $\widetilde{\phi}$ and $\widetilde{\psi^j}$, respectively,
-$$\widehat{\widetilde{\phi}}(\V{D}^T\V{\omega}) = \widetilde{m_0}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}),\quad \widehat{\widetilde{\psi^j}}(\V{D}^T\V{\omega}) = \widetilde{m_j}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}).$$
+\begin{align}\label{eq: mj_dual}
+\widehat{\widetilde{\phi}}(\V{D}^T\V{\omega}) = \widetilde{m_0}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}),\quad \widehat{\widetilde{\psi^j}}(\V{D}^T\V{\omega}) = \widetilde{m_j}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}).
+\end{align}
 For such bi-orthogonal bases, we have the similar identity summation and shift cancellation condition to those in Theorem \ref{thm: conds}.
 \begin{thm}\label{thm: bi-orth conds}
 The perfect reconstruction iff the following two conditions hold
@@ -486,7 +488,7 @@ We design $\widetilde{m_j}$'s in the form of \eqref{eq: m-form}, using phases in
 Using these $\m{j},\,j = 1,\cdots,6$ as input, the main algorithm in Section \ref{subsec: compute-m0} yields $m_0,\widetilde{m_0}$ and $m_j, \, j = 1,\cdots, 6$. As the first step, we numerically check that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}. As shown in Figure \ref{fig: m_0} $m_0(\V{\omega})$ obtained in step 2 is supported on the central square $C_0$, where $|m_0(\V{\omega})| = 1$. Moreover, Figure \ref{fig: m_0_m0dual} shows that $\m{0} = \overline{m_0^{-1}}(\V{\omega}) = m_0(\V{\omega})$ on $C_0$, i.e. $\m{0}$ solved in step 3 is numerically the same as $m_0(\V{\omega})$.
 Figure \ref{fig: m_j} and Figure \ref{fig: m_j_mjdual} show $|\m{j}|$ and $|m_j\m{j}|$ for $\m{j}$ obtained by solving \eqref{eq: mj-eq}. We also numerically check that $m_j(\V{\omega})$ and $\m{j}$ have the same phase, i.e. $m_j\m{j}\in \mathbb{R}$.
 
-So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: phi-m0} and \eqref{eq: mj}. However, $m_0$ and $\widetilde{m_0}$ here are not continuous. To improve the regularity of the corresponding wavelets, by Proposition \ref{prop: mc} and the observation $m_0\sbarm{0} = \V{1}_{C_0}$, we substitute $(m_0,\widetilde{m_0})$ by $(m_0', \widetilde{m_0}')$, where $\widetilde{m_0}'$ is a smooth real function supported on $C_0$ and $m_0'(\V{\omega}) = \V{1}_{C_0}(\overline{\widetilde{m_0}'})^{-1}(\V{\omega})$. Figure \ref{fig: smooth_m0dual} shows such a pair of $(m_0',\widetilde{m_0}')$, where $\widetilde{m_0'}$ is the low pass $m$-function corresponding to a known 2D biorthogonal tensor filter.
+So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: mj} and \eqref{eq: mj_dual}. However, $m_0$ and $\widetilde{m_0}$ here are not continuous. To improve the regularity of the corresponding wavelets, by Proposition \ref{prop: mc} and the observation $m_0\sbarm{0} = \V{1}_{C_0}$, we substitute $(m_0,\widetilde{m_0})$ by $(m_0', \widetilde{m_0}')$, where $\widetilde{m_0}'$ is a smooth real function supported on $C_0$ and $m_0'(\V{\omega}) = \V{1}_{C_0}(\overline{\widetilde{m_0}'})^{-1}(\V{\omega})$. Figure \ref{fig: smooth_m0dual} shows such a pair of $(m_0',\widetilde{m_0}')$. Finally, using pre-designed $\m{j}$ and post-designed $\widetilde{m_0}'$, we construct the dual wavelets  $\widetilde{\psi^j}$ in \eqref{eq: bi-orth MRA} using \eqref{eq: mj_dual}. As shown in Figure \ref{fig: wavelets}, the dual wavelets are spatially localized and have good direction selection. The wavelets and scaling functions in \eqref{eq: bi-orth MRA} can be constructed using \eqref{eq: mj_dual} similarly.
 
 \begin{figure}
 \centering
@@ -526,9 +528,17 @@ So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that sati
 \begin{figure}
 \centering
 \includegraphics[width=.66\textwidth]{smooth_m0dual.png}
-\caption{ Left: $\widetilde{m_0}'$, a tensor product of low-pass $m$-function associated to an 1D biorthogonal filter, right: $m_0'$, $s.t. m_0'\overline{\widetilde{m_0}'}(\V{\omega})  =  m_0\overline{\widetilde{m_0}}(\V{\omega})= \V{1}_{C_0}(\V{\omega})$. } 
+\caption{ Left: $\widetilde{m_0}'$, designed smooth function mainly supported on the central square $C_0$, right: $m_0'$, $s.t. m_0'\overline{\widetilde{m_0}'}(\V{\omega})  =  m_0\overline{\widetilde{m_0}}(\V{\omega})= \V{1}_{C_0}(\V{\omega})$. } 
 \label{fig: smooth_m0dual}
 \end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=.8\textwidth]{quincunx_wavelets.png}
+\caption{ Real part of $\psi^j$ constructed from $\widetilde{m_0}'$ in Figure \ref{fig: smooth_m0dual} and $\widetilde{m_j},\, j=1,\cdots, 6$ in Figure \ref{fig: mjdual} using \eqref{eq: mj_dual}. Top: $\widetilde{\psi^j}$ without scaling, bottom: $\widetilde{\psi^j}$ with eight time zoom-in } 
+\label{fig: wavelets}
+\end{figure}
+
 
 \begin{comment}
 \subsection{solving $m_0^C$}
