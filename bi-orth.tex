@@ -462,6 +462,13 @@ To sum up, we propose the following algorithm for bi-orthogonal directional filt
 
 Proposition \ref{prop: mc} suggests that we can design $c(\V{\omega})$ such that $(m_0^c,\widetilde{m_0}^c)$ have desired properties, e.g. continuity, smoothness or fast decay rate. In practice, we compute $m_0(\V{\omega})\sbarm{0}$ from $m_0(\V{\omega})$ and $\m{0}$ obtained in step 2 and 3, then re-decompose the product into $m_0^c(\V{\omega})$ and $\overline{\widetilde{m_0}^c}(\V{\omega})$.
 
+We may also manipulate pairs of $(m_j,\widetilde{m_j})$ in a similar way due to the following generalization of Proposition \ref{prop: mc}.
+\begin{proposition}\label{prop: mjc}
+If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
+$m_j^c(\V{\omega})\doteq m_j(\V{\omega})c_j(\V{\omega}), \widetilde{m_j}^c_j(\V{\omega})\doteq \m{j}\overline{c}(\V{\omega})^{-1} \, j = 0,\cdots,6$ 
+satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if $ c_0(\V{\omega}) = c_0(\V{\omega}+\V{\pi}_{2k})\,,\forall k = 0,\cdots,3$ and $c_j(\V{\omega}) = c_j(\V{\omega} + \V{\pi}_k),\, \forall \;k = 0,\cdots,7,\, j = 1,\cdots,6$.
+\end{proposition}
+
 \begin{comment}
 \subsection{solving $m_i$}
 In the final step, we substitute $\mc{0}$ and $m_0^C(\V{\omega})$ into \eqref{eq: LS-new} and rewrite it into the following linear system,
