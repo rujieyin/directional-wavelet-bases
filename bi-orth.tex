@@ -200,7 +200,7 @@ For the full proof of Lemma \ref{lem: rank1}, see Appendix \ref{app: lemmas}.
 Without loss of generality, in the following analysis, we assume $rank(\mrow{1},\mrow{7}) = 1$ on $S_\rho$.
 Since only $\mp{1}{1}, \mp{6}{1}$ could be non-zero in $\mrow{1}$ and $\mp{1}{7}, \mp{6}{7}$ could be non-zero in $\mrow{7}$ on $S_\rho$, they are linearly related. Based on this, we can show that $\m{1},\m{6}$ are zero almost everywhere on $S_\rho + \V{\pi}_1$, which implies the discontinuity of $\m{1}$ and $\m{6}$ at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 
-\begin{proposition}
+\begin{proposition}\label{prop: continuity}
 $\m{1},\m{6}$ are not continuous at both $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 \end{proposition}
 \noindent{\it Proof. }
@@ -481,36 +481,38 @@ The solution of \eqref{eq: mi} depends only on $m_0^C\overline{\widetilde{m_0}^C
 
 In this section, we show an example of the numerical construction of biorthogonal directional wavelets on quincunx lattice using our proposed algorithm in Matlab.
 
-We design $\widetilde{m_j}$'s in the form of \eqref{eq: m-form}, using phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: tm_i_m_0}. For the construction of $|\widetilde{m_j}|$, we start with $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry along the diagonal. This is the same approach used in the shearlet construction. Furthermore, $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\frac{\pi}{2},\frac{\pi}{2})\times [-\frac{\pi}{2},\frac{\pi}{2}).$
+We design $\widetilde{m_j}$'s in the form of \eqref{eq: m-form}, using phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: mjdual}. For the construction of $|\widetilde{m_j}|$, we start with $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry along the diagonal. This is the same approach used in the shearlet construction. Furthermore, $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\frac{\pi}{2},\frac{\pi}{2})\times [-\frac{\pi}{2},\frac{\pi}{2}).$ In particular, by Proposition \ref{prop: continuity}, we enforce $|\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$ and $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$.
 
-Using these $\m{j},\,j = 1,\cdots,6$ as input, the main algorithm in Section \ref{subsec: compute-m0} yields $m_0,\widetilde{m_0}$ and $m_j, \, j = 1,\cdots, 6$. As the first step, we numerically check that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}. Figure \ref{fig: m_0} shows $m_0(\V{\omega})$ obtained in step 2; figure  whose support is the central square $C_0$. Moreover, $\m{0}$ solved in step 3 is numerically the same as $m_0(\V{\omega})$, see Figure \ref{m_0_m0dual}. Finally, 
-The real part and imaginary part of the solution are not continuous, but it can be fixed later 
+Using these $\m{j},\,j = 1,\cdots,6$ as input, the main algorithm in Section \ref{subsec: compute-m0} yields $m_0,\widetilde{m_0}$ and $m_j, \, j = 1,\cdots, 6$. As the first step, we numerically check that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}. As shown in Figure \ref{fig: m_0} $m_0(\V{\omega})$ obtained in step 2 is supported on the central square $C_0$, where $|m_0(\V{\omega})| = 1$. Moreover, Figure \ref{fig: m_0_m0dual} shows that $\m{0} = \overline{m_0^{-1}}(\V{\omega}) = m_0(\V{\omega})$ on $C_0$, i.e. $\m{0}$ solved in step 3 is numerically the same as $m_0(\V{\omega})$.
+Figure \ref{fig: m_j} and Figure \ref{fig: m_j_mjdual} show $|\m{j}|$ and $|m_j\m{j}|$ for $\m{j}$ obtained by solving \eqref{eq: mj-eq}. We also numerically check that $m_j(\V{\omega})$ and $\m{j}$ have the same phase, i.e. $m_j\m{j}\in \mathbb{R}$.
+
+So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: phi-m0} and \eqref{eq: mj}. However, $m_0$ and $\widetilde{m_0}$ here are not continuous. To improve the regularity of the corresponding wavelets, by Proposition \ref{prop: mc} and the observation $m_0\sbarm{0} = \V{1}_{C_0}$, we substitute $(m_0,\widetilde{m_0})$ by $((\widetilde{m_0}')^{-1}, \widetilde{m_0}')$, where $\widetilde{m_0}'$ is a smooth real function supported on $C_0$.
 
 \begin{figure}
 \centering
 \includegraphics[width=.8\textwidth]{initialize_mdual.png}
 \caption{ Input $|\m{j}|$ constructed in the same way as shearlets.}
-\label{fig: tm_i_m_0}
+\label{fig: mjdual}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{m0.png}
-\caption{ $m_0(\V{\omega})$ constructed from $\widetilde{m_j}$ up to $c(\V{\omega})$}
+\caption{ $m_0(\V{\omega})$ constructed from $\widetilde{m_j}$. Left to right: $Re(m_0(\V{\omega})),\, Im(m_0(\V{\omega}))$ and $|m_0(\V{\omega})|$.}
 \label{fig: m_0}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{m0_m0dual.png}
-\caption{ $m_0(\V{\omega})\sbarm{0}$ }
+\includegraphics[width=\textwidth]{m0_m0dual_new.png}
+\caption{$|\m{0}|$ and $m_0\sbarm{0}$, where $\m{0}$ is solved by optimization \eqref{eq: opt}, given $\widetilde{m_j}$ in Figure \ref{fig: mjdual} and $m_0$ in Figure \ref{fig: m_0}. Left to right: $|\m{0}|$, $Re(m_0\sbarm{0})$ and $Im(m_0\sbarm{0})$. }
 \label{fig: m_0_m0dual}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{m.png}
-\caption{ $|m_j(\V{\omega})|$ }
+\caption{ $|m_j(\V{\omega})|$, where $m_j(\V{\omega})$ is solved from \eqref{eq: mj-eq} given $\widetilde{m_j}$ in Figure \ref{fig: mjdual}, $m_0$ in Figure \ref{fig: m_0} and $\widetilde{m_0}$ in Figure \ref{fig: m_0_m0dual}. }
 \label{fig: m_j}
 \end{figure}
 
