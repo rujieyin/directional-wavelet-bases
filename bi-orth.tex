@@ -57,7 +57,7 @@ By Theorem \ref{thm: basis cond 2}, $m_0$ and $\widetilde{m_0}$ need to satisfy 
 \begin{align}\label{eq: identity-cond}
 m_0\sbarm{0} + m_0\sbarmp{0}{2} + m_0\sbarmp{0}{4} + m_0\sbarmp{0}{6} = 1.
 \end{align}
-In sum, the construction of a bi-orthogonal basis \eqref{eq: bi-orth MRA} is equivalent to find feasible solutions of \eqref{eq: LS-new} with constraint \eqref{eq: identity-cond}\footnote{In fact, as long as \eqref{eq: LS_new} has unique solution of $m_j$ given fixed $\widetilde{m_j}, \, j = 0,\cdots,6,$ \eqref{eq: identity-cond} always holds. }. To solve this, we use the same approach in \cite{cohen1993compactly}, which constructs compactly supported symmetric bi-orthogonal filters on hexagon lattice. We next review the main scheme in \cite{cohen1993compactly} and adapt it to our setup of directional wavelet filter.
+In sum, the construction of a bi-orthogonal basis \eqref{eq: bi-orth MRA} is equivalent to find feasible solutions of \eqref{eq: LS-new} with constraint \eqref{eq: identity-cond}\footnote{In fact, as long as \eqref{eq: LS-new} has a unique solution for $m_j$ given fixed $\widetilde{m_j}, \, j = 0,\cdots,6,$ \eqref{eq: identity-cond} always holds. }. To solve this, we use the same approach as in \cite{cohen1993compactly}, which constructs compactly supported symmetric bi-orthogonal filters on a hexagon lattice. We next review the main scheme in \cite{cohen1993compactly} and adapt it to our setup of directional wavelet filter.
 
 \subsection{Summary of Cohen et al's construction}\label{subsec: cohen-summary}
 We summerize the main setup and the approach in \cite{cohen1993compactly}. Consider a bi-orthogonal scheme consists of 3 high-pass filters $m_1,m_2$ and $m_3$ and a low-pass filter $m_0$ together with their bi-orthogonal duals $\widetilde{m_j}$, s.t.
@@ -69,7 +69,7 @@ Lemma 2.2.2 in \cite{cohen1993compactly} )
 \begin{bmatrix}
     \, \overline{\widetilde{m_0}}(\V{\omega}) &  \overline{\widetilde{m_1}}(\V{\omega}) &  \overline{\widetilde{m_2}}(\V{\omega}) &  \overline{\widetilde{m_3}}(\V{\omega})\; \\
     \;\sbarmn{0}{1} & \sbarmn{1}{1}  & \sbarmn{2}{1}  & \sbarmn{3}{1}\; \\
-    \;\vdots & \vdots & \vdots & \vdots \; \\
+    \;\sbarmn{0}{2} & \sbarmn{1}{2}  & \sbarmn{2}{2}  & \sbarmn{3}{2}\; \\
     \;\sbarmn{0}{3} & \sbarmn{1}{3} & \sbarmn{2}{3} & \sbarmn{3}{3}\;
 \end{bmatrix}
 \begin{bmatrix}
@@ -87,8 +87,8 @@ Lemma 2.2.2 in \cite{cohen1993compactly} )
 \end{bmatrix}
 \end{align}
  where $\V{\nu}_i = \V{\pi}_i,\, i = 1,2,3.$ %$\V{\nu}_1 = (\pi,0),\V{\nu}_2 = (0,\pi),\V{\nu}_3=(\pi,\pi)$.
- Let $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{4\times 4}$ be the matrix consisting of $\barm{j}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^4$ be the vector consisting of $m_j$ in \eqref{eq: LS}, then \eqref{eq: LS} can be written as \[\widetilde{\mathbf{M}}\, \mathbf{m} (\V{\omega})= [1,0,0,0]^\top.\]\\
-Given $\m{1}$, $\m{2}$ and $\m{3}$ are determined by symmetry, and Lemma 2.2.2 in \cite{cohen1993compactly} shows that
+ Let $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{4\times 4}$ be the matrix with entries $\sbarm{j}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^4$ be the vector consisting of entries $m_j(\V{\omega})$ in \eqref{eq: LS}, then \eqref{eq: LS} can be written as \[\widetilde{\mathbf{M}}\, \mathbf{m} (\V{\omega})= [1,0,0,0]^\top.\]\\
+Imposing that $\m{1}$, $\m{2}$ and $\m{3}$ are determined by symmetry, and invoking Lemma 2.2.2 in \cite{cohen1993compactly} leads to
 \begin{align}\label{eq: m0-sol}
 m_0(\V{\omega}) &= D^{-1}%\propto 
 \left|
@@ -98,9 +98,9 @@ m_0(\V{\omega}) &= D^{-1}%\propto
     \; \sbarmn{1}{3} & \sbarmn{2}{3} & \sbarmn{3}{3}\;
 \end{matrix}
 \right| \notag\\
-&= D^{-1}\det(\widetilde{\mathbf{M}}_{1,1}(\V{\omega})),
+&= D^{-1}\widetilde{\mathbf{M}}_{0,0}(\V{\omega}),
 \end{align}
-where $ D \equiv \det(\widetilde{\mathbf{M}})\in \mathbb{C}^* = \mathbb{C}\setminus\{0\}$.
+where $\widetilde{\mathbf{M}}_{0,0}$ is the minor of $\widetilde{\mathbf{M}}$ and $ D \equiv \det(\widetilde{\mathbf{M}}(\V{\omega}))\in \mathbb{C}^* = \mathbb{C}\setminus\{0\}$ does not depend on $\V{\omega}$ in \cite{cohen1993compactly}, because of symmetry.
 %{\it Remark.} 
 %For \eqref{eq: m0-sol} to hold, $m_0(\mathbf{\omega})$ and $\det(\widetilde{\mathbf{M}}_{1,1}(\V{\omega}))$ having the same phase suffices, which is implied by the symmetry of $m_0$ and $\widetilde{m_j} $'s.\\ % Both $\mo{0}$ and $\det(\widetilde{\mathbf{M}}_{1,1}(\V{\omega}))$ are $\frac{2\pi}{3}-$rotation invariant. \\
 If $\widetilde{m_0}$ is solved, then $m_1,m_2$ and $m_3$ are obtained by solving the linear system \eqref{eq: LS}.
@@ -119,19 +119,20 @@ In the next section, we propose an optimization problem that solves $\widetilde{
 
 \section{Adaptation to dilated quincunx scheme}\label{sec: solve-quincunx}
 
-Following the same approach of Cohen et al, we first design $\m{j},\,j = 1,\cdots,6,$ then solve $m_0,\widetilde{m_0}$ and $m_j$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
+Following the same approach of Cohen et al, we first design $\m{j},\,j = 1,\cdots,6,$ then solve for $m_0,\widetilde{m_0}$ and $m_j$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
 %we focus on solving $m_i$'s and $\widetilde{m_0}$ in \eqref{eq: LS-new} given pre-designed $\m{i},\,i=1,\cdots,6$. %Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
 
-Since \eqref{eq: LS-new} takes the same form as \eqref{eq: LS}, for simplicity, in the rest of this paper, we reuse matrix and vector notations $\widetilde{\mathbf{M}}(\V{\omega}),\,\mathbf{m}(\V{\omega}) $ in \eqref{eq: LS} for those in \eqref{eq: LS-new}, where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, let $\V{b}_k \in\mathbb{R}^8,\, 0\leq k\leq 7$, whose only non-zero entry is $\V{b}_k[k] = 1$, where the indexing starts with zero. Note that $\M\,\mathbf{m}(\V{\omega}) = \V{b}_0\in\mathbb{R}^8$ is over-determined, and it has unique solution if and only if 
+Since \eqref{eq: LS-new} takes the same form as \eqref{eq: LS}, for simplicity, in the rest of this paper, we adapt the matrix and vector notations $\widetilde{\mathbf{M}}(\V{\omega}),\,\mathbf{m}(\V{\omega}) $ that helped to simplify \eqref{eq: LS}. Accordingly, we rewrite \eqref{eq: LS-new} as  \[\widetilde{\mathbf{M}}\, \mathbf{m} (\V{\omega})= [1,0,0,0,0,0,0]^\top,\]  where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, let $\V{b}_k \in\mathbb{R}^8,\, 0\leq k\leq 7$, whose only non-zero entry is $\V{b}_k[k] = 1$, where the indexing starts with zero. Note that $\M\,\mathbf{m}(\V{\omega}) = \V{b}_0\in\mathbb{R}^8$ is over-determined; it has a unique solution if and only if 
 
 \begin{enumerate}[leftmargin=.5in]
 \item[\mylabel{cond: 1}{(\ref{sec: solve-quincunx}.i)}] $\M(\V{\omega})$ is full rank,
-\item[\mylabel{cond: 2}{(\ref{sec: solve-quincunx}.ii)}] $[\M(\V{\omega}), \V{b}_0]$ is singular.
+\item[\mylabel{cond: 2}{(\ref{sec: solve-quincunx}.ii)}] $[\M(\V{\omega}), \V{b}_0]$ is singular,
 \end{enumerate}
-The matrix $\M(\V{\omega})$ is structured such that each row is associated with a shift $\V{\pi}_i,\,i=0\cdots,7$ and each column is associated with a dual function $\m{j},\,j=0,\cdots,7$. We denote a sub-matrix of $\M$ containing all but the row associated with $\V{\pi}_k$(the column associated with $\m{k}$) as $\M[-k,:]$($\M[:,-k]$).
+where we denote by $[\M(\V{\omega}), \V{b}_0]$ the $8\times 8$ matrix obtained by adding the 8-th column $\V{b}_0$ to the $8\times 7$ matrix $\M(\V{\omega})$.
+The matrix $\M(\V{\omega})$ is structured such that each row is associated with a shift $\V{\pi}_i,\,i=0\cdots,7$ and each column is associated with a dual function $\m{j},\,j=0,\cdots,7$. We denote a sub-matrix of $\M$ containing all but the row associated with $\V{\pi}_k$(respectively, the column associated with $\m{k}$) as $\M[-k,:]$(respectively, $\M[:,-k]$).
 In particular, we denote $\M[-0,-0]$ as $\Msub$.
 
-We have the following observations of $\M(\V{\omega})$.
+We have the following observations for $\M(\V{\omega})$.
 \begin{lemma}\label{lem: subM-singular}
 If \eqref{eq: LS-new} is solvable, then $\M[-0,:](\V{\omega})$ is singular $\forall \V{\omega}$.
 \end{lemma}
@@ -218,7 +219,7 @@ Specifically, following the orthonormal construction in \cite{yin2014orthshear},
 \begin{align}\label{eq: m-form}
 \m{j} = e^{-i\V{\eta}_j^\top\V{\omega}}|\m{j}|,\quad j = 1,\cdots,6
 \end{align}
- where $|\m{j}|$'s have symmetries with respect to the two diagonals and the two axis. Figure \ref{fig: tm_i_m_0} shows such a design of $|\m{j}|$ in the left.
+ where $|\m{j}|$'s have symmetries with respect to the two diagonals and the two axis. Figure \ref{fig: mjdual} shows such a design of $|\m{j}|$.
  
 Given the symmetries of $\m{j}$, for $|m_0(\V{\omega})| > 0,\, \forall\, |\V{\omega}| < \rho$, $\V{\eta}_j$ have to satisfy certain constraints.
 % We want to design the phase $\V{\eta}_k$ such that $m_0(\V{\omega}) > 0, \; \forall \omega\in S_1$. This is the same as requiring $\Msub$ to be full rank. We first show the necessary conditions on phases $\V{\eta}$ of the full rank requirement on $\Msub$.
@@ -318,7 +319,7 @@ and $m_j,\,j=1,\cdots,6$ can be uniquely solved if and only if
 %Because , \ref{cond: i} can be easily checked by computing $\det(\M[:,-0]^\top\M[:,-0])$ and see if it is non-zero. Next, we show that (ii) provides an explicit way of computing $m_0(\V{\omega})$ without knowing $\m{0}$.
 Next, we show that \ref{cond: ii} breaks down to constraints on two submatrices of $\M[:,-0]$ and quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$.
 \begin{proposition}\label{prop: m0_formula}
-Let $\M[odd,-0],\M[even,-0]\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,-0]$ consisting of odd and even rows respectively. Suppose \ref{cond: i} holds, then \ref{cond: ii} holds if and only if $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$ and 
+Let $\M[odd,-0],\M[even,-0]\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,-0]$ consisting of odd and even rows respectively. Suppose {\rm\ref{cond: i}} holds, then {\rm\ref{cond: ii}} holds if and only if $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$ and 
 \begin{align}\label{eq: m0-even-null}
 [m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,-0](\V{\omega}) = \V{0},
 \end{align}
@@ -400,7 +401,7 @@ $m_0^c(\V{\omega})\doteq m_0(\V{\omega})c(\V{\omega}), \widetilde{m_0}^c(\V{\ome
 satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if $ c(\V{\omega}) = c(\V{\omega}+\V{\pi}_2)=c(\V{\omega}+\V{\pi}_4) = c(\V{\omega}+\V{\pi}_6) \neq 0$, i.e. $c(\V{\omega})$ is $\pi$-periodic in both $\omega_1$ and $\omega_2$.
 \end{proposition}
 \noindent{\it Proof. }
-It suffices to show that $m_0^c(\V{\omega})\overline{\widetilde{m_0}^c}(\V{\omega} + \V{\pi}_i) = m_0(\V{\omega})\sbarmp{0}{i},\, i$ is even.\qed
+It suffices to show that $m_0^c(\V{\omega})\overline{\widetilde{m_0}^c}(\V{\omega} + \V{\pi}_i) = m_0(\V{\omega})\sbarmp{0}{i},\,$ when $i$ is even.\qed
 
 %\begin{align*}
 %m_0^c(\V{\omega})\overline{\widetilde{m_0}^c}(\V{\omega} + \V{\pi}_i) = m_0(\V{\omega})\sbarmp{0}{i},\quad & i \text{ is even,}\hspace{4em}\qed
@@ -437,7 +438,7 @@ $$\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V
 %\end{align}
 Supplementary numerical results on solving $\m{0}$ by optimization are provided in Appendix \ref{app: supp-numerical}, where we test this optimization method on known bi-orthogonal filters $m_0$ and $\widetilde{m_0}$ and compare the solution from the optimization with the ground truth.
 
-Finally, we plug $m_0(\V{\omega})$ and $\m{0}$ into $\V{b}_0'(\V{\omega})$ on the right of \eqref{eq: mj-eq} and solve the linear system, which has guaranteed unique solution.
+Finally, we plug $m_0(\V{\omega})$ and $\m{0}$ into $\V{b}_0'(\V{\omega})$ on the right of \eqref{eq: mj-eq} and solve the linear system, which has a guaranteed unique solution.
 
 %According to Proposition \ref{prop: mc}, we can first solve $\mc{0}$ and $m_0^C(\V{\omega})$ and then construct $c(\V{\omega})$ for optimal $\m{0}$ and $m_0(\V{\omega})$. 
 %In particular, $m_0^C$ can be computed without knowing $k_{\V{\omega}}$,
@@ -488,14 +489,14 @@ The solution of \eqref{eq: mi} depends only on $m_0^C\overline{\widetilde{m_0}^C
 
 \section{Numerical Experiments}
 
-In this section, we show an example of the numerical construction of biorthogonal directional wavelets on quincunx lattice using our proposed algorithm in Matlab.
+In this section, we show an example of the numerical construction of biorthogonal directional wavelets on a quincunx lattice using our proposed algorithm in Matlab.
 
-We design $\widetilde{m_j}$'s in the form of \eqref{eq: m-form}, using phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: mjdual}. For the construction of $|\widetilde{m_j}|$, we start with $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry along the diagonal. This is the same approach used in the shearlet construction. Furthermore, $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\frac{\pi}{2},\frac{\pi}{2})\times [-\frac{\pi}{2},\frac{\pi}{2}).$ In particular, by Proposition \ref{prop: continuity}, we enforce $|\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$ and $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$.
+We design $\widetilde{m_j}$ in the form of \eqref{eq: m-form}, using phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: mjdual}. For the construction of $|\widetilde{m_j}|$, we start with $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry along the diagonal. This is the same approach used in the shearlet construction \cite{kutyniok2012digital}. Furthermore, $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\frac{\pi}{2},\frac{\pi}{2})\times [-\frac{\pi}{2},\frac{\pi}{2}).$ In particular, by Proposition \ref{prop: continuity}, we enforce $|\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$ and $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$.
 
 Using these $\m{j},\,j = 1,\cdots,6$ as input, the main algorithm in Section \ref{subsec: compute-m0} yields $m_0,\widetilde{m_0}$ and $m_j, \, j = 1,\cdots, 6$. As the first step, we numerically check that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}. As shown in Figure \ref{fig: m_0} $m_0(\V{\omega})$ obtained in step 2 is supported on the central square $C_0$, where $|m_0(\V{\omega})| = 1$. Moreover, Figure \ref{fig: m_0_m0dual} shows that $\m{0} = \overline{m_0^{-1}}(\V{\omega}) = m_0(\V{\omega})$ on $C_0$, i.e. $\m{0}$ solved in step 3 is numerically the same as $m_0(\V{\omega})$.
 Figure \ref{fig: m_j} and Figure \ref{fig: m_j_mjdual} show $|\m{j}|$ and $|m_j\m{j}|$ for $\m{j}$ obtained by solving \eqref{eq: mj-eq}. We also numerically check that $m_j(\V{\omega})$ and $\m{j}$ have the same phase, i.e. $m_j\m{j}\in \mathbb{R}$.
 
-So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: mj} and \eqref{eq: mj_dual}. However, $m_0$ and $\widetilde{m_0}$ here are not continuous. To improve the regularity of the corresponding wavelets, by Proposition \ref{prop: mc} and the observation $m_0\sbarm{0} = \V{1}_{C_0}$, we substitute $(m_0,\widetilde{m_0})$ by $(m_0', \widetilde{m_0}')$, where $\widetilde{m_0}'$ is a smooth real function supported on $C_0$ and $m_0'(\V{\omega}) = \V{1}_{C_0}(\overline{\widetilde{m_0}'})^{-1}(\V{\omega})$. Figure \ref{fig: smooth_m0dual} shows such a pair of $(m_0',\widetilde{m_0}')$. Finally, using pre-designed $\m{j}$ and post-designed $\widetilde{m_0}'$, we construct the dual wavelets  $\widetilde{\psi^j}$ in \eqref{eq: bi-orth MRA} using \eqref{eq: mj_dual}. As shown in Figure \ref{fig: wavelets}, the dual wavelets are spatially localized and have good direction selection. The wavelets and scaling functions in \eqref{eq: bi-orth MRA} can be constructed using \eqref{eq: mj_dual} similarly.
+So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: mj} and \eqref{eq: mj_dual}. However, $m_0$ and $\widetilde{m_0}$ here are not continuous. To improve the regularity of the corresponding wavelets, by Proposition \ref{prop: mc} and the observation $m_0\sbarm{0} = \V{1}_{C_0}$, we replace $(m_0,\widetilde{m_0})$ by $(m_0', \widetilde{m_0}')$, where $\widetilde{m_0}'$ is a smooth real function supported on $C_0$ and $m_0'(\V{\omega}) = \V{1}_{C_0}(\overline{\widetilde{m_0}'})^{-1}(\V{\omega})$. Figure \ref{fig: smooth_m0dual} shows such a pair of $(m_0',\widetilde{m_0}')$. Finally, using pre-designed $\m{j}$ and post-designed $\widetilde{m_0}'$, we construct the dual wavelets  $\widetilde{\psi^j}$ in \eqref{eq: bi-orth MRA} using \eqref{eq: mj_dual}. As shown in Figure \ref{fig: wavelets}, the dual wavelets are spatially localized and have good direction selection. The wavelets and scaling functions in \eqref{eq: bi-orth MRA} can be constructed using \eqref{eq: mj_dual} similarly.
 
 \begin{figure}
 \centering

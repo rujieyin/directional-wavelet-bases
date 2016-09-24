@@ -1,19 +1,19 @@
 \section{Orthonormal Bases}\label{sec: orth}
 
-In this section, we discuss the conditions on $m-$ functions such that the corresponding MRA forms an orthonormal bases. 
+In this section, we discuss the conditions on $m_j$ such that the corresponding MRA forms an orthonormal bases. 
 %consider orthonormal bases with $m-$functions defined in \eqref{eq: m0} and \eqref{eq: mj} whose supports mainly corresponding to the partition of $S_0$ in Fig.\ref{fig: partition}.
 %we always consider a multi-resolution system with scaling function $\phi$ and quasi-shearlets $\psi^j$, {\small$ j = 1,\dots,6$} defined by $(M_0, D_2)$ and $(M_j, Q)$, {\small$j = 1,\dots,6$} respectively. Furthermore, the essential support of $M_j$'s corresponds to the partition of $\mathbf{S}_0$ in a shearlet system.
 
 %The construction of \eqref{eq: MRA} reduces to design $m_0$ in \eqref{eq: m0} and $m_j, j= 1,\cdots,6$ in \eqref{eq: mj}.
-We begin with the two key conditions, i.e. {\it identity summation} and {\it shift cancellation}, on $m-$functions such that the system \eqref{eq: MRA} is perfect reconstruction (PR) or equivalently a Parseval frame in MRA.% weaker than the orthonormal condition.
+We begin with the two key conditions, i.e. {\it identity summation} and {\it shift cancellation}, on $m_j$ such that the system \eqref{eq: MRA} is perfect-reconstruction (PR) or equivalently a Parseval frame in MRA.% weaker than the orthonormal condition.
 
 %\subsection{Identity summation and shift cancellation}
-\subsection{orthonormal conditions on $m-$functions}
+\subsection{orthonormal conditions on $m_j$}
 In MRA, \eqref{eq: MRA} is PR if $\forall f\in L_2(\mathbb{R}^2)$,
 \begin{equation}
 \textstyle \sum_k\langle f,\phi_{0,k}\rangle\phi_{0,k} = \sum_k\langle f,\phi_{1,k}\rangle\phi_{1,k} + \sum_j\sum_k\langle f,\psi^{j}_{1,k}\rangle\psi^j_{1,k}.\label{eq: PR}
 \end{equation}
-Using \eqref{eq: m0} and \eqref{eq: mj} together with the admissibility of the frequency partition \eqref{eq: tiling}, condition \eqref{eq: PR} on $\phi$ and $\psi^j$'s yields:
+Using \eqref{eq: m0} and \eqref{eq: mj} together with the admissibility of the frequency partition \eqref{eq: tiling}, condition \eqref{eq: PR} on $\phi$ and $\psi^j$ yields:
 \begin{thm}\label{thm: conds}
 The perfect reconstruction condition holds for \eqref{eq: MRA} iff the following two conditions hold
 \begin{align}\label{eq: id-sum}
@@ -37,7 +37,7 @@ In Theorem \ref{thm: conds}, Eq. \eqref{eq: id-sum} is the {\it identity summati
 %\subsection{Extra condition for basis}
 %By Theorem \ref{thm: conds}, the system \eqref{eq: MRA} is a Parseval frame ; 
 For  \eqref{eq: MRA} to be an orthonormal basis,  $\{\phi_{\boldsymbol{k}}\}_{\boldsymbol{k}\in\mathbb{Z}^2}$ need to be an orthonormal basis, which is determined by $m_0$ in \eqref{eq: phi-m0}. In 1D MRA, Cohen's theorem in \cite{cohen1992biorthogonal} provides a necessary and sufficient condition on $m_0$ such that \eqref{eq: MRA} is an orthonormal basis. %Such a condition in 1D wavelet MRA is given by Cohen \cite{cohen1992biorthogonal}. 
-We generalized this theorem to 2D in \cite{yin2014orthshear}.
+This theorem generalizes to 2D as proved in  e.g. \cite{yin2014orthshear}, as follows.
 \begin{thm}\label{thm: basis cond}
 Assume that $m_0$ is a trigonometric polynomial with $m_0(0)=1$, and define $\hat{\phi}(\boldsymbol{\omega})$ as in \eqref{eq: phi-m0}.\\
 If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal, then $\exists K$ containing a neighborhood of 0, s.t. $\forall\boldsymbol{\omega}\in S_0,\,\boldsymbol{\omega}+2\pi\mathbf{n}\in K$ for some $\mathbf{n}\in\mathbb{Z}^2, $ and $\inf_{k>0,\,\boldsymbol{\omega}\in K}|m_0(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$. 
@@ -47,7 +47,7 @@ If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal,
 %Because it is difficult to directly design $M_0$ that satisfies the conditions in Theorem \ref{thm: basis cond}, 
 %Below, we construct $m-$functions imposing only \eqref{eq: id-sum} and \eqref{eq: shift-cancel} and then check if the resulting Parseval frame is an orthonormal basis by applying Theorem \ref{thm: basis cond} to $m_0$.
 
-\subsection{$m$-function Design and Boundary Regularity}\label{sec: design}
+\subsection{ Design and Boundary Regularity of $m_j$}\label{sec: design}
 %In this section, we define Shannon-type directional orthonormal basis same as in \cite{durand2007} and \cite{nuDFB05}. Then, we apply direct smoothing to its $m-$functions to improve spatial localization, this leads to a critical analysis of the boundary regularity of $S_1$ and the $C_j$'s.
 
 %\subsection{Shannon-type wavelets and smoothing}
@@ -57,10 +57,11 @@ then the identity summation follows from the partition, and the shift cancellati
 Applying Theorem \ref{thm: basis cond} to $m_0$, we check that the Shannon-type wavelets generated from these $m-$functions form an orthonormal basis.
 
 %However, because of the discontinuity of $m_j$ across the boundary of its support, the corresponding wavelet has slow decay in the time domain. 
-Such $m_j$'s are not regularized due to the discontinuity on $\partial C_j$'s, the boundaries of $C_j$'s, hence the corresponding wavelets are not spatially localized. $m_j$'s can be regularized by direct smoothing on $\partial C_j$'s.
+%Such $m_j$'s are not regularized due to 
+Because of the discontinuity at $\partial C_j$, the boundaries of the $C_j$, the $m_j$ are not smooth, and hence the corresponding wavelets are not spatially localized. The $m_j$ can be regularized by smoothing at the $\partial C_j$.
 %We take a different regularization approach from Durand's \cite{durand2007}, where three regular quincunx filter banks are constructed and then composed to obtain the desired regular quincunx dyadic filter banks. Here, we smooth the discontinuous boundaries of $m-$functions directly. 
-However, as shown in Proposition 3 in \cite{durand2007}, it is not possible to smooth all the boundaries with discontinuity if $m_j$'s have to satisfy the perfect reconstruction condition.
-In \cite{yin2014orthshear}, $\partial C_j$'s are segmented into {\it singular} and {\it regular} pieces. On regular boundaries, pairs of $(m_j,\, m_{j'})$ that share the boundary can be smoothed in a coherent way such that all the constraints in Theorem \ref{thm: basis cond} are satisfied. Yet, on those singular pieces, it is shown that $m_j$ cannot be smoothed without violating the shift cancellation condition. Fig. \ref{fig: boundary} shows the boundary classification, where the corners of $S_0$ and $C_0$ are singular, hence $m_0$ and the diagonal $m-$ functions of an orthonormal bases are discontinuous there. A mechanism of constructing orthonormal bases by smoothing $m_j$ on regular boundaries from indicator functions is provided in \cite{yin2014orthshear}.%However, it remains unclear if some of the discontinuity can be removed by direct smoothing.
+However, as shown in Proposition 3 in \cite{durand2007}, it is not possible to smooth the behavior of the $m_j$ at  {\it all} the boundaries with discontinuity if the $m_j$ have to satisfy the perfect reconstruction condition.
+In \cite{yin2014orthshear}, the $\partial C_j$ are segmented into {\it singular} and {\it regular} pieces. On regular boundaries, pairs of $(m_j,\, m_{j'})$ share a boundary and can both be smoothed in a coherent way such that all the constraints in Theorem \ref{thm: basis cond} remain satisfied. The singular pieces are boundaries for just one $m_j$, which can then not be smoothed without violating the shift cancellation condition. Fig. \ref{fig: boundary} shows the boundary classification, where the corners of $S_0$ and $C_0$ are singular, hence $m_0$ and the $m_j$'s in two diagonal directions of an orthonormal bases are discontinuous there. A mechanism of constructing orthonormal bases by smoothing $m_j$ on regular boundaries from indicator functions is provided in \cite{yin2014orthshear}.%However, it remains unclear if some of the discontinuity can be removed by direct smoothing.
 
 %Next, we analyze the limitation of direct smoothing in detail and show that there are regular boundaries which can be smoothed without violating \eqref{eq: id-sum} and \eqref{eq: shift-cancel}, and singular boundaries which cannot be smoothed.
 

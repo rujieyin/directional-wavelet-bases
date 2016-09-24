@@ -77,4 +77,9 @@ A.~Cohen, I.~Daubechies, and J.-C. Feauveau, ``Biorthogonal bases of compactly
   supported wavelets,'' \emph{Communications on pure and applied mathematics},
   vol.~45, no.~5, pp. 485--560, 1992.
 
+\bibitem{kutyniok2012digital}
+G.~Kutyniok, W.-Q. Lim, and X.~Zhuang, ``Digital shearlet transforms,'' in
+  \emph{Shearlets}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2012, pp.
+  239--282.
+
 \end{thebibliography}
