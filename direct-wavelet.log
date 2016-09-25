@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  25 SEP 2016 16:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  25 SEP 2016 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -444,12 +444,12 @@ Overfull \hbox (36.07741pt too wide) in paragraph at lines 415--420
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 487--488
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
 
  []
 
 
-Overfull \hbox (10.74162pt too wide) in paragraph at lines 491--494
+Overfull \hbox (10.74162pt too wide) in paragraph at lines 492--495
 []\OT1/cmr/bx/n/10 Proposition 5.10. []\OT1/cmr/m/it/10 If $[]\OT1/cmr/m/n/10 (
 [])\OML/cmm/m/it/10 ; m[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 ;  j \OT1/cmr/m/n
 /10 = 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; :::; \OT1/cmr/m/n
@@ -462,14 +462,14 @@ File: ./bi-orth/figure/initialize_mdual.png Graphic file (type png)
 
 <use ./bi-orth/figure/initialize_mdual.png>
 Package pdftex.def Info: ./bi-orth/figure/initialize_mdual.png used on input li
-ne 526.
+ne 527.
 (pdftex.def)             Requested size: 276.00105pt x 165.53673pt.
 
 <./bi-orth/figure/m0.png, id=100, 960.58875pt x 259.97125pt>
 File: ./bi-orth/figure/m0.png Graphic file (type png)
 
 <use ./bi-orth/figure/m0.png>
-Package pdftex.def Info: ./bi-orth/figure/m0.png used on input line 533.
+Package pdftex.def Info: ./bi-orth/figure/m0.png used on input line 534.
 (pdftex.def)             Requested size: 345.0pt x 93.3714pt.
 
 <./bi-orth/figure/m0_m0dual_new.png, id=101, 956.57375pt x 254.9525pt>
@@ -477,21 +477,21 @@ File: ./bi-orth/figure/m0_m0dual_new.png Graphic file (type png)
 
 <use ./bi-orth/figure/m0_m0dual_new.png>
 Package pdftex.def Info: ./bi-orth/figure/m0_m0dual_new.png used on input line 
-540.
+541.
 (pdftex.def)             Requested size: 345.0pt x 91.9501pt.
 
 <./bi-orth/figure/m.png, id=102, 940.51375pt x 531.9875pt>
 File: ./bi-orth/figure/m.png Graphic file (type png)
 
 <use ./bi-orth/figure/m.png>
-Package pdftex.def Info: ./bi-orth/figure/m.png used on input line 547.
+Package pdftex.def Info: ./bi-orth/figure/m.png used on input line 548.
 (pdftex.def)             Requested size: 345.0pt x 195.14386pt.
 
 <./bi-orth/figure/m_mdual.png, id=103, 948.54375pt x 528.97626pt>
 File: ./bi-orth/figure/m_mdual.png Graphic file (type png)
 
 <use ./bi-orth/figure/m_mdual.png>
-Package pdftex.def Info: ./bi-orth/figure/m_mdual.png used on input line 554.
+Package pdftex.def Info: ./bi-orth/figure/m_mdual.png used on input line 555.
 (pdftex.def)             Requested size: 345.0pt x 192.39268pt.
 
 <./bi-orth/figure/smooth_m0dual.png, id=104, 331.2375pt x 145.29282pt>
@@ -499,7 +499,7 @@ File: ./bi-orth/figure/smooth_m0dual.png Graphic file (type png)
 
 <use ./bi-orth/figure/smooth_m0dual.png>
 Package pdftex.def Info: ./bi-orth/figure/smooth_m0dual.png used on input line 
-561.
+562.
 (pdftex.def)             Requested size: 227.70126pt x 99.87747pt.
 
 <./bi-orth/figure/quincunx_wavelets.png, id=105, 374.90062pt x 274.77657pt>
@@ -507,7 +507,7 @@ File: ./bi-orth/figure/quincunx_wavelets.png Graphic file (type png)
 
 <use ./bi-orth/figure/quincunx_wavelets.png>
 Package pdftex.def Info: ./bi-orth/figure/quincunx_wavelets.png used on input l
-ine 568.
+ine 569.
 (pdftex.def)             Requested size: 276.00105pt x 202.30005pt.
 ) (./conclusion.tex [16] [17 <./bi-orth/figure/initialize_mdual.png> <./bi-orth
 /figure/m0.png> <./bi-orth/figure/m0_m0dual_new.png>] [18 <./bi-orth/figure/m.p
@@ -702,7 +702,7 @@ mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on direct-wavelet.pdf (29 pages, 1080561 bytes).
+Output written on direct-wavelet.pdf (29 pages, 1080678 bytes).
 PDF statistics:
  302 PDF objects out of 1000 (max. 8388607)
  199 compressed objects within 2 object streams

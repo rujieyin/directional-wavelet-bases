@@ -477,11 +477,12 @@ To sum up, we propose the following algorithm for bi-orthogonal directional filt
 \item[\mylabel{alg}{Algorithm 1}. Construction of $m_0,\widetilde{m_0}$ and $\widetilde{m_j}$ in bi-orthogonal basis]\
 \begin{itemize}
 \item[Input:] $\m{j},\,j=1,...,6$
-\item[step 1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks}.%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
+\item[step 1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks},%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
 \item[step 2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
-\item[step 3.] solve the optimization \eqref{eq: opt} for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$.
+\item[step 3.] solve the optimization \eqref{eq: opt} for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$,
+\item[step 4.] re-decompose $m_0(\V{\omega})\sbarm{0}$ into $m_0'(\V{\omega})$ and $\overline{\widetilde{m_0}'}(\V{\omega})$,
 %solve $m_i(\V{\omega}),\, i=1,...,6$ according to \eqref{eq: LS-new}
-\item[step 4.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
+\item[step 5.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
 \end{itemize}
 \end{description}
 \rule{\textwidth}{.5pt}\\[.5em]
