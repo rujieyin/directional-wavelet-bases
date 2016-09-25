@@ -320,15 +320,15 @@ m_6(\V{\omega})
 0
 \end{bmatrix} \doteq \V{b}_0'(\V{\omega}),
 \end{align}
-where $\M[:,-0]$ is completely determined by $\m{j},\,j = 1,\cdots,6$ 
-and $m_j,\,j=1,\cdots,6$ can be uniquely solved on $S-0$ if and only if $\forall\V{\omega}\in S_0$
+where $\M[:,-0](\V{\omega})$ is completely determined by $\m{j},\,j = 1,\cdots,6$ 
+and $m_j,\,j=1,\cdots,6$ can be uniquely solved on $S_0$ if and only if $\forall\V{\omega}\in S_0$
 \hspace{-1em}
 \begin{enumerate}[leftmargin=.5in]
 \item[\mylabel{cond: i}{(\ref{subsec: compute-m0}.i)}] $\M[:,-0](\V{\omega})$ is full rank,%
 \item[\mylabel{cond: ii}{(\ref{subsec: compute-m0}.ii)}] $\V{b}_0'(\V{\omega})$ is in $col\big(\M[:,-0](\V{\omega})\big)$, the column space of $\M[:,-0](\V{\omega})$.%
 \end{enumerate}
 %Because , \ref{cond: i} can be easily checked by computing $\det(\M[:,-0]^\top\M[:,-0])$ and see if it is non-zero. Next, we show that (ii) provides an explicit way of computing $m_0(\V{\omega})$ without knowing $\m{0}$.
-Next, we show that \ref{cond: ii} breaks down to constraints on two submatrices of $\M[:,-0](\V{\omega})$ and quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$.
+Next, we show that \ref{cond: ii} breaks down to constraints on two submatrices of $\M[:,-0](\V{\omega})$ and quadruples $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$, $\big( m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7) \big)$.
 \begin{proposition}\label{prop: m0_formula}
 Let $\M[odd,-0](\V{\omega}),\M[even,-0](\V{\omega})\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,-0](\V{\omega})$ consisting of odd and even indexed rows respectively. $\forall\V{\omega}\in S_0$, suppose {\rm\ref{cond: i}} holds, then {\rm\ref{cond: ii}} holds if and only if $rank(\,\M[odd,-0](\V{\omega})\,) = rank(\,\M[even,-0](\V{\omega})\,) = 3$ and 
 \begin{align}\label{eq: m0-even-null}
@@ -342,16 +342,16 @@ Let $\M[odd,-0](\V{\omega}),\M[even,-0](\V{\omega})\in\mathbb{C}^{4\times6}$ be 
 For the proof of Proposition \ref{prop: m0_formula}, see Appendix \ref{app: solving}.
 
 \noindent{\it Remark.} 
-Note that the submatrices $\M[odd,-0](\V{\omega})$ and $\M[even,-0](\V{\omega})$ are dual to each other under the shift of variable $\V{\omega}\mapsto \V{\omega}+\V{\pi}_i$, when $i$ is odd. Therefore, the constraints $rank(\,\M[even,-0](\V{\omega})\,) = 3$ and \eqref{eq: m0-even-null} from Proposition \ref{prop: m0_formula} are sufficient for \ref{cond: ii} to hold. Furthermore, because $\M[even, -0](\V{\omega})$ and $(\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4, \V{\omega} + \V{\pi}_6)$ are invariant to the shift of variable $\V{\omega}\mapsto\V{\omega}+\V{\pi}_i$ when $i$ is even, we only need to consider their constraints  on the subset $[-\pi,0)\times[-\pi,0)$ of $S_0$.
+Note that the submatrices $\M[odd,-0](\V{\omega})$ and $\M[even,-0](\V{\omega})$ are dual to each other under the shift of variable $\V{\omega}\mapsto \V{\omega}+\V{\pi}_i$, when $i$ is odd. Therefore, the constraints $rank(\,\M[even,-0](\V{\omega})\,) = 3$ and \eqref{eq: m0-even-null} from Proposition \ref{prop: m0_formula} are sufficient for \ref{cond: ii} to hold on $S_0$. Furthermore, because $\M[even, -0](\V{\omega})$ and $(\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4, \V{\omega} + \V{\pi}_6)$ are invariant to the shift of variable $\V{\omega}\mapsto\V{\omega}+\V{\pi}_i$ when $i$ is even, we only need to consider the constraints above on the subset $[-\pi,0)\times[-\pi,0)$ of $S_0$.
 %Both conditions \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null} hold $\forall \V{\omega}\in[-\pi,\pi)\times[-\pi,\pi)$ if and only if \eqref{eq: m0-even-null} holds $\forall \V{\omega}\in [-\pi,0)\times[-\pi,0)$.
 
-In sum, $\M[:,-0]$ (or equivalently $\widetilde{m_j}$) has to satisfy the following rank constraints on $[-\pi,0)\times[-\pi,0)$ for \eqref{eq: mj-eq} to be uniquely solvable on $S_0$, 
+In sum, $\M[:,-0](\V{\omega})$ (or equivalently $\widetilde{m_j}$) has to satisfy the following rank constraints on $[-\pi,0)\times[-\pi,0)$ for \eqref{eq: mj-eq} to be uniquely solvable on $S_0$, 
 \begin{align}\label{eq: Mranks}
 rank(\,\M[:,-0](\V{\omega})\,) = 6,\, rank(\,\M[even,-0](\V{\omega})\,) = 3.
 \end{align}
-As the rank constraints are hard to impose while designing $\widetilde{m_j}$, in our numerical experiments, we check if these rank constraints satisfied afterwards.
+As the rank constraints are hard to impose while designing $\widetilde{m_j}$, in our numerical experiments, we check if these rank constraints are satisfied afterwards, see step 1. in \ref{alg}.
 
-Suppose \eqref{eq: Mranks} hold, the quadruple  $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ can be solved by \eqref{eq: m0-even-null} as the vector orthogonal to the column space of $\M[even,-0](\V{\omega})$ of co-dimension 1. Hence the quadruple is uniquely determined {\it up to a constant $c(\V{\omega})$}. In particular, to obtain $m_0(\V{\omega})$, we solve \eqref{eq: m0-even-null} independently at each $\V{\omega}$ on $[-\pi,0)\times[-\pi,0)$. As a result, $c(\V{\omega})$ may not even be continuous, which leads to potential lack of regularity of $m_0(\V{\omega})$ as an artifact of the algorithm. Fortunately, we can remove this artificial irregularity by taking out the factor $c(\V{\omega})$.
+Suppose \eqref{eq: Mranks} hold, the quadruple  $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ can then be solved by \eqref{eq: m0-even-null} as the vector that is orthogonal to the column space of $\M[even,-0](\V{\omega})$ of co-dimension 1. Hence the quadruple is uniquely determined {\it up to a constant}. In particular, we obtain $m_0(\V{\omega})$ on $S_0$ by solving \eqref{eq: m0-even-null} independently at each $\V{\omega}$ on $[-\pi,0)\times[-\pi,0)$, see step 2. in \ref{alg}. Since the constant can change drastically as $\V{\omega}$ changes, there is potential lack of regularity of $m_0(\V{\omega})$ as an artifact of the algorithm. Fortunately, this artificial irregularity can be removed as suggested by the following proposition.
 
 \begin{comment}
 By Lemma \ref{lem: M-symmetry}, $\M[:,-0]$ are the same at $\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4$ and $\V{\omega} + \V{\pi}_6$ up to row permutations. Therefore, the columns of the matrix $\V{B}$ below should be in $col\big(\M[:,-0](\V{\omega})\big)$,
@@ -415,30 +415,37 @@ We assume that $m_0\in\mathbb{R}_{\geq 0}$ without phase. Let $m_0^C(\V{\omega})
 If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
 %$m_0^C(\V{\omega}),$ $\,\mc{0}, m_i(\V{\omega}),\,i = 1,...,6$ do. More generally, 
 %$m_0(\V{\omega})c(\V{\omega}),\,\m{0}c(\V{\omega})^{-1}, m_i(\V{\omega}),\,i=1,...,6$ 
-then $m_0^c(\V{\omega})\doteq m_0(\V{\omega})c(\V{\omega}), \widetilde{m_0}^c(\V{\omega})\doteq \m{0}\overline{c}(\V{\omega})^{-1}$ together with the same $m_j(\V{\omega}),\m{j}, \, j = 1,\cdots,6$ 
+then $m_0'(\V{\omega})\doteq m_0(\V{\omega})c(\V{\omega}), \widetilde{m_0}'(\V{\omega})\doteq \m{0}\overline{c}(\V{\omega})^{-1}$ together with the same $m_j(\V{\omega}),\m{j}, \, j = 1,\cdots,6$ 
 satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if $ c(\V{\omega}) = c(\V{\omega}+\V{\pi}_2)=c(\V{\omega}+\V{\pi}_4) = c(\V{\omega}+\V{\pi}_6) \neq 0$, i.e. $c(\V{\omega})$ is $\pi$-periodic in both $\omega_1$ and $\omega_2$.
 \end{proposition}
 \noindent{\it Proof. }
-It suffices to show that $m_0^c(\V{\omega})\overline{\widetilde{m_0}^c}(\V{\omega} + \V{\pi}_i) = m_0(\V{\omega})\sbarmp{0}{i},\,$ when $i$ is even.\qed
+It suffices to show that $m_0'(\V{\omega})\overline{\widetilde{m_0}'}(\V{\omega} + \V{\pi}_i) = m_0(\V{\omega})\sbarmp{0}{i},\,$ when $i$ is even.\qed
 
 %\begin{align*}
 %m_0^c(\V{\omega})\overline{\widetilde{m_0}^c}(\V{\omega} + \V{\pi}_i) = m_0(\V{\omega})\sbarmp{0}{i},\quad & i \text{ is even,}\hspace{4em}\qed
 %\hspace{1em}m_j^c(\V{\omega})\overline{\widetilde{m_j}^c}(\V{\omega} + \V{\pi}_i) = \big(m_j(\V{\omega})\sbarmp{j}{i}\big)c(\V{\omega})c(\V{\omega}+\V{\pi}_1)^{-1},\quad & i \text{ is odd.}\qedhere\hspace{2em}\qed
 %\end{align*}
 
-Next, we solve quadruple $(\m{0}, \mp{0}{2}, \mp{0}{4}, \mp{0}{6})$ from the identity condition \eqref{eq: identity-cond} on $[-\pi, 0)\times[-\pi, 0 )$. We reformulate it as a quadratic optimization problem that minimizes the total variation of $\sbarm{0}m_0(\V{\omega})$ as follows,
-%On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
-\begin{align}\label{eq: opt}
-\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
-s.t. \; \V{A}\xvec = \mathbf{1},
-\end{align}
-where $\V{D}$ is the gradient operator, $\circ$ is Hadamard product and $\V{A}$ is the linear operator from \eqref{eq: identity-cond}. In particular, on a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $ \eqref{eq: identity-cond} can be rewrite as
+\noindent{\it Remark.}
+Proposition \ref{prop: mc} suggests that we can design $c(\V{\omega})$ such that $(m_0',\widetilde{m_0}')$ have desired properties, e.g. continuity, smoothness or fast decay rate. In practice, we first solve $\m{0}$, see step 3. in \ref{alg}, then compute $m_0(\V{\omega})\sbarm{0}$ and re-decompose the product into $m_0'(\V{\omega})$ and $\overline{\widetilde{m_0}'}(\V{\omega})$.
+
+To obtain $\m{0}$ on $S_0$, we solve the identity condition \eqref{eq: identity-cond} on $[-\pi, 0)\times[-\pi, 0 )$ for the quadruple $(\m{0}, \mp{0}{2}, \mp{0}{4}, \mp{0}{6})$. As mentioned at the end of Section \ref{subsec: cohen-summary}, we are not aware of existing efficient algorithms that solve \eqref{eq: identity-cond}. Hence we reformulate it as an optimization problem wher \eqref{eq: identity-cond} serves as a linear constraint. In particular, on a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $ \eqref{eq: identity-cond} can be rewrite as
 \begin{align}
 \V{A}\, \overline{\widetilde{\mathbf{m}_0}}= \mathbf{1}_{4N^2}, \label{eq: m0-A}%\\ 
 %\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2}&\in\mathbb{C}^{4N^2} \notag
 \end{align}
 where $\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1}^{4N^2}$ and $\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ is a sparse matrix with entries 
 $$\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V{\pi}_{2k}), \quad \V{\omega}_j \in [-\pi,0)\times[-\pi,0).$$
+
+For the objective function to be minimized, we choose the total variation of $\sbarm{0}m_0(\V{\omega})$, as the product will be later re-decomposed and its regularity controls the regularity of $(\,m_0'(\V{\omega}), \widetilde{m_0}'(\V{\omega})\,)$ that can be achieved.
+
+In sum, we solve the following quadratic minimization problem with linear constraint,
+%On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
+\begin{align}\label{eq: opt}
+\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
+s.t. \; \V{A}\xvec = \mathbf{1},
+\end{align}
+where $\V{D}$ is the gradient operator, $\circ$ is Hadamard product and $\V{A}$ is the linear operator from \eqref{eq: identity-cond}. 
 %Because the set $\{\V{\omega},\, \V{\omega}+\V{\nu}_k,k=1,2,3\}$ is invariant under the shift $\V{\nu}_i,\, i = 1,2,3,$ the rows of $\V{A}$ corresponding to $\V{\omega}$ and $\V{\omega}+\V{\nu}_i$ are identical and 
 %Because we only need to consider \eqref{eq: identity-cond} on $[-\pi,0)\times[-\pi,0)$, 
 %rows corresponds to $\V{\omega}\in [-\pi,\pi)\times[-\pi,\pi)/\{\V{0},\,\V{\nu}_i,i=1,2,3\}$. Therefore, after removing the duplicate rows, 
@@ -467,7 +474,7 @@ Finally, we plug $m_0(\V{\omega})$ and $\m{0}$ into $\V{b}_0'(\V{\omega})$ on th
 To sum up, we propose the following algorithm for bi-orthogonal directional filter construction with dilated quincunx downsampling scheme:\\
 \rule{\textwidth}{.5pt}
 \begin{description}% prevent items from splitting
-\item[construction of $m$-, $\widetilde{m}$-functions in bi-orthogonal basis]\
+\item[\mylabel{alg}{Algorithm 1}. Construction of $m_0,\widetilde{m_0}$ and $\widetilde{m_j}$ in bi-orthogonal basis]\
 \begin{itemize}
 \item[Input:] $\m{j},\,j=1,...,6$
 \item[step 1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks}.%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
@@ -479,12 +486,10 @@ To sum up, we propose the following algorithm for bi-orthogonal directional filt
 \end{description}
 \rule{\textwidth}{.5pt}\\[.5em]
 
-Proposition \ref{prop: mc} suggests that we can design $c(\V{\omega})$ such that $(m_0^c,\widetilde{m_0}^c)$ have desired properties, e.g. continuity, smoothness or fast decay rate. In practice, we compute $m_0(\V{\omega})\sbarm{0}$ from $m_0(\V{\omega})$ and $\m{0}$ obtained in step 2 and 3, then re-decompose the product into $m_0^c(\V{\omega})$ and $\overline{\widetilde{m_0}^c}(\V{\omega})$.
-
 We may also manipulate pairs of $(m_j,\widetilde{m_j})$ in a similar way due to the following generalization of Proposition \ref{prop: mc}.
 \begin{proposition}\label{prop: mjc}
 If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
-$m_j^c(\V{\omega})\doteq m_j(\V{\omega})c_j(\V{\omega}), \widetilde{m_j}^c_j(\V{\omega})\doteq \m{j}\overline{c}(\V{\omega})^{-1} \, j = 0,\cdots,6$ 
+$m_j^c(\V{\omega})\doteq m_j(\V{\omega})c_j(\V{\omega}), \widetilde{m_j}^c(\V{\omega})\doteq \m{j}\overline{c_j}(\V{\omega})^{-1} \, j = 0,\cdots,6$ 
 satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if $ c_0(\V{\omega}) = c_0(\V{\omega}+\V{\pi}_{2k})\,,\forall k = 0,\cdots,3$ and $c_j(\V{\omega}) = c_j(\V{\omega} + \V{\pi}_k),\, \forall \;k = 0,\cdots,7,\, j = 1,\cdots,6$.
 \end{proposition}
 
