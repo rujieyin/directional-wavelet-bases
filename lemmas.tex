@@ -1,6 +1,6 @@
 \section{Proof of lemmas and propositions}\label{app: lemmas}
 
-\subsection{Discontinuity of $\m{j}$}
+\subsection{Discontinuity of $\m{j}$}\label{app: discontinuity}
 \begin{lemma}\label{lem: subM-singular-sys}
 Define $d_{i,j}(\V{\omega}) = \det([\mrow{k_1}(\V{\omega})^\top,\cdots,\mrow{k_6}(\V{\omega})^\top]),\;$ where $0\leq k_1<\cdots<k_6\leq 7,\, s.t.\, k_l\neq i,j.$
 \eqref{eq: LS-new} is solvable $\forall \V{\omega}$ if and only if \vspace{.5em}
@@ -119,13 +119,13 @@ a.e. on $T_1\bigcap\text{supp}(\widetilde{m_1})$).
 \noindent{\it Proof}
 Let $B_6=\{\V{\omega}: |\m{6}| \leq |\m{1}|\}\bigcap T_6\bigcap supp(\widetilde{m_1})$ and $B_1$ be its mirror set with respect to $\omega_1 = \omega_2$ and suppose $|B_6|>0$, then $\int_{B_6}|\m{6}|\leq \int_{B_6}|\m{1}|$. On the other hand, since $\m{1}$ concentrates in $T_1$, we know $\int_{B_1}|\m{1}| > \int_{B_6}|\m{1}|$. Moreover, due to the symmetry of $\m{1},\m{6}$ and $B_1,B_6$, $\int_{B_1}|\m{1}| = \int_{B_6}|\m{6}|$, hence $\int_{B_6}|\m{1}| \geq\int_{B_6}|\m{6}| = \int_{B_1}|\m{1}| $ which results in contradiction.\qed
 
-\begin{proposition}
+\begin{proposition}\label{prop: zero-corner}
 If  $m_1\,(m_6)$ concentrates within $T_1\,(T_6)$, then $\m{1} = \m{6} = 0,\, a.e. $ on $ S_\rho + \V{\pi}_1$.
 \end{proposition}
 \noindent{\it Proof.}
 Consider frequency domain $S_\rho' = S_\rho\bigcap\{\omega_1<\omega_2\}.$ By Lemma \ref{lem: rank1}, $\exists\,\alpha_{\V{\omega}}\in\mathbb{C}, s.t.\,\mrow{1}(\V{\omega}) = \alpha_{\V{\omega}}\,\mrow{7}(\V{\omega}),\, \forall\, \V{\omega}\in S_\rho',$ i.e. $\widetilde{m_1}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_1}(\V{\omega} + \V{\pi}_7)$ and $\widetilde{m_6}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_6}(\V{\omega} + \V{\pi}_7)$. On the other hand, Lemma \ref{lem: concentrate} implies that $|\widetilde{m_1}(\V{\omega} + \V{\pi}_7)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_7)|$, hence $|\widetilde{m_1}(\V{\omega} + \V{\pi}_1)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_1)|$. Let $\Omega_6':= (S_\rho+\pi_1)\bigcap T_6$, then $\int_{\Omega_6'}|\m{1}| \geq\int_{\Omega_6'}|\m{6}|$, which will contradict Lemma \ref{lem: concentrate} unless $|\Omega_6'\bigcap\text{supp}(\widetilde{m_6})| = 0$, or equivalently $\alpha_{\V{\omega}}=0$ and so $\m{6} = \m{1} = 0,\,a.e.$ on $\Omega_6'$. By symmetry, $\m{6}=\m{1} = 0,\,a.e. $ on $(S_\rho+\V{\pi}_1)\setminus \Omega_6'$ as well.\qed
 
-\subsection{Design of input $\m{j}$}
+\subsection{Design of input $\m{j}$}\label{app: input design}
 {\bf Proof of Lemma \ref{lem: phase-ineq}}:\\[.2em]
 {\bf Lemma \ref{lem: phase-ineq}.} 
 {\it If $\exists\,\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2},0)\},\,s.t. \,m_0(\V{\omega})>0,$ then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}\,2\pi)$.}\\ [1em]
@@ -198,7 +198,7 @@ The product of singular values of $\V{A}$ is
 \sqrt{\text{det}(\V{A}^* \V{A})} = 4a^3\sqrt{a^2 K_1^2K_2^2 + b^2(Q_1K_2^2 + Q_2K_1^2)},
 \end{align}
 where $ Q_1 = 1 - \cos(\V{\pi}_6^\top(\V{\eta}_1-\V{\eta}_6))\cos(\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)), Q_2 = 1 - \cos(\V{\pi}_6^\top(\V{\eta}_3-\V{\eta}_4))\cos(\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)), K_1 = \sin(\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)), K_2 = \sin(\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)).$ If $\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6) = \V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4) = \pi (mod\, 2\pi)$, then $K_1 = K_2 = 0$ and $\V{A}$ becomes singular.\qed
-\subsection{Solving \eqref{eq: LS-new} and \eqref{eq: identity-cond} for $m_0,\widetilde{m_0}$ and $m_j$}
+\subsection{Solving \eqref{eq: LS-new} and \eqref{eq: identity-cond} for $m_0,\widetilde{m_0}$ and $m_j$}\label{app: solving}
 \begin{lemma}\label{lem: null-space}
 Let $\V{P}\in\mathbb{C}^{n\times n}$ be a projection matrix of rank $2$ and $\V{a},\V{b},\V{a}',\V{b}'\in\mathbb{C}^n,\, s.t.\, \V{a}^*\V{b} = (\V{a}')^*\V{b}'=1,\, \V{a}'^*\V{b} = \V{a}^*\V{b}' = \V{b}^*\V{b}' = 0.$ If $\V{P}(\V{I}_n - \V{a}\otimes\V{b} - \V{a}'\otimes\V{b}' ) = \V{0}$, then $\V{P}$ is the projection of $span\{\V{b},\V{b}'\}$.
 \end{lemma}
