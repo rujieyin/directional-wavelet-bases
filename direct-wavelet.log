@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  26 SEP 2016 14:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  26 SEP 2016 16:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -457,14 +457,14 @@ File: ./bi-orth/figure/initialize_mdual.png Graphic file (type png)
 
 <use ./bi-orth/figure/initialize_mdual.png>
 Package pdftex.def Info: ./bi-orth/figure/initialize_mdual.png used on input li
-ne 541.
+ne 544.
 (pdftex.def)             Requested size: 276.00105pt x 165.53673pt.
 
 <./bi-orth/figure/m0.png, id=103, 960.58875pt x 259.97125pt>
 File: ./bi-orth/figure/m0.png Graphic file (type png)
 
 <use ./bi-orth/figure/m0.png>
-Package pdftex.def Info: ./bi-orth/figure/m0.png used on input line 548.
+Package pdftex.def Info: ./bi-orth/figure/m0.png used on input line 551.
 (pdftex.def)             Requested size: 345.0pt x 93.3714pt.
 
 <./bi-orth/figure/m0_m0dual_new.png, id=104, 956.57375pt x 254.9525pt>
@@ -472,7 +472,7 @@ File: ./bi-orth/figure/m0_m0dual_new.png Graphic file (type png)
 
 <use ./bi-orth/figure/m0_m0dual_new.png>
 Package pdftex.def Info: ./bi-orth/figure/m0_m0dual_new.png used on input line 
-555.
+558.
 (pdftex.def)             Requested size: 345.0pt x 91.9501pt.
 
 <./bi-orth/figure/smooth_m0dual.png, id=105, 331.2375pt x 145.29282pt>
@@ -480,21 +480,21 @@ File: ./bi-orth/figure/smooth_m0dual.png Graphic file (type png)
 
 <use ./bi-orth/figure/smooth_m0dual.png>
 Package pdftex.def Info: ./bi-orth/figure/smooth_m0dual.png used on input line 
-562.
+565.
 (pdftex.def)             Requested size: 227.70126pt x 99.87747pt.
 
 <./bi-orth/figure/m.png, id=106, 940.51375pt x 531.9875pt>
 File: ./bi-orth/figure/m.png Graphic file (type png)
 
 <use ./bi-orth/figure/m.png>
-Package pdftex.def Info: ./bi-orth/figure/m.png used on input line 569.
+Package pdftex.def Info: ./bi-orth/figure/m.png used on input line 572.
 (pdftex.def)             Requested size: 345.0pt x 195.14386pt.
 
 <./bi-orth/figure/m_mdual.png, id=107, 948.54375pt x 528.97626pt>
 File: ./bi-orth/figure/m_mdual.png Graphic file (type png)
 
 <use ./bi-orth/figure/m_mdual.png>
-Package pdftex.def Info: ./bi-orth/figure/m_mdual.png used on input line 576.
+Package pdftex.def Info: ./bi-orth/figure/m_mdual.png used on input line 579.
 (pdftex.def)             Requested size: 345.0pt x 192.39268pt.
 
 <./bi-orth/figure/quincunx_wavelets.png, id=108, 374.90062pt x 274.77657pt>
@@ -502,12 +502,12 @@ File: ./bi-orth/figure/quincunx_wavelets.png Graphic file (type png)
 
 <use ./bi-orth/figure/quincunx_wavelets.png>
 Package pdftex.def Info: ./bi-orth/figure/quincunx_wavelets.png used on input l
-ine 583.
+ine 586.
 (pdftex.def)             Requested size: 276.00105pt x 202.30005pt.
-) (./conclusion.tex [17 <./bi-orth/figure/initialize_mdual.png>] [18 <./bi-orth
-/figure/m0.png> <./bi-orth/figure/m0_m0dual_new.png> <./bi-orth/figure/smooth_m
-0dual.png>] [19 <./bi-orth/figure/m.png> <./bi-orth/figure/m_mdual.png>]) (./pa
-rseval-cond.tex [20 <./bi-orth/figure/quincunx_wavelets.png>]
+) (./conclusion.tex [17] [18 <./bi-orth/figure/initialize_mdual.png> <./bi-orth
+/figure/m0.png> <./bi-orth/figure/m0_m0dual_new.png>] [19 <./bi-orth/figure/smo
+oth_m0dual.png> <./bi-orth/figure/m.png>] [20 <./bi-orth/figure/m_mdual.png> <.
+/bi-orth/figure/quincunx_wavelets.png>]) [21] (./parseval-cond.tex
 Overfull \hbox (9.85329pt too wide) in paragraph at lines 17--20
 []\OT1/cmr/m/n/10 ([]) = \OML/cmm/m/it/10 ^^^[]\OT1/cmr/m/n/10 ([] \OMS/cmsy/m/
 n/10 ^^@ [][]\OT1/cmr/m/n/10 ) = \OMS/cmsy/m/n/10 j[]j[] [][] \OML/cmm/m/it/10 
@@ -526,12 +526,12 @@ mm/m/it/10 ; \OT1/cmr/m/n/10 0)\OML/cmm/m/it/10 ;  \OT1/cmr/m/n/10 (0\OML/cmm/m
 10 ; \OT1/cmr/m/n/10 1)\OMS/cmsy/m/n/10 g$\OT1/cmr/m/n/10 ,
  []
 
-[21]) (./lemmas.tex
+[22]) (./lemmas.tex
 LaTeX Font Info:    Try loading font information for U+euf on input line 31.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[22]
+[23]
 Overfull \hbox (12.72762pt too wide) in paragraph at lines 66--70
 \OT1/cmr/bx/n/10 Lemma 5.3[]\OT1/cmr/m/n/10 . $\OMS/cmsy/m/n/10 9 \OML/cmm/m/it
 /10 ^^Z > \OT1/cmr/m/n/10 0$ \OT1/cmr/m/it/10 s.t. if $[]\OT1/cmr/m/n/10 [\OMS/
@@ -541,7 +541,7 @@ r/m/it/10 , then $\OML/cmm/m/it/10 rank\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 ; []
 \OT1/cmr/m/n/10 ) =
  []
 
-[23]
+[24]
 Overfull \hbox (1.66971pt too wide) in paragraph at lines 116--118
 []\OT1/cmr/bx/n/10 Lemma B.3. []\OT1/cmr/m/it/10 If $[]\OT1/cmr/m/n/10 ([])([](
 []))$ \OT1/cmr/m/it/10 con-cen-trates in $\OML/cmm/m/it/10 T[]\OT1/cmr/m/n/10 (
@@ -558,37 +558,37 @@ en-trates within $\OML/cmm/m/it/10 T[] \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T[]\OT
 1/cmr/m/n/10 )$\OT1/cmr/m/it/10 , then $[]\OT1/cmr/m/n/10 ([]) = []([]) =
  []
 
-[24]
+[25]
 Underfull \hbox (badness 10000) in paragraph at lines 152--156
 
  []
 
-[25]
+[26]
 Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
-[26]
+[27]
 Overfull \hbox (21.64096pt too wide) in paragraph at lines 246--248
 \OT1/cmr/m/n/10 The iden-tity con-straint [] thus can be writ-ten as $([])[] []
 [] = 1$ and $([])[] [][] =
  []
 
-) (./m0-opt.tex <./bi-orth/figure/filters.jpg, id=149, 562.1pt x 421.575pt>
+) (./m0-opt.tex <./bi-orth/figure/filters.jpg, id=152, 562.1pt x 421.575pt>
 File: ./bi-orth/figure/filters.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/filters.jpg>
 Package pdftex.def Info: ./bi-orth/figure/filters.jpg used on input line 6.
 (pdftex.def)             Requested size: 137.9979pt x 103.49583pt.
 
-<./bi-orth/figure/m-funcs.jpg, id=150, 562.1pt x 421.575pt>
+<./bi-orth/figure/m-funcs.jpg, id=153, 562.1pt x 421.575pt>
 File: ./bi-orth/figure/m-funcs.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/m-funcs.jpg>
 Package pdftex.def Info: ./bi-orth/figure/m-funcs.jpg used on input line 18.
 (pdftex.def)             Requested size: 155.24895pt x 116.432pt.
 
-<./bi-orth/figure/1d-m-compare.jpg, id=151, 546.04pt x 265.99374pt>
+<./bi-orth/figure/1d-m-compare.jpg, id=154, 546.04pt x 265.99374pt>
 File: ./bi-orth/figure/1d-m-compare.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/1d-m-compare.jpg>
@@ -596,21 +596,21 @@ Package pdftex.def Info: ./bi-orth/figure/1d-m-compare.jpg used on input line 2
 5.
 (pdftex.def)             Requested size: 155.24895pt x 75.62636pt.
 
-<./bi-orth/figure/1d-filter-compare.jpg, id=152, 527.9725pt x 231.86626pt>
+<./bi-orth/figure/1d-filter-compare.jpg, id=155, 527.9725pt x 231.86626pt>
 File: ./bi-orth/figure/1d-filter-compare.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/1d-filter-compare.jpg>
 Package pdftex.def Info: ./bi-orth/figure/1d-filter-compare.jpg used on input l
 ine 26.
 (pdftex.def)             Requested size: 155.24895pt x 68.17705pt.
- [27 <./bi-orth/figure/filters.jpg>]
+ [28 <./bi-orth/figure/filters.jpg>]
 Underfull \hbox (badness 3240) in paragraph at lines 33--34
 []\OT1/cmr/m/n/10 Let $[]([])$ be the ap-prox-i-ma-tion of
  []
 
-[28 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-or
+[29 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-or
 th/figure/1d-filter-compare.jpg>]
-<./bi-orth/figure/2d-m-compare-vanilla.png, id=159, 1351.0475pt x 297.11pt>
+<./bi-orth/figure/2d-m-compare-vanilla.png, id=162, 1351.0475pt x 297.11pt>
 File: ./bi-orth/figure/2d-m-compare-vanilla.png Graphic file (type png)
 
 <use ./bi-orth/figure/2d-m-compare-vanilla.png>
@@ -618,7 +618,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-vanilla.png used on inpu
 t line 71.
 (pdftex.def)             Requested size: 310.4979pt x 68.27945pt.
 
-<./bi-orth/figure/2d-m-compare-weightedl2.png, id=160, 1352.05125pt x 300.12125
+<./bi-orth/figure/2d-m-compare-weightedl2.png, id=163, 1352.05125pt x 300.12125
 pt>
 File: ./bi-orth/figure/2d-m-compare-weightedl2.png Graphic file (type png)
  <use ./bi-orth/figure/2d-m-compare-weightedl2.png>
@@ -626,7 +626,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-weightedl2.png used on i
 nput line 78.
 (pdftex.def)             Requested size: 310.4979pt x 68.9211pt.
 
-<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=161, 1351.0475pt x 294.0
+<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=164, 1351.0475pt x 294.0
 9875pt>
 File: ./bi-orth/figure/2d-filter-compare-weightedl2.png Graphic file (type png)
 
@@ -635,7 +635,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-filter-compare-weightedl2.png used
  on input line 79.
 (pdftex.def)             Requested size: 310.4979pt x 67.58743pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 69--104
+Underfull \hbox (badness 10000) in paragraph at lines 69--105
 
  []
 
@@ -643,9 +643,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--104
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-[29 <./bi-orth/figure/2d-m-compare-vanilla.png (PNG copy)> <./bi-orth/figure/2d
+[30 <./bi-orth/figure/2d-m-compare-vanilla.png (PNG copy)> <./bi-orth/figure/2d
 -m-compare-weightedl2.png (PNG copy)> <./bi-orth/figure/2d-filter-compare-weigh
-tedl2.png (PNG copy)>]) [30] (./direct-wavelet.aux)
+tedl2.png (PNG copy)>]) [31] (./direct-wavelet.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -700,10 +700,10 @@ sfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm7.pfb>
-Output written on direct-wavelet.pdf (30 pages, 1082873 bytes).
+Output written on direct-wavelet.pdf (31 pages, 1084544 bytes).
 PDF statistics:
- 306 PDF objects out of 1000 (max. 8388607)
- 201 compressed objects within 3 object streams
+ 310 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

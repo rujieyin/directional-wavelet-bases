@@ -532,9 +532,12 @@ We then solve \eqref{eq: opt} for $\m{0}$, and the solution is coupled with $m_0
 
 Next, we find $c(\V{\omega})$ to obtain $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ with better regularity. We can construct $c(\V{\omega})$ freely on $C_0$ and then extend it to $S_0$ by its $\pi$-periodicity. Since both $m_0(\V{\omega})$ and $\m{0}$ are supported on $C_0$, $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ have the same support as well, thus they are determined by $c(\omega)$ on $C_0$. Therefore, $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ can be directly obtained by re-decomposition of $m_0(\V{\omega})\sbarm{0}=1$ on $C_0$. In particular, we let $\widetilde{m_0}'$ be a smooth real function and $m_0'(\V{\omega}) = \widetilde{m_0}'(\V{\omega})^{-1}$ on $C_0$, see Figure \ref{fig: smooth_m0dual}.
 
-Figure \ref{fig: m_j} and Figure \ref{fig: m_j_mjdual} show $|\m{j}|$ and $|m_j\m{j}|$ for $\m{j}$ obtained by solving \eqref{eq: mj-eq}. We also numerically verify that $m_j(\V{\omega})$ and $\m{j}$ have the same phase, i.e. $\overlinespace{m_j}\m{j}\in \mathbb{R}$.
+Finally, we solve \eqref{eq: mj-eq} for $\m{j}$. As shown in figure \ref{fig: mjdual}, the energy of $\widetilde{m_j}$ concentrates at $\partial C_0$, where $m_j$ decay to near zero. Moreover, Figure \ref{fig: m_j_mjdual} shows that $|m_j\m{j}|$ are close to constant on $C_j$, which is similar to the energy concentration of $m_0'$ at the corners of $C_0$ that compensates the decay of $m_0'$ in Figure \ref{fig: smooth_m0dual}. Such irregularity roots in the irregularity of bi-orthogonal bases construction we show in Section \ref{subsec: discontinuity}, which prevents input $\widetilde{m_j}$ to be continuous in the first place.
+ We also numerically verify that $m_j(\V{\omega})$ and $\m{j}$ have the same phase, i.e. $\overlinespace{m_j}\m{j}\in \mathbb{R}$.
 
-So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: mj} and \eqref{eq: mj_dual}. Finally, using pre-designed $\m{j}$ and post-designed $\widetilde{m_0}'$, we construct the dual wavelets  $\widetilde{\psi^j}$ in \eqref{eq: bi-orth MRA} using \eqref{eq: mj_dual}. As shown in Figure \ref{fig: wavelets}, the dual wavelets are spatially localized and have good direction selection. The wavelets and scaling functions in \eqref{eq: bi-orth MRA} can be constructed using \eqref{eq: mj_dual} similarly.
+So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: mj} and \eqref{eq: mj_dual}. Figure \ref{fig: wavelets} shows the dual wavelets  $\widetilde{\psi^j}$ in \eqref{eq: bi-orth MRA} constructed using \eqref{eq: mj_dual}. Because of the regularity we impose on $\widetilde{m_j}$ and $\widetilde{m_0}'$, the dual wavelets are spatially localized and have good direction selection. The wavelets and scaling functions in \eqref{eq: bi-orth MRA} can be constructed using \eqref{eq: mj_dual} similarly, but with much poorer regularity originated in $m_j$ and $m_0'$.
+
+Although using a different set of $\widetilde{m_j}$ as input paired with a carefully tweaked $\widetilde{m_0}'$ might improve the regularity of the dual wavelets $\widetilde{\psi^j}$, the intrinsic irregularity of the corresponding wavelets $\psi^j$ shall remain.
 
 \begin{figure}
 \centering
@@ -560,21 +563,21 @@ So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that sati
 \begin{figure}
 \centering
 \includegraphics[width=.66\textwidth]{smooth_m0dual.png}
-\caption{ Left: $\widetilde{m_0}'$, designed smooth function mainly supported on the central square $C_0$, right: $m_0'$, $s.t. m_0'\overline{\widetilde{m_0}'}(\V{\omega})  =  m_0\overline{\widetilde{m_0}}(\V{\omega})= \V{1}_{C_0}(\V{\omega})$. } 
+\caption{ Left: $\widetilde{m_0}'$, designed smooth function mainly supported on the central square $C_0$, right: $m_0'$, where $\;\, m_0'\overline{\widetilde{m_0}'}(\V{\omega})  =  m_0\sbarm{0}= \V{1}_{C_0}(\V{\omega})$. } 
 \label{fig: smooth_m0dual}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{m.png}
-\caption{ $|m_j(\V{\omega})|$, where $m_j(\V{\omega})$ is solved from \eqref{eq: mj-eq} given $\widetilde{m_j}$ in Figure \ref{fig: mjdual}, $m_0$ in Figure \ref{fig: m_0} and $\widetilde{m_0}$ in Figure \ref{fig: m_0_m0dual}. }
+\caption{ $|m_j(\V{\omega})|$, where $m_j(\V{\omega})$ is solved from \eqref{eq: mj-eq} given $\widetilde{m_j}$ in Figure \ref{fig: mjdual}, $m_0'$ and $\widetilde{m_0}'$ in Figure \ref{fig: smooth_m0dual}. }
 \label{fig: m_j}
 \end{figure}
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{m_mdual.png}
-\caption{ $|m_j(\V{\omega})\m{j}|$ }
+\caption{ $|m_j(\V{\omega})\m{j}|$ for $m_j$ in Figure \ref{fig: m_j} and $\widetilde{m_j}$ in Figure \ref{fig: mjdual}. }
 \label{fig: m_j_mjdual}
 \end{figure}
 
