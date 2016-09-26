@@ -25,11 +25,8 @@
 \renewcommand{\mp}[2]{\widetilde{m_{#1}}(\boldsymbol{\omega}+\boldsymbol{\pi}_{#2})}
 \newcommand{\mc}[1]{\widetilde{m_{#1}}^C(\boldsymbol{\omega})}
 \newcommand{\barm}[1]{\overline{\widetilde{m_{#1}}(\boldsymbol{\omega})}}
-\newcommand{\sbarm}[1]{\overline{\widetilde{m_{#1}}}(\boldsymbol{\omega})}
 \newcommand{\barmp}[2]{\overline{\widetilde{m_{#1}}(\boldsymbol{\omega} + \boldsymbol{\pi}_{#2})}}
 \newcommand{\barmn}[2]{\overline{\widetilde{m_{#1}}(\boldsymbol{\omega} + \boldsymbol{\nu}_{#2})}}
-\newcommand{\sbarmp}[2]{\overline{\widetilde{m_{#1}}}(\boldsymbol{\omega} + \boldsymbol{\pi}_{#2})}
-\newcommand{\sbarmn}[2]{\overline{\widetilde{m_{#1}}}(\boldsymbol{\omega} + \boldsymbol{\nu}_{#2})}
 \newcommand{\M}{\widetilde{\mathbf{M}}}
 \newcommand{\Msub}{\widetilde{\mathbf{M}}^{\Box}}
 \newcommand{\G}{\mathcal{G}}
@@ -50,8 +47,11 @@
 \makeatletter
 
 \newcommand{\mylabel}[2]{#2\def\@currentlabel{#2}\label{#1}}
+\newcommand*{\overlinespace}[1]{\overline{\mbox{$#1$}\raisebox{3mm}{}}}
+\newcommand{\sbarm}[1]{\overlinespace{\widetilde{m_{#1}}}(\boldsymbol{\omega})}
+\newcommand{\sbarmp}[2]{\overlinespace{\widetilde{m_{#1}}}(\boldsymbol{\omega} + \boldsymbol{\pi}_{#2})}
+\newcommand{\sbarmn}[2]{\overlinespace{\widetilde{m_{#1}}}(\boldsymbol{\omega} + \boldsymbol{\nu}_{#2})}
 \makeatother
-
 
 \begin{document}
 

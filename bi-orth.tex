@@ -15,8 +15,8 @@ m_0(\boldsymbol{\omega})\sbarm{0} + \sum_{j = 1}^6 m_j(\boldsymbol{\omega})\sbar
 \end{align}
 \begin{equation}\label{eq: shift-cancel 2}
 \begin{cases}
-\sum_{j = 0}^6m_j(\boldsymbol{\omega})\overline{\widetilde{m_j}}(\boldsymbol{\omega} + \boldsymbol{\pi}) = 0, & \boldsymbol{\pi}\in \Gamma_0\setminus\{\boldsymbol{0}\}\\[.5em]
-\sum_{j=1}^6m_j(\boldsymbol{\omega})\overline{\widetilde{m_j}}(\boldsymbol{\omega}+\boldsymbol{\pi}) = 0, & \boldsymbol{\pi}\in\Gamma_1\setminus\Gamma_0
+\sum_{j = 0}^6m_j(\boldsymbol{\omega})\overlinespace{\widetilde{m_j}}(\boldsymbol{\omega} + \boldsymbol{\pi}) = 0, & \boldsymbol{\pi}\in \Gamma_0\setminus\{\boldsymbol{0}\}\\[.5em]
+\sum_{j=1}^6m_j(\boldsymbol{\omega})\overlinespace{\widetilde{m_j}}(\boldsymbol{\omega}+\boldsymbol{\pi}) = 0, & \boldsymbol{\pi}\in\Gamma_1\setminus\Gamma_0
 \end{cases}
 \end{equation}
 \end{thm}
@@ -67,7 +67,7 @@ This bi-orthogonal scheme satisfies the following linear system (
 Lemma 2.2.2 in \cite{cohen1993compactly} )
 \begin{align}\label{eq: LS}
 \begin{bmatrix}
-    \, \overline{\widetilde{m_0}}(\V{\omega}) &  \overline{\widetilde{m_1}}(\V{\omega}) &  \overline{\widetilde{m_2}}(\V{\omega}) &  \overline{\widetilde{m_3}}(\V{\omega})\; \\
+    \, \sbarm{0} &  \sbarm{1} &  \sbarm{2} & \sbarm{3}\; \\
     \;\sbarmn{0}{1} & \sbarmn{1}{1}  & \sbarmn{2}{1}  & \sbarmn{3}{1}\; \\
     \;\sbarmn{0}{2} & \sbarmn{1}{2}  & \sbarmn{2}{2}  & \sbarmn{3}{2}\; \\
     \;\sbarmn{0}{3} & \sbarmn{1}{3} & \sbarmn{2}{3} & \sbarmn{3}{3}\;
@@ -310,7 +310,7 @@ m_6(\V{\omega})
 \end{bmatrix}
 = \V{b}_0 - m_0(\V{\omega})
 \begin{bmatrix}
- \overline{\widetilde{m_0}}(\V{\omega})\\
+ \sbarm{0}\\
  0\\
 \sbarmp{0}{2}\\
 0\\
@@ -415,7 +415,7 @@ We assume that $m_0\in\mathbb{R}_{\geq 0}$ without phase. Let $m_0^C(\V{\omega})
 If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
 %$m_0^C(\V{\omega}),$ $\,\mc{0}, m_i(\V{\omega}),\,i = 1,...,6$ do. More generally, 
 %$m_0(\V{\omega})c(\V{\omega}),\,\m{0}c(\V{\omega})^{-1}, m_i(\V{\omega}),\,i=1,...,6$ 
-then $m_0'(\V{\omega})\doteq m_0(\V{\omega})c(\V{\omega}), \widetilde{m_0}'(\V{\omega})\doteq \m{0}\overline{c}(\V{\omega})^{-1}$ together with the same $m_j(\V{\omega}),\m{j}, \, j = 1,\cdots,6$ 
+then $m_0'(\V{\omega})\doteq m_0(\V{\omega})c(\V{\omega}), \widetilde{m_0}'(\V{\omega})\doteq \m{0}\overlinespace{c}(\V{\omega})^{-1}$ together with the same $m_j(\V{\omega}),\m{j}, \, j = 1,\cdots,6$ 
 satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if $ c(\V{\omega}) = c(\V{\omega}+\V{\pi}_2)=c(\V{\omega}+\V{\pi}_4) = c(\V{\omega}+\V{\pi}_6) \neq 0$, i.e. $c(\V{\omega})$ is $\pi$-periodic in both $\omega_1$ and $\omega_2$.
 \end{proposition}
 \noindent{\it Proof. }
@@ -427,17 +427,17 @@ It suffices to show that $m_0'(\V{\omega})\overline{\widetilde{m_0}'}(\V{\omega}
 %\end{align*}
 
 \noindent{\it Remark.}
-Proposition \ref{prop: mc} suggests that we can compensate $a_{\V{\omega}}$ by choosing $c(\V{\omega})$ such that $(m_0',\widetilde{m_0}')$ have improved regularity, e.g. continuity, smoothness or fast decay rate. In practice, we first solve $\m{0}$, step 3. in \ref{alg}, then compute $m_0(\V{\omega})\sbarm{0}$ and re-decompose the product into $m_0'(\V{\omega})$ and $\overline{\widetilde{m_0}'}(\V{\omega})$.
+Proposition \ref{prop: mc} suggests that we can compensate $a_{\V{\omega}}$ by choosing $c(\V{\omega})$ such that $(m_0',\widetilde{m_0}')$ have improved regularity, e.g. continuity, smoothness or fast decay rate. In practice, we first solve $\m{0}$, step 3. in \ref{alg}, then choose $c(\V{\omega})$ $\pi$-periodic in both axis and replace $m_0(\V{\omega})$ and $\widetilde{m_0}(\V{\omega})$ by $m_0'(\V{\omega})$ and $\overline{\widetilde{m_0}'}(\V{\omega})$ as defined in Proposition \ref{prop: mc}.
 
 To obtain $\m{0}$ on $S_0$, we solve the identity condition \eqref{eq: identity-cond} on $[-\pi, 0)\times[-\pi, 0 )$ for the quadruple $(\m{0}, \mp{0}{2}, \mp{0}{4}, \mp{0}{6})$. As mentioned at the end of Section \ref{subsec: cohen-summary}, we are not aware of existing efficient algorithms that solve \eqref{eq: identity-cond}. Hence we reformulate it as an optimization problem wher \eqref{eq: identity-cond} serves as a linear constraint. In particular, on a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $ \eqref{eq: identity-cond} can be rewritten as
 \begin{align}
-\V{A}\, \overline{\widetilde{\mathbf{m}_0}}= \mathbf{1}_{4N^2}, \label{eq: m0-A}%\\ 
+\V{A}\, \overlinespace{\widetilde{\mathbf{m}_0}}= \mathbf{1}_{4N^2}, \label{eq: m0-A}%\\ 
 %\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2}&\in\mathbb{C}^{4N^2} \notag
 \end{align}
 where $\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1}^{4N^2}$ and $\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ is a sparse matrix with entries 
 $$\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V{\pi}_{2k}), \quad \V{\omega}_j \in [-\pi,0)\times[-\pi,0).$$
 
-We optimize the regularity of $\sbarm{0}m_0(\V{\omega})$ instead of $\sbarm{0}$, as the product will be later re-decomposed and its regularity controls the regularity of $(\,m_0'(\V{\omega}), \widetilde{m_0}'(\V{\omega})\,)$ that can be achieved.
+We optimize the regularity of $\sbarm{0}m_0(\V{\omega})$ instead of $\sbarm{0}$, as this product remains the same for $(\,m_0'(\V{\omega}), \widetilde{m_0}'(\V{\omega})\,)$ and its regularity controls the regularity of $(\,m_0'(\V{\omega}), \widetilde{m_0}'(\V{\omega})\,)$ that can be achieved.
 We choose the squared $\ell_2$ norm of the gradient of $\sbarm{0}m_0(\V{\omega})$ as the objective function, although other forms of regularity may be imposed by different objective functions.
 
 In sum, we solve the following quadratic minimization problem with linear constraint,
@@ -472,8 +472,10 @@ Finally, we plug $m_0(\V{\omega})$ and $\m{0}$ into $\V{b}_0'(\V{\omega})$ on th
 %m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}| = |det(\M_{1,1}[-k_{\V{\omega}},:])| = \prod_{i=1}^6\sigma_i(\M_{1,1}[-k_{\V{\omega}},:]) = \prod_{i=1}^6\sigma_i(\M_{1,1}).
 %\end{align}
 %In practice, we first perform QR decomposition on $\Msub:=\M_{1,1}$ and then take the absolute value of the product of the diagonal entries of the upper triangular matrix, $diag(R)$. 
-To sum up, we propose the following algorithm for bi-orthogonal directional filter construction with dilated quincunx downsampling scheme:%\\
-%\rule{\textwidth}{.5pt}
+\vspace{.5em}
+\noindent\begin{minipage}{\linewidth}
+\rule{\textwidth}{.5pt}
+\vspace*{-2em}
 \begin{description}% prevent items from splitting
 \item[\mylabel{alg}{Algorithm 1}. Construction of $m_0,\widetilde{m_0}$ and $\widetilde{m_j}$ in bi-orthogonal basis]\
 \begin{itemize}
@@ -481,17 +483,23 @@ To sum up, we propose the following algorithm for bi-orthogonal directional filt
 \item[step 1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks},%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
 \item[step 2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
 \item[step 3.] solve the optimization \eqref{eq: opt} for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$,
-\item[step 4.] re-decompose $m_0(\V{\omega})\sbarm{0}$ into $m_0'(\V{\omega})$ and $\overline{\widetilde{m_0}'}(\V{\omega})$,
+\item[step 4.] choose $\pi$-periodic $c(\V{\omega})$ and replace $m_0(\V{\omega}),\, \m{0}$ by $m_0'(\V{\omega}) = c(\V{\omega})m_0(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})=\m{0}\overline{c}(\V{\omega})^{-1}$,
 %solve $m_i(\V{\omega}),\, i=1,...,6$ according to \eqref{eq: LS-new}
 \item[step 5.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
 \end{itemize}
 \end{description}
-%\rule{\textwidth}{.5pt}\\[.5em]
+\vspace*{-1em}
+\rule{\textwidth}{.5pt}
+\end{minipage}\\[.5em]
+To sum up, we propose \ref{alg} for bi-orthogonal directional filter construction with dilated quincunx downsampling scheme.
+
+\noindent{\it Remark.}
+The order of step 4. and step 5. in \ref{alg} can be reversed because \eqref{eq: mj-eq} only depends on $m_0(\V{\omega})\overline{\widetilde{m_0}}(\V{\omega} + \V{\pi}_i)$ when $i$ is even, which remains the same for $m_0'(\V{\omega}),\widetilde{m_0}'(\V{\omega})$ regardless of $c(\V{\omega})$ by construction.
 
 It is not necessary, but we may also manipulate pairs of $(m_j,\widetilde{m_j})$ according to the following generalization of Proposition \ref{prop: mc}.
 \begin{proposition}\label{prop: mjc}
 If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
-$m_j^c(\V{\omega})\doteq m_j(\V{\omega})c_j(\V{\omega}), \widetilde{m_j}^c(\V{\omega})\doteq \m{j}\overline{c_j}(\V{\omega})^{-1} \, j = 0,\cdots,6$ 
+$m_j^c(\V{\omega})\doteq m_j(\V{\omega})c_j(\V{\omega}), \widetilde{m_j}^c(\V{\omega})\doteq \m{j}\overlinespace{c_j}(\V{\omega})^{-1} \, j = 0,\cdots,6$ 
 satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if $ c_0(\V{\omega}) = c_0(\V{\omega}+\V{\pi}_{2k})\,,\forall k = 0,\cdots,3$ and $c_j(\V{\omega}) = c_j(\V{\omega} + \V{\pi}_k),\, \forall \;k = 0,\cdots,7,\, j = 1,\cdots,6$.
 \end{proposition}
 
@@ -514,17 +522,19 @@ The solution of \eqref{eq: mi} depends only on $m_0^C\overline{\widetilde{m_0}^C
 
 \section{Numerical Experiments}
 
-In this section, we demonstrate the numerical construction of biorthogonal directional wavelets on a quincunx lattice using our proposed algorithm in Matlab.
+In this section, we demonstrate the numerical construction of biorthogonal directional wavelets on a quincunx lattice using our proposed \ref{alg} implemented in Matlab.
 
-We use $\widetilde{m_j}$ in the form of \eqref{eq: m-form}, with phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: mjdual} as the input of \ref{alg}. For the construction of $|\widetilde{m_j}|$, we start with $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry along the diagonal. This is the same approach used in the shearlet construction \cite{kutyniok2012digital}. Furthermore, $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\frac{\pi}{2},\frac{\pi}{2})\times [-\frac{\pi}{2},\frac{\pi}{2}).$ In particular, according to Proposition \ref{prop: continuity}, we enforce $|\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$ and $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$.
+For the input of \ref{alg}, we use $\widetilde{m_j}$ in the form of \eqref{eq: m-form}, with phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: mjdual} constructed as follows. We start with a symmetric $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry along the diagonal. This is the same approach used in the shearlet construction \cite{kutyniok2012digital}. Furthermore, we set $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\frac{\pi}{2},\frac{\pi}{2})\times [-\frac{\pi}{2},\frac{\pi}{2}).$ and according to Proposition \ref{prop: continuity}, we enforce $|\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$ and $|\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$. As the first step, we numerically verify that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}. 
 
-As the first step, we numerically check that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}. 
-We proceed to solve $m_0(\V{\omega})$ and the result is shown in Figure \ref{fig: m_0}. As shown in Figure \ref{fig: m_0}, the amplitude $|m_0(\V{\omega})|$ is supported on $C_0$, where $|m_0(\V{\omega})| = 1$ and its discontinuity at $\partial C_0$ inline with that of the input $\m{j}$. However, the phase of $m_0(\V{\omega})$ is discontinuous on $C_0$, an artificial irregularity. As explained in Section \ref{subsec: compute-m0}. in step 2. of \ref{alg} $m_0(\V{\omega})$ is solved separately for each $\V{\omega}$ up to a constant $a_{\V{\omega}}$, which is not necessary continuous.
-is continuous except at the boundary of $C_0$, 
-As shown in Figure \ref{fig: m_0} $m_0(\V{\omega})$ obtained in step 2  Moreover, Figure \ref{fig: m_0_m0dual} shows that $\m{0} = \overline{m_0^{-1}}(\V{\omega}) = m_0(\V{\omega})$ on $C_0$, i.e. $\m{0}$ solved in step 3 is numerically the same as $m_0(\V{\omega})$.
-Figure \ref{fig: m_j} and Figure \ref{fig: m_j_mjdual} show $|\m{j}|$ and $|m_j\m{j}|$ for $\m{j}$ obtained by solving \eqref{eq: mj-eq}. We also numerically check that $m_j(\V{\omega})$ and $\m{j}$ have the same phase, i.e. $m_j\m{j}\in \mathbb{R}$.
+We proceed to solve $m_0(\V{\omega})$ separately for each $\V{\omega}$ with an extra degree of freedom of a constant $a_{\V{\omega}}$ and the result is shown in Figure \ref{fig: m_0}. The solution $m_0(\V{\omega})$ has both inherent irregularity of the bi-orthogonal construction from the input and artificial irregularity from the algorithm: the amplitude $|m_0(\V{\omega})|$ is supported on $C_0$, where $|m_0(\V{\omega})| = 1$ and its discontinuity at $\partial C_0$ inline with that of the input $\m{j}$; however, the phase of $m_0(\V{\omega})$ is discontinuous even on $C_0$ due to $a_{\V{\omega}}$, an artificial irregularity that can be removed after $\m{0}$ is solved, as explained in Section \ref{subsec: compute-m0}.
 
-So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: mj} and \eqref{eq: mj_dual}. However, $m_0$ and $\widetilde{m_0}$ here are not continuous. To improve the regularity of the corresponding wavelets, by Proposition \ref{prop: mc} and the observation $m_0\sbarm{0} = \V{1}_{C_0}$, we replace $(m_0,\widetilde{m_0})$ by $(m_0', \widetilde{m_0}')$, where $\widetilde{m_0}'$ is a smooth real function supported on $C_0$ and $m_0'(\V{\omega}) = \V{1}_{C_0}(\overline{\widetilde{m_0}'})^{-1}(\V{\omega})$. Figure \ref{fig: smooth_m0dual} shows such a pair of $(m_0',\widetilde{m_0}')$. Finally, using pre-designed $\m{j}$ and post-designed $\widetilde{m_0}'$, we construct the dual wavelets  $\widetilde{\psi^j}$ in \eqref{eq: bi-orth MRA} using \eqref{eq: mj_dual}. As shown in Figure \ref{fig: wavelets}, the dual wavelets are spatially localized and have good direction selection. The wavelets and scaling functions in \eqref{eq: bi-orth MRA} can be constructed using \eqref{eq: mj_dual} similarly.
+We then solve \eqref{eq: opt} for $\m{0}$, and the solution is coupled with $m_0(\V{\omega})$ in the previous step. The left figure in Figure \ref{fig: m_0_m0dual} shows that $\m{0}$ is also supported on $C_0$ as $m_0(\V{\omega})$. This is a result of the linear constraint in \eqref{eq: opt} from the identity condition \eqref{eq: identity-cond}, not because of the regularization by the objective function where $m_0(\V{\omega})\sbarm{0}\equiv 0,\, \forall\V{\omega}\not\in C_0$. Furthermore, the middle and right figures in Figure \ref{fig: m_0_m0dual} suggest that $m_0(\V{\omega})\sbarm{0}=\V{1}_{C_0}$ numerically.
+
+Next, we find $c(\V{\omega})$ to obtain $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ with better regularity. We can construct $c(\V{\omega})$ freely on $C_0$ and then extend it to $S_0$ by its $\pi$-periodicity. Since both $m_0(\V{\omega})$ and $\m{0}$ are supported on $C_0$, $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ have the same support as well, thus they are determined by $c(\omega)$ on $C_0$. Therefore, $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ can be directly obtained by re-decomposition of $m_0(\V{\omega})\sbarm{0}=1$ on $C_0$. In particular, we let $\widetilde{m_0}'$ be a smooth real function and $m_0'(\V{\omega}) = \widetilde{m_0}'(\V{\omega})^{-1}$ on $C_0$, see Figure \ref{fig: smooth_m0dual}.
+
+Figure \ref{fig: m_j} and Figure \ref{fig: m_j_mjdual} show $|\m{j}|$ and $|m_j\m{j}|$ for $\m{j}$ obtained by solving \eqref{eq: mj-eq}. We also numerically verify that $m_j(\V{\omega})$ and $\m{j}$ have the same phase, i.e. $\overlinespace{m_j}\m{j}\in \mathbb{R}$.
+
+So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that satisfies \eqref{eq: LS-new} and \eqref{eq: identity-cond}, thus it can be used to construct biorthogonal wavelets based on \eqref{eq: mj} and \eqref{eq: mj_dual}. Finally, using pre-designed $\m{j}$ and post-designed $\widetilde{m_0}'$, we construct the dual wavelets  $\widetilde{\psi^j}$ in \eqref{eq: bi-orth MRA} using \eqref{eq: mj_dual}. As shown in Figure \ref{fig: wavelets}, the dual wavelets are spatially localized and have good direction selection. The wavelets and scaling functions in \eqref{eq: bi-orth MRA} can be constructed using \eqref{eq: mj_dual} similarly.
 
 \begin{figure}
 \centering
@@ -549,6 +559,13 @@ So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that sati
 
 \begin{figure}
 \centering
+\includegraphics[width=.66\textwidth]{smooth_m0dual.png}
+\caption{ Left: $\widetilde{m_0}'$, designed smooth function mainly supported on the central square $C_0$, right: $m_0'$, $s.t. m_0'\overline{\widetilde{m_0}'}(\V{\omega})  =  m_0\overline{\widetilde{m_0}}(\V{\omega})= \V{1}_{C_0}(\V{\omega})$. } 
+\label{fig: smooth_m0dual}
+\end{figure}
+
+\begin{figure}
+\centering
 \includegraphics[width=\textwidth]{m.png}
 \caption{ $|m_j(\V{\omega})|$, where $m_j(\V{\omega})$ is solved from \eqref{eq: mj-eq} given $\widetilde{m_j}$ in Figure \ref{fig: mjdual}, $m_0$ in Figure \ref{fig: m_0} and $\widetilde{m_0}$ in Figure \ref{fig: m_0_m0dual}. }
 \label{fig: m_j}
@@ -559,13 +576,6 @@ So far, we construct a set of $(m_j,\widetilde{m_j})_{j = 0,\cdots,6}$ that sati
 \includegraphics[width=\textwidth]{m_mdual.png}
 \caption{ $|m_j(\V{\omega})\m{j}|$ }
 \label{fig: m_j_mjdual}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=.66\textwidth]{smooth_m0dual.png}
-\caption{ Left: $\widetilde{m_0}'$, designed smooth function mainly supported on the central square $C_0$, right: $m_0'$, $s.t. m_0'\overline{\widetilde{m_0}'}(\V{\omega})  =  m_0\overline{\widetilde{m_0}}(\V{\omega})= \V{1}_{C_0}(\V{\omega})$. } 
-\label{fig: smooth_m0dual}
 \end{figure}
 
 \begin{figure}
