@@ -1,5 +1,9 @@
 \documentclass[]{article}
 
+
+\usepackage[letterpaper, margin=1in]{geometry}
+
+
 \renewcommand\abstractname{\textit{Abstract}}
 \usepackage[cmex10]{amsmath}
 \usepackage{amsfonts, amssymb}
@@ -72,7 +76,9 @@
 \maketitle
 
 \begin{abstract}
-We construct directional wavelet systems that will enable building efficient signal representation schemes with good direction selectivity. In particular, we focus on wavelet bases on a dyadic quincunx lattice; dilated quincunx downsampling is used to construct orthonormal and bi-orthogonal bases and standard dyadic downsampling for low-redundancy frames. We show that the supports of both orthonormal and bi-orthogonal wavelets in our framework are discontinuous in the frequency domain. However, this irregularity constraint can be avoided in frames, even with redundancy factor less than 2. 
+We construct directional wavelet systems that will enable building efficient signal representation schemes with good direction selectivity. In particular, we focus on wavelet bases on a dyadic quincunx lattice.
+%; dilated quincunx downsampling is used to construct orthonormal and bi-orthogonal bases and standard dyadic downsampling for low-redundancy frames. 
+In our previous work \cite{yin2014orthshear}, We show that the supports of orthonormal wavelets in our framework are discontinuous in the frequency domain, yet this irregularity constraint can be avoided in frames, even with redundancy factor less than 2. In this paper, we focus on the construction of bi-orthogonal wavelets and show that the same obstruction of regularity as in orthonormal schemes exists in bi-orthogonal schemes. In addition, we provide a numerical algorithm for bi-orthogonal wavelets construction that reveals its intrinsic irregularity.
 \end{abstract}
 
 \input{intro}

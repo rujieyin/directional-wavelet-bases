@@ -8,10 +8,11 @@ In this section, we discuss the conditions on $m_j$ such that the corresponding 
 We begin with the two key conditions, i.e. {\it identity summation} and {\it shift cancellation}, on $m_j$ such that the system \eqref{eq: MRA} is perfect-reconstruction (PR) or equivalently a Parseval frame in MRA.% weaker than the orthonormal condition.
 
 %\subsection{Identity summation and shift cancellation}
-\subsection{orthonormal conditions on $m_j$}
+\subsection{orthonormal conditions on $m_j$}\label{subsec: northonormal cond}
 In MRA, \eqref{eq: MRA} is PR if $\forall f\in L_2(\mathbb{R}^2)$,
 \begin{equation}
-\textstyle \sum_k\langle f,\phi_{0,k}\rangle\phi_{0,k} = \sum_k\langle f,\phi_{1,k}\rangle\phi_{1,k} + \sum_j\sum_k\langle f,\psi^{j}_{1,k}\rangle\psi^j_{1,k}.\label{eq: PR}
+%\textstyle 
+\sum_{\V{k}\in\mathbb{Z}^2}\langle f,\phi_{0,\V{k}}\rangle\phi_{0,\V{k}} = \sum_{\V{k}\in\mathbb{Z}^2}\langle f,\phi_{1,\V{k}}\rangle\phi_{1,\V{k}} + \sum_{j=1}^J\sum_{\V{k}'\in\V{Q}\mathbb{Z}^2}\langle f,\psi^{j}_{1,\V{k}'}\rangle\psi^j_{1,\V{k}'}.\label{eq: PR}
 \end{equation}
 Using \eqref{eq: m0} and \eqref{eq: mj} together with the admissibility of the frequency partition \eqref{eq: tiling}, condition \eqref{eq: PR} on $\phi$ and $\psi^j$ yields:
 \begin{thm}\label{thm: conds}
@@ -36,10 +37,10 @@ In Theorem \ref{thm: conds}, Eq. \eqref{eq: id-sum} is the {\it identity summati
 
 %\subsection{Extra condition for basis}
 %By Theorem \ref{thm: conds}, the system \eqref{eq: MRA} is a Parseval frame ; 
-For  \eqref{eq: MRA} to be an orthonormal basis,  $\{\phi_{\boldsymbol{k}}\}_{\boldsymbol{k}\in\mathbb{Z}^2}$ need to be an orthonormal basis, which is determined by $m_0$ in \eqref{eq: phi-m0}. In 1D MRA, Cohen's theorem in \cite{cohen1992biorthogonal} provides a necessary and sufficient condition on $m_0$ such that \eqref{eq: MRA} is an orthonormal basis. %Such a condition in 1D wavelet MRA is given by Cohen \cite{cohen1992biorthogonal}. 
+Moreover, for  \eqref{eq: MRA} to be an orthonormal basis,  $\{\phi_{\boldsymbol{k}}\}_{\boldsymbol{k}\in\mathbb{Z}^2}$ need to be an orthonormal basis, which is determined by $m_0$ in \eqref{eq: phi-m0}. In 1D MRA, Cohen's theorem in \cite{cohen1992biorthogonal} provides a necessary and sufficient condition on $m_0$ such that \eqref{eq: MRA} is an orthonormal basis. %Such a condition in 1D wavelet MRA is given by Cohen \cite{cohen1992biorthogonal}. 
 This theorem generalizes to 2D as proved in  e.g. \cite{yin2014orthshear}, as follows.
 \begin{thm}\label{thm: basis cond}
-Assume that $m_0$ is a trigonometric polynomial with $m_0(0)=1$, and define $\hat{\phi}(\boldsymbol{\omega})$ as in \eqref{eq: phi-m0}.\\
+Assume that $m_0$ is a trigonometric polynomial with $m_0(\V{0})=1$, and define $\hat{\phi}(\boldsymbol{\omega})$ as in \eqref{eq: phi-m0}.\\
 If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal, then $\exists K$ containing a neighborhood of 0, s.t. $\forall\boldsymbol{\omega}\in S_0,\,\boldsymbol{\omega}+2\pi\mathbf{n}\in K$ for some $\mathbf{n}\in\mathbb{Z}^2, $ and $\inf_{k>0,\,\boldsymbol{\omega}\in K}|m_0(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$. 
  Further, if $\sum_{\boldsymbol{\V{\pi}}\in \Gamma_0} |m_0(\boldsymbol{\omega}+\boldsymbol{\pi})|^2 = 1$, then the inverse is true.
 \end{thm}
@@ -47,21 +48,21 @@ If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal,
 %Because it is difficult to directly design $M_0$ that satisfies the conditions in Theorem \ref{thm: basis cond}, 
 %Below, we construct $m-$functions imposing only \eqref{eq: id-sum} and \eqref{eq: shift-cancel} and then check if the resulting Parseval frame is an orthonormal basis by applying Theorem \ref{thm: basis cond} to $m_0$.
 
-\subsection{ Design and Boundary Regularity of $m_j$}\label{sec: design}
+\subsection{Regularity of $m_j$ supported on the $C_j$}\label{sec: design}
 %In this section, we define Shannon-type directional orthonormal basis same as in \cite{durand2007} and \cite{nuDFB05}. Then, we apply direct smoothing to its $m-$functions to improve spatial localization, this leads to a critical analysis of the boundary regularity of $S_1$ and the $C_j$'s.
 
 %\subsection{Shannon-type wavelets and smoothing}
-We begin with the Shannon-type wavelet construction.
-Let each $m_j$ be an indicator function, $ m_j = \mathbbm{1}_{C_j},\,0\leq j \leq 6,\,$ and we use the boundary assignment of $C_j$ in Fig.\ref{fig: partition},
-then the identity summation follows from the partition, and the shift cancellation follows from \eqref{eq: tiling}. % which implies $m_j(\boldsymbol{\omega})\overline{m_j(\boldsymbol{\omega} + \boldsymbol{\pi}_i)}\equiv 0,\,\forall j,\, i\neq 0.$ %Let $\partial\mathbf{C}_j = \overline{\mathbf{C}_j}-\mathbf{C}_j^{\circ}$ be the boundary of $\mathbf{C}_j$,  
-Applying Theorem \ref{thm: basis cond} to $m_0$, we check that the Shannon-type wavelets generated from these $m-$functions form an orthonormal basis.
+In this subsection, we consider $m_j$ supported on the $C_j$ introduced in Section \ref{subsec: frequency partition} that satisfy orthonormal conditions in Section \ref{subsec: northonormal cond}. We begin with the Shannon-type wavelet construction,
+where $m_j$ are indicator functions $ m_j = \mathbbm{1}_{C_j},\,0\leq j \leq 6,\,$ and we use the boundary assignment of $C_j$ in Fig.\ref{fig: partition}.
+The identity summation follows from the partition of $S_0$ by the $C_j$, and the shift cancellation follows from the tiling property \eqref{eq: tiling}. % which implies $m_j(\boldsymbol{\omega})\overline{m_j(\boldsymbol{\omega} + \boldsymbol{\pi}_i)}\equiv 0,\,\forall j,\, i\neq 0.$ %Let $\partial\mathbf{C}_j = \overline{\mathbf{C}_j}-\mathbf{C}_j^{\circ}$ be the boundary of $\mathbf{C}_j$,  
+Applying Theorem \ref{thm: basis cond} to $m_0$, we verify that the Shannon-type wavelets generated from these $m_j$ form an orthonormal basis.
 
 %However, because of the discontinuity of $m_j$ across the boundary of its support, the corresponding wavelet has slow decay in the time domain. 
 %Such $m_j$'s are not regularized due to 
-Because of the discontinuity at $\partial C_j$, the boundaries of the $C_j$, the $m_j$ are not smooth, and hence the corresponding wavelets are not spatially localized. The $m_j$ can be regularized by smoothing at the $\partial C_j$.
+Because of the discontinuity at $\partial C_j$, the boundaries of the $C_j$, these $m_j$ are not smooth, and hence the corresponding wavelets are not spatially localized. The $m_j$ can be regularized by smoothing at the $\partial C_j$.
 %We take a different regularization approach from Durand's \cite{durand2007}, where three regular quincunx filter banks are constructed and then composed to obtain the desired regular quincunx dyadic filter banks. Here, we smooth the discontinuous boundaries of $m-$functions directly. 
 However, as shown in Proposition 3 in \cite{durand2007}, it is not possible to smooth the behavior of the $m_j$ at  {\it all} the boundaries with discontinuity if the $m_j$ have to satisfy the perfect reconstruction condition.
-In \cite{yin2014orthshear}, the $\partial C_j$ are segmented into {\it singular} and {\it regular} pieces. On regular boundaries, pairs of $(m_j,\, m_{j'})$ share a boundary and can both be smoothed in a coherent way such that all the constraints in Theorem \ref{thm: basis cond} remain satisfied. The singular pieces are boundaries for just one $m_j$, which can then not be smoothed without violating the shift cancellation condition. Fig. \ref{fig: boundary} shows the boundary classification, where the corners of $S_0$ and $C_0$ are singular, hence $m_0$ and the $m_j$'s in two diagonal directions of an orthonormal bases are discontinuous there. A mechanism of constructing orthonormal bases by smoothing $m_j$ on regular boundaries from indicator functions is provided in \cite{yin2014orthshear}.%However, it remains unclear if some of the discontinuity can be removed by direct smoothing.
+In \cite{yin2014orthshear}, the $\partial C_j$ are segmented into {\it singular} and {\it regular} pieces. On regular boundaries, pairs of $(m_j,\, m_{j'})$ share a boundary and can both be smoothed in a coherent way such that all the constraints in Theorem \ref{thm: basis cond} remain satisfied. The singular pieces are boundaries for just one $m_j$, which can then not be smoothed without violating the shift cancellation condition. Fig. \ref{fig: boundary} shows the boundary classification, where the corners of $S_0$ and $C_0$ are singular, hence $m_0$ and the $m_j$'s in two diagonal directions of an orthonormal bases are discontinuous there. A mechanism of constructing orthonormal bases by smoothing Shannon-type $m_j$ on regular boundaries is provided in \cite{yin2014orthshear}.%However, it remains unclear if some of the discontinuity can be removed by direct smoothing.
 
 %Next, we analyze the limitation of direct smoothing in detail and show that there are regular boundaries which can be smoothed without violating \eqref{eq: id-sum} and \eqref{eq: shift-cancel}, and singular boundaries which cannot be smoothed.
 

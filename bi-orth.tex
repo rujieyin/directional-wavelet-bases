@@ -7,7 +7,7 @@ where $\phi$ and $\psi^j$ satisfy \eqref{eq: m0} and \eqref{eq: mj}, as well as 
 \begin{align}\label{eq: mj_dual}
 \widehat{\widetilde{\phi}}(\V{D}^T\V{\omega}) = \widetilde{m_0}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}),\quad \widehat{\widetilde{\psi^j}}(\V{D}^T\V{\omega}) = \widetilde{m_j}(\V{\omega})\widehat{\widetilde{\phi}}(\V{\omega}).
 \end{align}
-For such bi-orthogonal bases, we have the similar identity summation and shift cancellation condition to those in Theorem \ref{thm: conds}.
+For such bi-orthogonal bases, we have the similar identity summation and shift cancellation conditions to those in Theorem \ref{thm: conds}.
 \begin{thm}\label{thm: bi-orth conds}
 The perfect reconstruction iff the following two conditions hold
 \begin{align}\label{eq: id-sum 2}
@@ -20,7 +20,20 @@ m_0(\boldsymbol{\omega})\sbarm{0} + \sum_{j = 1}^6 m_j(\boldsymbol{\omega})\sbar
 \end{cases}
 \end{equation}
 \end{thm}
-The conditions \eqref{eq: id-sum 2} and \eqref{eq: shift-cancel 2} can be combined into a linear system as follows,
+\vspace{1em}
+%where $\M\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}_0\in\mathbb{C}^7$.
+We also have the following analogue of Theorem \ref{thm: basis cond}.
+\begin{thm}\label{thm: basis cond 2}
+Assume that $m_0, \widetilde{m_0}$ are trigonometric polynomials with $m_0(\V{0})=\widetilde{m_0}(\V{0}) = 1$, which generate $\phi,\widetilde{\phi}$ respectively.\\
+If $\phi(\cdot - \boldsymbol{k}),\widetilde{\phi}(\cdot - \boldsymbol{k}),\,\boldsymbol{k}\in\mathbb{Z}^2$ are bi-orthogonal, then $\exists K$ containing a neighborhood of 0, s.t. $\forall\boldsymbol{\omega}\in S_0,\,\boldsymbol{\omega}+2\pi\mathbf{n}\in K$ for some $\mathbf{n}\in\mathbb{Z}^2, $ and $\inf_{k>0,\,\boldsymbol{\omega}\in K}|m_0(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$, $\inf_{k>0,\,\boldsymbol{\omega}\in K}|\widetilde{m_0}(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$. 
+ Furthermore, if  $\sum_{\boldsymbol{\V{\pi}}\in \Gamma_0} m_0(\boldsymbol{\omega}+\boldsymbol{\pi})\sbarmp{0}{} = 1,$ then the inverse is true.
+\end{thm}
+By Theorem \ref{thm: basis cond 2}, $m_0$ and $\widetilde{m_0}$ need to satisfy the following identity constraint for the MRA \eqref{eq: bi-orth MRA} to be bi-orthogonal,
+\begin{align}\label{eq: identity-cond}
+m_0\sbarm{0} + m_0\sbarmp{0}{2} + m_0\sbarmp{0}{4} + m_0\sbarmp{0}{6} = 1.
+\end{align}
+In addition, the identity summation and shift cancellation conditions \eqref{eq: id-sum 2} and \eqref{eq: shift-cancel 2} from Theorem \ref{thm: bi-orth conds}
+ can be combined into a linear system with respect to $m_j$ as follows,
 \begin{align}\label{eq: LS-new}
 %\overline{\M}(\V{\omega})\mathbf{m}_0(\V{\omega})=
 \begin{bmatrix}
@@ -46,22 +59,11 @@ The conditions \eqref{eq: id-sum 2} and \eqref{eq: shift-cancel 2} can be combin
 0
 \end{bmatrix}
 \end{align}
-%where $\M\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}_0\in\mathbb{C}^7$.
-In addition, we have the following analogue of Theorem \ref{thm: basis cond}.
-\begin{thm}\label{thm: basis cond 2}
-Assume that $m_0, \widetilde{m_0}$ are trigonometric polynomials with $m_0(0)=\widetilde{m_0}(0) = 1$, which generate $\phi,\widetilde{\phi}$ respectively.\\
-If $\phi(\cdot - \boldsymbol{k}),\widetilde{\phi}(\cdot - \boldsymbol{k}),\,\boldsymbol{k}\in\mathbb{Z}^2$ are bi-orthogonal, then $\exists K$ containing a neighborhood of 0, s.t. $\forall\boldsymbol{\omega}\in S_0,\,\boldsymbol{\omega}+2\pi\mathbf{n}\in K$ for some $\mathbf{n}\in\mathbb{Z}^2, $ and $\inf_{k>0,\,\boldsymbol{\omega}\in K}|m_0(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$, $\inf_{k>0,\,\boldsymbol{\omega}\in K}|\widetilde{m_0}(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$. 
- Further, if  $\sum_{\boldsymbol{\V{\pi}}\in \Gamma_0} m_0(\boldsymbol{\omega}+\boldsymbol{\pi})\sbarmp{0}{} = 1,$ then the inverse is true.
-\end{thm}
-By Theorem \ref{thm: basis cond 2}, $m_0$ and $\widetilde{m_0}$ need to satisfy the following identity constraint for the MRA \eqref{eq: bi-orth MRA} to be bi-orthogonal,
-\begin{align}\label{eq: identity-cond}
-m_0\sbarm{0} + m_0\sbarmp{0}{2} + m_0\sbarmp{0}{4} + m_0\sbarmp{0}{6} = 1.
-\end{align}
-In sum, the construction of a bi-orthogonal basis \eqref{eq: bi-orth MRA} is equivalent to find feasible solutions of \eqref{eq: LS-new} with constraint \eqref{eq: identity-cond}\footnote{In fact, as long as \eqref{eq: LS-new} has a unique solution for $m_j$ given fixed $\widetilde{m_j}, \, j = 0,\cdots,6,$ \eqref{eq: identity-cond} always holds. }. To solve this, we use the same approach as in \cite{cohen1993compactly}, which constructs compactly supported symmetric bi-orthogonal filters on a hexagon lattice. We next review the main scheme in \cite{cohen1993compactly} and adapt it to our setup of directional wavelet filter.
+In sum, the construction of a bi-orthogonal basis \eqref{eq: bi-orth MRA} is equivalent to find feasible solutions of \eqref{eq: LS-new} with constraint \eqref{eq: identity-cond}\footnote{It can be shown that as long as \eqref{eq: LS-new} has a unique solution for $m_j$ given fixed $\widetilde{m_j}, \, j = 0,\cdots,6,$ \eqref{eq: identity-cond} always holds. See Section \ref{subsec: adapt-cohen}.}. To solve this, we use the same approach as in \cite{cohen1993compactly}, which constructs compactly supported symmetric bi-orthogonal filters on a hexagon lattice. We next review the main scheme in \cite{cohen1993compactly} and adapt it to our setup of bi-orthogonal bases on the dyadic quincunx lattice.
 
 \subsection{Summary of Cohen et al's construction}\label{subsec: cohen-summary}
-We summerize the main setup and the approach in \cite{cohen1993compactly}. Consider a bi-orthogonal scheme consists of 3 high-pass filters $m_1,m_2$ and $m_3$ and a low-pass filter $m_0$ together with their bi-orthogonal duals $\widetilde{m_j}$, s.t.
-$m_0$ is $\frac{2\pi}{3}$-rotation invariant and $m_1,\, m_2,\, m_3$ are $\frac{2\pi}{3}$-rotation co-variant.
+We summerize the main setup and the approach in \cite{cohen1993compactly}. Consider a bi-orthogonal scheme consists of three high-pass filters $m_1,m_2$ and $m_3$ and a low-pass filter $m_0$ together with their bi-orthogonal duals $\widetilde{m_j}$, s.t.
+$m_0$ and $\widetilde{m_0}$ are $\frac{2\pi}{3}$-rotation invariant and $m_1,\, m_2,\, m_3$ and their duals are $\frac{2\pi}{3}$-rotation co-variant on a hexagon lattice.
 
 This bi-orthogonal scheme satisfies the following linear system (
 Lemma 2.2.2 in \cite{cohen1993compactly} )
@@ -86,9 +88,9 @@ Lemma 2.2.2 in \cite{cohen1993compactly} )
 0
 \end{bmatrix}
 \end{align}
- where $\V{\nu}_i = \V{\pi}_i,\, i = 1,2,3.$ %$\V{\nu}_1 = (\pi,0),\V{\nu}_2 = (0,\pi),\V{\nu}_3=(\pi,\pi)$.
- Let $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{4\times 4}$ be the matrix with entries $\sbarm{j}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^4$ be the vector consisting of entries $m_j(\V{\omega})$ in \eqref{eq: LS}, then \eqref{eq: LS} can be written as \[\widetilde{\mathbf{M}}(\V{\omega})\, \mathbf{m} (\V{\omega})= [1,0,0,0]^\top.\]\\
-Imposing that $\m{1}$, $\m{2}$ and $\m{3}$ are determined by symmetry, and invoking Lemma 2.2.2 in \cite{cohen1993compactly} leads to
+ where $\V{\nu}_i = \V{\pi}_{2i},\, i = 1,2,3.$ %$\V{\nu}_1 = (\pi,0),\V{\nu}_2 = (0,\pi),\V{\nu}_3=(\pi,\pi)$.
+ Let $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{4\times 4}$ be the matrix with entries $\sbarmn{j}{i}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^4$ be the vector consisting of entries $m_j(\V{\omega})$ in \eqref{eq: LS}, then \eqref{eq: LS} can be written as \[\widetilde{\mathbf{M}}(\V{\omega})\, \mathbf{m} (\V{\omega})= [1,0,0,0]^\top.\]
+Begin with a pre-designed $\m{1}$ with desired propery, $\m{2}$ and $\m{3}$ are determined by symmetry. Lemma 2.2.2 in \cite{cohen1993compactly} then leads to
 \begin{align}\label{eq: m0-sol}
 m_0(\V{\omega}) &= D^{-1}%\propto 
 \left|
@@ -100,36 +102,30 @@ m_0(\V{\omega}) &= D^{-1}%\propto
 \right| \notag\\
 &= D^{-1}\widetilde{\mathbf{M}}_{0,0}(\V{\omega}),
 \end{align}
-where $\widetilde{\mathbf{M}}_{0,0}(\V{\omega})$ is the minor with respect to $\sbarm{0}$ of $\widetilde{\mathbf{M}}(\V{\omega})$ and $ D \equiv \det(\widetilde{\mathbf{M}}(\V{\omega}))\in \mathbb{C}^* = \mathbb{C}\setminus\{0\}$ does not depend on $\V{\omega}$ in \cite{cohen1993compactly}, due to symmetry.
+where $\widetilde{\mathbf{M}}_{0,0}(\V{\omega})$ is the minor of $\widetilde{\mathbf{M}}(\V{\omega})$ with respect to $\sbarm{0}$ and $ D \equiv \det(\widetilde{\mathbf{M}}(\V{\omega}))\in \mathbb{C}^* = \mathbb{C}\setminus\{0\}$ does not depend on $\V{\omega}$ in \cite{cohen1993compactly}, due to symmetry.
 %{\it Remark.} 
 %For \eqref{eq: m0-sol} to hold, $m_0(\mathbf{\omega})$ and $\det(\widetilde{\mathbf{M}}_{1,1}(\V{\omega}))$ having the same phase suffices, which is implied by the symmetry of $m_0$ and $\widetilde{m_j} $'s.\\ % Both $\mo{0}$ and $\det(\widetilde{\mathbf{M}}_{1,1}(\V{\omega}))$ are $\frac{2\pi}{3}-$rotation invariant. \\
-If $\widetilde{m_0}$ is solved, then $m_1,m_2$ and $m_3$ are obtained by solving the linear system \eqref{eq: LS}.
-In particular, $\m{0}$ need to satisfy 
+
+Expanding $det(\widetilde{\mathbf{M}}(\V{\omega}))$ with respect to the first column leads to the following constraint on $\m{0}$, 
 \begin{align}\label{eq: bi-orth-eq}
 m_0\sbarm{0} + m_0\sbarmn{0}{1} + m_0\sbarmn{0}{2} + m_0\sbarmn{0}{3} = 1,
 \end{align}
-which can be obtained by expanding $det(\widetilde{\mathbf{M}}(\V{\omega}))$ with respect to the first column.
-According to Lemma 3.2.1 in \cite{cohen1993compactly}, based on {\it Hilbert's Nullstellensatz}, \eqref{eq: bi-orth-eq} has a solution if and only if there does not exist $(z_1,z_2)\in (\mathbb{C}^*)^2,\, \mathbb{C}^* = \mathbb{C}\setminus\{0\}$\, s.t. $(\pm z_1,\pm z_2)$ are all 
-vanishing points of the $z$-transform of $m_0$.
-
+which is the same as the identity constraint \eqref{eq: identity-cond} for bi-orthogonal bases. 
+Once \eqref{eq: bi-orth-eq} is solved for $\widetilde{m_0}$, $m_1,m_2$ and $m_3$ are obtained by solving the linear system \eqref{eq: LS} with known $\M(\V{\omega})$.
 %\subsubsection{Solving $\m{0}$}
-In general, there is no efficient algorithm to solve {\it Hilbert's Nullstellensatz}, and how \eqref{eq: bi-orth-eq} is solved exactly is not mentioned in \cite{cohen1993compactly}.
-In the next section, we propose an optimization problem that solves $\widetilde{m_0}$, where \eqref{eq: m0-sol}(which is the same as \eqref{eq: identity-cond}) serves as a linear constraint and the objective function imposes regularity on $\widetilde{m_0}$.
 
+\subsection{Adaptation to dyadic quincunx downsampling}\label{subsec: adapt-cohen}
 
-\section{Adaptation to dilated quincunx scheme}\label{sec: solve-quincunx}
+Despite the specific symmetries of $m_j,\,\widetilde{m_j},\, j = 0,\cdots,3$ on a hexagon lattice, Cohen et al's approach can be adapted to construct bi-orthogonal bases on different lattices with different downsampling schemes. In particular, we adapt their approach to solve \eqref{eq: LS-new} where $\widetilde{m_j},\, j= 1,\cdots,6$ are pre-designed. Furthermore, by exploiting the symmetric structure of \eqref{eq: LS-new} with respect to the shifts $\V{\pi}_i,\,i=0,\cdots,7$, we derive necessary conditions for \eqref{eq: LS-new} to have a unique solution which imply the irregularity in our bi-orthogonal scheme.
 
-Following the same approach of Cohen et al, we first design $\m{j},\,j = 1,\cdots,6,$ on the canonical frequency square $S_0 = [-\pi,\pi)\times[-\pi,\pi),$ then solve for $m_0,\widetilde{m_0}$ and $m_j$ on $S_0$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
-%we focus on solving $m_i$'s and $\widetilde{m_0}$ in \eqref{eq: LS-new} given pre-designed $\m{i},\,i=1,\cdots,6$. %Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
-
-Since \eqref{eq: LS-new} takes the same form as \eqref{eq: LS}, for simplicity, in the rest of this paper, we adapt the matrix and vector notations $\widetilde{\mathbf{M}}(\V{\omega}),\,\mathbf{m}(\V{\omega}) $ that helped to simplify \eqref{eq: LS}. Accordingly, we rewrite \eqref{eq: LS-new} as  \[\widetilde{\mathbf{M}}(\V{\omega})\, \mathbf{m} (\V{\omega})= [1,0,0,0,0,0,0]^\top,\]  where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, let $\V{b}_k \in\mathbb{R}^8,\, 0\leq k\leq 7$, whose only non-zero entry is $\V{b}_k[k] = 1$, where the indexing starts with zero. Note that $\M(\V{\omega})\,\mathbf{m}(\V{\omega}) = \V{b}_0\in\mathbb{R}^8$ is over-determined; it has a unique solution if and only if 
+Since \eqref{eq: LS-new} takes the same form as \eqref{eq: LS}, for simplicity, in the rest of this paper, we adapt the matrix and vector notations $\widetilde{\mathbf{M}}(\V{\omega}),\,\mathbf{m}(\V{\omega}) $ that helped to simplify \eqref{eq: LS}. Accordingly, we rewrite \eqref{eq: LS-new} as  \[\widetilde{\mathbf{M}}(\V{\omega})\, \mathbf{m} (\V{\omega})= [1,0,0,0,0,0,0]^\top,\]  where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, let $\V{b}_k \in\mathbb{R}^8,\, 0\leq k\leq 7$, whose only non-zero entry is $\V{b}_k[k] = 1$, where the indexing starts with zero. Note that $\M(\V{\omega})\,\mathbf{m}(\V{\omega}) = \V{b}_0\in\mathbb{R}^8$ is over-determined; it has a unique solution of $m_j$ if and only if 
 
 \begin{enumerate}[leftmargin=.5in]
 \item[\mylabel{cond: 1}{(\ref{sec: solve-quincunx}.i)}] $\M(\V{\omega})$ is full rank,
 \item[\mylabel{cond: 2}{(\ref{sec: solve-quincunx}.ii)}] $[\M(\V{\omega}), \V{b}_0]$ is singular,
 \end{enumerate}
-where we use $[]$ to concatenate $\M(\V{\omega})$ and $\V{b}_0$ into a $8\times 8$ matrix. %denote by $[\M(\V{\omega}), \V{b}_0]$ the $8\times 8$ matrix obtained by adding the 8-th column $\V{b}_0$ to the $8\times 7$ matrix $\M(\V{\omega})$.
-The matrix $\M(\V{\omega})$ is structured such that each row is associated with a shift $\V{\pi}_i,\,i=0\cdots,7$ and each column is associated with a dual function $\m{j},\,j=0,\cdots,7$. In particular, $\M(\V{\omega})$ depends on the value of $\widetilde{m_j}$ at $\V{\omega}$ and its shifts $\V{\pi}_i$ and can be considered a vector function of $\V{\omega}$. We denote a sub-matrix of $\M$ containing all but the row associated with $\V{\pi}_k$(respectively, the column associated with $\m{k}$) as $\M[-k,:]$(respectively, $\M[:,-k]$).
+where we use $[\;]$ to concatenate $\M(\V{\omega})$ and $\V{b}_0$ into a $8\times 8$ matrix. %denote by $[\M(\V{\omega}), \V{b}_0]$ the $8\times 8$ matrix obtained by adding the 8-th column $\V{b}_0$ to the $8\times 7$ matrix $\M(\V{\omega})$.
+The matrix $\M(\V{\omega})$ is structured such that each row is associated with a shift $\V{\pi}_i,\,i=0\cdots,7$ and each column is associated with a dual function $\m{j},\,j=0,\cdots,7$. In particular, $\M(\V{\omega})$ depends on the value of $\widetilde{m_j}$ at $\V{\omega}$ and its shifts $\V{\omega}+\V{\pi}_i$, thus can be considered a vector function of $\V{\omega}$. We denote a sub-matrix of $\M$ containing all but the row associated with $\V{\pi}_k$ (respectively, the column associated with $\m{k}$) as $\M[-k,:]$ (respectively, $\M[:,-k]$).
 In particular, we denote $\M[-0,-0]$ as $\Msub$.
 
 We have the following observations for $\M(\V{\omega})$.
@@ -137,7 +133,7 @@ We have the following observations for $\M(\V{\omega})$.
  $\forall \V{\omega}\in S_0$, if \eqref{eq: LS-new} is solvable, then $\M[-0,:](\V{\omega})$ is singular.
 \end{lemma}
 \noindent{\it Proof.}
-If \eqref{eq: LS-new} is solvable, then condition (ii) holds, which implies that $\det([\M,\V{b}_0]) = 0$. Expanding the determinant with respect to the last column $\V{b}_0$ yields $\det(\M[-0,:]) = 0$.\qed
+If \eqref{eq: LS-new} is solvable, then condition \ref{cond: 2} holds, which implies that $\det([\M(\V{\omega}),\V{b}_0]) = 0$. Expanding the determinant with respect to the last column $\V{b}_0$ yields $\det(\,\M[-0,:](\V{\omega})\,) = 0$.\qed
 %If \eqref{eq: LS-new} has a solution, then $\forall \V{\omega}$,  $[1,0,\cdots,0]^\top\in \mathbb{R}^8$ is a linear combination of the columns of $\M$ hence the solution $\mathbf{m} \in Null(\M[-0,:])$ and it is non-zero. This implies that $\M[-0,:]$ is singular.\qed\\[1em]
 
 \begin{lemma}\label{lem: M-symmetry}
@@ -148,26 +144,30 @@ $\M(\V{\omega}),\,\M(\V{\omega}+\V{\pi}_2),\,\M(\V{\omega}+\V{\pi}_4)$ and $\M(\
 \end{lemma}
 
 \noindent{\it Remark}.
-If we consider $\M(\V{\omega})$ a vector function of $\V{\omega}$, then the conditions \ref{cond: 1} and \ref{cond: 2} are both pointwise, yet Lemma \ref{lem: M-symmetry} shows that the set of points $\{\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega} + \V{\pi}_4, \V{\omega}+\V{\pi}_6\}$ are linked together by the symmetry in $\M(\V{\omega})$. We exploit this symmetry in our analysis.
+If we consider $\M(\V{\omega})$ a vector function of $\V{\omega}$, then the conditions \ref{cond: 1} and \ref{cond: 2} are both pointwise, yet Lemma \ref{lem: M-symmetry} shows that the set of points $\{\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega} + \V{\pi}_4, \V{\omega}+\V{\pi}_6\}$ are linked together by the symmetry in $\M(\V{\omega})$. 
 
-Due to condition \ref{cond: 1}, $\forall\,\V{\omega}$, $\exists\, k_{\V{\omega}}$ depending on $\V{\omega}$ such that $\M[-k_{\V{\omega}},:](\V{\omega})$ is non-singular. On the other hand, Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry} together imply that $\M[-k,:],\,k=0,2,4,6$ are singular. Therefore, $k_{\V{\omega}} \in\{1,3,5,7\}$ and thus $\M[-k_{\V{\omega}},:](\V{\omega})$ contains all rows associated with shifts $\V{\pi}_{2i},\, i = 0,\cdots,3$. 
-As in Section \ref{subsec: cohen-summary}, we obtain the following expression of $m_0$ by applying Cramer's rule to $\M[-k_{\V{\omega}},:](\V{\omega})$, 
+Due to condition \ref{cond: 1}, $\forall\,\V{\omega}$, $\exists\, k_{\V{\omega}}$ depending on $\V{\omega}$ such that $\M[-k_{\V{\omega}},:](\V{\omega})$ is non-singular. Lemma \ref{lem: subM-singular} implies that $k_{\V{\omega}}\neq 0$ \footnote{We have stronger result using the symmetry. Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry} together imply that $\M[-k,:](\V{\omega}),\,k=0,2,4,6$ are singular. Therefore, $k_{\V{\omega}} \in\{1,3,5,7\}$ and thus $\M[-k_{\V{\omega}},:](\V{\omega})$ contains all rows associated with shifts $\V{\pi}_{2i},\, i = 0,\cdots,3$. 
+}
+; therefore we may apply Cramer's rule to $\M[-k_{\V{\omega}},:](\V{\omega})$, as in Section \ref{subsec: cohen-summary}, and obtain
+the following expression of $m_0(\V{\omega})$
 %there is a unique row $\M[k_{\V{\omega}},:],\,k_\omega\in\{2,\cdots,8\}$ such that removing it from $\M$ gives a non-singular square matrix $\M[-k_{\V{\omega}},:]$. By Cramer's rule, 
 \begin{align}\label{eq: m0-cramer}
 m_0(\V{\omega}) = \det(\,\Msub[-k_{\V{\omega}},:](\V{\omega})\,)/\det(\,\M[-k_{\V{\omega}},:](\V{\omega})\,).
 \end{align}
 Moreover, based on \eqref{eq: m0-cramer}, the identity condition \eqref{eq: identity-cond} on $m_0(\V{\omega})$ and $\m{0}$ can be derived in the same way as \eqref{eq: bi-orth-eq} by expanding $\det(\,\M[-k_{\V{\omega}},:](\V{\omega})\,)$.
 
-In the following subsections, we first show our main result that for \eqref{eq: LS-new} to be solvable, the pre-designed $\widetilde{m_j}$ are discontinuous, when the support of $\widetilde{m_j}$ concentrates in the direction of $C_j$ and a minimum symmetry of $\widetilde{m_j}$ is required. We then discuss how to design $\widetilde{m_j}$ with more symmetry and solve the corresponding system \eqref{eq: LS-new}.
+%We then discuss how to design $\widetilde{m_j}$ with more symmetry and solve the corresponding system \eqref{eq: LS-new}.
 
 \subsection{Discontinuity of $\m{j}$}\label{subsec: discontinuity}
-In this subsection, we assume that
+In this subsection, we show our main result that for \eqref{eq: LS-new} to be solvable, the pre-designed $\widetilde{m_j}$ are discontinuous, when they satisfy mild conditions on symmetry and concentration of support.
+%when the support of $\widetilde{m_j}$ concentrates in the direction of $C_j$ and a minimum symmetry of $\widetilde{m_j}$ is required.
+
+We assume that
 $|\m{1}|$ and $|\m{6}|$ are symmetric with respect to the diagonal $\omega_1=\omega_2$, i.e.
 $$ |\widetilde{m_1}(\V{\omega})| = |\widetilde{m_6}(\V{\omega}')|\quad \forall\, \omega_1=\omega_2', \,\omega_2=\omega_1',$$
 and likewise for $\m{3}$ and $\m{4}$,
 $$ |\widetilde{m_3}(\V{\omega})| = |\widetilde{m_4}(\V{\omega}')|\quad \forall\, \omega_1=-\omega_2', \,\omega_2=-\omega_1'.$$
 %Same as in Section \ref{subsec: cohen-summary} , we first compute $m_0$ and assume that $\M$ is full rank, otherwise \eqref{eq: LS-new} has infinitely many solutions. Moreover, $\M[2:8,:]$ is singular. 
-Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\widetilde{m_6}(\V{\omega}+\V{\pi}_i)]\in\mathbb{C}^6,\, i = 0,\cdots,7$ be the rows of $\M[:,-0]$. 
 %Proposition \ref{prop: feasibility} provides a necessary condition such that the numerical optimization solving $\widetilde{m_0}$ is feasible.
 \begin{figure}
 \centering
@@ -180,16 +180,16 @@ Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\w
 In the following, we introduce a triangular partition of frequency square and define formally the concentration of $\widetilde{m_j}$'s support.
 
 \noindent{\bf Definition.}
-The {\it essential support} $\Omega_i$ of a function $\widetilde{m_i}$ is the set $\{\V{\omega}:\,|\widetilde{m_i}(\V{\omega})|> |\widetilde{m_j}(\V{\omega})|,\,\forall j\neq i\}$. \vspace{.5em}
+The {\it essential support} $\Omega_j$ of a function $\widetilde{m_j}$ is the set $\{\V{\omega}:\,|\widetilde{m_j}(\V{\omega})|> |\widetilde{m_i}(\V{\omega})|,\,\forall i\neq j\}$. \vspace{.5em}
 
-Let $T_i$ be pairs of triangles shown in Figure \ref{fig: partition 2}, such that $C_i\subset T_i,\, i = 1,\cdots,6.$ Consider its decomposition, $T_i = T_i^-\bigcup T_i^+$, where $T_i^-, T_i^+$ are halves of $T_i$ adjacent  to $T_{i-1}$ and $T_{i+1}$ respectively.\\[.5em]
-\noindent{\bf Definition.}  $\widetilde{m_i}$ {\it concentrates} within $T_i$ if 
+Let $T_j$ be pairs of triangles shown in Figure \ref{fig: partition 2}, such that $C_j\subset T_j,\, j = 1,\cdots,6.$ Consider its decomposition, $T_j = T_j^-\bigcup T_j^+$, where $T_j^-, T_j^+$ are halves of $T_j$ adjacent to $T_{j-1}$ and $T_{j+1}$ respectively.\\[.5em]
+\noindent{\bf Definition.}  $\widetilde{m_j}$ {\it concentrates} within $T_j$ if 
 \begin{itemize}
-\item[(i)] $\Omega_i\subset T_i$;
-\item[(ii)]$\text{supp}(\widetilde{m_i})\subset T_{i-1}^+\bigcup T_i\bigcup T_{i+1}^-$ and $\int_\Omega|\widetilde{m_i}| > \int_{\Omega'}|\widetilde{m_i}|, \forall\, \Omega\subset T_i\bigcap\text{supp}(\widetilde{m_i})$, where $\Omega' \subset T_{i-1}^+\bigcup T_{i+1}^-$ is symmetric to $\Omega$ with respect to the boundary of $T_i$.
+\item[(i)] $\Omega_j\subset T_j$;
+\item[(ii)]$\text{supp}(\widetilde{m_j})\subset T_{j-1}^+\bigcup T_j\bigcup T_{j+1}^-$ and $\int_\Omega|\widetilde{m_j}| > \int_{\Omega'}|\widetilde{m_j}|, \forall\, \Omega\subset T_j\bigcap\text{supp}(\widetilde{m_j})$, where $\Omega' \subset T_{j-1}^+\bigcup T_{j+1}^-$ is symmetric to $\Omega$ with respect to the boundary of $T_j$.
 \end{itemize}
 {\it Remark.}
-For $\widetilde{m_i}$ to concentrate in $T_i$, $\widetilde{m_i}$ should be ``mainly" supported in $T_i$ (condition (i) ) and ``decay" properly outside of $T_i$ (conditoin (ii)).
+For $\widetilde{m_j}$ to concentrate in $T_j$, $\widetilde{m_j}$ should be ``mainly" supported in $T_j$ (condition (i)) and ``decay" properly outside of $T_j$ (conditoin (ii)).
 
 \begin{figure}
 \centering
@@ -197,10 +197,11 @@ For $\widetilde{m_i}$ to concentrate in $T_i$, $\widetilde{m_i}$ should be ``mai
 \caption{$S_{\rho}$ and its shifts}
 \label{fig: S-shifts}
 \end{figure}
-Given $\m{i}$ that concentrates in $T_i$, we study the singularity condition on $\M[-0,:](\V{\omega})$ from Lemma \ref{lem: subM-singular}, specifically in the domain $S_{\rho} = \{(\omega_1,\omega_2)|\;\Vert\omega\Vert < \rho, \omega_1 <0,\,\omega_2<0\}$, see Figure \ref{fig: S-shifts}. 
+Given $\m{j}$ that concentrates in $T_j$, we study the singularity condition on $\M[-0,:](\V{\omega})$ from Lemma \ref{lem: subM-singular}, specifically in the domain $S_{\rho} = \{(\omega_1,\omega_2)|\;\Vert\omega\Vert < \rho, \omega_1 <0,\,\omega_2<0\}$, see Figure \ref{fig: S-shifts}. 
 
+Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\widetilde{m_6}(\V{\omega}+\V{\pi}_i)]\in\mathbb{C}^6,\, i = 0,\cdots,7$ be the rows of $\M[:,-0](\V{\omega})$. 
 \begin{lemma}\label{lem: rank1}
-$\exists\, \rho>0$ s.t.  if $\,\M[-0,:](\V{\omega})$ is singular $\forall \V{\omega}\in S_\rho$, then $rank(\mrow{1},\mrow{7})=1$ or $rank(\mrow{3},\mrow{5}) = 1$.
+$\exists\, \rho>0$ s.t. $\forall \V{\omega}\in S_\rho$ if $\,\M[-0,:](\V{\omega})$ is singular, then $rank(\mrow{1},\mrow{7})=1$ or $rank(\mrow{3},\mrow{5}) = 1$.
 \end{lemma}
 Lemma \ref{lem: rank1} can be proved by analyzing the linear dependency and independency between $\mrow{i}$ on $S_\rho$, since $\mrow{i}$ have known locations of zero entries when $\rho$ is small due to the concentration of $\widetilde{m_j}$.
 For the full proof of Lemma \ref{lem: rank1}, see Appendix \ref{app: lemmas}.
@@ -212,11 +213,15 @@ Since only $\mp{1}{1}, \mp{6}{1}$ could be non-zero in $\mrow{1}$ and $\mp{1}{7}
 Given the same condition as in Lemma \ref{lem: rank1}, $\m{1},\m{6}$ are not continuous at both $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 \end{proposition}
 \noindent{\it Proof. }
-If $\m{1}$ is continuous at $(\frac{\pi}{2},\frac{\pi}{2})$, then $\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2}) = \lim_{\alpha\rightarrow 1^-}\widetilde{m_1}(\V{\omega}(\alpha)) = 0$, where $\{\V{\omega}(\alpha),\,0\leq \alpha<1\} \subset S_\rho + \V{\pi}_1$ and $\V{\omega}(1) = (\frac{\pi}{2},\frac{\pi}{2})$. By symmetry, we have $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2}) = 0$. Similarly, the continuity at $(-\frac{\pi}{2},-\frac{\pi}{2})$ implies $\widetilde{m_1}(-\frac{\pi}{2},-\frac{\pi}{2}) = \widetilde{m_6}(-\frac{\pi}{2},-\frac{\pi}{2}) = 0$. Therefore $\mrow{1}(0) = \mrow{7}(0) = \mathbf{0}$ which results in contradiction with Lemma \ref{lem: rank1}.\qed\\[1em]%and from \eqref{eq: m0C} $m_0^C(0)=0$ so that $m_0(0)=0$, %  On the other hand, Proposition\ref{prop: origin-det} implies that $m_0(0) = 0$ as $a = |\widetilde{m_1}(\pi_1)| = 0$, which results in contradiction.
+If $\m{1}$ is continuous at $(\frac{\pi}{2},\frac{\pi}{2})$, then $\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2}) = \lim_{\alpha\rightarrow 1^-}\widetilde{m_1}(\V{\omega}(\alpha)) = 0$, where $\{\V{\omega}(\alpha),\,0\leq \alpha<1\} \subset S_\rho + \V{\pi}_1$ and $\V{\omega}(1) = (\frac{\pi}{2},\frac{\pi}{2})$. By symmetry, we have $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2}) = 0$. Similarly, the continuity at $(-\frac{\pi}{2},-\frac{\pi}{2})$ implies $\widetilde{m_1}(-\frac{\pi}{2},-\frac{\pi}{2}) = \widetilde{m_6}(-\frac{\pi}{2},-\frac{\pi}{2}) = 0$. Therefore $\mrow{1}(\V{0}) = \mrow{7}(\V{0}) = \mathbf{0}$ at the origin which results in contradiction with Lemma \ref{lem: rank1}.\qed\\[1em]%and from \eqref{eq: m0C} $m_0^C(0)=0$ so that $m_0(0)=0$, %  On the other hand, Proposition\ref{prop: origin-det} implies that $m_0(0) = 0$ as $a = |\widetilde{m_1}(\pi_1)| = 0$, which results in contradiction.
 The following theorem summarizes our main result.
 \begin{theorem}\label{thm: thm}
 If  $\m{i}$ concentrates in $T_i$ and $\m{1},\m{6}$ are symmetric with respect to the diagonal $\omega_1=\omega_2$ to each other,  then  \eqref{eq: LS-new} doesn't have feasible solution given continuous $\m{1}$ and $\m{6}$.
 \end{theorem}
+
+\section{Numerical construction of bi-orthogonal bases}\label{sec: solve-quincunx}
+Following the same approach of Cohen et al, we first design $\m{j},\,j = 1,\cdots,6,$ on the canonical frequency square $S_0 = [-\pi,\pi)\times[-\pi,\pi),$ then solve for $m_0,\widetilde{m_0}$ and $m_j$ on $S_0$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
+%we focus on solving $m_i$'s and $\widetilde{m_0}$ in \eqref{eq: LS-new} given pre-designed $\m{i},\,i=1,\cdots,6$. %Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
 
 \subsection{Design of input $\m{j}$}\label{sec: phase-design}
 In this sub-section, we construct $\m{j},\, j = 1,\cdots,6,$ which concentrate in $T_i$.
@@ -429,7 +434,13 @@ It suffices to show that $m_0'(\V{\omega})\overline{\widetilde{m_0}'}(\V{\omega}
 \noindent{\it Remark.}
 Proposition \ref{prop: mc} suggests that we can compensate $a_{\V{\omega}}$ by choosing $c(\V{\omega})$ such that $(m_0',\widetilde{m_0}')$ have improved regularity, e.g. continuity, smoothness or fast decay rate. In practice, we first solve $\m{0}$, step 3. in \ref{alg}, then choose $c(\V{\omega})$ $\pi$-periodic in both axis and replace $m_0(\V{\omega})$ and $\widetilde{m_0}(\V{\omega})$ by $m_0'(\V{\omega})$ and $\overline{\widetilde{m_0}'}(\V{\omega})$ as defined in Proposition \ref{prop: mc}.
 
-To obtain $\m{0}$ on $S_0$, we solve the identity condition \eqref{eq: identity-cond} on $[-\pi, 0)\times[-\pi, 0 )$ for the quadruple $(\m{0}, \mp{0}{2}, \mp{0}{4}, \mp{0}{6})$. As mentioned at the end of Section \ref{subsec: cohen-summary}, we are not aware of existing efficient algorithms that solve \eqref{eq: identity-cond}. Hence we reformulate it as an optimization problem wher \eqref{eq: identity-cond} serves as a linear constraint. In particular, on a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $ \eqref{eq: identity-cond} can be rewritten as
+To obtain $\m{0}$ on $S_0$, we solve the identity condition \eqref{eq: identity-cond} on $[-\pi, 0)\times[-\pi, 0 )$ for the quadruple $(\m{0}, \mp{0}{2}, \mp{0}{4}, \mp{0}{6})$. Note that \eqref{eq: identity-cond} is the same as \eqref{eq: bi-orth-eq} in Section \ref{subsec: cohen-summary}. 
+According to Lemma 3.2.1 in \cite{cohen1993compactly}, based on {\it Hilbert's Nullstellensatz}, \eqref{eq: bi-orth-eq} has a solution if and only if there does not exist $(z_1,z_2)\in (\mathbb{C}^*)^2,\, \mathbb{C}^* = \mathbb{C}\setminus\{0\}$\, s.t. $(\pm z_1,\pm z_2)$ are all vanishing points of the $z$-transform of $m_0$.
+In general, there is no efficient algorithm to solve {\it Hilbert's Nullstellensatz}, and how \eqref{eq: bi-orth-eq} is solved exactly is not mentioned in \cite{cohen1993compactly}.
+%In Section \ref{sec: numerics}, we propose an optimization problem that solves $\widetilde{m_0}$, where \eqref{eq: m0-sol} (which is the same as \eqref{eq: identity-cond}) serves as a linear constraint.
+%As mentioned at the end of Section \ref{subsec: cohen-summary}, we are not aware of existing efficient algorithms that solve \eqref{eq: identity-cond}. 
+
+Here, we reformulate it as an optimization problem wher \eqref{eq: identity-cond} serves as a linear constraint. In particular, on a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $ \eqref{eq: identity-cond} can be rewritten as
 \begin{align}
 \V{A}\, \overlinespace{\widetilde{\mathbf{m}_0}}= \mathbf{1}_{4N^2}, \label{eq: m0-A}%\\ 
 %\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2}&\in\mathbb{C}^{4N^2} \notag
@@ -491,7 +502,7 @@ Finally, we plug $m_0(\V{\omega})$ and $\m{0}$ into $\V{b}_0'(\V{\omega})$ on th
 \vspace*{-1em}
 \rule{\textwidth}{.5pt}
 \end{minipage}\\[.5em]
-To sum up, we propose \ref{alg} for bi-orthogonal directional filter construction with dilated quincunx downsampling scheme.
+To sum up, we propose \ref{alg} for bi-orthogonal directional filter construction with dyadic quincunx downsampling scheme.
 
 \noindent{\it Remark.}
 The order of step 4. and step 5. in \ref{alg} can be reversed because \eqref{eq: mj-eq} only depends on $m_0(\V{\omega})\overline{\widetilde{m_0}}(\V{\omega} + \V{\pi}_i)$ when $i$ is even, which remains the same for $m_0'(\V{\omega}),\widetilde{m_0}'(\V{\omega})$ regardless of $c(\V{\omega})$ by construction.
@@ -520,7 +531,7 @@ In the final step, we substitute $\mc{0}$ and $m_0^C(\V{\omega})$ into \eqref{eq
 The solution of \eqref{eq: mi} depends only on $m_0^C\overline{\widetilde{m_0}^C}$, or equivalently $m_0\overline{\widetilde{m_0}}$. 
 \end{comment}
 
-\section{Numerical Experiments}
+\section{Numerical Experiments}\label{sec: numerics}
 
 In this section, we demonstrate the numerical construction of biorthogonal directional wavelets on a quincunx lattice using our proposed \ref{alg} implemented in Matlab.
 
