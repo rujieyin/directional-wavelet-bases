@@ -116,25 +116,25 @@ Once \eqref{eq: bi-orth-eq} is solved for $\widetilde{m_0}$, $m_1,m_2$ and $m_3$
 
 \subsection{Adaptation to dyadic quincunx downsampling}\label{subsec: adapt-cohen}
 
-Despite the specific symmetries of $m_j,\,\widetilde{m_j},\, j = 0,\cdots,3$ on a hexagon lattice, Cohen et al's approach can be adapted to construct bi-orthogonal bases on different lattices with different downsampling schemes. In particular, we adapt their approach to solve \eqref{eq: LS-new} where $\widetilde{m_j},\, j= 1,\cdots,6$ are pre-designed. Furthermore, by exploiting the symmetric structure of \eqref{eq: LS-new} with respect to the shifts $\V{\pi}_i,\,i=0,\cdots,7$, we derive necessary conditions for \eqref{eq: LS-new} to have a unique solution which imply the irregularity in our bi-orthogonal scheme.
+Cohen et al's approach can be adapted to construct bi-orthogonal bases in different settings; We shall apply it to our framework, even though we work with different lattices, downsampling schemes and symmetries. In particular, we adapt their approach to solve \eqref{eq: LS-new} where $\widetilde{m_j},\, j= 1,\cdots,6$ are pre-designed. Furthermore, by exploiting the symmetric structure of \eqref{eq: LS-new} with respect to the shifts $\V{\pi}_i,\,i=0,\cdots,7$, we derive necessary conditions for \eqref{eq: LS-new} to have a unique solution. It turns out that this will, once again, force to exhibit lack of regularity in our bi-orthogonal scheme.
 
-Since \eqref{eq: LS-new} takes the same form as \eqref{eq: LS}, for simplicity, in the rest of this paper, we adapt the matrix and vector notations $\widetilde{\mathbf{M}}(\V{\omega}),\,\mathbf{m}(\V{\omega}) $ that helped to simplify \eqref{eq: LS}. Accordingly, we rewrite \eqref{eq: LS-new} as  \[\widetilde{\mathbf{M}}(\V{\omega})\, \mathbf{m} (\V{\omega})= [1,0,0,0,0,0,0]^\top,\]  where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, let $\V{b}_k \in\mathbb{R}^8,\, 0\leq k\leq 7$, whose only non-zero entry is $\V{b}_k[k] = 1$, where the indexing starts with zero. Note that $\M(\V{\omega})\,\mathbf{m}(\V{\omega}) = \V{b}_0\in\mathbb{R}^8$ is over-determined; it has a unique solution of $m_j$ if and only if 
+Since \eqref{eq: LS-new} takes the same form as \eqref{eq: LS}, we adopt, for the sake of simplicity and for the rest of this paper,  the matrix and vector notations $\widetilde{\mathbf{M}}(\V{\omega}),\,\mathbf{m}(\V{\omega}) $ that helped to simplify \eqref{eq: LS}. Accordingly, we rewrite \eqref{eq: LS-new} as  \[\widetilde{\mathbf{M}}(\V{\omega})\, \mathbf{m} (\V{\omega})= [1,0,0,0,0,0,0]^\top,\]  where $\widetilde{\mathbf{M}}(\V{\omega})\in\mathbb{C}^{8\times 7}$ and $\mathbf{m}(\V{\omega})\in\mathbb{C}^7$. In addition, let $\V{b}_k \in\mathbb{R}^8,\, 0\leq k\leq 7$, whose only non-zero entry is $\V{b}_k[k] = 1$, where the indexing starts with zero. Note that $\M(\V{\omega})\,\mathbf{m}(\V{\omega}) = \V{b}_0\in\mathbb{R}^8$ is over-determined; it has a unique solution of $m_j$ if and only if 
 
 \begin{enumerate}[leftmargin=.5in]
 \item[\mylabel{cond: 1}{(\ref{sec: solve-quincunx}.i)}] $\M(\V{\omega})$ is full rank,
 \item[\mylabel{cond: 2}{(\ref{sec: solve-quincunx}.ii)}] $[\M(\V{\omega}), \V{b}_0]$ is singular,
 \end{enumerate}
-where we use $[\;]$ to concatenate $\M(\V{\omega})$ and $\V{b}_0$ into a $8\times 8$ matrix. %denote by $[\M(\V{\omega}), \V{b}_0]$ the $8\times 8$ matrix obtained by adding the 8-th column $\V{b}_0$ to the $8\times 7$ matrix $\M(\V{\omega})$.
-The matrix $\M(\V{\omega})$ is structured such that each row is associated with a shift $\V{\pi}_i,\,i=0\cdots,7$ and each column is associated with a dual function $\m{j},\,j=0,\cdots,7$. In particular, $\M(\V{\omega})$ depends on the value of $\widetilde{m_j}$ at $\V{\omega}$ and its shifts $\V{\omega}+\V{\pi}_i$, thus can be considered a vector function of $\V{\omega}$. We denote a sub-matrix of $\M$ containing all but the row associated with $\V{\pi}_k$ (respectively, the column associated with $\m{k}$) as $\M[-k,:]$ (respectively, $\M[:,-k]$).
-In particular, we denote $\M[-0,-0]$ as $\Msub$.
+where we use the notation $[\;]$ for the concatenation of $\M(\V{\omega})$ and $\V{b}_0$ into a $8\times 8$ matrix. %denote by $[\M(\V{\omega}), \V{b}_0]$ the $8\times 8$ matrix obtained by adding the 8-th column $\V{b}_0$ to the $8\times 7$ matrix $\M(\V{\omega})$.
+The matrix $\M(\V{\omega})$ is structured such that each row is associated with a shift $\V{\pi}_i,\,i=0\cdots,7$ and each column is associated with a dual function $\m{j},\,j=0,\cdots,7$. In particular, $\M(\V{\omega})$ depends on the value of $\widetilde{m_j}$ at $\V{\omega}$ and its shifts $\V{\omega}+\V{\pi}_i$, and can thus be considered a matrix-valued function of $\V{\omega}$. We denote a sub-matrix of $\M$ containing all but the row associated with $\V{\pi}_k$ (respectively, the column associated with $\m{k}$) as $\M[\widehat{k},:]$ (respectively, $\M[:,\widehat{k}]$).
+In particular, we denote $\M[\widehat{0},\widehat{0}]$ as $\Msub$.
 
 We have the following observations for $\M(\V{\omega})$.
 \begin{lemma}\label{lem: subM-singular}
- $\forall \V{\omega}\in S_0$, if \eqref{eq: LS-new} is solvable, then $\M[-0,:](\V{\omega})$ is singular.
+ $\forall \V{\omega}\in S_0$, if \eqref{eq: LS-new} is solvable, then $\M[\widehat{0},:](\V{\omega})$ is singular.
 \end{lemma}
 \noindent{\it Proof.}
-If \eqref{eq: LS-new} is solvable, then condition \ref{cond: 2} holds, which implies that $\det([\M(\V{\omega}),\V{b}_0]) = 0$. Expanding the determinant with respect to the last column $\V{b}_0$ yields $\det(\,\M[-0,:](\V{\omega})\,) = 0$.\qed
-%If \eqref{eq: LS-new} has a solution, then $\forall \V{\omega}$,  $[1,0,\cdots,0]^\top\in \mathbb{R}^8$ is a linear combination of the columns of $\M$ hence the solution $\mathbf{m} \in Null(\M[-0,:])$ and it is non-zero. This implies that $\M[-0,:]$ is singular.\qed\\[1em]
+If \eqref{eq: LS-new} is solvable, then condition \ref{cond: 2} holds, which implies that $\det([\M(\V{\omega}),\V{b}_0]) = 0$. Expanding the determinant with respect to the last column $\V{b}_0$ yields $\det(\,\M[\widehat{0},:](\V{\omega})\,) = 0$.\qed
+%If \eqref{eq: LS-new} has a solution, then $\forall \V{\omega}$,  $[1,0,\cdots,0]^\top\in \mathbb{R}^8$ is a linear combination of the columns of $\M$ hence the solution $\mathbf{m} \in Null(\M[\widehat{0},:])$ and it is non-zero. This implies that $\M[\widehat{0},:]$ is singular.\qed\\[1em]
 
 \begin{lemma}\label{lem: M-symmetry}
 $\M(\V{\omega}),\,\M(\V{\omega}+\V{\pi}_2),\,\M(\V{\omega}+\V{\pi}_4)$ and $\M(\V{\omega}+\V{\pi}_6)$ are the same up to row permutations. \eqref{eq: LS-new} holds $\forall \, \V{\omega}$ if and only if 
@@ -146,20 +146,20 @@ $\M(\V{\omega}),\,\M(\V{\omega}+\V{\pi}_2),\,\M(\V{\omega}+\V{\pi}_4)$ and $\M(\
 \noindent{\it Remark}.
 If we consider $\M(\V{\omega})$ a vector function of $\V{\omega}$, then the conditions \ref{cond: 1} and \ref{cond: 2} are both pointwise, yet Lemma \ref{lem: M-symmetry} shows that the set of points $\{\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega} + \V{\pi}_4, \V{\omega}+\V{\pi}_6\}$ are linked together by the symmetry in $\M(\V{\omega})$. 
 
-Due to condition \ref{cond: 1}, $\forall\,\V{\omega}$, $\exists\, k_{\V{\omega}}$ depending on $\V{\omega}$ such that $\M[-k_{\V{\omega}},:](\V{\omega})$ is non-singular. Lemma \ref{lem: subM-singular} implies that $k_{\V{\omega}}\neq 0$ \footnote{We have stronger result using the symmetry. Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry} together imply that $\M[-k,:](\V{\omega}),\,k=0,2,4,6$ are singular. Therefore, $k_{\V{\omega}} \in\{1,3,5,7\}$ and thus $\M[-k_{\V{\omega}},:](\V{\omega})$ contains all rows associated with shifts $\V{\pi}_{2i},\, i = 0,\cdots,3$. 
+Due to condition \ref{cond: 1}, $\forall\,\V{\omega}$, $\exists\, k_{\V{\omega}}$ depending on $\V{\omega}$ such that $\M[\widehat{k_{\V{\omega}}},:](\V{\omega})$ is non-singular. Lemma \ref{lem: subM-singular} implies that $\widehat{k_{\V{\omega}}}\neq 0$ \footnote{By symmetry, we have the stronger result $k_{\V{\omega}}\not\in\{0,2,4,6\}$. Indeed, Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry} together imply that $\M[\widehat{k},:](\V{\omega}),\,k=0,2,4,6$ are singular. Therefore, $\widehat{k_{\V{\omega}}} \in\{1,3,5,7\}$ and thus $\M[\widehat{k_{\V{\omega}}},:](\V{\omega})$ contains all rows associated with shifts $\V{\pi}_{2i},\, i = 0,\cdots,3$. 
 }
-; therefore we may apply Cramer's rule to $\M[-k_{\V{\omega}},:](\V{\omega})$, as in Section \ref{subsec: cohen-summary}, and obtain
+; therefore we may apply Cramer's rule to $\M[\widehat{k_{\V{\omega}}},:](\V{\omega})$, as in Section \ref{subsec: cohen-summary}, and obtain
 the following expression of $m_0(\V{\omega})$
-%there is a unique row $\M[k_{\V{\omega}},:],\,k_\omega\in\{2,\cdots,8\}$ such that removing it from $\M$ gives a non-singular square matrix $\M[-k_{\V{\omega}},:]$. By Cramer's rule, 
+%there is a unique row $\M[\widehat{k_{\V{\omega}}},:],\,k_\omega\in\{2,\cdots,8\}$ such that removing it from $\M$ gives a non-singular square matrix $\M[\widehat{k_{\V{\omega}}},:]$. By Cramer's rule, 
 \begin{align}\label{eq: m0-cramer}
-m_0(\V{\omega}) = \det(\,\Msub[-k_{\V{\omega}},:](\V{\omega})\,)/\det(\,\M[-k_{\V{\omega}},:](\V{\omega})\,).
+m_0(\V{\omega}) = \det(\,\Msub[\widehat{k_{\V{\omega}}},:](\V{\omega})\,)/\det(\,\M[\widehat{k_{\V{\omega}}},:](\V{\omega})\,).
 \end{align}
-Moreover, based on \eqref{eq: m0-cramer}, the identity condition \eqref{eq: identity-cond} on $m_0(\V{\omega})$ and $\m{0}$ can be derived in the same way as \eqref{eq: bi-orth-eq} by expanding $\det(\,\M[-k_{\V{\omega}},:](\V{\omega})\,)$.
+Moreover, based on \eqref{eq: m0-cramer}, the identity condition \eqref{eq: identity-cond} on $m_0(\V{\omega})$ and $\m{0}$ can be derived in the same way as \eqref{eq: bi-orth-eq} by expanding $\det(\,\M[\widehat{k_{\V{\omega}}},:](\V{\omega})\,)$.
 
 %We then discuss how to design $\widetilde{m_j}$ with more symmetry and solve the corresponding system \eqref{eq: LS-new}.
 
 \subsection{Discontinuity of $\m{j}$}\label{subsec: discontinuity}
-In this subsection, we show our main result that for \eqref{eq: LS-new} to be solvable, the pre-designed $\widetilde{m_j}$ are discontinuous, when they satisfy mild conditions on symmetry and concentration of support.
+In this subsection, we show our main result that for \eqref{eq: LS-new} to be solvable, the pre-designed $\widetilde{m_j}$ have to be discontinuous as soon as they satisfy mild conditions on symmetry and concentration of support.
 %when the support of $\widetilde{m_j}$ concentrates in the direction of $C_j$ and a minimum symmetry of $\widetilde{m_j}$ is required.
 
 We assume that
@@ -181,19 +181,18 @@ and likewise for $\m{3}$ and $\m{4}$,
 \end{figure}
 %Let pairs of triangles $T_i$ in Fig.\ref{fig: partition 2} contain the essential support of $\widetilde{m_i},\,i=1,\cdots,6$.
 %\eqref{eq: LS-new} takes a similar form to \eqref{eq: LS}, but with $\M\in\mathbb{C}^{8\times 7}$, which is an over-determinant linear system.
-In the following, we introduce a triangular partition of frequency square and define formally the concentration of $\widetilde{m_j}$'s support.
+In what follows, we introduce a triangular partition of $S_0=[-\pi,\pi)\times[-\pi,\pi)$ in the frequency plane and define formally the concentration of the support of the $\widetilde{m_j}$.
 
 \noindent{\bf Definition.}
-The {\it essential support} $\Omega_j$ of a function $\widetilde{m_j}$ is the set $\{\V{\omega}:\,|\widetilde{m_j}(\V{\omega})|> |\widetilde{m_i}(\V{\omega})|,\,\forall i\neq j\}$. \vspace{.5em}
+The {\it  domination-support} $\Omega_j$ of a function $\widetilde{m_j}$ (with respect to the other $m_i$, $i\neq j$) is the set $\{\V{\omega}:\,|\widetilde{m_j}(\V{\omega})|> |\widetilde{m_i}(\V{\omega})|,\,\forall i\neq j\}$. \vspace{.5em}
 
-Let $T_j$ be pairs of triangles shown in Figure \ref{fig: partition 2}, such that $C_j\subset T_j,\, j = 1,\cdots,6.$ Consider its decomposition, $T_j = T_j^-\bigcup T_j^+$, where $T_j^-, T_j^+$ are halves of $T_j$ adjacent to $T_{j-1}$ and $T_{j+1}$ respectively.\\[.5em]
+Let $T_j$ be pairs of triangles shown in Figure \ref{fig: partition 2}, defined such that $C_j\subset T_j,\, j = 1,\cdots,6.$ Consider the decompositions $T_j = T_j^-\bigcup T_j^+$, where $T_j^-, T_j^+$ are halves of $T_j$ adjacent to its neighboring triangles $T_i$ in the counter clockwise and clockwise directions respectively.\\[.5em]
 \noindent{\bf Definition.}  $\widetilde{m_j}$ {\it concentrates} within $T_j$ if 
 \begin{itemize}
 \item[(i)] $\Omega_j\subset T_j$;
 \item[(ii)]$\text{supp}(\widetilde{m_j})\subset T_{j-1}^+\bigcup T_j\bigcup T_{j+1}^-$ and $\int_\Omega|\widetilde{m_j}| > \int_{\Omega'}|\widetilde{m_j}|, \forall\, \Omega\subset T_j\bigcap\text{supp}(\widetilde{m_j})$ s.t. $|\Omega|>0$, where $\Omega' \subset T_{j-1}^+\bigcup T_{j+1}^-$ is symmetric to $\Omega$ with respect to the boundary of $T_j$.
 \end{itemize}
-{\it Remark.}
-For $\widetilde{m_j}$ to concentrate in $T_j$, $\widetilde{m_j}$ should be ``mainly" supported in $T_j$ (condition (i)) and ``decay" properly outside of $T_j$ (conditoin (ii)).
+In other words, for $\widetilde{m_j}$ to concentrate in $T_j$, $\widetilde{m_j}$ should be ``mainly" supported in $T_j$ (condition (i)) and ``decay" properly outside of $T_j$ (condition (ii)).
 
 \begin{figure}
 \centering
@@ -201,31 +200,30 @@ For $\widetilde{m_j}$ to concentrate in $T_j$, $\widetilde{m_j}$ should be ``mai
 \caption{$S_{\rho}$ and its shifts}
 \label{fig: S-shifts}
 \end{figure}
-Given $\m{j}$ that concentrates in $T_j$, we study the singularity condition on $\M[-0,:](\V{\omega})$ from Lemma \ref{lem: subM-singular}, specifically in the domain $S_{\rho} = \{(\omega_1,\omega_2)|\;\Vert\omega\Vert < \rho, \omega_1 <0,\,\omega_2<0\}$, see Figure \ref{fig: S-shifts}. 
+Given $\m{j}$ that concentrates in $T_j$, we examine the consequences of the singularity condition on $\M[\widehat{0},:](\V{\omega})$ from Lemma \ref{lem: subM-singular}, specifically in the domain $S_{\rho} = \{(\omega_1,\omega_2)|\;\Vert\omega\Vert < \rho, \omega_1 <0,\,\omega_2<0\}$, see the red zone in Figure \ref{fig: S-shifts}. 
 
-Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\widetilde{m_6}(\V{\omega}+\V{\pi}_i)]\in\mathbb{C}^6,\, i = 0,\cdots,7$ be the rows of $\M[:,-0](\V{\omega})$. 
+Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\widetilde{m_6}(\V{\omega}+\V{\pi}_i)]\in\mathbb{C}^6,\, i = 0,\cdots,7$ be the rows of $\M[:,\widehat{0}](\V{\omega})$. 
 \begin{lemma}\label{lem: rank1}
-$\exists\, \rho>0$ s.t. $\forall \V{\omega}\in S_\rho$, if $\,\M[-0,:](\V{\omega})$ is singular, then $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,)=1$ or $rank(\,\mrow{3}(\V{\omega}\,),\mrow{5}(\V{\omega})) = 1$.
+$\exists\, \rho>0$ s.t. if $\V{\omega}\in S_\rho$ and $\M[\widehat{0},:](\V{\omega})$ is singular, then $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,)=1$ or \\$rank(\,\mrow{3}(\V{\omega}\,),\mrow{5}(\V{\omega})) = 1$.
 \end{lemma}
-Lemma \ref{lem: rank1} can be proved by analyzing the linear dependency and independency between $\mrow{i}$ on $S_\rho$, since $\mrow{i}$ have known locations of zero entries when $\rho$ is small due to the concentration of $\widetilde{m_j}$.
+Lemma \ref{lem: rank1} can be proved by analyzing the linear dependency and independency between the $\mrow{i}$ on $S_\rho$, since the $\mrow{i}$ have known locations of zero entries when $\rho$ is small due to the concentration of the $\widetilde{m_j}$.
 For the full proof of Lemma \ref{lem: rank1}, see Appendix \ref{app: lemmas}.
 
 The concentration and the symmetry of $\m{3}$ and $\m{4}$ in $T_3$ and $T_4$ together imply that  $rank(\mrow{3},\mrow{5}) \neq 1\; a.e.$ on $S_\rho$, see Lemma \ref{lem: full-rank-m35} in Appendix \ref{app: discontinuity}, hence $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,) = 1\; a.e.$ on $S_\rho$.
 Therefore, $\mp{1}{1}, \mp{6}{1}$ in $\mrow{1}(\V{\omega})$ and the corresponding $\mp{1}{7}, \mp{6}{7}$ in $\mrow{7}(\V{\omega})$ on $S_\rho$ are linearly related. Based on this and  the concentration and the symmetry of $\m{1}$ and $\m{6}$ in $T_1$ and $T_6$, we can show that $\m{1}=\m{6}=0\; a.e.$ on $S_\rho + \V{\pi}_1$, see Proposition \ref{prop: zero-corner} in Appendix \ref{app: discontinuity}, which implies the discontinuity of $\m{1}$ and $\m{6}$ at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 
 \begin{proposition}\label{prop: continuity}
-Given the same condition as in Lemma \ref{lem: rank1}, $\m{1},\m{6}$ are not continuous at both $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$.
+Given the same condition as in Lemma \ref{lem: rank1}, $\m{1},\m{6}$ cannot be continuous at both $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 \end{proposition}
 \noindent{\it Proof. }
 If $\m{1}$ is continuous at $(\frac{\pi}{2},\frac{\pi}{2})$, then $\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2}) = \lim_{\alpha\rightarrow 1^-}\widetilde{m_1}(\V{\omega}(\alpha)) = 0$, where $\{\V{\omega}(\alpha),\,0\leq \alpha<1\} \subset S_\rho + \V{\pi}_1$ and $\V{\omega}(1) = (\frac{\pi}{2},\frac{\pi}{2})$. By symmetry, we have $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2}) = 0$. Similarly, the continuity at $(-\frac{\pi}{2},-\frac{\pi}{2})$ implies $\widetilde{m_1}(-\frac{\pi}{2},-\frac{\pi}{2}) = \widetilde{m_6}(-\frac{\pi}{2},-\frac{\pi}{2}) = 0$. Therefore $\mrow{1}(\V{0}) = \mrow{7}(\V{0}) = \mathbf{0}$ at the origin which results in contradiction with Lemma \ref{lem: rank1}.\qed\\[1em]%and from \eqref{eq: m0C} $m_0^C(0)=0$ so that $m_0(0)=0$, %  On the other hand, Proposition\ref{prop: origin-det} implies that $m_0(0) = 0$ as $a = |\widetilde{m_1}(\pi_1)| = 0$, which results in contradiction.
 The following theorem summarizes our main result.
 \begin{theorem}\label{thm: thm}
-If  $\m{j}$ concentrates in $T_j$ and have symmetries \eqref{eq: sym-m16} and \eqref{eq: sym-m34}, then \eqref{eq: LS-new} doesn't have feasible solution of $m_j$ given continuous $\m{1}$ and $\m{6}$.
+If the $\m{j}$ concentrate in $T_j$ and have symmetries \eqref{eq: sym-m16} and \eqref{eq: sym-m34}, then \eqref{eq: LS-new} doesn't have feasible solution of $m_j$ if $\m{1}$ and $\m{6}$ are continuous.
 \end{theorem}
 
 \section{Numerical construction of bi-orthogonal bases}\label{sec: solve-quincunx}
-In this section, we develop a numerical construction of bi-orthogonal bases on a dyadic quincunx lattice in our previous setup. 
-Following the same approach of Cohen et al, we first design $\m{j},\,j = 1,\cdots,6,$ on the canonical frequency square $S_0 = [-\pi,\pi)\times[-\pi,\pi),$ then solve for $m_0,\widetilde{m_0}$ and $m_j$ on $S_0$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
+In this section, we develop a numerical construction of bi-orthogonal bases on a dyadic quincunx lattice following an approach similar to Cohen et al. We first design $\m{j},\,j = 1,\cdots,6,$ on the canonical frequency square $S_0 = [-\pi,\pi)\times[-\pi,\pi),$ then solve for $m_0,\widetilde{m_0}$ and $m_j$ on $S_0$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
 %we focus on solving $m_i$'s and $\widetilde{m_0}$ in \eqref{eq: LS-new} given pre-designed $\m{i},\,i=1,\cdots,6$. %Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
 
 \subsection{Design of input $\m{j}$}\label{sec: phase-design}
@@ -245,7 +243,7 @@ Based on \eqref{eq: m-form} and the symmetries of $|\m{j}|$, for $|m_0(\V{\omega
 If $\exists\,\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2},0)\},\,s.t. \,|m_0(\V{\omega})|\neq 0,$ then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}\,2\pi)$. 
 \end{lemma} 
 
-Because $m_0(\V{\omega})$ can be expressed as in \eqref{eq: m0-cramer}, $|m_0(\V{\omega})|\neq 0$ is equivalent to $\det(\,\Msub[-k_{\V{\omega}},:](\V{\omega})\,)\neq 0$, i.e. $\Msub(\V{\omega})$ is full rank. The constraint on $\V{\eta}_1$ and $\V{\eta}_6$ then follows from substituting non-zero entries of $\Msub(\V{\omega})$ by \eqref{eq: m-form} and consider the linear dependency of the columns in $\Msub(\V{\omega})$. For the full proof of Lemma \ref{lem: phase-ineq}, see Appendix \ref{app: input design}.
+Because $m_0(\V{\omega})$ can be expressed as in \eqref{eq: m0-cramer}, $|m_0(\V{\omega})|\neq 0$ is equivalent to $\det(\,\Msub[\widehat{k_{\V{\omega}}},:](\V{\omega})\,)\neq 0$, i.e. $\Msub(\V{\omega})$ is full rank. The constraint on $\V{\eta}_1$ and $\V{\eta}_6$ then follows from substituting non-zero entries of $\Msub(\V{\omega})$ by \eqref{eq: m-form} and consider the linear dependency of the columns in $\Msub(\V{\omega})$. For the full proof of Lemma \ref{lem: phase-ineq}, see Appendix \ref{app: input design}.
 
 Similarly, if $\exists\,\V{\omega}\in \{\omega_1 = \omega_2,\, \omega_1\in(0,\frac{\pi}{2})\},\, s.t.\, |m_0(\V{\omega})| \neq 0$, then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_1)\neq 0(\text{mod}\,2\pi)$. These two conditions are equivalent to 
 \begin{align*}
@@ -267,9 +265,9 @@ If $|\widetilde{m_0}(\V{0})|\neq 0,$ then $\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)
 The proof of Proposition \ref{prop: origin-det} is similar to that of Lemma \ref{lem: phase-ineq} but more involved. See Appendix \ref{app: input design} for the full proof.
 
 \begin{comment}
-{\it Remark.} In Lemma \ref{lem: phase-ineq}, $\Msub[:,1]$ and $\Msub[:,6]$ being independent only guarantees $\det(\Msub[-k_{\V{\omega}},:])\neq 0$. However, \eqref{eq: m0-cramer} implies that $|m_0(\V{\omega})|\propto \det(\Msub[-k_{\V{\omega}},:])$ hence it is preferred to maximize the determinant. Since
+{\it Remark.} In Lemma \ref{lem: phase-ineq}, $\Msub[:,1]$ and $\Msub[:,6]$ being independent only guarantees $\det(\Msub[\widehat{k_{\V{\omega}}},:])\neq 0$. However, \eqref{eq: m0-cramer} implies that $|m_0(\V{\omega})|\propto \det(\Msub[\widehat{k_{\V{\omega}}},:])$ hence it is preferred to maximize the determinant. Since
 \begin{align*}
-\det(\Msub[-k_{\V{\omega}}, :]) = \det\big(\big[\, \Msub[-k_{\V{\omega}},-6], \;\Msub[-k_{\V{\omega}},6] + c \cdot\Msub[-k_{\V{\omega}},1]  \,\big]\big),\quad 
+\det(\Msub[\widehat{k_{\V{\omega}}}, :]) = \det\big(\big[\, \Msub[\widehat{k_{\V{\omega}}},-6], \;\Msub[\widehat{k_{\V{\omega}}},6] + c \cdot\Msub[\widehat{k_{\V{\omega}}},1]  \,\big]\big),\quad 
 \end{align*}
 $\forall c\in \mathbb{C}$, the angle between $\Msub[:,1]$ and $\Msub[:,6]$ should be maximized.
 Therefore, a stronger condition than ({\bf c1.1}) is to require $\Msub[:,1]$ and $\Msub[:,6]$ be orthogonal, which is equivalent to 
@@ -309,7 +307,7 @@ where
 \subsection{Solving \eqref{eq: LS-new} and \eqref{eq: identity-cond} for $m_0,\widetilde{m_0}$ and $m_j$}\label{subsec: compute-m0}
 Once $\m{j}, j= 1,\cdots, 6$ are fixed on $S_0$, \eqref{eq: LS-new} can be reformulated as follows,
 \begin{align}\label{eq: mj-eq}
-\M[:,-0](\V{\omega}) 
+\M[:,\widehat{0}](\V{\omega}) 
 \begin{bmatrix}
 m_1(\V{\omega})\\
 m_2(\V{\omega})\\
@@ -330,41 +328,41 @@ m_6(\V{\omega})
 0
 \end{bmatrix} \doteq \V{b}_0'(\V{\omega}),
 \end{align}
-where $\M[:,-0](\V{\omega})$ is completely determined by $\m{j},\,j = 1,\cdots,6$ 
+where $\M[:,\widehat{0}](\V{\omega})$ is completely determined by $\m{j},\,j = 1,\cdots,6$ 
 and $m_j,\,j=1,\cdots,6$ can be uniquely solved on $S_0$ if and only if $\forall\V{\omega}\in S_0$
 \hspace{-1em}
 \begin{enumerate}[leftmargin=.5in]
-\item[\mylabel{cond: i}{(\ref{subsec: compute-m0}.i)}] $\M[:,-0](\V{\omega})$ is full rank,%
-\item[\mylabel{cond: ii}{(\ref{subsec: compute-m0}.ii)}] $\V{b}_0'(\V{\omega})$ is in $col\big(\M[:,-0](\V{\omega})\big)$, the column space of $\M[:,-0](\V{\omega})$.%
+\item[\mylabel{cond: i}{(\ref{subsec: compute-m0}.i)}] $\M[:,\widehat{0}](\V{\omega})$ is full rank,%
+\item[\mylabel{cond: ii}{(\ref{subsec: compute-m0}.ii)}] $\V{b}_0'(\V{\omega})$ is in $col\big(\M[:,\widehat{0}](\V{\omega})\big)$, the column space of $\M[:,\widehat{0}](\V{\omega})$.%
 \end{enumerate}
-%Because , \ref{cond: i} can be easily checked by computing $\det(\M[:,-0]^\top\M[:,-0])$ and see if it is non-zero. Next, we show that (ii) provides an explicit way of computing $m_0(\V{\omega})$ without knowing $\m{0}$.
-Next, we show that \ref{cond: ii} breaks down to constraints on two submatrices of $\M[:,-0](\V{\omega})$ and quadruples $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$, $\big( m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7) \big)$.
+%Because , \ref{cond: i} can be easily checked by computing $\det(\M[:,\widehat{0}]^\top\M[:,\widehat{0}])$ and see if it is non-zero. Next, we show that (ii) provides an explicit way of computing $m_0(\V{\omega})$ without knowing $\m{0}$.
+Next, we show that \ref{cond: ii} breaks down to constraints on two submatrices of $\M[:,\widehat{0}](\V{\omega})$ and quadruples $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$, $\big( m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7) \big)$.
 \begin{proposition}\label{prop: m0_formula}
-Let $\M[odd,-0](\V{\omega}),\M[even,-0](\V{\omega})\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,-0](\V{\omega})$ consisting of odd and even indexed rows respectively. $\forall\V{\omega}\in S_0$, suppose {\rm\ref{cond: i}} holds, then {\rm\ref{cond: ii}} holds if and only if $rank(\,\M[odd,-0](\V{\omega})\,) = rank(\,\M[even,-0](\V{\omega})\,) = 3$ and 
+Let $\M[odd,\widehat{0}](\V{\omega}),\M[even,\widehat{0}](\V{\omega})\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,\widehat{0}](\V{\omega})$ consisting of odd and even indexed rows respectively. $\forall\V{\omega}\in S_0$, suppose {\rm\ref{cond: i}} holds, then {\rm\ref{cond: ii}} holds if and only if $rank(\,\M[odd,\widehat{0}](\V{\omega})\,) = rank(\,\M[even,\widehat{0}](\V{\omega})\,) = 3$ and 
 \begin{align}\label{eq: m0-even-null}
-[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,-0](\V{\omega}) = \V{0},
+[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,\widehat{0}](\V{\omega}) = \V{0},
 \end{align}
 \begin{align}\label{eq: m0-odd-null}
-[m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7)] \,\M[odd,-0](\V{\omega}) = \V{0}.
+[m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7)] \,\M[odd,\widehat{0}](\V{\omega}) = \V{0}.
 \end{align}
 \end{proposition}
 
 For the proof of Proposition \ref{prop: m0_formula}, see Appendix \ref{app: solving}.
 
 \noindent{\it Remark.} 
-Note that the submatrices $\M[odd,-0](\V{\omega})$ and $\M[even,-0](\V{\omega})$ are dual to each other under the shift of variable $\V{\omega}\mapsto \V{\omega}+\V{\pi}_i$, when $i$ is odd. Therefore, the constraints $rank(\,\M[even,-0](\V{\omega})\,) = 3$ and \eqref{eq: m0-even-null} from Proposition \ref{prop: m0_formula} are sufficient for \ref{cond: ii} to hold on $S_0$. Furthermore, because $\M[even, -0](\V{\omega})$ and $(\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4, \V{\omega} + \V{\pi}_6)$ are invariant to the shift of variable $\V{\omega}\mapsto\V{\omega}+\V{\pi}_i$ when $i$ is even, we only need to consider the constraints above on the subset $[-\pi,0)\times[-\pi,0)$ of $S_0$.
+Note that the submatrices $\M[odd,\widehat{0}](\V{\omega})$ and $\M[even,\widehat{0}](\V{\omega})$ are dual to each other under the shift of variable $\V{\omega}\mapsto \V{\omega}+\V{\pi}_i$, when $i$ is odd. Therefore, the constraints $rank(\,\M[even,\widehat{0}](\V{\omega})\,) = 3$ and \eqref{eq: m0-even-null} from Proposition \ref{prop: m0_formula} are sufficient for \ref{cond: ii} to hold on $S_0$. Furthermore, because $\M[even, \widehat{0}](\V{\omega})$ and $(\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4, \V{\omega} + \V{\pi}_6)$ are invariant to the shift of variable $\V{\omega}\mapsto\V{\omega}+\V{\pi}_i$ when $i$ is even, we only need to consider the constraints above on the subset $[-\pi,0)\times[-\pi,0)$ of $S_0$.
 %Both conditions \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null} hold $\forall \V{\omega}\in[-\pi,\pi)\times[-\pi,\pi)$ if and only if \eqref{eq: m0-even-null} holds $\forall \V{\omega}\in [-\pi,0)\times[-\pi,0)$.
 
-In sum, $\M[:,-0](\V{\omega})$ (or equivalently $\widetilde{m_j}$) has to satisfy the following rank constraints on $[-\pi,0)\times[-\pi,0)$ for \eqref{eq: mj-eq} to be uniquely solvable on $S_0$, 
+In sum, $\M[:,\widehat{0}](\V{\omega})$ (or equivalently $\widetilde{m_j}$) has to satisfy the following rank constraints on $[-\pi,0)\times[-\pi,0)$ for \eqref{eq: mj-eq} to be uniquely solvable on $S_0$, 
 \begin{align}\label{eq: Mranks}
-rank(\,\M[:,-0](\V{\omega})\,) = 6,\, rank(\,\M[even,-0](\V{\omega})\,) = 3.
+rank(\,\M[:,\widehat{0}](\V{\omega})\,) = 6,\, rank(\,\M[even,\widehat{0}](\V{\omega})\,) = 3.
 \end{align}
 As the rank constraints are hard to impose while designing $\widetilde{m_j}$, in our numerical experiments, we check if these rank constraints are satisfied afterwards, see step 1. in \ref{alg}.
 
-Suppose \eqref{eq: Mranks} hold, the quadruple  $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ can then be uniquely determined by \eqref{eq: m0-even-null} {\it up to a constant $a_{\V{\omega}} $}, where its corresponding vector is orthogonal to the column space of $\M[even,-0](\V{\omega})$ of co-dimension 1. In particular, we obtain $m_0(\V{\omega})$ on $S_0$ by solving \eqref{eq: m0-even-null} independently at each $\V{\omega}$ on $[-\pi,0)\times[-\pi,0)$, see step 2. in \ref{alg}. Since the constant $a_{\V{\omega}}$ can change drastically as $\V{\omega}$ changes, there is potential lack of regularity of $m_0(\V{\omega})$ as an artifact of the algorithm. Figure \ref{fig: m_0_m0dual} shows an $m_0(\V{\omega})$ computed in this way, which has discontinuous phase due to $a_{\V{\omega}}$. Fortunately, this artificial irregularity can be removed as suggested by the following proposition.
+Suppose \eqref{eq: Mranks} hold, the quadruple  $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ can then be uniquely determined by \eqref{eq: m0-even-null} {\it up to a constant $a_{\V{\omega}} $}, where its corresponding vector is orthogonal to the column space of $\M[even,\widehat{0}](\V{\omega})$ of co-dimension 1. In particular, we obtain $m_0(\V{\omega})$ on $S_0$ by solving \eqref{eq: m0-even-null} independently at each $\V{\omega}$ on $[-\pi,0)\times[-\pi,0)$, see step 2. in \ref{alg}. Since the constant $a_{\V{\omega}}$ can change drastically as $\V{\omega}$ changes, there is potential lack of regularity of $m_0(\V{\omega})$ as an artifact of the algorithm. Figure \ref{fig: m_0_m0dual} shows an $m_0(\V{\omega})$ computed in this way, which has discontinuous phase due to $a_{\V{\omega}}$. Fortunately, this artificial irregularity can be removed as suggested by the following proposition.
 
 \begin{comment}
-By Lemma \ref{lem: M-symmetry}, $\M[:,-0]$ are the same at $\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4$ and $\V{\omega} + \V{\pi}_6$ up to row permutations. Therefore, the columns of the matrix $\V{B}$ below should be in $col\big(\M[:,-0](\V{\omega})\big)$,
+By Lemma \ref{lem: M-symmetry}, $\M[:,\widehat{0}]$ are the same at $\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4$ and $\V{\omega} + \V{\pi}_6$ up to row permutations. Therefore, the columns of the matrix $\V{B}$ below should be in $col\big(\M[:,\widehat{0}](\V{\omega})\big)$,
 \begin{align*}
 \V{B}&= \widetilde{\mathbf{m}_0}^\uparrow\otimes\mathbf{m}_0 - [\V{b}_0,\V{b}_2,\V{b}_4,\V{b}_6]\\
 &\doteq
@@ -398,24 +396,24 @@ By Lemma \ref{lem: M-symmetry}, $\M[:,-0]$ are the same at $\V{\omega},\V{\omega
 \end{bmatrix},
 \end{align*}
 
-Let $\M[:,-0] = U\Sigma V^\top$ be the singular value decomposition of $\M[:,-0]$, such that $U(\V{\omega})\in\mathbb{C}^{8\times 6}$ consists of left singular vectors of $\M[:,-0](\V{\omega})$ and $UU^\top(\V{\omega})$ is a projection matrix of $col\big(\M[:,-0](\V{\omega})\big)$. Therefore, $\V{B}$ satisfies
+Let $\M[:,\widehat{0}] = U\Sigma V^\top$ be the singular value decomposition of $\M[:,\widehat{0}]$, such that $U(\V{\omega})\in\mathbb{C}^{8\times 6}$ consists of left singular vectors of $\M[:,\widehat{0}](\V{\omega})$ and $UU^\top(\V{\omega})$ is a projection matrix of $col\big(\M[:,\widehat{0}](\V{\omega})\big)$. Therefore, $\V{B}$ satisfies
 \begin{align}\label{eq: cond-full}
 \V{P}\V{B} = (\V{U}\V{U}^\top - \V{I}_8 )\V{B} = \V{0}\in\mathbb{C}^8,
 \end{align}
- where $\V{P}$ is the projection onto $col\big(\M[:,-0](\V{\omega})\big)^\bot$, $\V{I}_8$ is the identity matrix in $\mathbb{C}^8$. Because the even rows of $\V{B}$ are all zeros, we can down-sample its rows and correspondingly the columns of $\V{P}$ and \eqref{eq: cond-full} can be reduced to 
+ where $\V{P}$ is the projection onto $col\big(\M[:,\widehat{0}](\V{\omega})\big)^\bot$, $\V{I}_8$ is the identity matrix in $\mathbb{C}^8$. Because the even rows of $\V{B}$ are all zeros, we can down-sample its rows and correspondingly the columns of $\V{P}$ and \eqref{eq: cond-full} can be reduced to 
 \begin{align}
 \V{P}^\downarrow\V{B}^\downarrow = \V{P}^\downarrow \big(\widetilde{\mathbf{m}_0}\otimes \mathbf{m}_0 - \V{I}_4\big) = \V{0}\in\mathbb{C}^8
 \end{align}
 $\V{P}^\downarrow\in\mathbb{C}^{8\times 4}$ consists of odd columns of $\V{P}$ and $\V{B}^\downarrow\in\mathbb{C}^{4\times 4}$ consists of odd rows of $\V{B}$.
 
-Let $C_{\V{\omega}} = det(\M[-k_{\V{\omega}},:])$, then we have the following observation.
+Let $C_{\V{\omega}} = det(\M[\widehat{k_{\V{\omega}}},:])$, then we have the following observation.
 \begin{lemma}\label{lem: equal-det}
 $C_{\V{\omega}} = C_{\V{\omega}+\V{\pi}_2} = C_{\V{\omega}+\V{\pi}_4} = C_{\V{\omega}+\V{\pi}_6}$
 \end{lemma}
 \noindent{\it Proof}
 Because $\widetilde{M}(\V{\omega}+\V{\pi}_2) = P_{\V{\pi}_2}\M(\V{\omega})$ where $P_{\V{\pi}_2}$ is a row permutation matrix, it follows from the definition of $C_{\V{\omega}}$ that 
-$C_{\V{\omega}} = det\big(\M[-k_{\V{\omega}},:](\V{\omega})\big) = det\big(\M[-k_{\V{\omega}+\V{\pi}_2},:](\V{\omega}+\V{\pi}_2) \big)= C_{\V{\omega}+\V{\pi}_2}$ where 
-$\mathbf{1}_{k_{\V{\omega}+\V{\pi}_2}} = P_{\V{\pi}_2}\mathbf{1}_{k_{\V{\omega}}}$.
+$C_{\V{\omega}} = det\big(\M[\widehat{k_{\V{\omega}}},:](\V{\omega})\big) = det\big(\M[-k_{\V{\omega}+\V{\pi}_2},:](\V{\omega}+\V{\pi}_2) \big)= C_{\V{\omega}+\V{\pi}_2}$ where 
+$\mathbf{1}_{k_{\V{\omega}+\V{\pi}_2}} = P_{\V{\pi}_2}\mathbf{1}_{\widehat{k_{\V{\omega}}}}$.
 \qed\\[1em]
 We assume that $m_0\in\mathbb{R}_{\geq 0}$ without phase. Let $m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}|\in \mathbb{R}_{\geq 0}$ and $\mc{0} = \m{0}/|C_{\V{\omega}}|$, then Lemma \ref{lem: equal-det} implies the following.
 \end{comment}
@@ -483,9 +481,9 @@ Supplementary numerical results on solving $\m{0}$ by optimization are provided 
 Finally, we plug $m_0(\V{\omega})$ and $\m{0}$ into $\V{b}_0'(\V{\omega})$ on the right of \eqref{eq: mj-eq} and solve the linear system, which has a guaranteed unique solution.
 
 %According to Proposition \ref{prop: mc}, we can first solve $\mc{0}$ and $m_0^C(\V{\omega})$ and then construct $c(\V{\omega})$ for optimal $\m{0}$ and $m_0(\V{\omega})$. 
-%In particular, $m_0^C$ can be computed without knowing $k_{\V{\omega}}$,
+%In particular, $m_0^C$ can be computed without knowing $\widehat{k_{\V{\omega}}}$,
 %\begin{align}\label{eq: m0C}
-%m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}| = |det(\M_{1,1}[-k_{\V{\omega}},:])| = \prod_{i=1}^6\sigma_i(\M_{1,1}[-k_{\V{\omega}},:]) = \prod_{i=1}^6\sigma_i(\M_{1,1}).
+%m_0^C(\V{\omega}) = m_0(\V{\omega})|C_{\V{\omega}}| = |det(\M_{1,1}[\widehat{k_{\V{\omega}}},:])| = \prod_{i=1}^6\sigma_i(\M_{1,1}[\widehat{k_{\V{\omega}}},:]) = \prod_{i=1}^6\sigma_i(\M_{1,1}).
 %\end{align}
 %In practice, we first perform QR decomposition on $\Msub:=\M_{1,1}$ and then take the absolute value of the product of the diagonal entries of the upper triangular matrix, $diag(R)$. 
 \vspace{.5em}
@@ -496,7 +494,7 @@ Finally, we plug $m_0(\V{\omega})$ and $\m{0}$ into $\V{b}_0'(\V{\omega})$ on th
 \item[\mylabel{alg}{Algorithm 1}. Construction of $m_0,\widetilde{m_0}$ and $\widetilde{m_j}$ in bi-orthogonal basis]\
 \begin{itemize}
 \item[Input:] $\m{j},\,j=1,...,6$
-\item[step 1.] construct $\M[:,-0](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks},%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[-k_{\V{\omega}},:])\right|$
+\item[step 1.] construct $\M[:,\widehat{0}](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks},%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[\widehat{k_{\V{\omega}}},:])\right|$
 \item[step 2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
 \item[step 3.] solve the optimization \eqref{eq: opt} for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$,
 \item[step 4.] choose $\pi$-periodic $c(\V{\omega})$ and replace $m_0(\V{\omega}),\, \m{0}$ by $m_0'(\V{\omega}) = c(\V{\omega})m_0(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})=\m{0}\overline{c}(\V{\omega})^{-1}$,
