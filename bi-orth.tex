@@ -164,9 +164,13 @@ In this subsection, we show our main result that for \eqref{eq: LS-new} to be so
 
 We assume that
 $|\m{1}|$ and $|\m{6}|$ are symmetric with respect to the diagonal $\omega_1=\omega_2$, i.e.
-$$ |\widetilde{m_1}(\V{\omega})| = |\widetilde{m_6}(\V{\omega}')|\quad \forall\, \omega_1=\omega_2', \,\omega_2=\omega_1',$$
+\begin{align}\label{eq: sym-m16}
+ |\widetilde{m_1}(\V{\omega})| = |\widetilde{m_6}(\V{\omega}')|\quad \forall\, \omega_1=\omega_2', \,\omega_2=\omega_1',
+\end{align}
 and likewise for $\m{3}$ and $\m{4}$,
-$$ |\widetilde{m_3}(\V{\omega})| = |\widetilde{m_4}(\V{\omega}')|\quad \forall\, \omega_1=-\omega_2', \,\omega_2=-\omega_1'.$$
+\begin{align}\label{eq: sym-m34}
+|\widetilde{m_3}(\V{\omega})| = |\widetilde{m_4}(\V{\omega}')|\quad \forall\, \omega_1=-\omega_2', \,\omega_2=-\omega_1'.
+\end{align}
 %Same as in Section \ref{subsec: cohen-summary} , we first compute $m_0$ and assume that $\M$ is full rank, otherwise \eqref{eq: LS-new} has infinitely many solutions. Moreover, $\M[2:8,:]$ is singular. 
 %Proposition \ref{prop: feasibility} provides a necessary condition such that the numerical optimization solving $\widetilde{m_0}$ is feasible.
 \begin{figure}
@@ -186,7 +190,7 @@ Let $T_j$ be pairs of triangles shown in Figure \ref{fig: partition 2}, such tha
 \noindent{\bf Definition.}  $\widetilde{m_j}$ {\it concentrates} within $T_j$ if 
 \begin{itemize}
 \item[(i)] $\Omega_j\subset T_j$;
-\item[(ii)]$\text{supp}(\widetilde{m_j})\subset T_{j-1}^+\bigcup T_j\bigcup T_{j+1}^-$ and $\int_\Omega|\widetilde{m_j}| > \int_{\Omega'}|\widetilde{m_j}|, \forall\, \Omega\subset T_j\bigcap\text{supp}(\widetilde{m_j})$, where $\Omega' \subset T_{j-1}^+\bigcup T_{j+1}^-$ is symmetric to $\Omega$ with respect to the boundary of $T_j$.
+\item[(ii)]$\text{supp}(\widetilde{m_j})\subset T_{j-1}^+\bigcup T_j\bigcup T_{j+1}^-$ and $\int_\Omega|\widetilde{m_j}| > \int_{\Omega'}|\widetilde{m_j}|, \forall\, \Omega\subset T_j\bigcap\text{supp}(\widetilde{m_j})$ s.t. $|\Omega|>0$, where $\Omega' \subset T_{j-1}^+\bigcup T_{j+1}^-$ is symmetric to $\Omega$ with respect to the boundary of $T_j$.
 \end{itemize}
 {\it Remark.}
 For $\widetilde{m_j}$ to concentrate in $T_j$, $\widetilde{m_j}$ should be ``mainly" supported in $T_j$ (condition (i)) and ``decay" properly outside of $T_j$ (conditoin (ii)).
@@ -206,8 +210,8 @@ $\exists\, \rho>0$ s.t. $\forall \V{\omega}\in S_\rho$, if $\,\M[-0,:](\V{\omega
 Lemma \ref{lem: rank1} can be proved by analyzing the linear dependency and independency between $\mrow{i}$ on $S_\rho$, since $\mrow{i}$ have known locations of zero entries when $\rho$ is small due to the concentration of $\widetilde{m_j}$.
 For the full proof of Lemma \ref{lem: rank1}, see Appendix \ref{app: lemmas}.
 
-Concentration and symmetry of $\m{3}$ and $\m{4}$ on $T_3$ and $T_4$ implies that  $rank(\mrow{3},\mrow{5}) \neq 1\; a.e.$ on $S_\rho$ hence $rank(\mrow{1},\mrow{7}) = 1\; a.e.$ on $S_\rho$.
-Since only $\mp{1}{1}, \mp{6}{1}$ could be non-zero in $\mrow{1}$ and $\mp{1}{7}, \mp{6}{7}$ could be non-zero in $\mrow{7}$ on $S_\rho$, they are linearly related. Based on this, we can show that $\m{1},\m{6}$ are zero almost everywhere on $S_\rho + \V{\pi}_1$, see Proposition \ref{prop: zero-corner} in Appendix \ref{app: discontinuity}, which implies the discontinuity of $\m{1}$ and $\m{6}$ at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
+The concentration and the symmetry of $\m{3}$ and $\m{4}$ in $T_3$ and $T_4$ together imply that  $rank(\mrow{3},\mrow{5}) \neq 1\; a.e.$ on $S_\rho$, see Lemma \ref{lem: full-rank-m35} in Appendix \ref{app: discontinuity}, hence $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,) = 1\; a.e.$ on $S_\rho$.
+Therefore, $\mp{1}{1}, \mp{6}{1}$ in $\mrow{1}(\V{\omega})$ and the corresponding $\mp{1}{7}, \mp{6}{7}$ in $\mrow{7}(\V{\omega})$ on $S_\rho$ are linearly related. Based on this and  the concentration and the symmetry of $\m{1}$ and $\m{6}$ in $T_1$ and $T_6$, we can show that $\m{1}=\m{6}=0\; a.e.$ on $S_\rho + \V{\pi}_1$, see Proposition \ref{prop: zero-corner} in Appendix \ref{app: discontinuity}, which implies the discontinuity of $\m{1}$ and $\m{6}$ at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 
 \begin{proposition}\label{prop: continuity}
 Given the same condition as in Lemma \ref{lem: rank1}, $\m{1},\m{6}$ are not continuous at both $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$.
@@ -216,10 +220,11 @@ Given the same condition as in Lemma \ref{lem: rank1}, $\m{1},\m{6}$ are not con
 If $\m{1}$ is continuous at $(\frac{\pi}{2},\frac{\pi}{2})$, then $\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2}) = \lim_{\alpha\rightarrow 1^-}\widetilde{m_1}(\V{\omega}(\alpha)) = 0$, where $\{\V{\omega}(\alpha),\,0\leq \alpha<1\} \subset S_\rho + \V{\pi}_1$ and $\V{\omega}(1) = (\frac{\pi}{2},\frac{\pi}{2})$. By symmetry, we have $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2}) = 0$. Similarly, the continuity at $(-\frac{\pi}{2},-\frac{\pi}{2})$ implies $\widetilde{m_1}(-\frac{\pi}{2},-\frac{\pi}{2}) = \widetilde{m_6}(-\frac{\pi}{2},-\frac{\pi}{2}) = 0$. Therefore $\mrow{1}(\V{0}) = \mrow{7}(\V{0}) = \mathbf{0}$ at the origin which results in contradiction with Lemma \ref{lem: rank1}.\qed\\[1em]%and from \eqref{eq: m0C} $m_0^C(0)=0$ so that $m_0(0)=0$, %  On the other hand, Proposition\ref{prop: origin-det} implies that $m_0(0) = 0$ as $a = |\widetilde{m_1}(\pi_1)| = 0$, which results in contradiction.
 The following theorem summarizes our main result.
 \begin{theorem}\label{thm: thm}
-If  $\m{i}$ concentrates in $T_i$ and $\m{1},\m{6}$ are symmetric with respect to the diagonal $\omega_1=\omega_2$ to each other,  then  \eqref{eq: LS-new} doesn't have feasible solution given continuous $\m{1}$ and $\m{6}$.
+If  $\m{j}$ concentrates in $T_j$ and have symmetries \eqref{eq: sym-m16} and \eqref{eq: sym-m34}, then \eqref{eq: LS-new} doesn't have feasible solution of $m_j$ given continuous $\m{1}$ and $\m{6}$.
 \end{theorem}
 
 \section{Numerical construction of bi-orthogonal bases}\label{sec: solve-quincunx}
+In this section, we develop a numerical construction of bi-orthogonal bases on a dyadic quincunx lattice in our previous setup. 
 Following the same approach of Cohen et al, we first design $\m{j},\,j = 1,\cdots,6,$ on the canonical frequency square $S_0 = [-\pi,\pi)\times[-\pi,\pi),$ then solve for $m_0,\widetilde{m_0}$ and $m_j$ on $S_0$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
 %we focus on solving $m_i$'s and $\widetilde{m_0}$ in \eqref{eq: LS-new} given pre-designed $\m{i},\,i=1,\cdots,6$. %Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
 

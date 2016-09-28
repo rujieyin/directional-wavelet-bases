@@ -1,4 +1,4 @@
-\section{Proof of lemmas and propositions}\label{app: lemmas}
+\section{Proof of lemmas and propositions for bi-orthogonal schemes}\label{app: lemmas}
 
 \subsection{Discontinuity of $\m{j}$}\label{app: discontinuity}
 \begin{lemma}\label{lem: subM-singular-sys}
@@ -112,18 +112,25 @@ Since $S_\rho$ is in the low frequency domain, $m_0(\V{\omega})\neq 0$. \eqref{e
 On the other hand, (ii) and (iv) imply that $$rank(\Msub(\V{\omega}+\V{\pi}_2))=rank(\mrow{0},\mrow{4},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})= 5$$ and likewise $$rank(\Msub(\V{\omega}+\V{\pi}_4))=rank(\mrow{0},\mrow{2},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})= 5.$$ Therefore, $\det(\Msub(\V{\omega} + \V{\pi}_2)) = \det(\Msub(\V{\omega} + \V{\pi}_4)) = 0$ and \eqref{eq: m0-cramer} implies $m_0(\V{\omega}+\V{\pi}_2) = m_0(\V{\omega}+\V{\pi}_4) = 0$.\\
 If $\mrow{1}$ and $\mrow{7}$ are linearly independent and so are $\mrow{3}$ and $\mrow{5}$, then $$rank(\Msub(\V{\omega}+\V{\pi}_6))=rank(\mrow{2},\mrow{4},\mrow{1},\mrow{3},\mrow{5},\mrow{7}) = 6,$$ hence $m_0(\V{\omega}+\V{\pi}_6)\neq 0$. Therefore, $$[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)] = [*,0,0,*].$$ In addition, $d_{i,j} = 0,\, \forall(i,j)$ except $(0,6)$, so in \eqref{eq: singular-cond} $$\mathfrak{D}(\V{\omega}) = [d_{0,6}, 0, 0,0]^\top [0,0,0,1] + [0,0,0,d_{0,6}]^\top [-1,0,0,0].$$  By Proposition \ref{prop: feasibility}, the linear system \eqref{eq: LS-new} has no solution $\widetilde{m_0}$ and this proofs the lemma.\qed
 
-\begin{lemma}\label{lem: concentrate}
-If $\m{1} (\m{6})$ concentrates in $T_1 (T_6)$, then $|\m{6}| > |\m{1}|\,$ a.e. on $T_6\bigcap \text{supp}(\widetilde{m_6})$ ($|\m{1}| > |\m{6}|$ 
-a.e. on $T_1\bigcap\text{supp}(\widetilde{m_1})$).
+\begin{lemma}\label{lem: full-rank-m35}
+Let $\widetilde{S_\rho} = S_\rho\cap\{\V{\omega}:\, rank(\,\mrow{3}(\V{\omega}),\,\mrow{5}(\V{\omega})\,)= 1\}$, if $\m{3}$ and $\m{4}$ concentrate in $T_3$ and $T_4$ respectively, then $|\widetilde{S_\rho}|=0$.
 \end{lemma}
-\noindent{\it Proof}
-Let $B_6=\{\V{\omega}: |\m{6}| \leq |\m{1}|\}\bigcap T_6\bigcap supp(\widetilde{m_1})$ and $B_1$ be its mirror set with respect to $\omega_1 = \omega_2$ and suppose $|B_6|>0$, then $\int_{B_6}|\m{6}|\leq \int_{B_6}|\m{1}|$. On the other hand, since $\m{1}$ concentrates in $T_1$, we know $\int_{B_1}|\m{1}| > \int_{B_6}|\m{1}|$. Moreover, due to the symmetry of $\m{1},\m{6}$ and $B_1,B_6$, $\int_{B_1}|\m{1}| = \int_{B_6}|\m{6}|$, hence $\int_{B_6}|\m{1}| \geq\int_{B_6}|\m{6}| = \int_{B_1}|\m{1}| $ which results in contradiction.\qed
+\noindent{\it Proof.}
+Let $\widetilde{S_\rho} + \V{\pi}_3 = \{\V{\omega} + \V{\pi}_3,\, \V{\omega}\in \widetilde{S_\rho}\}$ and $\Omega'$ be the set symmetric to a set $\Omega\subset S_0$ with respect to the diagonal $\omega_1 = -\omega_2$. If $|\widetilde{S_\rho}|>0$, by the concentration of $\m{3}$ in $T_3$, $\forall\, \Omega\subset \widetilde{S_\rho} + \V{\pi}_3\subset T_3$ s.t. $|\Omega|> 0$, $\int_{\Omega}|\widetilde{m_3}| > \int_{\Omega'}|\widetilde{m_3}|$. Due to the symmetry between $|\widetilde{m_3}|$ and $|\widetilde{m_4}|$ defined in \eqref{eq: sym-m34}, $\int_{\Omega'}|\widetilde{m_3}| = \int_{\Omega}|\widetilde{m_4}|$. Therefore, $\int_{\Omega}|\widetilde{m_3}| >  \int_\Omega|\widetilde{m_4}|$ which implies that $|\m{3}| > |\m{4}|\; a.e.$ on $\widetilde{S_\rho}+\V{\pi}_3$ or equivalently $|\widetilde{m_3}(\V{\omega}+\V{\pi}_3)| > |\widetilde{m_4}(\V{\omega}+\V{\pi}_3)|\; a.e.$ on $\widetilde{S_\rho}$. Similarly, we have $|\widetilde{m_4}(\V{\omega}+\V{\pi}_5)| > |\widetilde{m_3}(\V{\omega}+\V{\pi}_5)|\; a.e.$ on $\widetilde{S_\rho}$ following the same analysis on $\widetilde{S_\rho}+\V{\pi}_5\subset T_4$.
+On the other hand, $rank(\,\mrow{3}(\V{\omega}),\,\mrow{5}(\V{\omega})\,)= 1$ on $\widetilde{S_\rho}$, hence $\widetilde{m_3}(\V{\omega}+\V{\pi}_3)\widetilde{m_4}(\V{\omega}+\V{\pi}_5) = \widetilde{m_3}(\V{\omega}+\V{\pi}_5)\widetilde{m_4}(\V{\omega}+\V{\pi}_3)$, which contradicts the previous two inequalities.\qed
+
+\begin{lemma}\label{lem: concentrate}
+If $\m{1} \;(\m{6})$ concentrates in $T_1 (T_6)$, then $|\m{6}| > |\m{1}|\,$ a.e. on $T_6\bigcap \text{supp}(\widetilde{m_6})$ \rm{(}$|\m{1}| > |\m{6}|$ 
+a.e. on $T_1\bigcap\text{supp}(\widetilde{m_1})$\rm{)}.
+\end{lemma}
+\noindent{\it Proof.}
+Let $B_6=\{\V{\omega}: |\m{6}| \leq |\m{1}|\}\bigcap T_6\bigcap supp(\widetilde{m_1})$ and $B_1$ be the set symmetric to $B_6$ with respect to $\omega_1 = \omega_2$ and suppose $|B_6|>0$, then $\int_{B_6}|\m{6}|\leq \int_{B_6}|\m{1}|$. On the other hand, since $\m{1}$ concentrates in $T_1$, we know $\int_{B_1}|\m{1}| > \int_{B_6}|\m{1}|$. Moreover, due to the symmetry of $\m{1},\m{6}$ and $B_1,B_6$, $\int_{B_1}|\m{1}| = \int_{B_6}|\m{6}|$, hence $\int_{B_6}|\m{1}| \geq\int_{B_6}|\m{6}| = \int_{B_1}|\m{1}| $ which results in contradiction.\qed
 
 \begin{proposition}\label{prop: zero-corner}
 If  $m_1\,(m_6)$ concentrates within $T_1\,(T_6)$, then $\m{1} = \m{6} = 0,\, a.e. $ on $ S_\rho + \V{\pi}_1$.
 \end{proposition}
 \noindent{\it Proof.}
-Consider frequency domain $S_\rho' = S_\rho\bigcap\{\omega_1<\omega_2\}.$ By Lemma \ref{lem: rank1}, $\exists\,\alpha_{\V{\omega}}\in\mathbb{C}, s.t.\,\mrow{1}(\V{\omega}) = \alpha_{\V{\omega}}\,\mrow{7}(\V{\omega}),\, \forall\, \V{\omega}\in S_\rho',$ i.e. $\widetilde{m_1}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_1}(\V{\omega} + \V{\pi}_7)$ and $\widetilde{m_6}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_6}(\V{\omega} + \V{\pi}_7)$. On the other hand, Lemma \ref{lem: concentrate} implies that $|\widetilde{m_1}(\V{\omega} + \V{\pi}_7)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_7)|$, hence $|\widetilde{m_1}(\V{\omega} + \V{\pi}_1)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_1)|$. Let $\Omega_6':= (S_\rho+\pi_1)\bigcap T_6$, then $\int_{\Omega_6'}|\m{1}| \geq\int_{\Omega_6'}|\m{6}|$, which will contradict Lemma \ref{lem: concentrate} unless $|\Omega_6'\bigcap\text{supp}(\widetilde{m_6})| = 0$, or equivalently $\alpha_{\V{\omega}}=0$ and so $\m{6} = \m{1} = 0,\,a.e.$ on $\Omega_6'$. By symmetry, $\m{6}=\m{1} = 0,\,a.e. $ on $(S_\rho+\V{\pi}_1)\setminus \Omega_6'$ as well.\qed
+Consider frequency domain $S_\rho' = S_\rho\bigcap\{\omega_1<\omega_2\}.$ By Lemma \ref{lem: rank1}, $\exists\,\alpha_{\V{\omega}}\in\mathbb{C}, s.t.\,\mrow{1}(\V{\omega}) = \alpha_{\V{\omega}}\,\mrow{7}(\V{\omega}),\,$ $\forall\, \V{\omega}\in S_\rho',$ i.e. $\widetilde{m_1}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_1}(\V{\omega} + \V{\pi}_7)$ and $\widetilde{m_6}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_6}(\V{\omega} + \V{\pi}_7)$. On the other hand, Lemma \ref{lem: concentrate} implies that $|\widetilde{m_1}(\V{\omega} + \V{\pi}_7)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_7)|$, hence $|\widetilde{m_1}(\V{\omega} + \V{\pi}_1)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_1)|$. Let $\Omega_6'\doteq (S_\rho+\V{\pi}_1)\bigcap T_6$, then $\int_{\Omega_6'}|\m{1}| \geq\int_{\Omega_6'}|\m{6}|$, which will contradict Lemma \ref{lem: concentrate} unless $|\Omega_6'\bigcap\text{supp}(\widetilde{m_6})| = 0$, or equivalently $\alpha_{\V{\omega}}=0$ and so $\m{6} = \m{1} = 0,\,a.e.$ on $\Omega_6'$. By symmetry, $\m{6}=\m{1} = 0,\,a.e. $ on $(S_\rho+\V{\pi}_1)\setminus \Omega_6'$ as well.\qed
 
 \subsection{Design of input $\m{j}$}\label{app: input design}
 {\bf Proof of Lemma \ref{lem: phase-ineq}}:\\[.2em]
