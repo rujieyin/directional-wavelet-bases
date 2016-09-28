@@ -201,12 +201,12 @@ Given $\m{j}$ that concentrates in $T_j$, we study the singularity condition on 
 
 Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\widetilde{m_6}(\V{\omega}+\V{\pi}_i)]\in\mathbb{C}^6,\, i = 0,\cdots,7$ be the rows of $\M[:,-0](\V{\omega})$. 
 \begin{lemma}\label{lem: rank1}
-$\exists\, \rho>0$ s.t. $\forall \V{\omega}\in S_\rho$ if $\,\M[-0,:](\V{\omega})$ is singular, then $rank(\mrow{1},\mrow{7})=1$ or $rank(\mrow{3},\mrow{5}) = 1$.
+$\exists\, \rho>0$ s.t. $\forall \V{\omega}\in S_\rho$, if $\,\M[-0,:](\V{\omega})$ is singular, then $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,)=1$ or $rank(\,\mrow{3}(\V{\omega}\,),\mrow{5}(\V{\omega})) = 1$.
 \end{lemma}
 Lemma \ref{lem: rank1} can be proved by analyzing the linear dependency and independency between $\mrow{i}$ on $S_\rho$, since $\mrow{i}$ have known locations of zero entries when $\rho$ is small due to the concentration of $\widetilde{m_j}$.
 For the full proof of Lemma \ref{lem: rank1}, see Appendix \ref{app: lemmas}.
 
-Without loss of generality, in the following analysis, we assume $rank(\mrow{1},\mrow{7}) = 1$ on $S_\rho$.
+Concentration and symmetry of $\m{3}$ and $\m{4}$ on $T_3$ and $T_4$ implies that  $rank(\mrow{3},\mrow{5}) \neq 1\; a.e.$ on $S_\rho$ hence $rank(\mrow{1},\mrow{7}) = 1\; a.e.$ on $S_\rho$.
 Since only $\mp{1}{1}, \mp{6}{1}$ could be non-zero in $\mrow{1}$ and $\mp{1}{7}, \mp{6}{7}$ could be non-zero in $\mrow{7}$ on $S_\rho$, they are linearly related. Based on this, we can show that $\m{1},\m{6}$ are zero almost everywhere on $S_\rho + \V{\pi}_1$, see Proposition \ref{prop: zero-corner} in Appendix \ref{app: discontinuity}, which implies the discontinuity of $\m{1}$ and $\m{6}$ at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 
 \begin{proposition}\label{prop: continuity}
