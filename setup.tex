@@ -1,12 +1,14 @@
 \section{Framework Setup}\label{sec: setup}
 We summarize 2D-MRA systems and the relation between frequency domain partition and sub-lattice of $\mathbb{Z}^2$ with critical downsampling following \cite{yin2014orthshear}.
 
-\subsection{Notation}
-Throughout this paper, we use upper case bold font for matrices $(e.g.\;\V{A},\V{B})$, lower case bold font for vectors $(e.g.\;\V{a},\V{b})$ and upper case italics for subsets $(e.g.\;C_1,\,C_2)$ of the frequency domain. We denote the conjugate transpose of a matrix $\V{A}$ by $\V{A}^*$. For $\V{a}$ in a $d$-dimensional vector space over $\mathbb{F}$, we use the convention $\V{a}\in\mathbb{F}^{d\times 1}$ and $\V{a}^*$ for its conjugate row vector. For matrices and vectors, the indexing of rows and columns starts with zero.
+\subsection{Notations and conventions}
+Throughout this paper, we use upper case bold font for matrices $(e.g.\;\V{A},\V{B})$, lower case bold font for vectors $(e.g.\;\V{a},\V{b})$ and upper case italics for subsets $(e.g.\;C_1,\,C_2)$ of the frequency domain. We denote the conjugate transpose of a matrix $\V{A}$ by $\V{A}^*$. For $\V{a}$ in a $d$-dimensional vector space over $\mathbb{F}$, we use the convention $\V{a}\in\mathbb{F}^{d\times 1}$ and $\V{a}^*$ for its conjugate row vector. 
+
+We adopt conventions typically used in scientific computing programs and packages. For matrices and vectors, the indexing of rows and columns starts with zero. For the axes of the frequency plane, we denote the vertical axis as $\omega_1$-axis increasing from top to bottom and the horizontal axis as $\omega_2$-axis increasing from left to right, e.g. Figure \ref{fig: partition}.
 
 \subsection{Multi-resolution analysis and sub-lattice sampling}
 In an MRA, given a scaling function $\phi\in L^2(\mathbb{R}^2)$, s.t. $\Vert\phi\Vert_2=1$,
-the base approximation space is defined as $V_0 = \overline{span\{\phi_{0,\boldsymbol{k}}\}}_{\boldsymbol{k}\in\mathbb{Z}^2}$, where $\phi_{0,\boldsymbol{k}} = \phi(\boldsymbol{x}-\boldsymbol{k})$. If $\langle \phi_{0,\boldsymbol{k}},\phi_{0,\boldsymbol{k'}}\rangle = \delta_{\boldsymbol{k,k'}}$, then $\{\phi_{0,\boldsymbol{k}}\}$ is an orthonormal basis of $V_0$. In addition, $\phi$ is associated with a scaling matrix $\mathbf{D}\in\mathbb{Z}^{2\times 2}$, s.t. the dilated scaling function
+the base approximation space is defined as $V_0 = \overlinespace{span\{\phi_{0,\boldsymbol{k}}\}}_{\boldsymbol{k}\in\mathbb{Z}^2}$, where $\phi_{0,\boldsymbol{k}} = \phi(\boldsymbol{x}-\boldsymbol{k})$. If $\langle \phi_{0,\boldsymbol{k}},\phi_{0,\boldsymbol{k'}}\rangle = \delta_{\boldsymbol{k,k'}}$, then $\{\phi_{0,\boldsymbol{k}}\}$ is an orthonormal basis of $V_0$. In addition, $\phi$ is associated with a scaling matrix $\mathbf{D}\in\mathbb{Z}^{2\times 2}$, s.t. the dilated scaling function
  $\phi_1(\boldsymbol{x}) = |\mathbf{D}|^{-1/2}\phi(\mathbf{D}^{-1}\boldsymbol{x})$ is a linear combination of $\phi_{0,\boldsymbol{k}}$.
 Equivalently, $\exists\,m_0(\boldsymbol{\omega}) = m_0(\omega_1,\omega_2)$, $2\pi-$periodic in $\omega_1,\omega_2$, s.t. in the frequency domain
 \begin{align}\label{eq: m0}
@@ -19,7 +21,7 @@ The recursive expression \eqref{eq: m0} of $\widehat{\phi}(\V{\omega})$ implies 
 where we have implicitly assumed that $\phi\in L^1(\mathbb{R}^2)$ and $\int\phi\,dx = 1$ (which follows from the other constraints if $\phi$ has some decay at $\infty$).
 \\[.2em]
 Let $\phi_{l,\boldsymbol{k}} = \phi(\V{D}^{-l}\boldsymbol{x}-\boldsymbol{k})$
-and $V_l = \overline{span\{\phi_{l,\boldsymbol{k}};\boldsymbol{k}\in\mathbb{Z}^2\}},\,l\in\mathbb{Z}$ be the nested approximation spaces. Define $W_l$ as the orthogonal complement of $V_l$ with respect to $V_{l-1}$ in MRA. 
+and $V_l = \overlinespace{span\{\phi_{l,\boldsymbol{k}};\boldsymbol{k}\in\mathbb{Z}^2\}},\,l\in\mathbb{Z}$ be the nested approximation spaces. Define $W_l$ as the orthogonal complement of $V_l$ with respect to $V_{l-1}$ in MRA. 
 Suppose there are $J$ wavelet functions $\psi^j\in L^2(\mathbb{R}^2)$, {\small $1 \leq j \leq J$}, and $\mathbf{Q}\in\mathbb{Z}^{2\times2}$, s.t.
 \begin{align*}
 \hspace{-1em} W_l = \bigcup_{j=1}^J W_l^j = \bigcup_{j=1}^J \overline{span\{\psi^j_{l,\boldsymbol{k}};\boldsymbol{ k}\in \mathbf{Q}\mathbb{Z}^2\}}= \bigcup_{j=1}^J \overline{span\{\psi^j(\mathbf{D}^{-l}\boldsymbol{x-k});\boldsymbol{ k}\in \mathbf{Q}\mathbb{Z}^2\}},
@@ -54,7 +56,7 @@ In this specific construction of MRA,
 \includegraphics[width=\textwidth]{sublattice-2.jpg}
 \vspace*{1em}
 \end{minipage}
-\caption{Left: partition of $S_0$ and boundary assignment of $C_j$, $j = 1,\cdots,6$ (each $C_j$ has boundaries indicated by red line segments), Right: dyadic quincunx sub-lattice. }
+\caption{Left: partition of $S_0$ and boundary assignment of $C_j$, $j = 1,\cdots,6$ (each $C_j$ has boundaries indicated by red line segments), Right: dyadic quincunx sub-lattice. Note that the $\omega_1$-axis is vertical and the $\omega_2$-axis is horizontal by our convention.}
 \label{fig: partition}
 \vspace*{-5mm}
 \end{figure}
@@ -74,7 +76,7 @@ Consider the canonical frequency square, $S_0 = [-\pi,\pi)\times[-\pi,\pi)$ asso
 For $L=1$, the 1-level decomposition \eqref{eq: MRA} together with \eqref{eq: m0} and \eqref{eq: mj} implies that the union of the support of $m_j,\,0\leq j\leq J$ covers $S_0$.
 Furthermore, $\exists\, C_j\subset supp(m_j), 0\leq j\leq J,$ such that they form a partition of $S_0$; conversely, given a partition $C_j$ of $S_0$, we may construct an MRA where $m_j$ are ``mainly" supported on $C_j$ (this will become more explicit in Section \ref{subsec: discontinuity}).
 %, and it is natural to take $C_j$ as the main support of $m_j$.
-To build an orthonormal basis with good directional selectivity, we choose the partition of $S_0$ shown in the left of Fig.\ref{fig: partition}, which is the same for Example B in \cite{durand2007} and the least redundant shearlet system \cite{kutyniok2012digital}. In this partition, $S_0$ is divided into a central square $C_0 = \bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)^{-1}S_0$ and a ring: the ring is further cut into six pairs of directional trapezoids $C_j$ by lines passing through the origin with slopes $\pm 1, \pm 3$ and $\pm \frac{1}{3}$. The central square $C_0$ can be further partitioned in the same way to obtain a two-level multi-resolution system, as shown in Fig.\ref{fig: partition}. 
+To build an orthonormal basis with good directional selectivity, we choose the partition of $S_0$ shown in the left of Figure \ref{fig: partition}, which is the same for Example B in \cite{durand2007} and the least redundant shearlet system \cite{kutyniok2012digital}. In this partition, $S_0$ is divided into a central square $C_0 = \bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)^{-1}S_0$ and a ring: the ring is further cut into six pairs of directional trapezoids $C_j$ by lines passing through the origin with slopes $\pm 1, \pm 3$ and $\pm \frac{1}{3}$. The central square $C_0$ can be further partitioned in the same way to obtain a two-level multi-resolution system, as shown in Fig.\ref{fig: partition}. 
 
 
 %To build our first example, in which $\hat{\phi},\,\widehat{\psi}^j$ are indicator functions in $\mathbb{R}^2$, we consider the case where  and we pick $S_0=\mathbb{R}^2/(\mathbb{Z}^2)^*$, . 
