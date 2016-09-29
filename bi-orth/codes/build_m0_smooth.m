@@ -1,6 +1,10 @@
 % construct a smooth m0 function supported on the central square
-
-x = linspace(-pi/2.618,pi/2.618,N+1);
+if extend_support
+    a = 3;
+else
+    a = 2.618;
+end
+x = linspace(-pi/a, pi/a, N+1);
 m01d = bumpV1(x(1:end-1));
 m0dual_smooth = m01d(:)*m01d ;
 
@@ -14,7 +18,8 @@ subplot(1,2,2); imagesc(m0_smooth); axis image; axis off; title('$m_0$','interpr
 % subplot(1,2,2); imagesc(fftshift(abs(ifft2(m0_smooth)))); axis image; axis off; title('m0')
 
 %% construct dual wavelet filters
-x = linspace(-pi/2.618,pi/2.618,N+1);
+% a = 2.618; 
+% x = linspace(-pi/a, pi/a, N+1);
 m0dual_prod = ones(N);
 for i = 1:2
     x = x/2;

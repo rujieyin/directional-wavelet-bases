@@ -31,13 +31,13 @@ Define $d_{i,j}(\V{\omega}) = \det([\mrow{k_1}(\V{\omega})^\top,\cdots,\mrow{k_6
 \end{align}
 \end{lemma}
 \noindent{\it Proof.}
-By Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry},  $\M[-k,:],\,k=0,2,4,6$ are singular,
-The singularity condition on  $\M[-0,:](\V{\omega})$ can be rewritten as follows,
+By Lemma \ref{lem: subM-singular} and Lemma \ref{lem: M-symmetry},  $\M[\widehat{k},:],\,k=0,2,4,6$ are singular,
+The singularity condition on  $\M[\widehat{0},:](\V{\omega})$ can be rewritten as follows,
 \begin{align}\label{eq: singular-omega}
-0 &=\det(\M[-0,:]) \notag\\
-&=  \sbarmp{0}{2}\cdot\det(\Msub[-2,:])\notag\\
-&\quad+ \,\sbarmp{0}{4}\cdot\det(\Msub[-4,:])
-+ \sbarmp{0}{6}\cdot\det(\Msub[-6,:])\notag\\
+0 &=\det(\M[\widehat{0},:]) \notag\\
+&=  \sbarmp{0}{2}\cdot\det(\Msub[\widehat{2},:])\notag\\
+&\quad+ \,\sbarmp{0}{4}\cdot\det(\Msub[\widehat{4},:])
++ \sbarmp{0}{6}\cdot\det(\Msub[\widehat{6},:])\notag\\
 &= 0\cdot\sbarm{0}\,+\,d_{0,2}\cdot\sbarmp{0}{2} \notag\\
 &\quad+\,d_{0,4}\cdot \sbarmp{0}{4}\,+\, d_{0,6}\cdot\sbarmp{0}{6}
 \end{align}
@@ -52,7 +52,7 @@ The singularity condition on  $\M[-0,:](\V{\omega})$ can be rewritten as follows
 %[-d_{0,2}(\V{\omega}),\, 0,\,d_{2,4}(\V{\omega}),\,d_{2,6}][\widetilde{m_0}(\V{\omega}),\,\widetilde{m_0}(\V{\omega}+\V{\pi}_2),\, \widetilde{m_0}(\V{\omega}+\V{\pi}_4),\,\widetilde{m_0}(\V{\omega}+\V{\pi}_6)]^\top = 0,
 %\end{align*}
 %which is the second linear equation in  \eqref{eq: singular-cond}.
-Similarly, the second to fourth equations can be obtained by rewriting the singularity condition on $\M[-2,:]$, $\M[-4,:]$ and $\M[-6,:]$ respectively.\qed
+Similarly, the second to fourth equations can be obtained by rewriting the singularity condition on $\M[\widehat{2},:]$, $\M[\widehat{4},:]$ and $\M[\widehat{6},:]$ respectively.\qed
 % at $\V{\omega}+\V{\pi}_4$ and $\V{\omega}+\V{\pi}_6$ in the coordinate of $\V{\omega}$.\qed
 %where $\mathfrak{D}(\V{\omega})$ is anti-symmetric. Because $\mathfrak{D}(\V{\omega})$ is independent of $m_0(\V{\omega})$, \eqref{eq: singular-cond} holds for $\mc{0}$ as well.
 
@@ -64,12 +64,14 @@ Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: LS-new} has no solution for 
 \end{proposition}
 
 \noindent{\bf Proof of Lemma \ref{lem: rank1}}:\\[.2em]
-{\bf Lemma \ref{lem: rank1}}. {\it$\exists\, \rho>0$ s.t.  if $\M[-0,:](\V{\omega})$ is singular $\forall \V{\omega}\in S_\rho$, then $rank(\mrow{1},\mrow{7})=1$ or $rank(\mrow{3},\mrow{5}) = 1$.}\\[1em]
+{\bf Lemma \ref{lem: rank1}}. {\it 
+$\exists\, \rho>0$ s.t. if $\V{\omega}\in S_\rho$ and $\M[\widehat{0},:](\V{\omega})$ is singular, then $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,)=1$ or \\$rank(\,\mrow{3}(\V{\omega}\,),\mrow{5}(\V{\omega})) = 1$.
+}\\[1em]
 \noindent{\it Proof.}
-When $\rho$ is small enough, due to the concentration property, $\m{i}$ is zero on all but a few sets $S_\rho + \V{\pi}_j$ (see Fig.\ref{fig: S-shifts} for reference of $S_\rho$ and its shifts), thus $\mrow{i}(\V{\omega})$ is sparse on $S_\rho$ and $\M[:,-0]$ takes the following form
+When $\rho$ is small enough, due to the concentration property, $\m{i}$ is zero on all but a few sets $S_\rho + \V{\pi}_j$ (see Fig.\ref{fig: S-shifts} for reference of $S_\rho$ and its shifts), thus $\mrow{i}(\V{\omega})$ is sparse on $S_\rho$ and $\M[:,\widehat{0}]$ takes the following form
 \begin{align}
 \label{eq: sparse-mat}
-\M[:,-0](\V{\omega})=
+\M[:,\widehat{0}](\V{\omega})=
 \begin{bmatrix}
 \mrow{0}\\
 \mrow{1}\\
@@ -108,7 +110,7 @@ We make the following observation of $\mrow{i}$:
 \item[(iii)] $span\{\mrow{1},\mrow{7}\} \perp span\{\mrow{3},\mrow{5}\}$ and $rank(\mrow{1},\mrow{7}) \leq 2$, \\$rank(\mrow{3},\mrow{5})\leq 2$
 \item[(iv)] $span\{\mrow{1}, \mrow{7}, \mrow{3},\mrow{5},\mrow{6}\} \leq 4$
 \end{itemize}
-Since $S_\rho$ is in the low frequency domain, $m_0(\V{\omega})\neq 0$. \eqref{eq: m0-cramer} then implies that $\det(\Msub[-k_{\V{\omega}},:])\neq 0$ hence $\Msub$ is full rank, or equivantly, $rank(\M[:,-0]) = 6$. It follows from  (ii) and (iv) that $rank(\mrow{1},\mrow{6},\mrow{7},\mrow{3},\mrow{5})= 4$.\\
+Since $S_\rho$ is in the low frequency domain, $m_0(\V{\omega})\neq 0$. \eqref{eq: m0-cramer} then implies that $\det(\Msub[\widehat{k_{\V{\omega}}},:])\neq 0$ hence $\Msub$ is full rank, or equivantly, $rank(\M[:,\widehat{0}]) = 6$. It follows from  (ii) and (iv) that $rank(\mrow{1},\mrow{6},\mrow{7},\mrow{3},\mrow{5})= 4$.\\
 On the other hand, (ii) and (iv) imply that $$rank(\Msub(\V{\omega}+\V{\pi}_2))=rank(\mrow{0},\mrow{4},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})= 5$$ and likewise $$rank(\Msub(\V{\omega}+\V{\pi}_4))=rank(\mrow{0},\mrow{2},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})= 5.$$ Therefore, $\det(\Msub(\V{\omega} + \V{\pi}_2)) = \det(\Msub(\V{\omega} + \V{\pi}_4)) = 0$ and \eqref{eq: m0-cramer} implies $m_0(\V{\omega}+\V{\pi}_2) = m_0(\V{\omega}+\V{\pi}_4) = 0$.\\
 If $\mrow{1}$ and $\mrow{7}$ are linearly independent and so are $\mrow{3}$ and $\mrow{5}$, then $$rank(\Msub(\V{\omega}+\V{\pi}_6))=rank(\mrow{2},\mrow{4},\mrow{1},\mrow{3},\mrow{5},\mrow{7}) = 6,$$ hence $m_0(\V{\omega}+\V{\pi}_6)\neq 0$. Therefore, $$[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)] = [*,0,0,*].$$ In addition, $d_{i,j} = 0,\, \forall(i,j)$ except $(0,6)$, so in \eqref{eq: singular-cond} $$\mathfrak{D}(\V{\omega}) = [d_{0,6}, 0, 0,0]^\top [0,0,0,1] + [0,0,0,d_{0,6}]^\top [-1,0,0,0].$$  By Proposition \ref{prop: feasibility}, the linear system \eqref{eq: LS-new} has no solution $\widetilde{m_0}$ and this proofs the lemma.\qed
 
@@ -135,7 +137,8 @@ Consider frequency domain $S_\rho' = S_\rho\bigcap\{\omega_1<\omega_2\}.$ By Lem
 \subsection{Design of input $\m{j}$}\label{app: input design}
 {\bf Proof of Lemma \ref{lem: phase-ineq}}:\\[.2em]
 {\bf Lemma \ref{lem: phase-ineq}.} 
-{\it If $\exists\,\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2},0)\},\,s.t. \,m_0(\V{\omega})>0,$ then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}\,2\pi)$.}\\ [1em]
+{\it If $\exists\,\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2},0)\},\,s.t. \,|m_0(\V{\omega})|\neq 0,$ then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}\,2\pi)$. 
+}\\ [1em]
 \noindent {\it Proof.}
 As $\m{1}$ and $\m{6}$ concentrate in $T_1$ and $T_6$ respectively, $\widetilde{m_1}(\V{\omega} + \V{\pi}_i) = 0$ and  $\widetilde{m_6}(\V{\omega} + \V{\pi}_i) = 0$, $i = 1,\cdots, 5$. Due to symmetry, $|\widetilde{m_1}(\V{\omega})| = |\widetilde{m_6}(\V{\omega})|$ on $\{\omega_1=\omega_2\}$. Let $A = |\widetilde{m_1}(\V{\omega}+\V{\pi}_7)| = |\widetilde{m_6}(\V{\omega}+\V{\pi}_7)|$ and $B=|\widetilde{m_1}(\V{\omega}+\V{\pi}_6)| = |\widetilde{m_6}(\V{\omega}+\V{\pi}_6)|$, then the first and the last columns of $\Msub$ are
   \begin{align*}
@@ -163,7 +166,7 @@ In particular, $\Msub[:,1]$ and $\Msub[:,6]$ are linearly independent, which imp
 
 \noindent{\bf Proof of Proposition \ref{prop: origin-det}}\\[.2em]
 \noindent{\bf Proposition \ref{prop: origin-det}.} 
-{\it If $\widetilde{m_0}(\V{0})\neq 0,$ then $\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)\neq \pi(\text{mod}\,2\pi)$ or $\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)\neq \pi(\text{mod}\,2\pi)$. }
+{\it If $\widetilde{m_0}(\V{0})\neq 0,$ then $\V{\pi}_1^\top(\V{\eta}_1-\V{\eta}_6)\neq \pi(\text{mod}\,2\pi)$ or $\V{\pi}_3^\top(\V{\eta}_3-\V{\eta}_4)\neq \pi(\text{mod}\,2\pi)$. }\\[1em]
 \noindent{\it Proof.}
 %$\Msub(\V{0})$ takes the following form
 %$$\begin{bmatrix}
@@ -215,29 +218,30 @@ it follows that $rank(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')\geq n - 2$.
 \begin{align*}
 \V{b}^*(\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')
 &= \V{b}^* - (\V{b}^*\V{a})\V{b}^* - (\V{b}^*\V{a}')(\V{b}')^*\\
-&= \V{b}^* - \V{b}^* - 0\cdot (\V{b}')^* = \V{0}^*
+&= \V{b}^* - \V{b}^* - 0\cdot (\V{b}')^* = \V{0}^*.
 \end{align*}
 Therefore, $\V{P}\V{b} = \V{b}$.
 Similarly, $(\V{b}')^* (\V{I}_n-\V{a}\otimes\V{b}-\V{a}'\otimes\V{b}')=\V{0}^*$ and $\V{P}\V{b}' = \V{b}'$. Moreover, as $\V{b}^*\V{b}' = 0$ and $rank(\V{P}) = 2$, $\V{P} = \Vert\V{b}\Vert^{-2}\cdot\V{b}\otimes\V{b} + \Vert\V{b}'\Vert^{-2}\cdot\V{b}'\otimes\V{b}'.$\qed
 
 \begin{lemma}
-Given $\M[:,-0](\V{\omega})$ is full rank $\forall \V{\omega}$, $\M[-0,:](\V{\omega})$ is singular if \eqref{eq: identity-cond} holds.
+Given $\M[:,\widehat{0}](\V{\omega})$ is full rank $\forall \V{\omega}$, $\M[\widehat{0},:](\V{\omega})$ is singular if \eqref{eq: identity-cond} holds.
 \end{lemma}
 \noindent{\it Proof. }
-If \eqref{eq: identity-cond} holds, then by Lemma \ref{lem: null-space}, $\meven,\,\modd$ are orthogonal to \\$col(\M[:,-0])$, therefore $\big[\,\modd,\meven,\M[:,-0]\,\big]\in\mathbb{C}^{8\times 8}$ is full rank. Due to \eqref{eq: identity-cond}, $\meven$ and $\mteven$ are not orthogonal to each other, hence $\big[\,\modd,\mteven,\M[:,-0]\,\big] = \big[\,\modd, \M\,\big]$ is full rank as well. Because $(\modd)^*\M[:, i] = 0,\,i= 0,\cdots,7$ and $\modd[-0]^*\M[-0, i] = (\modd)^*\M[:,i]$, $\modd[-0]$ is orthogonal to $col(\M[-0,:])$. Since $\big[ \modd[-0], \M[-0,:]\,\big]\in\mathbb{C}^{7\times 8}$ is full rank, $\M[-0,:]$ must be singular.\qed\\[1em]
+If \eqref{eq: identity-cond} holds, then by Lemma \ref{lem: null-space}, $\meven,\,\modd$ are orthogonal to \\$col(\M[:,\widehat{0}])$, therefore $\big[\,\modd,\meven,\M[:,\widehat{0}]\,\big]\in\mathbb{C}^{8\times 8}$ is full rank. Due to \eqref{eq: identity-cond}, $\meven$ and $\mteven$ are not orthogonal to each other, hence $\big[\,\modd,\mteven,\M[:,\widehat{0}]\,\big] = \big[\,\modd, \M\,\big]$ is full rank as well. Because $(\modd)^*\M[:, i] = 0,\,i= 0,\cdots,7$ and $\modd[\widehat{0}]^*\M[\widehat{0}, i] = (\modd)^*\M[:,i]$, $\modd[\widehat{0}]$ is orthogonal to $col(\M[\widehat{0},:])$. Since $\big[ \modd[\widehat{0}], \M[\widehat{0},:]\,\big]\in\mathbb{C}^{7\times 8}$ is full rank, $\M[\widehat{0},:]$ must be singular.\qed\\[1em]
 
 \noindent{\bf Proof of Proposition \ref{prop: m0_formula}}:\\[.2em]
 \noindent{\bf Proposition \ref{prop: m0_formula}.} 
-{\it Let $\M[odd,-0],\M[even,-0]\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,-0]$ consisting of odd and even rows respectively. Suppose \ref{cond: i} holds, then \ref{cond: ii} holds if and only if $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$ and 
-\begin{align*}
-[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,-0](\V{\omega}) = \V{0},\tag{\ref{eq: m0-even-null}}
-\end{align*}
-\begin{align*}
-[m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7)] \,\M[odd,-0](\V{\omega}) = \V{0}.\tag{\ref{eq: m0-odd-null}}
-\end{align*}}
+{\it Let $\M[odd,\widehat{0}](\V{\omega}),\M[even,\widehat{0}](\V{\omega})\in\mathbb{C}^{4\times6}$ be the sub-matrices of $\M[:,\widehat{0}](\V{\omega})$ consisting of odd and even indexed rows respectively. $\forall\V{\omega}\in S_0$, suppose {\rm\ref{cond: i}} holds, then {\rm\ref{cond: ii}} holds if and only if $rank(\,\M[odd,\widehat{0}](\V{\omega})\,) = rank(\,\M[even,\widehat{0}](\V{\omega})\,) = 3$ and 
+\begin{align}\label{eq: m0-even-null}
+[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,\widehat{0}](\V{\omega}) = \V{0},
+\end{align}
+\begin{align}\label{eq: m0-odd-null}
+[m_0(\V{\omega}+\V{\pi}_1),m_0(\V{\omega}+\V{\pi}_3), m_0(\V{\omega} +\V{\pi}_5), m_0(\V{\omega}+\V{\pi}_7)] \,\M[odd,\widehat{0}](\V{\omega}) = \V{0}.
+\end{align}
+}
 \\[.5em]
 \noindent{\it Proof.}
-Note that $\M[:,-0]$ have the same rows at $\V{\omega} + \V{\pi}_i,\,i = 0,\cdots,7$, we define row permutation matrix $\V{P}_i,\; s.t.\,$ $\V{P}_i\big(\M[:,-0](\V{\omega} + \V{\pi}_i)\big) = \M[:,-0](\V{\omega}). $ Let $\V{P}_{\M}(\V{\omega})$ be the projection matrix of the $col\big(\M[:,-0](\V{\omega})\big)^\bot = null(\M[:,-0]^*)$, then \ref{cond: ii} is equivalent to $\V{P}_{\M}\V{b}_0'(\V{\omega}) = \V{0}.$ Group this equality at $\V{\omega}+\V{\pi}_i$, we have 
+Note that $\M[:,\widehat{0}]$ have the same rows at $\V{\omega} + \V{\pi}_i,\,i = 0,\cdots,7$, we define row permutation matrix $\V{P}_i,\; s.t.\,$ $\V{P}_i\big(\M[:,\widehat{0}](\V{\omega} + \V{\pi}_i)\big) = \M[:,\widehat{0}](\V{\omega}). $ Let $\V{P}_{\M}(\V{\omega})$ be the projection matrix of the $col\big(\M[:,\widehat{0}](\V{\omega})\big)^\bot = null(\M[:,\widehat{0}]^*)$, then \ref{cond: ii} is equivalent to $\V{P}_{\M}\V{b}_0'(\V{\omega}) = \V{0}.$ Group this equality at $\V{\omega}+\V{\pi}_i$, we have 
 \begin{align}\label{eq: group-proj}
 \V{0} & = [\V{P}_i\V{P}_{\M}\V{b}_0'(\V{\omega} + \V{\pi}_i) ]_{i=0,\cdots,7}\notag\\
 &= [\V{P}_i\V{P}_{\M}(\V{\omega}+\V{\pi}_i)\V{P}_i^2\V{b}_0'(\V{\omega}+\V{\pi}_i) ]_{i = 0,\cdots,7}\notag\\
@@ -251,7 +255,7 @@ Let
 \meven&= [ (1 + i \bmod 2)\cdot\,m_0(\V{\omega} + \V{\pi}_i)]_{i=0,\cdots,7}^\top,\\
 \modd&= [ ( i \bmod 2)\cdot\,m_0(\V{\omega} + \V{\pi}_i)]_{i=0,\cdots,7}^\top.
 \end{align*}
-The identity constraint \eqref{eq: identity-cond} thus can be written as $(\overline{\meven})^*\,\mteven = 1$ and $(\overline{\modd})^*\,\mtodd = 1$. By definition, 
+The identity constraint \eqref{eq: identity-cond} thus can be written as $(\overlinespace{\meven})^*\,\mteven = 1$ and $(\overlinespace{\modd})^*\,\mtodd = 1$. By definition, 
 $$ \V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i) = \V{P}_i\big(\V{b}_0 - m_0\M[:,0](\V{\omega}+\V{\pi}_i)\big)  = \V{b}_i - m_0(\V{\omega}+\V{\pi}_i)\V{P}_i\big(\M[:,0](\V{\omega}+\V{\pi}_i)\big)$$
 and 
 $$\V{P}_i\big(\M[:,0](\V{\omega}+\V{\pi}_i)\big) = 
@@ -266,5 +270,5 @@ Substitute the above expression of $ \V{P}_i\V{b}_0'(\V{\omega}+\V{\pi}_i)$ in \
 %= \V{P}_{\M}(\omega)([\V{b}_i]_{i=0,\cdots,7} - \mteven\otimes\meven - \mtodd\otimes\modd) 
 = \V{P}_{\M}(\V{I}_8 -  \mteven\otimes\overline{\meven} - \mtodd\otimes\overline{\modd})
 \end{align}
-Therefore, by Lemma \ref{lem: null-space}, $\V{P}_{\M}$ is the projection of $span\{\overline{\modd},\overline{\meven}\}$. This is equivalent to \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null}.
-Finally, since $$6 = rank(\M[:,-0]) \leq rank(\M[odd,-0]) + rank(\M[even,-0]) \leq (4-1) + (4-1),$$ $rank(\M[odd,-0]) = rank(\M[even,-0]) = 3$.\qed
+Therefore, by Lemma \ref{lem: null-space}, $\V{P}_{\M}$ is the projection of $span\{\overlinespace{\modd},\overlinespace{\meven}\}$. This is equivalent to \eqref{eq: m0-even-null} and \eqref{eq: m0-odd-null}.
+Finally, since $$6 = rank(\M[:,\widehat{0}]) \leq rank(\M[odd,\widehat{0}]) + rank(\M[even,\widehat{0}]) \leq (4-1) + (4-1),$$ $rank(\M[odd,\widehat{0}]) = rank(\M[even,\widehat{0}]) = 3$.\qed

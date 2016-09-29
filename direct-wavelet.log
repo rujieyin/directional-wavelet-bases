@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  28 SEP 2016 16:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  29 SEP 2016 09:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -488,12 +488,12 @@ LaTeX Font Info:    Try loading font information for U+euf on input line 31.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 159--163
+Underfull \hbox (badness 10000) in paragraph at lines 162--166
 
  []
 
 [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 226--228
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
 
  []
 
@@ -527,8 +527,9 @@ File: ./bi-orth/figure/1d-filter-compare.jpg Graphic file (type jpg)
 Package pdftex.def Info: ./bi-orth/figure/1d-filter-compare.jpg used on input l
 ine 26.
 (pdftex.def)             Requested size: 211.38832pt x 92.8333pt.
- [30 <./bi-orth/figure/filters.jpg>] <./bi-orth/figure/2d-m-compare-vanilla.png
-, id=168, 1351.0475pt x 297.11pt>
+ [30 <./bi-orth/figure/filters.jpg>] [31 <./bi-orth/figure/m-funcs.jpg> <./bi-o
+rth/figure/1d-m-compare.jpg> <./bi-orth/figure/1d-filter-compare.jpg>]
+<./bi-orth/figure/2d-m-compare-vanilla.png, id=172, 1351.0475pt x 297.11pt>
 File: ./bi-orth/figure/2d-m-compare-vanilla.png Graphic file (type png)
 
 <use ./bi-orth/figure/2d-m-compare-vanilla.png>
@@ -536,7 +537,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-vanilla.png used on inpu
 t line 71.
 (pdftex.def)             Requested size: 422.77664pt x 92.97357pt.
 
-<./bi-orth/figure/2d-m-compare-weightedl2.png, id=169, 1352.05125pt x 300.12125
+<./bi-orth/figure/2d-m-compare-weightedl2.png, id=173, 1352.05125pt x 300.12125
 pt>
 File: ./bi-orth/figure/2d-m-compare-weightedl2.png Graphic file (type png)
  <use ./bi-orth/figure/2d-m-compare-weightedl2.png>
@@ -544,7 +545,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-weightedl2.png used on i
 nput line 78.
 (pdftex.def)             Requested size: 422.77664pt x 93.8426pt.
 
-<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=170, 1351.0475pt x 294.0
+<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=174, 1351.0475pt x 294.0
 9875pt>
 File: ./bi-orth/figure/2d-filter-compare-weightedl2.png Graphic file (type png)
 
@@ -557,14 +558,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--113
 
  []
 
-[31 <./bi-orth/figure/m-funcs.jpg> <./bi-orth/figure/1d-m-compare.jpg> <./bi-or
-th/figure/1d-filter-compare.jpg>] (./direct-wavelet.bbl
+(./direct-wavelet.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
 [32 <./bi-orth/figure/2d-m-compare-vanilla.png (PNG copy)> <./bi-orth/figure/2d
 -m-compare-weightedl2.png (PNG copy)> <./bi-orth/figure/2d-filter-compare-weigh
-tedl2.png (PNG copy)>]) [33] (./direct-wavelet.aux) ) 
+tedl2.png (PNG copy)>]) [33] (./direct-wavelet.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  4939 strings out of 495005
  74571 string characters out of 6181431
@@ -573,52 +577,52 @@ Here is how much of TeX's memory you used:
  23228 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  38i,19n,38p,1468b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/grad/rachel/.texli
-ve2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-mextra/cmmib6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-extra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cme
-xtra/cmmib8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmex
-tra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on direct-wavelet.pdf (33 pages, 1088165 bytes).
+ </home/grad/rachel/.texlive2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.6
+00pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
+ls/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm7.pfb>
+Output written on direct-wavelet.pdf (33 pages, 1088273 bytes).
 PDF statistics:
  328 PDF objects out of 1000 (max. 8388607)
  217 compressed objects within 3 object streams

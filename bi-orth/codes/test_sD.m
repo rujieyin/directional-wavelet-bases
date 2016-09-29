@@ -21,7 +21,7 @@ C = arrayfun(@(x)sD(:,:,x)*conj([m0(x); m0(x+N/2); m0(x+N^2/2); m0(x+N^2/2 + N/2
 C = cat(1, C{:});
 
 if all(C == 0)
-    disp('Pass check : m0_dual in the null space of sD.');
+    disp('Pass check : m0 in the null space of sD.');
 else
-    disp('m0_dual is not in the null space of sD.');
+    disp('m0 is not in the null space of sD.');
 end

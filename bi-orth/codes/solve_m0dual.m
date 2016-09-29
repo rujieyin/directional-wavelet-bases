@@ -20,7 +20,12 @@ Dx = sparse(repmat(1:N^2,1,2), [1:N^2, reshape(circshift(reshape(1:N^2,N,N), [1,
 Dy = sparse(repmat(1:N^2,1,2), [1:N^2, reshape(circshift(reshape(1:N^2,N,N), [0,1] ), 1, [])], [ones(1, N^2), -ones(1, N^2)]);
 D = Dx'*Dx + Dy'*Dy;
 M0 = sparse(1:2*N^2, [1:N^2, 1:N^2], [real(m0(:))', imag(m0(:))']);
-Q = M0*D*M0';%[D, sparse(N^2, N^2); sparse(N^2, N^2), D];%
+
+if product_regularizor
+    Q = M0*D*M0'; % regularize m0*conj(m0dual)
+else
+    Q = [D, sparse(N^2, N^2); sparse(N^2, N^2), D];% regularize m0dual directly
+end
 
 addpath(cvx_path);
 cvx_setup;
