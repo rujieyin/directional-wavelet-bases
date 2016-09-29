@@ -456,7 +456,8 @@ We choose the squared $\ell_2$ norm of the gradient of $\sbarm{0}m_0(\V{\omega})
 We thus solve the following quadratic minimization problem with linear constraint,
 %On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
 \begin{align}\label{eq: opt}
-\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
+\min_{\xvec}\; \Vert \V{D}\xvec\Vert^2,\quad 
+%\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
 s.t. \; \V{A}\xvec = \mathbf{1},
 \end{align}
 where $\V{D}$ is the gradient operator, $\circ$ is the Hadamard product and $\V{A}$ is the linear operator from \eqref{eq: identity-cond}. 
@@ -494,12 +495,12 @@ To sum up, we propose \ref{alg} for bi-orthogonal directional filter constructio
 \begin{description}% prevent items from splitting
 \item[\mylabel{alg}{Algorithm 1}. Construction of $m_0,\widetilde{m_0}$ and $\widetilde{m_j}$ in bi-orthogonal basis]\
 \begin{itemize}
-\item[Input:] $\m{j},\,j=1,...,6$, a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $
+\item[Input:] $\m{j},\,j=1,...,6$, a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ over $[-\pi, \pi)\times[-\pi, \pi), $
 \item[step 1.] construct $\M[:,\widehat{0}](\V{\omega})$ on sub-grid $[-\pi,0)\times[-\pi,0)$ and check rank constraints \eqref{eq: Mranks},%compute $m_0^C(\V{\omega}) = \left|det(\M_{1,1}[\widehat{k_{\V{\omega}}},:])\right|$
-\item[step 2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
-\item[step 3.] solve the optimization \eqref{eq: opt} for $\m{0}$ on grid $[-\pi,\pi)\times[-\pi,\pi)$,
-\item[step 4.] choose appropriate $\pi$-periodic $c(\V{\omega})$ and replace $m_0(\V{\omega}),\, \m{0}$ by $m_0'(\V{\omega}) = c(\V{\omega})m_0(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})=\m{0}\overline{c}(\V{\omega})^{-1}$,
+\item[step 2.] solve quadruple $\big( m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \big)$ using \eqref{eq: m0-even-null} on the sub-grid in $[-\pi,0)\times[-\pi,0)$,%compute $\mc{0}$, such that \eqref{eq: LS-new} is solvable and \eqref{eq: identity-cond} holds
+\item[step 3.] choose appropriate $\pi$-periodic $c(\V{\omega})$ and replace $m_0(\V{\omega})$ by $m_0'(\V{\omega}) = c(\V{\omega})m_0(\V{\omega})$,% and $\widetilde{m_0}'(\V{\omega})=\m{0}\overline{c}(\V{\omega})^{-1}$,
 %solve $m_i(\V{\omega}),\, i=1,...,6$ according to \eqref{eq: LS-new}
+\item[step 4.] solve the optimization \eqref{eq: opt} for $\m{0}$ on the sub-grid in $[-\pi,\pi)\times[-\pi,\pi)$,
 \item[step 5.] solve the reduced linear system \eqref{eq: mj-eq} for $m_j(\V{\omega}),\, j = 1,\cdots,6$.%design $c(\V{\omega})$ and let $m_0(\V{\omega}) = m_0^C(\V{\omega})c(\V{\omega}),\,\m{0} = \mc{0}\overline{c}(\V{\omega})^{-1}$
 \end{itemize}
 \end{description}
@@ -509,9 +510,9 @@ To sum up, we propose \ref{alg} for bi-orthogonal directional filter constructio
 
 \noindent{\it Remarks.}
 \begin{itemize}
-\item[1.] The order of step 4. and step 5. in \ref{alg} can be reversed because \eqref{eq: mj-eq} only depends on $m_0(\V{\omega})\overline{\widetilde{m_0}}(\V{\omega} + \V{\pi}_i)$ when $i$ is even, which remains the same for $m_0'(\V{\omega}),\widetilde{m_0}'(\V{\omega})$ regardless of $c(\V{\omega})$ by construction.
-\item[2.] In principle, one could formulate an optimization for the choice of $c(\V{\omega})$ in order to obtain good smoothness for $m_0',\,\widetilde{m_0}'$.
-\item[3.] Once can also manipulate pairs of $(m_j,\widetilde{m_j})$ according to the following generalization of Proposition \ref{prop: mc}.
+%\item[1.] The order of step 4. and step 5. in \ref{alg} can be reversed because \eqref{eq: mj-eq} only depends on $m_0(\V{\omega})\overline{\widetilde{m_0}}(\V{\omega} + \V{\pi}_i)$ when $i$ is even, which remains the same for $m_0'(\V{\omega}),\widetilde{m_0}'(\V{\omega})$ regardless of $c(\V{\omega})$ by construction.
+\item[1.] In principle, one could formulate an optimization for the choice of $c(\V{\omega})$ in order to obtain good smoothness for $m_0',\,\widetilde{m_0}'$.
+\item[2.] Once can also manipulate pairs of $(m_j,\widetilde{m_j})$ according to the following generalization of Proposition \ref{prop: mc}.
 \end{itemize}
 \begin{proposition}\label{prop: mjc}
 If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
@@ -545,7 +546,7 @@ For the input of \ref{alg}, we use $\widetilde{m_j}$ in the form of \eqref{eq: m
 
 We proceed to solve $m_0(\V{\omega})$ separately for each $\V{\omega}$. As pointed out earlier, these solutions still have an unconstrained degree of freedom in the form of a constant $a_{\V{\omega}}$; the result is shown in Figure \ref{fig: m_0} for one implementation using Matlab solvers. This solution $m_0(\V{\omega})$ has both inherent irregularity of the bi-orthogonal construction from the input and artificial irregularity from the algorithm: the amplitude $|m_0(\V{\omega})|$ is supported on $C_0$, where $|m_0(\V{\omega})| = 1$ and its discontinuity at $\partial C_0$ corresponds to that of the input $\m{j}$; however, the phase of $m_0(\V{\omega})$ is discontinuous even on the interior of $C_0$ due to $a_{\V{\omega}}$, an artificial irregularity we can remove after $\m{0}$ is solved, as explained in Section \ref{subsec: compute-m0}.
 
-We then solve \eqref{eq: opt} for $\m{0}$, and the solution is coupled with $m_0(\V{\omega})$ in the previous step. The left figure in Figure \ref{fig: m_0_m0dual} shows that $\m{0}$ is also supported on $C_0$ as $m_0(\V{\omega})$. Minimizing the objective function in \eqref{eq: opt} optimizes the smoothness of $m_0(\V{\omega})\sbarm{0}$; this quantity is already $\equiv 0$ outside $C_0$ since $m_0(\V{\omega})=0,\,\forall\V{\omega}\not\in C_0$. It follows that the behavior of the optimizing $\widetilde{m_0}$ outside $C_0$ is mostly determined by the linear constraint in \eqref{eq: opt}-- it is thus essentially the identity condition \eqref{eq: identity-cond} that causes $\m{0}$ to vanish outside $C_0$.%This is a result of the linear constraint in \eqref{eq: opt} from the identity condition \eqref{eq: identity-cond}, not because of the regularization by the objective function where $m_0(\V{\omega})\sbarm{0}\equiv 0,\, \forall\V{\omega}\not\in C_0$. 
+%We then solve \eqref{eq: opt} for $\m{0}$, and the solution is coupled with $m_0(\V{\omega})$ in the previous step. The left figure in Figure \ref{fig: m_0_m0dual} shows that $\m{0}$ is also supported on $C_0$ as $m_0(\V{\omega})$. Minimizing the objective function in \eqref{eq: opt} optimizes the smoothness of $m_0(\V{\omega})\sbarm{0}$; this quantity is already $\equiv 0$ outside $C_0$ since $m_0(\V{\omega})=0,\,\forall\V{\omega}\not\in C_0$. It follows that the behavior of the optimizing $\widetilde{m_0}$ outside $C_0$ is mostly determined by the linear constraint in \eqref{eq: opt}-- it is thus essentially the identity condition \eqref{eq: identity-cond} that causes $\m{0}$ to vanish outside $C_0$.%This is a result of the linear constraint in \eqref{eq: opt} from the identity condition \eqref{eq: identity-cond}, not because of the regularization by the objective function where $m_0(\V{\omega})\sbarm{0}\equiv 0,\, \forall\V{\omega}\not\in C_0$. 
 Furthermore, the middle and right figures in Figure \ref{fig: m_0_m0dual} suggest that $m_0(\V{\omega})\sbarm{0}=\V{1}_{C_0}$ numerically, as they should be.
 
 Next, we find $c(\V{\omega})$ to obtain $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ with better regularity. We can construct $c(\V{\omega})$ freely on $C_0$ and then extend it to $S_0$ by its $\pi$-periodicity. Since both $m_0(\V{\omega})$ and $\m{0}$ are supported on $C_0$, $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ have the same support as well, thus they are determined by $c(\omega)$ on $C_0$. Therefore, $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ can be directly obtained by re-decomposition of $m_0(\V{\omega})\sbarm{0}=1$ on $C_0$. In particular, we let $\widetilde{m_0}'$ be a smooth real function and $m_0'(\V{\omega}) = \widetilde{m_0}'(\V{\omega})^{-1}$ on $C_0$, see Figure \ref{fig: smooth_m0dual}.
