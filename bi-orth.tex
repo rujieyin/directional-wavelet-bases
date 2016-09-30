@@ -359,7 +359,7 @@ rank(\,\M[:,\widehat{0}](\V{\omega})\,) = 6,\, rank(\,\M[even,\widehat{0}](\V{\o
 \end{align}
 In practice, the rank constraints are hard to impose while designing $\widetilde{m_j}$, in our numerical experiments, we therefore first construct $\widetilde{m_j}$ and then check if these rank constraints are satisfied, see step 1. in \ref{alg}.
 
-If \eqref{eq: Mranks} holds, the vector $[\, m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \,]$ can be uniquely determined by \eqref{eq: m0-even-null} {\it up to a constant factor $a_{\V{\omega}} $}, since it is orthogonal to the column space of $\M[even,\widehat{0}](\V{\omega})$ of co-dimension 1. In particular, we obtain $m_0(\V{\omega})$ on $S_0$ by solving \eqref{eq: m0-even-null} independently at each $\V{\omega}$ on $[-\pi,0)\times[-\pi,0)$, see step 2. in \ref{alg}. Since the constant $a_{\V{\omega}}$ can change drastically as $\V{\omega}$ changes, there is potential lack of regularity of $m_0(\V{\omega})$ as an artifact of the algorithm. Figure \ref{fig: m_0_m0dual} shows an $m_0(\V{\omega})$ computed in this way, which has discontinuous phase due to $a_{\V{\omega}}$. Fortunately, this irregularity is an artifact that can be removed as suggested by the following proposition.
+If \eqref{eq: Mranks} holds, the vector $[\, m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6) \,]$ can be uniquely determined by \eqref{eq: m0-even-null} {\it up to a constant factor $a_{\V{\omega}} $}, since it is orthogonal to the column space of $\M[even,\widehat{0}](\V{\omega})$ of co-dimension 1. In particular, we obtain $m_0(\V{\omega})$ on $S_0$ by solving \eqref{eq: m0-even-null} independently at each $\V{\omega}$ on $[-\pi,0)\times[-\pi,0)$, see step 2. in \ref{alg}. As the constant $a_{\V{\omega}}$ can change drastically as $\V{\omega}$ changes, there is potential lack of regularity of $m_0(\V{\omega})$ as an artifact of the algorithm. Figure \ref{fig: m_0_m0dual} shows an $m_0(\V{\omega})$ computed in this way, which has discontinuous phase due to $a_{\V{\omega}}$. Fortunately, this irregularity is an artifact that can be removed as suggested by the following proposition.
 
 \begin{comment}
 By Lemma \ref{lem: M-symmetry}, $\M[:,\widehat{0}]$ are the same at $\V{\omega},\V{\omega}+\V{\pi}_2,\V{\omega}+\V{\pi}_4$ and $\V{\omega} + \V{\pi}_6$ up to row permutations. Therefore, the columns of the matrix $\V{B}$ below should be in $col\big(\M[:,\widehat{0}](\V{\omega})\big)$,
@@ -435,23 +435,24 @@ It follows from the observation that $m_0'(\V{\omega})\overline{\widetilde{m_0}'
 %\end{align*}
 
 \noindent{\it Remark.}
-In practice, we use Proposition \ref{prop: mc} compensate for irregularities introduced by the arbitrary $a_{\V{\omega}}$; we first solve $\m{0}$, step 3. in \ref{alg}, then we can choose $c(\V{\omega})$ $\pi$-periodic in both $\omega_1,\,\omega_2$ such that $(m_0',\widetilde{m_0}')$ have improved regularity and replace $m_0(\V{\omega})$ and $\widetilde{m_0}(\V{\omega})$ by $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ respectively.
+In practice, we use Proposition \ref{prop: mc} compensate for irregularities introduced by the arbitrary $a_{\V{\omega}}$; After $m_0(\V{\omega})$ is solved, we can choose $c(\V{\omega})$ $\pi$-periodic in both $\omega_1,\,\omega_2$ such that $m_0'(\V{\omega})$ has improved regularity and replace $m_0(\V{\omega})$ by $m_0'(\V{\omega})$ in the rest of the construction.
+%we first solve $\m{0}$, step 3. in \ref{alg}, then we can choose $c(\V{\omega})$ $\pi$-periodic in both $\omega_1,\,\omega_2$ such that $(m_0',\widetilde{m_0}')$ have improved regularity and replace $m_0(\V{\omega})$ and $\widetilde{m_0}(\V{\omega})$ by $m_0'(\V{\omega})$ and $\widetilde{m_0}'(\V{\omega})$ respectively.
 
 To obtain $\m{0}$ on $S_0$, we solve the identity condition \eqref{eq: identity-cond} on $[-\pi, 0)\times[-\pi, 0 )$ for the quadruple $(\m{0}, \mp{0}{2}, \mp{0}{4}, \mp{0}{6})$. Note that \eqref{eq: identity-cond} is the same as \eqref{eq: bi-orth-eq} in Section \ref{subsec: cohen-summary}. 
 According to Lemma 3.2.1 in \cite{cohen1993compactly}, by {\it Hilbert's Nullstellensatz} \eqref{eq: bi-orth-eq} has a solution if and only if there does not exist $(z_1,z_2)\in (\mathbb{C}^*)^2,\, \mathbb{C}^* = \mathbb{C}\setminus\{0\}$\, s.t. $(\pm z_1,\pm z_2)$ are all vanishing points of the $z$-transform of $m_0$. Unfortunately this is not very constructive: in general, there is no efficient algorithm to solve {\it Hilbert's Nullstellensatz}.%, and how \eqref{eq: bi-orth-eq} is solved exactly is not mentioned in \cite{cohen1993compactly}.
 %In Section \ref{sec: numerics}, we propose an optimization problem that solves $\widetilde{m_0}$, where \eqref{eq: m0-sol} (which is the same as \eqref{eq: identity-cond}) serves as a linear constraint.
 %As mentioned at the end of Section \ref{subsec: cohen-summary}, we are not aware of existing efficient algorithms that solve \eqref{eq: identity-cond}. 
 
-Our approach here is to reformulate solving $\m{0}$ under the condition \eqref{eq: identity-cond} as an optimization problem wher \eqref{eq: identity-cond} serves as a linear constraint. In particular, on a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $ \eqref{eq: identity-cond} can be rewritten as
+Our approach here is to reformulate solving $\m{0}$ under the condition \eqref{eq: identity-cond} as an optimization problem where \eqref{eq: identity-cond} serves as a linear constraint. In particular, on a $2N\times 2N$ regular grid $\G=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi, \pi)\times[-\pi, \pi), $ \eqref{eq: identity-cond} can be rewritten as
 \begin{align}
-\V{A}\, \overlinespace{\widetilde{\mathbf{m}_0}}= \mathbf{1}_{4N^2}, \label{eq: m0-A}%\\ 
+\V{A}\, \overlinespace{\widetilde{\mathbf{m}_0}}= \mathbf{1}_{N^2}, \label{eq: m0-A}%\\ 
 %\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1,\hdots,4N^2}&\in\mathbb{C}^{4N^2} \notag
 \end{align}
 where $\widetilde{\mathbf{m}_0} = [\widetilde{m_0}(\V{\omega}_i)]_{\,i=1}^{4N^2}$ and $\V{A}\in \mathbb{C}^{N^2\times 4N^2}$ is a sparse matrix with entries 
 $$\V{A}_{i,j} = m_0(\V{\omega}_j)\sum_{k=0}^3\delta(\V{\omega}_j-\V{\omega}_i-\V{\pi}_{2k}), \quad \V{\omega}_j \in [-\pi,0)\times[-\pi,0).$$
 
-We optimize the regularity of $\sbarm{0}m_0(\V{\omega})$ rather than $\sbarm{0}$; its regularity controls the regularity of $(\,m_0'(\V{\omega}), \widetilde{m_0}'(\V{\omega})\,)$ that can be achieved by a judicious application of Proposition \ref{prop: mc}.
-We choose the squared $\ell_2$ norm of the gradient of $\sbarm{0}m_0(\V{\omega})$ as the objective function, although other forms of regularity may be imposed by different objective functions.
+%We optimize the regularity of $\sbarm{0}m_0(\V{\omega})$ rather than $\sbarm{0}$; its regularity controls the regularity of $(\,m_0'(\V{\omega}), \widetilde{m_0}'(\V{\omega})\,)$ that can be achieved by a judicious application of Proposition \ref{prop: mc}.
+Note that $m_0(\V{\omega})$ in $\V{A}$ here has been regularized by $c(\V{\omega})$, hence we expect the corresponding $\m{0}$ that satisfies \eqref{eq: identity-cond} (or equivalently \eqref{eq: m0-A} on the grid $\mathcal{G}$) to be regular as well. To optimize the regularity of $\m{0}$,  we choose the squared $\ell_2$ norm of the gradient of $\m{0}$ as the objective function, although other forms of regularity may be imposed by different objective functions.
 
 We thus solve the following quadratic minimization problem with linear constraint,
 %On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
@@ -510,9 +511,10 @@ To sum up, we propose \ref{alg} for bi-orthogonal directional filter constructio
 
 \noindent{\it Remarks.}
 \begin{itemize}
+\item[1.] Since $\widetilde{m_j},\, j=1,\cdots,6$ are pre-designed, it is relatively easy to control their regularity. In addition, the regularity of $\widetilde{m_0}$ is optimized by \eqref{eq: opt}. Therefore, according to \eqref{eq: mj_dual}, we may hope to obtain dual wavelets with good regularity.
 %\item[1.] The order of step 4. and step 5. in \ref{alg} can be reversed because \eqref{eq: mj-eq} only depends on $m_0(\V{\omega})\overline{\widetilde{m_0}}(\V{\omega} + \V{\pi}_i)$ when $i$ is even, which remains the same for $m_0'(\V{\omega}),\widetilde{m_0}'(\V{\omega})$ regardless of $c(\V{\omega})$ by construction.
-\item[1.] In principle, one could formulate an optimization for the choice of $c(\V{\omega})$ in order to obtain good smoothness for $m_0',\,\widetilde{m_0}'$.
-\item[2.] Once can also manipulate pairs of $(m_j,\widetilde{m_j})$ according to the following generalization of Proposition \ref{prop: mc}.
+\item[2.] In principle, one could formulate an optimization for $c(\V{\omega})$ in step 3. and $\m{0}$ in step 4. jointly in order to obtain optimal smoothness for $\m{0}$ given $m_0(\V{\omega})$ solved in step 2. Instead of solving a linearly constrained quadratic program like \eqref{eq: opt}, one solves a {\it quadratically} constrained quadratic program (QCQP), which is non-convex and in general NP-hard. Such a QCQP can be relaxed to a convex semidefinite program (SDP) that can be efficiently solved although the solution is not exact. See Appendix \ref{app: QCQP} for more details. In Section \ref{sec: numerics}, we discuss how to choose $c(\V{\omega})$ for a $m_0(\V{\omega})$ solved from a specific set of input $\widetilde{m_j}$.
+\item[3.] Once can also manipulate pairs of $(m_j,\widetilde{m_j})$ according to the following generalization of Proposition \ref{prop: mc}.
 \end{itemize}
 \begin{proposition}\label{prop: mjc}
 If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 

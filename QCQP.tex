@@ -1,0 +1,15 @@
+\section{Joint optimization of $c(\V{\omega})$ and $\m{0}$}\label{app: QCQP}
+
+In \ref{alg}, $c(\V{\omega})$ is chosen in step 3. to construct $m_0'(\V{\omega})$, which replaces $m_0(\V{\omega})$ and is used to create the linear constraint in \eqref{eq: opt} in step 4. Since different $c(\V{\omega})$ correspond to different $m_0'(\V{\omega})$, hence different linear constraints \eqref{eq: m0-A} on $\m{0}$; $\m{0}$ obtained in step 4. is optimal with respect to the pre-fixed $c(\V{\omega})$ from step 3., but not necessarily global optimal considering all possible choices of $c(\V{\omega})$. Therefore, we intend to optimize $c(\V{\omega})$ and $\m{0}$ jointly to obtain $\m{0}$ with best possible regularity given unregularized $m_0(\V{\omega})$ from step 2.
+
+By the definition in Proposition \ref{prop: mc}, $m_0'(\V{\omega}) = m_0(\V{\omega})c(\V{\omega})$. Furthermore, since $c(\V{\omega})$ is $\pi$-periodic in both $\omega_1,\,\omega_2$, we have $m_0'(\V{\omega}+\V{\pi}_i) = m_0(\V{\omega}+\V{\pi}_i)c(\V{\omega}),\, i = 2,4,6$. Hence the constraint \eqref{eq: identity-cond} on $\m{0}$ with $m_0(\V{\omega})$ replaced by $m_0'(\V{\omega})$ can be reformulated as follows,
+\begin{align}
+1 & = m_0'\m{0} + m_0'\mp{0}{2} + m_0'\mp{0}{4} + m_0'\mp{0}{6}\notag\\
+& = c(\V{\omega})\big(\,m_0\m{0} + m_0\mp{0}{2} + m_0\mp{0}{4} + m_0\mp{0}{6}\,\big).\label{eq: linear-cond_c}
+\end{align}
+Using the same setup of the optimization \eqref{eq: opt}, we convert \eqref{eq: linear-cond_c} to a constraint on a $2N\times 2N$ grid $\mathcal{G}=\{\V{\omega}_i\}_{i=1}^{4N^2}$ of $[-\pi,\pi)\times[-\pi,\pi)$.
+Let $\mathbf{C}\in\mathbb{C}^{N^2\times N^2}$ be a diagonal matrix whose $j$-th diagonal entry is $c(\V{\omega}_j)$, where $\V{\omega}_j\in \mathcal{G}\cap [-\pi,0)\times[-\pi,0)$. Construct $\widetilde{\mathbf{m}_0}\in\mathbb{C}^{4N^2}$ and $\V{A}$ same as in \eqref{eq: opt}. Then \eqref{eq: linear-cond_c} is equivalent to the following constraint on the grid $\mathcal{G}$,
+\begin{align}
+\mathbf{C}\V{A}\,\overlinespace{\widetilde{\mathbf{m}_0}} = \V{1}_{N^2}.
+\end{align}
+Therefore, 
