@@ -458,7 +458,7 @@ We thus solve the following quadratic minimization problem with linear constrain
 %On a $2N\times 2N$ grid $\G$ of $S_0 = [-\pi, \pi)\times[-\pi, \pi)$, s.t. $\forall \V{\omega}_j \in \G, \; \V{\omega}_j+\V{\nu}_1,\,\V{\omega}_j+\V{\nu}_2,\,\V{\omega}_j+\V{\nu}_3 \in \G$, \eqref{eq: m0-sol} is reformulated as
 \begin{align}\label{eq: opt}
 \min_{\xvec}\; \Vert \V{D}\xvec\Vert^2,\quad 
-%\min_{\xvec}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
+%\min_{\xvec\in\mathbb{C}^{4N^2}}\; \Vert \V{D}(\mathbf{m}_0\circ\xvec)\Vert^2,\quad 
 s.t. \; \V{A}\xvec = \mathbf{1},
 \end{align}
 where $\V{D}$ is the gradient operator, $\circ$ is the Hadamard product and $\V{A}$ is the linear operator from \eqref{eq: identity-cond}. 
