@@ -6,7 +6,7 @@ Define $d_{i,j}(\V{\omega}) = \det([\mrow{k_1}(\V{\omega})^\top,\cdots,\mrow{k_6
 \eqref{eq: LS-new} is solvable $\forall \V{\omega}$ if and only if \vspace{.5em}
 \begin{align}
 \label{eq: singular-cond}
-\mathfrak{D}(\omega)\begin{bmatrix}
+\mathfrak{D}(\V{\omega})\begin{bmatrix}
 \sbarm{0}\\
 \sbarmp{0}{2}\\
 \sbarmp{0}{4}\\
@@ -60,12 +60,12 @@ Similarly, the second to fourth equations can be obtained by rewriting the singu
 The identity constraint \eqref{eq: identity-cond} on $m_0$ and the singularity condition \eqref{eq: singular-cond} together imply the following proposition,
 %Due to the periodic wrapping of the frequency square $S_0$, we only need to consider \eqref{eq: singular-cond} and \eqref{eq: identity-cond} on $S_1$ and they imply the following proposition,
 \begin{proposition}\label{prop: feasibility}
-Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: LS-new} has no solution for $\widetilde{m_0}$, if $\exists\,\omega, \,s.t. \; [m_0(\omega), m_0(\omega+\pi_2),m_0(\omega+\pi_4),m_0(\omega+\pi_6)]$ is a linear combination of the rows of $\mathfrak{D}(\omega)$.% in \eqref{eq: singular-cond}.
+Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: identity-cond} has no solution for $\widetilde{m_0}$, if $\exists\,\V{\omega}, \,s.t. \; [m_0(\V{\omega}), m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)]$ is a linear combination of the rows of $\mathfrak{D}(\V{\omega})$.% in \eqref{eq: singular-cond}.
 \end{proposition}
 
 \noindent{\bf Proof of Lemma \ref{lem: rank1}}:\\[.2em]
 {\bf Lemma \ref{lem: rank1}}. {\it 
-If $\V{\omega}\in S_\rho$ and $\M[\widehat{0},:](\V{\omega})$ is singular, then $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,)=1$ or \\$rank(\,\mrow{3}(\V{\omega}\,),\mrow{5}(\V{\omega})) = 1$.
+If $\V{\omega}\in S_\rho$ s.t. \eqref{eq: identity-cond} holds and $\M[\widehat{0},:](\V{\omega})$ is singular, then $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,)=1$ or \\$rank(\,\mrow{3}(\V{\omega}\,),\mrow{5}(\V{\omega})) = 1$.
 }\\[1em]
 \noindent{\it Proof.}
 When $\rho$ is small enough, due to the concentration property, $\m{i}$ is zero on all but a few sets $S_\rho + \V{\pi}_j$ (see Fig.\ref{fig: S-shifts} for reference of $S_\rho$ and its shifts), thus $\mrow{i}(\V{\omega})$ is sparse on $S_\rho$ and $\M[:,\widehat{0}]$ takes the following form
@@ -112,7 +112,7 @@ We make the following observation of $\mrow{i}$:
 \end{itemize}
 Since $m_0(\V{\omega})\neq 0$ on $S_\rho$, \eqref{eq: m0-cramer} then implies that $\det(\Msub[\widehat{k_{\V{\omega}}},:])\neq 0$. Therefore, $\Msub$ is full rank, or equivalently, $rank(\M[:,\widehat{0}]) = 6$. It follows from  (ii) and (iv) that $rank(\mrow{1},\mrow{6},\mrow{7},\mrow{3},\mrow{5})= 4$.\\
 On the other hand, (ii) and (iv) imply that $$rank(\Msub(\V{\omega}+\V{\pi}_2))=rank(\mrow{0},\mrow{4},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})= 5$$ and likewise $$rank(\Msub(\V{\omega}+\V{\pi}_4))=rank(\mrow{0},\mrow{2},\mrow{6},\mrow{1},\mrow{3},\mrow{5},\mrow{7})= 5.$$ Therefore, $\det(\Msub(\V{\omega} + \V{\pi}_2)) = \det(\Msub(\V{\omega} + \V{\pi}_4)) = 0$ and \eqref{eq: m0-cramer} implies $m_0(\V{\omega}+\V{\pi}_2) = m_0(\V{\omega}+\V{\pi}_4) = 0$.\\
-If $\mrow{1}$ and $\mrow{7}$ are linearly independent and so are $\mrow{3}$ and $\mrow{5}$, then $$rank(\Msub(\V{\omega}+\V{\pi}_6))=rank(\mrow{2},\mrow{4},\mrow{1},\mrow{3},\mrow{5},\mrow{7}) = 6,$$ hence $m_0(\V{\omega}+\V{\pi}_6)\neq 0$. Therefore, $$[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)] = [*,0,0,*].$$ In addition, $d_{i,j} = 0,\, \forall(i,j)$ except $(0,6)$, so in \eqref{eq: singular-cond} $$\mathfrak{D}(\V{\omega}) = [d_{0,6}, 0, 0,0]^\top [0,0,0,1] + [0,0,0,d_{0,6}]^\top [-1,0,0,0].$$  By Proposition \ref{prop: feasibility}, the linear system \eqref{eq: LS-new} has no solution $\widetilde{m_0}$ and this proofs the lemma.\qed
+If $\mrow{1}$ and $\mrow{7}$ are linearly independent and so are $\mrow{3}$ and $\mrow{5}$, then $$rank(\Msub(\V{\omega}+\V{\pi}_6))=rank(\mrow{2},\mrow{4},\mrow{1},\mrow{3},\mrow{5},\mrow{7}) = 6,$$ hence $m_0(\V{\omega}+\V{\pi}_6)\neq 0$. Therefore, $$[m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)] = [*,0,0,*].$$ In addition, $d_{i,j} = 0,\, \forall(i,j)$ except $(0,6)$, so in \eqref{eq: singular-cond} $$\mathfrak{D}(\V{\omega}) = [d_{0,6}, 0, 0,0]^\top [0,0,0,1] + [0,0,0,d_{0,6}]^\top [-1,0,0,0].$$  By Proposition \ref{prop: feasibility}, \eqref{eq: identity-cond} cannot be satisfied and this proofs the lemma.\qed
 
 \begin{lemma}\label{lem: full-rank-m35}
 Let $\widetilde{S_\rho} = S_\rho\cap\{\V{\omega}:\, rank(\,\mrow{3}(\V{\omega}),\,\mrow{5}(\V{\omega})\,)= 1\}$, if $\m{3}$ and $\m{4}$ concentrate in $T_3$ and $T_4$ respectively, then $|\widetilde{S_\rho}|=0$.
