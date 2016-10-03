@@ -16,23 +16,23 @@ In MRA, \eqref{eq: MRA} is PR if $\forall f\in L_2(\mathbb{R}^2)$,
 \end{equation}
 Using \eqref{eq: m0} and \eqref{eq: mj} together with the admissibility of the frequency partition \eqref{eq: tiling}, condition \eqref{eq: PR} on $\phi$ and $\psi^j$ yields:
 \begin{thm}\label{thm: conds}
-Let $J=6,\, \V{D} =\bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)$ and $\V{Q}\doteq\bigl(\begin{smallmatrix} 1&1\\-1&1\end{smallmatrix}\bigr)$ in \eqref{eq: MRA}.
-Then the perfect reconstruction condition holds for \eqref{eq: MRA} iff the following two conditions hold
+Let $J=6,\, \V{D} =\bigl(\begin{smallmatrix} 2&0\\0&2\end{smallmatrix}\bigr)$ and $\V{Q}=\bigl(\begin{smallmatrix} 1&1\\-1&1\end{smallmatrix}\bigr)$ in \eqref{eq: MRA}.
+Then the perfect reconstruction condition holds for \eqref{eq: MRA} if and only if the following two conditions hold.
 \begin{align}\label{eq: id-sum}
-|m_0(\boldsymbol{\omega})|^2 + \sum_{j = 1}^6|m_j(\boldsymbol{\omega})|^2 = 1
+|m_0(\boldsymbol{\omega})|^2 + \sum_{j = 1}^6|m_j(\boldsymbol{\omega})|^2 = 1.
 \end{align}
 \begin{equation}\label{eq: shift-cancel}
  \begin{cases}
 %M_0(\boldsymbol{omega})\overline{M_0(\boldsymbol{omega}+\boldsymbol{\gamma})} + 
-\sum_{j = 0}^6m_j(\boldsymbol{\omega})\overlinespace{m_j}(\boldsymbol{\omega} + \boldsymbol{\pi}) = 0, & \boldsymbol{\pi}\in \Gamma_0\setminus\{\boldsymbol{0}\}\\[.5em]
-\sum_{j=1}^6m_j(\boldsymbol{\omega})\overlinespace{m_j}(\boldsymbol{\omega}+\boldsymbol{\pi}) = 0, & \boldsymbol{\pi}\in\Gamma_1\setminus\Gamma_0
+\sum_{j = 0}^6m_j(\boldsymbol{\omega})\overlinespace{m_j}(\boldsymbol{\omega} + \boldsymbol{\pi}) = 0, & \boldsymbol{\pi}\in \Gamma_0\setminus\{\boldsymbol{0}\}.\\[.5em]
+\sum_{j=1}^6m_j(\boldsymbol{\omega})\overlinespace{m_j}(\boldsymbol{\omega}+\boldsymbol{\pi}) = 0, & \boldsymbol{\pi}\in\Gamma_1\setminus\Gamma_0.
 \end{cases}
 \end{equation}
 %where  $\Lambda = (QD\mathbb{Z}^2)^*/(\mathbb{Z}^2)^*,\,\Gamma = (D\mathbb{Z}^2)^*/(\mathbb{Z}^2)^*.$ %$\{(\frac{\pi}{2},\frac{\pi}{2}),(\frac{3\pi}{2},\frac{\pi}{2}),(\frac{\pi}{2},\frac{3\pi}{2}),(\frac{3\pi}{2},\frac{3\pi}{2}),$ $(0,0),(0,\pi),(\pi,0),(\pi,\pi)\}$
 \end{thm}
 
-Theorem \ref{thm: conds} is a corollary of Prop. 1 and Prop. 2 in \cite{durand2007}. We give an alternate proof in Appendix \ref{app: cond-thm}.
-In Theorem \ref{thm: conds}, Eq. \eqref{eq: id-sum} is the {\it identity summation} condition, guaranteeing conservation of $l_2$ energy; Eq. \eqref{eq: shift-cancel} is the {\it shift cancellation} condition such that aliasing is canceled correctly in reconstruction from wavelet coefficients. %, such that downsampling of scaling and shearlet coefficients is valid. 
+Theorem \ref{thm: conds} is a corollary of Proposition 1 and Proposition 2 in \cite{durand2007}. We give an alternate proof in Appendix \ref{app: cond-thm}.
+In Theorem \ref{thm: conds}, \eqref{eq: id-sum} is the {\it identity summation} condition, guaranteeing conservation of $l_2$ energy; \eqref{eq: shift-cancel} is the {\it shift cancellation} condition such that aliasing is canceled correctly in reconstruction from wavelet coefficients. %, such that downsampling of scaling and shearlet coefficients is valid. 
  %$\Lambda = \{(\frac{\pi}{2},\frac{\pi}{2}),(\frac{3\pi}{2},\frac{\pi}{2}),(\frac{\pi}{2},\frac{3\pi}{2}),(\frac{3\pi}{2},\frac{3\pi}{2}),$ $(0,0),(0,\pi),(\pi,0),(\pi,\pi)\},\Gamma = \{(0,0),(0,\pi),(\pi,0),(\pi,\pi)\}$ are the sets of shifts associated to quincunx-dyadic dilation $QD$ and dyadic dilation $D$ respectively.
 %Each $M_j$ contributes a term $M_j(\boldsymbol{omega})\overline{M_j(\boldsymbol{omega} + \boldsymbol{\nu})}$ in the cancellation condition of any shift $\boldsymbol{\nu}$ corresponding to the downsampling scheme of $M_j$.
 Because each $m_j$ is $(2\pi,2\pi)$ periodic, we only need to check these conditions $\forall \V{\omega}\in S_0$.
@@ -40,7 +40,7 @@ Because each $m_j$ is $(2\pi,2\pi)$ periodic, we only need to check these condit
 %\subsection{Extra condition for basis}
 %By Theorem \ref{thm: conds}, the system \eqref{eq: MRA} is a Parseval frame ; 
 Moreover, for  \eqref{eq: MRA} to be an orthonormal basis,  $\{\phi_{\boldsymbol{k}}\}_{\boldsymbol{k}\in\mathbb{Z}^2}$ need to be an orthonormal basis, which is determined by $m_0$ in \eqref{eq: phi-m0}. In 1D MRA, Cohen's theorem in \cite{cohen1992biorthogonal} provides a necessary and sufficient condition on $m_0$ such that \eqref{eq: MRA} is an orthonormal basis. %Such a condition in 1D wavelet MRA is given by Cohen \cite{cohen1992biorthogonal}. 
-This theorem generalizes to 2D as proved in  e.g. \cite{yin2014orthshear}, as follows.
+This theorem generalizes to 2D in  e.g. \cite{yin2014orthshear}, as follows.
 \begin{thm}\label{thm: basis cond}
 Assume that $m_0$ is a trigonometric polynomial with $m_0(\V{0})=1$, and define $\hat{\phi}(\boldsymbol{\omega})$ as in \eqref{eq: phi-m0}.\\
 If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal, then $\exists K$ containing a neighborhood of 0, s.t. $\forall\boldsymbol{\omega}\in S_0,\,\boldsymbol{\omega}+2\pi\mathbf{n}\in K$ for some $\mathbf{n}\in\mathbb{Z}^2, $ and $\inf_{k>0,\,\boldsymbol{\omega}\in K}|m_0(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$. 
@@ -55,8 +55,8 @@ If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal,
 
 %\subsection{Shannon-type wavelets and smoothing}
 In this subsection, we consider $m_j$ supported on the $C_j$ introduced in Section \ref{subsec: frequency partition} that satisfy orthonormal conditions in Section \ref{subsec: northonormal cond}. We begin with the Shannon-type wavelet construction,
-where $m_j$ are indicator functions $ m_j = \mathbbm{1}_{C_j},\,0\leq j \leq 6,\,$ and we use the boundary assignment of $C_j$ in Fig.\ref{fig: partition}.
-The identity summation follows from the partition of $S_0$ by the $C_j$, and the shift cancellation follows from the tiling property \eqref{eq: tiling}. % which implies $m_j(\boldsymbol{\omega})\overline{m_j(\boldsymbol{\omega} + \boldsymbol{\pi}_i)}\equiv 0,\,\forall j,\, i\neq 0.$ %Let $\partial\mathbf{C}_j = \overline{\mathbf{C}_j}-\mathbf{C}_j^{\circ}$ be the boundary of $\mathbf{C}_j$,  
+where $m_j$ are indicator functions $ m_j = \mathbbm{1}_{C_j},\,0\leq j \leq 6,\,$ and we use the boundary assignment of $C_j$ in Figure \ref{fig: partition}.
+The identity summation follows from the partition of $S_0$ by the $C_j$, and the shift cancellation follows from the admissible property \eqref{eq: tiling}. % which implies $m_j(\boldsymbol{\omega})\overline{m_j(\boldsymbol{\omega} + \boldsymbol{\pi}_i)}\equiv 0,\,\forall j,\, i\neq 0.$ %Let $\partial\mathbf{C}_j = \overline{\mathbf{C}_j}-\mathbf{C}_j^{\circ}$ be the boundary of $\mathbf{C}_j$,  
 Applying Theorem \ref{thm: basis cond} to $m_0$, we verify that the Shannon-type wavelets generated from these $m_j$ form an orthonormal basis.
 
 %However, because of the discontinuity of $m_j$ across the boundary of its support, the corresponding wavelet has slow decay in the time domain. 
@@ -64,7 +64,7 @@ Applying Theorem \ref{thm: basis cond} to $m_0$, we verify that the Shannon-type
 Because of the discontinuity at $\partial C_j$, the boundaries of the $C_j$, these $m_j$ are not smooth, and hence the corresponding wavelets are not spatially localized. The $m_j$ can be regularized by smoothing at the $\partial C_j$.
 %We take a different regularization approach from Durand's \cite{durand2007}, where three regular quincunx filter banks are constructed and then composed to obtain the desired regular quincunx dyadic filter banks. Here, we smooth the discontinuous boundaries of $m-$functions directly. 
 However, as shown in Proposition 3 in \cite{durand2007}, it is not possible to smooth the behavior of the $m_j$ at  {\it all} the boundaries with discontinuity if the $m_j$ have to satisfy the perfect reconstruction condition.
-In \cite{yin2014orthshear}, the $\partial C_j$ are segmented into {\it singular} and {\it regular} pieces. On regular boundaries, pairs of $(m_j,\, m_{j'})$ share a boundary and can both be smoothed in a coherent way such that all the constraints in Theorem \ref{thm: basis cond} remain satisfied. The singular pieces are boundaries for just one $m_j$, which can then not be smoothed without violating the shift cancellation condition. Fig. \ref{fig: boundary} shows the boundary classification, where the corners of $S_0$ and $C_0$ are singular, hence $m_0$ and the $m_j$'s in two diagonal directions of an orthonormal bases are discontinuous there. A mechanism of constructing orthonormal bases by smoothing Shannon-type $m_j$ on regular boundaries is provided in \cite{yin2014orthshear}.%However, it remains unclear if some of the discontinuity can be removed by direct smoothing.
+In \cite{yin2014orthshear}, the $\partial C_j$ are segmented into {\it singular} and {\it regular} pieces with respect to the shift cancellation condition \eqref{eq: shift-cancel} in Theorem \ref{thm: conds}. On regular boundaries, pairs of $(m_j,\, m_{j'})$ share a boundary and can both be smoothed in a coherent way such that both \eqref{eq: id-sum} and \eqref{eq: shift-cancel} remain satisfied. The singular pieces are boundaries for just one $m_j$, which can then not be smoothed without violating the shift cancellation condition. Figure \ref{fig: boundary} shows the boundary classification, where the corners of $S_0$ and $C_0$ are singular, hence $m_0$ and the $m_j$'s in two diagonal directions of an orthonormal bases are discontinuous there. A mechanism of constructing orthonormal bases by smoothing Shannon-type $m_j$ on regular boundaries is provided in \cite{yin2014orthshear}.%However, it remains unclear if some of the discontinuity can be removed by direct smoothing.
 
 %Next, we analyze the limitation of direct smoothing in detail and show that there are regular boundaries which can be smoothed without violating \eqref{eq: id-sum} and \eqref{eq: shift-cancel}, and singular boundaries which cannot be smoothed.
 

@@ -3,21 +3,21 @@
 %Consider the $L-$level directional wavelet MRA system
 The irregularity of orthonormal bases can be overcome in the following low-redundancy tight frame construction,
  \begin{align}\label{eq: MRA-frame}
- \{\phi_{L,\boldsymbol{k}}\,,\psi^j_{l,\boldsymbol{k'}}\,, \, {\small 1\leq l \leq L,\, \boldsymbol{k},\,\boldsymbol{k'}\in \mathbb{Z}^2,\,1\leq j \leq J\}}.
+ \{\phi_{L,\boldsymbol{k}}\,,\psi^j_{l,\boldsymbol{k'}}\,, \, {\small 1\leq l \leq L,\, \boldsymbol{k},\,\boldsymbol{k'}\in \mathbb{Z}^2,\,1\leq j \leq 6\}}.
 \end{align}  
-All wavelet coefficients are sub-sampled on dyadic sub-lattice and the redundancy of any $L-$level MRA frame doesn't exceed $\frac{J/|D|}{1-1/|D|} = \frac{6/4}{1-1/4} = 2$.
+In \eqref{eq: MRA-frame}, all wavelet coefficients are downsampled on the dyadic sublattice and the redundancy of any such $L-$level frame does not exceed $\frac{J/|D|}{1-1/|D|} = \frac{6/4}{1-1/4} = 2$.
 %where $\phi,\psi^j$ satisfy \eqref{eq: m0} and \eqref{eq: mj} as before. Instead of taking the dilated quincunx subsampling of directional wavelet coefficients of  \eqref{eq: MRA}, a dyadic subsampling is taken instead. A 1-level MRA frame \eqref{eq: MRA-frame} has redundancy $\frac{1}{|D|} + \frac{J}{|D|} = 1/4 + 6/4 = 7/4$, and the redundancy for any $L-$level MRA frame doesn't exceed $\frac{J/|D|}{1-1/|D|} = \frac{6/4}{1-1/4} = 2$. 
 Similar to Theorem \ref{thm: conds}, we have
 \begin{thm}\label{thm: frame-conds}
 %Set $\Gamma = (D\mathbb{Z}^2)^*/(\mathbb{Z}^2)^*.$ 
-The perfect reconstruction condition holds for \eqref{eq: MRA-frame} iff the following both hold
+\eqref{eq: MRA-frame} has PR if and only if the following two conditions both hold.
 \begin{align}
-\textstyle |m_0(\boldsymbol{\omega})|^2 + \sum_{j = 1}^6|m_j(\boldsymbol{\omega})|^2 &= 1 \\
-\textstyle\sum_{j = 0}^6\,m_j(\boldsymbol{\omega})\overlinespace{m_j}(\boldsymbol{\omega} + \boldsymbol{\pi}) &= 0,\quad  \boldsymbol{\pi}\in \Gamma_0\setminus\{\boldsymbol{0}\} \label{eq: reduced-shift-cancel}
+\textstyle |m_0(\boldsymbol{\omega})|^2 + \sum_{j = 1}^6|m_j(\boldsymbol{\omega})|^2 &= 1. \\
+\textstyle\sum_{j = 0}^6\,m_j(\boldsymbol{\omega})\overlinespace{m_j}(\boldsymbol{\omega} + \boldsymbol{\pi}) &= 0,\quad  \boldsymbol{\pi}\in \Gamma_0\setminus\{\boldsymbol{0}\}. \label{eq: reduced-shift-cancel}
 \end{align}
 \end{thm}
 Theorem \ref{thm: frame-conds} can be proved analogously to Theorem \ref{thm: conds}, 
-but with fewer shift cancellation constraints. Following the same analysis of boundary regularity as before, we show in \cite{yin2014orthshear} that all boundaries are regular and can be smoothed properly. Hence, we were able to obtain directional wavelets with much better spatial and frequency localization than those constructed by Durand in \cite{durand2007}. 
+but with fewer shift cancellation constraints. Following the same analysis of boundary regularity as before, we show in \cite{yin2014orthshear} that all boundaries are regular with respect to \eqref{eq: reduced-shift-cancel} and can be smoothed properly. Hence, we were able to obtain directional wavelets with much better spatial and frequency localization than those constructed by Durand in \cite{durand2007}. 
 %We can define {\it singular} boundaries as before, %and Lemma \ref{lem: singular-bdy} holds for \eqref{eq: reduced-shift-cancel} as well.
 %but only $\{\mathcal{B}(j,\boldsymbol{\pi})\}_{\boldsymbol{\pi}\in\Gamma_0\setminus\{\boldsymbol{0}\}}$ need to be considered, which results in fewer singular boundaries $\{\mathcal{C}_s(j,\boldsymbol{\pi})\}_{\boldsymbol{\pi}\in\Gamma\setminus\{\boldsymbol{0}\}}$; 
 % In particular, we construct a directional wavelet tight frame with redundancy of 2 by using the classical dyadic downsampling $D_2$, with shift cancellaiton constraints \eqref{eq: shift-cancel} only on set $\Gamma\setminus\{\boldsymbol{0}\}$. 

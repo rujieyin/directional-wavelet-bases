@@ -23,7 +23,7 @@ Since the objective function does not involve $\mathbf{c}$, $\mathbf{c}$ can be 
 \min_{\xvec\in\mathbb{C}^{4N^2}}\; \Vert \V{D}\xvec\Vert^2,\quad 
 s.t. \; |\V{A}_0\,\xvec| > 0,
 \end{align}
-where $|\cdot|$ in the constraint is a pointwise operator that computes the absolute value. The constraint $|\V{A}_0\,\xvec| > 0$ can be rewritten as a set of quadratic constraints $\xvec^*\V{A}_0[i,:]^*\V{A}_0[i,:]\,\xvec > 0,\, i =0,\cdots, N^2-1 $. Therefore, \eqref{eq: opt-ineq} is a quadratically constrained quadratic program. Furthermore, since $\V{Q}_i\doteq \V{A}_0[i,:]^*\V{A}_0[i,:]$ is positive semi-definite, \eqref{eq: opt-ineq} is not convex and is NP-hard in general. One may solve the convex relaxation of \eqref{eq: opt-ineq} using semidefinite programming (SDP). Instead of solving $\xvec$, we solve $\V{X}\doteq \xvec\xvec^*$ and convert \eqref{eq: opt-ineq} into 
+where $|\cdot|$ in the constraint is a pointwise operator that computes the absolute value. The constraint $|\V{A}_0\,\xvec| > 0$ can be rewritten as a set of quadratic constraints $\xvec^*\V{Q}_i\xvec > 0,\, i =0,\cdots, N^2-1 $ where $\V{Q}_i = \V{A}_0[i,:]^*\V{A}_0[i,:]$. Therefore, \eqref{eq: opt-ineq} is a quadratically constrained quadratic program. Furthermore, since $\V{Q}_i$ is positive semi-definite, \eqref{eq: opt-ineq} is not convex and is NP-hard in general. One may solve the convex relaxation of \eqref{eq: opt-ineq} using semidefinite programming (SDP). Instead of solving $\xvec$, we solve $\V{X}\doteq \xvec\xvec^*$ and convert \eqref{eq: opt-ineq} into 
 \begin{align}\label{eq: opt-trace}
 \min_{\V{X}\in\mathbb{C}^{4N^2\times 4N^2}}\;tr(\, \V{D}^*\V{D}\,\V{X}\,),\quad
 s.t. \; tr(\,\V{Q}_i\,\V{X}\,) > 0,\, \V{X}\succeq 0,\, rank(\V{X}) = 1,
