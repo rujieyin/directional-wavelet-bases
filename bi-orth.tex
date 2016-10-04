@@ -188,10 +188,10 @@ In what follows, we introduce a triangular partition of $S_0=[-\pi,\pi)\times[-\
 The {\it  domination-support} $\Omega_j$ of a function $\widetilde{m_j}$ (with respect to the other $m_i$, $i\neq j$) is the set $\{\V{\omega}:\,|\widetilde{m_j}(\V{\omega})|> |\widetilde{m_i}(\V{\omega})|,\,\forall i\neq j\}$. \vspace{.5em}
 
 Let $T_j$ be pairs of triangles shown in Figure \ref{fig: partition 2}, defined such that $C_j\subset T_j,\, j = 1,\cdots,6.$ Consider the decompositions $T_j = T_j^-\bigcup T_j^+$, where $T_j^-, T_j^+$ are halves of $T_j$ adjacent to its neighboring triangles $T_i$ in the counter clockwise and clockwise directions respectively.\\[.5em]
-\noindent{\bf Definition.}  $\widetilde{m_j}$ {\it concentrates} within $T_j$ if 
+\noindent{\bf Definition.}  $\widetilde{m_j}$ {\it concentrates} in $T_j$ for $j = 1,\cdots,6$ if 
 \begin{itemize}
 \item[(i)] $\Omega_j\subset T_j$;
-\item[(ii)]$\text{supp}(\widetilde{m_j})\subset T_{j-1}^+\bigcup T_j\bigcup T_{j+1}^-$ and $\int_\Omega|\widetilde{m_j}| > \int_{\Omega'}|\widetilde{m_j}|, \forall\, \Omega\subset T_j\bigcap\text{supp}(\widetilde{m_j})$ s.t. $|\Omega|>0$, where $\Omega' \subset T_{j-1}^+\bigcup T_{j+1}^-$ is symmetric to $\Omega$ with respect to the boundary of $T_j$.
+\item[(ii)] $\text{supp}(\widetilde{m_j})\subset T_{j-1}^+\bigcup T_j\bigcup T_{j+1}^-$ and $\int_\Omega|\widetilde{m_j}| > \int_{\Omega'}|\widetilde{m_j}|, \forall\, \Omega\subset T_j\bigcap\text{supp}(\widetilde{m_j})$ s.t. $|\Omega|>0$, where $\Omega' \subset T_{j-1}^+\bigcup T_{j+1}^-$ is symmetric to $\Omega$ with respect to the boundary of $T_j$.
 \end{itemize}
 In other words, for $\widetilde{m_j}$ to concentrate in $T_j$, $\widetilde{m_j}$ should be ``mainly" supported in $T_j$ (condition (i)) and ``decay" properly outside of $T_j$ (condition (ii)).
 
@@ -201,28 +201,32 @@ In other words, for $\widetilde{m_j}$ to concentrate in $T_j$, $\widetilde{m_j}$
 \caption{$S_{\rho}$ and its shifts}
 \label{fig: S-shifts}
 \end{figure}
+We say $\widetilde{m_0}$ concentrates in $C_0$ if $\Omega_0\subset C_0$.
 For $m_0$, we impose the natural requirement that, for some (possibly small) $\rho>0$, we have $|m_0(\V{\omega})| > 0,\, \forall\, |\V{\omega}| < \rho$.
 Given these constraints on the support of $\widetilde{m_j}$ and $m_0$, we examine the consequences of the singularity condition on $\M[\widehat{0},:](\V{\omega})$ from Lemma \ref{lem: subM-singular}, specifically in the domain $S_{\rho} = \{(\omega_1,\omega_2)|\;|\V{\omega}| < \rho, \omega_1 <0,\,\omega_2<0\}$, see the red zone in Figure \ref{fig: S-shifts}. 
 
 Let $\mrow{i}(\V{\omega}) = [\widetilde{m_1}(\V{\omega}+\V{\pi}_i)\, \cdots,\,\widetilde{m_6}(\V{\omega}+\V{\pi}_i)]\in\mathbb{C}^6,\, i = 0,\cdots,7$ be the rows of $\M[:,\widehat{0}](\V{\omega})$. 
 \begin{lemma}\label{lem: rank1}
-If $\V{\omega}\in S_\rho$ s.t. \eqref{eq: identity-cond} holds and $\M[\widehat{0},:](\V{\omega})$ is singular, then $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,)=1$ or \\$rank(\,\mrow{3}(\V{\omega}\,),\mrow{5}(\V{\omega})) = 1$.
+If $\V{\omega}\in S_\rho$ s.t. \eqref{eq: identity-cond} holds and $\M[\widehat{0},:](\V{\omega})$ is singular, then  $rank(\mrow{1},\mrow{7}) = 1$ and $rank(\mrow{3},\mrow{5}) = 2$ or $rank(\mrow{3},\mrow{5}) = 1$ and $rank(\mrow{1},\mrow{7}) = 2$.
 \end{lemma}
 Lemma \ref{lem: rank1} can be proved by analyzing the linear dependency and independency between the $\mrow{i}$ on $S_\rho$, since the $\mrow{i}$ have known locations of zero entries when $\rho$ is small due to the concentration of the $\widetilde{m_j}$.
 For the full proof of Lemma \ref{lem: rank1}, see Appendix \ref{app: lemmas}.
 
 The concentration of $\m{3}$ and $\m{4}$ in $T_3$ and $T_4$ and their symmetry together imply that  $rank(\mrow{3},\mrow{5}) \neq 1\; a.e.$ on $S_\rho$ (see Lemma \ref{lem: full-rank-m35} in Appendix \ref{app: discontinuity}), hence $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,) = 1\; a.e.$ on $S_\rho$.
-Therefore, $\mp{1}{1}, \mp{6}{1}$ in $\mrow{1}(\V{\omega})$ and the corresponding $\mp{1}{7}, \mp{6}{7}$ in $\mrow{7}(\V{\omega})$ on $S_\rho$ are linearly related. Based on this and the concentration of $\m{1}$ and $\m{6}$ in $T_1$ and $T_6$ as well as their symmetry, we can show that $\m{1}=\m{6}=0\; a.e.$ on $S_\rho + \V{\pi}_1$ (see Proposition \ref{prop: zero-corner} in Appendix \ref{app: discontinuity}), which implies the discontinuity of $\m{1}$ and $\m{6}$ at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
-
-\begin{proposition}\label{prop: continuity}
-Given the same condition as in Lemma \ref{lem: rank1}, $\m{1},\m{6}$ cannot be continuous at both $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$.
-\end{proposition}
-\noindent{\it Proof. }
-If $\m{1}$ is continuous at $(\frac{\pi}{2},\frac{\pi}{2})$, then $\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2}) = \lim_{\alpha\rightarrow 1^-}\widetilde{m_1}(\V{\omega}(\alpha)) = 0$, where $\{\V{\omega}(\alpha),\,0\leq \alpha<1\} \subset S_\rho + \V{\pi}_1$ and $\V{\omega}(1) = (\frac{\pi}{2},\frac{\pi}{2})$. By symmetry, we have $\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2}) = 0$. Similarly, the continuity at $(-\frac{\pi}{2},-\frac{\pi}{2})$ implies $\widetilde{m_1}(-\frac{\pi}{2},-\frac{\pi}{2}) = \widetilde{m_6}(-\frac{\pi}{2},-\frac{\pi}{2}) = 0$. Therefore $\mrow{1}(\V{0}) = \mrow{7}(\V{0}) = \mathbf{0}$ at the origin which results in contradiction with Lemma \ref{lem: rank1}.\qed\\[1em]%and from \eqref{eq: m0C} $m_0^C(0)=0$ so that $m_0(0)=0$, %  On the other hand, Proposition\ref{prop: origin-det} implies that $m_0(0) = 0$ as $a = |\widetilde{m_1}(\pi_1)| = 0$, which results in contradiction.
+Therefore, $\mp{1}{1}, \mp{6}{1}$ in $\mrow{1}(\V{\omega})$ and the corresponding $\mp{1}{7}, \mp{6}{7}$ in $\mrow{7}(\V{\omega})$ on $S_\rho$ are linearly related. Furthermore, we can show that $\m{6}=0\; a.e.$ on $S_\rho + \V{\pi}_1\cap \{\omega_1 < \omega_2\}$ (see Proposition \ref{prop: zero-corner} in Appendix \ref{app: discontinuity}), if $\m{0}$, $\m{1}$ and $\m{6}$ concentrate in $C_0$, $T_1$ and $T_6$ respectively. Therefore, if $\m{6}$ is continuous, $\widetilde{m_6}(\dfrac{\pi}{2},\dfrac{\pi}{2}) = 0$; the same holds for $\m{1}$ and for $(-\dfrac{\pi}{2},-\dfrac{\pi}{2})$ as well by symmetry.% and by symmetry $\m{1}$ and $\m{6}$ will be zero at $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$ if they are continuous.% at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 The following theorem summarizes our main result.
 \begin{theorem}\label{thm: thm}
-If the $\m{j}$ concentrate in $T_j$ and have symmetries \eqref{eq: sym-m16} and \eqref{eq: sym-m34}, then \eqref{eq: LS-new} does not have a unique solution of $m_j(\V{\omega})$ s.t. $\exists\,\rho>0,$ $|m_0(\V{\omega})|> 0, \, \forall |\V{\omega}|<\rho$, if $\m{1}$ and $\m{6}$ are continuous.
+%\begin{proposition}\label{prop: continuity}
+If the $\widetilde{m_j}$ concentrate in $T_j$ for $j= 1,3,4,6$ with symmetries \eqref{eq: sym-m16} and \eqref{eq: sym-m34} and $\widetilde{m_0}$ concentrates in $C_0$, then $\m{1},\m{6}$ cannot be continuous at both $(\dfrac{\pi}{2},\dfrac{\pi}{2})$ and $(-\dfrac{\pi}{2},-\dfrac{\pi}{2})$ for \eqref{eq: LS-new} to have a unique solution of $m_j$ s.t. $\exists\,\rho>0,\,m_0(\V{\omega})$ is non-zero on $|\V{\omega}|<\rho$.
 \end{theorem}
+%\end{proposition}
+\noindent{\it Proof. }
+If $\m{1}$ and $\m{6}$ are both continuous at $(\dfrac{\pi}{2},\dfrac{\pi}{2})$ and $(-\dfrac{\pi}{2},-\dfrac{\pi}{2})$, then $\widetilde{m_1}(\dfrac{\pi}{2},\dfrac{\pi}{2}) = \widetilde{m_1}(-\dfrac{\pi}{2}, -\dfrac{\pi}{2}) = \widetilde{m_6}(\dfrac{\pi}{2},\dfrac{\pi}{2}) = \widetilde{m_6}(-\dfrac{\pi}{2},-\dfrac{\pi}{2}) = 0$. %$\widetilde{m_1}(\dfrac{\pi}{2},\dfrac{\pi}{2}) = \lim_{\alpha\rightarrow 1^-}\widetilde{m_1}(\V{\omega}(\alpha)) = 0$, where $\{\V{\omega}(\alpha),\,0\leq \alpha<1\} \subset S_\rho + \V{\pi}_1$ and $\V{\omega}(1) = (\frac{\pi}{2},\frac{\pi}{2})$. By symmetry, we have $\widetilde{m_6}(\dfrac{\pi}{2},\dfrac{\pi}{2}) = 0$. Similarly, the continuity at $(-\dfrac{\pi}{2},-\dfrac{\pi}{2})$ implies $\widetilde{m_1}(-\dfrac{\pi}{2},-\dfrac{\pi}{2}) = \widetilde{m_6}(-\dfrac{\pi}{2},-\dfrac{\pi}{2}) = 0$. 
+Therefore, $\mrow{1}(\V{0}) = \mrow{7}(\V{0}) = \mathbf{0}$ at the origin which results in contradiction with Lemma \ref{lem: rank1}.\qed%and from \eqref{eq: m0C} $m_0^C(0)=0$ so that $m_0(0)=0$, %  On the other hand, Proposition\ref{prop: origin-det} implies that $m_0(0) = 0$ as $a = |\widetilde{m_1}(\pi_1)| = 0$, which results in contradiction.
+%The following theorem summarizes our main result.
+%\begin{theorem}\label{thm: thm}
+%If the $\m{j}$ concentrate in $T_j$, $\m{0}$ concentrates in $C_0$ and the symmetries \eqref{eq: sym-m16} and \eqref{eq: sym-m34} hold, then \eqref{eq: LS-new} does not have a unique solution of $m_j(\V{\omega})$ s.t. $\exists\,\rho>0,$ $|m_0(\V{\omega})|> 0, \, \forall |\V{\omega}|<\rho$, if $\m{1}$ and $\m{6}$ are continuous.
+%\end{theorem}
 
 \section{Numerical construction of biorthogonal bases}\label{sec: solve-quincunx}
 In this section, we develop a numerical construction of biorthogonal bases on a dyadic quincunx lattice following an approach similar to Cohen et al. We first design $\m{j},\,j = 1,\cdots,6,$ on the canonical frequency square $S_0 = [-\pi,\pi)\times[-\pi,\pi)$associated with the lattice $\mathbb{Z}^2$, then solve for $m_0,\widetilde{m_0}$ and $m_j$ on $S_0$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
@@ -518,14 +522,13 @@ To sum up, we propose \ref{alg} for biorthogonal directional filter construction
 \item[1.] Since $\widetilde{m_j},\, j=1,\cdots,6$ are pre-designed, it is relatively easy to control their regularity. In addition, the regularity of $\widetilde{m_0}$ is optimized by \eqref{eq: opt}. Therefore, according to \eqref{eq: mj_dual}, we may hope to obtain dual wavelets with good regularity.
 %\item[1.] The order of step 4. and step 5. in \ref{alg} can be reversed because \eqref{eq: mj-eq} only depends on $m_0(\V{\omega})\overline{\widetilde{m_0}}(\V{\omega} + \V{\pi}_i)$ when $i$ is even, which remains the same for $m_0'(\V{\omega}),\widetilde{m_0}'(\V{\omega})$ regardless of $c(\V{\omega})$ by construction.
 \item[2.] In principle, one could formulate an optimization for $c(\V{\omega})$ in step 3. and $\m{0}$ in step 4. jointly in order to obtain optimal smoothness for $\m{0}$ given $m_0(\V{\omega})$ solved in step 2. Instead of solving a linearly constrained quadratic program like \eqref{eq: opt}, one solves a {\it quadratically} constrained quadratic program (QCQP), which is non-convex and in general NP-hard. Such a QCQP can be relaxed to a convex semidefinite program (SDP) that can be efficiently solved although the solution is not exact. See Appendix \ref{app: QCQP} for more details. In Section \ref{sec: numerics}, we discuss how to choose $c(\V{\omega})$ for an $m_0(\V{\omega})$ solved from a specific set of input $\widetilde{m_j}$.
-\item[3.] Once can also manipulate pairs of $(m_j,\widetilde{m_j})$ according to the following generalization of Proposition \ref{prop: mc}.
+\item[3.] Once can also manipulate pairs of $(m_j,\widetilde{m_j})$ according to the generalization of Proposition \ref{prop: mc} below.
 \end{itemize}
 \begin{proposition}\label{prop: mjc}
 If $\m{j}, m_j(\V{\omega}),\,  j = 0,1,...,6$ satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond}, 
 $m_j^c(\V{\omega})\doteq m_j(\V{\omega})c_j(\V{\omega}), \widetilde{m_j}^c(\V{\omega})\doteq \m{j}\overlinespace{c_j}(\V{\omega})^{-1} \, j = 0,\cdots,6$ 
 satisfy \eqref{eq: LS-new} and \eqref{eq: identity-cond} if $ c_0(\V{\omega}) = c_0(\V{\omega}+\V{\pi}_{2k})\,,\forall k = 0,\cdots,3$ and $c_j(\V{\omega}) = c_j(\V{\omega} + \V{\pi}_k),\, \forall \;k = 0,\cdots,7,\, j = 1,\cdots,6$.
 \end{proposition}
-
 
 \begin{comment}
 \subsection{solving $m_i$}
@@ -548,7 +551,7 @@ The solution of \eqref{eq: mi} depends only on $m_0^C\overline{\widetilde{m_0}^C
 
 In this section, we demonstrate the numerical construction of biorthogonal directional wavelets on a quincunx lattice using our proposed \ref{alg} implemented in Matlab.
 
-For the input of \ref{alg}, we use $\widetilde{m_j}$ in the form of \eqref{eq: m-form}, with phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: mjdual} constructed as follows. We start with a symmetric $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry with respect to the diagonal. This is the same approach used in the shearlet construction in \cite{kutyniok2012digital}. Furthermore, we set $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\frac{\pi}{2},\frac{\pi}{2})\times [-\frac{\pi}{2},\frac{\pi}{2})$ and according to Proposition \ref{prop: continuity}, we enforce $|\widetilde{m_1}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$ and $|\widetilde{m_6}(\frac{\pi}{2},\frac{\pi}{2})|\neq 0$. As the first step, we numerically verify that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}.\footnote{In practice, we find it hard for $\widetilde{m_j}$ to satisfy the rank constraint \eqref{eq: Mranks} without enforcing $\widetilde{m_j}$ to be zero on $C_0$. This may indicate topological obstruction in our biorthogonal scheme}
+For the input of \ref{alg}, we use $\widetilde{m_j}$ in the form of \eqref{eq: m-form}, with phases in \eqref{eq: phase-sol} and amplitudes $|\widetilde{m_j}|$ shown in Figure \ref{fig: mjdual} constructed as follows. We start with a symmetric $|\widetilde{m_2}|$, then compute $|\widetilde{m_1}|$ and $|\widetilde{m_3}|$ by shearing $|\widetilde{m_2}|$ counter-clockwise and clockwise respectively. $|\widetilde{m_4}|, |\widetilde{m_5}|$ and $|\widetilde{m_6}|$ are obtained by symmetry with respect to the diagonal. This is the same approach used in the shearlet construction in \cite{kutyniok2012digital}. Furthermore, we set $\m{j} = 0,\,\forall \V{\omega}\in C_0 = [-\pi/2,\pi/2)\times [-\pi/2, \pi/2)$ and according to Theorem \ref{thm: thm}, we enforce $|\widetilde{m_1}(\dfrac{\pi}{2},\dfrac{\pi}{2})|\neq 0$ and $|\widetilde{m_6}(\dfrac{\pi}{2},\dfrac{\pi}{2})|\neq 0$. As the first step, we numerically verify that this particular design of $\widetilde{m_j}$ satisfies the rank constraints \eqref{eq: Mranks}.\footnote{In practice, we find it hard for $\widetilde{m_j}$ to satisfy the rank constraint \eqref{eq: Mranks} without enforcing $\widetilde{m_j}$ to be zero on $C_0$. This may indicate topological obstruction in our biorthogonal scheme}
 
 We proceed to solve $m_0(\V{\omega})$ in quadruple separately for each $\V{\omega}$ in $[-\pi,0)\times [-\pi,0)$. As pointed out earlier, these solutions still have an unconstrained degree of freedom in the form of a constant $a_{\V{\omega}}$; the result is shown in Figure \ref{fig: m_0} for one implementation using Matlab solvers. This solution $m_0(\V{\omega})$ has both inherent irregularity of the biorthogonal construction from the input and artificial irregularity from the algorithm: the amplitude $|m_0(\V{\omega})|$ is supported on $C_0$, where $|m_0(\V{\omega})| = 1$ and its discontinuity at $\partial C_0$ corresponds to that of the input $\m{j}$; however, the phase of $m_0(\V{\omega})$ is discontinuous even on the interior of $C_0$ due to $a_{\V{\omega}}$, an artificial irregularity we remove in the next step by introducing $c(\V{\omega})$.
 
@@ -580,14 +583,14 @@ Although using a different set of $\widetilde{m_j}$ as input paired with a caref
 
 \begin{figure}
 \centering
-\includegraphics[width=\textwidth]{m0.png}
+\includegraphics[width=.9\textwidth]{m0.png}
 \caption{ $m_0(\V{\omega})$ constructed from $\widetilde{m_j}$. Left to right: $Re(m_0(\V{\omega})),\, Im(m_0(\V{\omega}))$ and $|m_0(\V{\omega})|$.}
 \label{fig: m_0}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=.6\textwidth]{smooth_m0dual.png}
+\includegraphics[width=.5\textwidth]{smooth_m0dual.png}
 \caption{ Left: $\widetilde{m_0}$, designed smooth function supported on the central square $C_0$, right: $m_0'$, where $\;\, m_0'\sbarm{0} = \mathbbm{1}_{C_0}(\V{\omega})$. } 
 \label{fig: smooth_m0dual}
 \end{figure}
@@ -603,7 +606,7 @@ Although using a different set of $\widetilde{m_j}$ as input paired with a caref
 
 \begin{figure}
 \centering
-\includegraphics[width = \textwidth]{m_combined}
+\includegraphics[width = .9\textwidth]{m_combined}
 \caption{Top: $|m_j(\V{\omega})|,\, j= 1,2,3$,
 Bottom: $|m_j(\V{\omega})\m{j}|,\, j=4,5,6$, where $m_j(\V{\omega})$ is solved from \eqref{eq: mj-eq} given $\widetilde{m_j}$ in Figure \ref{fig: mjdual}, $m_0'$ and $\widetilde{m_0}$ in Figure \ref{fig: smooth_m0dual}.}
 \label{fig: m_j}
@@ -634,7 +637,7 @@ Bottom: $|m_j(\V{\omega})\m{j}|,\, j=4,5,6$, where $m_j(\V{\omega})$ is solved f
 
 \begin{figure}[h]
 \centering
-\includegraphics[width = .6\textwidth]{smooth_extended_m0dual.png}
+\includegraphics[width = .5\textwidth]{smooth_extended_m0dual.png}
 \caption{ Left: $\widetilde{m_0}$, with support outside $C_0$, right: $m_0'$, where $ m_0'\sbarm{0}  = \mathbbm{1}_{C_0}(\V{\omega})$.}
 \label{fig: smooth_m0dual-slow}
 \end{figure}

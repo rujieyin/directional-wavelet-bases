@@ -2,11 +2,14 @@
 \subsection{Numerical optimization of $\m{0}$ in 1D}\label{subsec: 1D-opt}
 To test whether numerical optimization is a practical way to solve \eqref{eq: identity-cond}, we experiment on $m_0$ and $\widetilde{m_0}$ of existing real biorthogonal wavelets. We consider a pair of low frequency filters corresponding to biorthogonal scaling functions $\phi,\, \tilde{\phi}$ with vanishing moments 3 and 5 respectively. 
 
-\begin{wrapfigure}{r}{.4\textwidth}
+\begin{figure}
+\centering
+%\begin{wrapfigure}{r}{.4\textwidth}
 \includegraphics[width = .4\textwidth]{filters.jpg}
 \caption{1D filters, up: LoD, down: LoR}
 \label{fig: filters}
-\end{wrapfigure}
+%\end{wrapfigure}
+\end{figure}
 The 1D filters are shown in Figure \ref{fig: filters}. Suppose we know the decomposition filter, and we want to find the real reconstruction filter, such that it has support as concentrated as possible. 
 %The corresponding $m_0$ and $\widetilde{m_0}$ are complex, yet we can shift the phase of $m_0$ such that $m_0$ is real and apply the same phase shift to $\m{0}$. 
 %Without loss of generality, \eqref{eq: identity-cond} can be solved assuming that $m_0$ is real.
@@ -66,21 +69,23 @@ Compared to \eqref{eq: opt} proposed to solve $\m{0}$, both optimization problem
 \end{minipage}
 \end{comment}
 
-\begin{minipage}{.9\textwidth}
+\begin{center}
+\begin{minipage}{.8\textwidth}
 \centering
 \includegraphics[width = \textwidth]{2d-m-compare-vanilla.png}
 \captionof{figure}{Left to right: solution of \eqref{eq: opt-1d} in 2D, ground truth and their difference}
 \label{fig: 2d-compare-1}
 \end{minipage}\\
 \vspace*{2em}
-\begin{minipage}{.9\textwidth}
+\begin{minipage}{.8\textwidth}
 \centering
 \includegraphics[width = \textwidth]{2d-m-compare-weightedl2.png}\\
 \includegraphics[width = \textwidth]{2d-filter-compare-weightedl2.png}
 \captionof{figure}{Left to right: solution of \eqref{eq: opt-2d-weight} ($\lambda = 600$), ground truth and their difference; Top: frequency domain, bottom: time domain.}
 \label{fig: 2d-compare-2.2}
 \end{minipage}
-\\[1em]
+\end{center}
+
 \begin{comment}
 {\it weighted L2 norm with symmetry constraint}\\
 If we hard constrain the symmetry by the following

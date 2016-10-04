@@ -17,7 +17,7 @@
 \usepackage{amsthm}
 \usepackage{graphicx}
 \usepackage{enumitem}
-\graphicspath{{./orth-frame/figure/}{./bi-orth/figure/}}
+\graphicspath{{./figs/}}%{./orth-frame/figure/}{./bi-orth/figure/}}
 \makeatletter
 \newcommand*{\ov}[1]{\m@th\overline{\mbox{#1}\raisebox{.8em}{}}}
 \newcommand{\V}[1]{\boldsymbol{#1}}% boldface for vector and matrix
@@ -112,6 +112,10 @@ In our previous work \cite{yin2014orthshear}, We show that the supports of ortho
 \section{Acknowledgment}
 This work is support by the NSF grant 1516988.
 
+\bibliographystyle{IEEEtran}%bib/te}
+\bibliography{ref}
+
+
 \clearpage
 \newpage
 \begin{appendices}
@@ -123,8 +127,6 @@ This work is support by the NSF grant 1516988.
 %\include{m0-opt}
 \end{appendices}
 
-\bibliographystyle{IEEEtran}%bib/te}
-\bibliography{ref}
 
 \newpage
 \end{document}
