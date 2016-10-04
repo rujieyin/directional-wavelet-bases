@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2016/dev) (preloaded format=pdflatex 2015.9.7)  3 OCT 2016 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 OCT 2016 20:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **direct-wavelet.tex
 (./direct-wavelet.tex
-LaTeX2e <2015/01/01> patch level 2
-Babel <3.9l> and hyphenation patterns for 2 languages loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,30 +23,38 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip43
+\@affilsep=\skip44
+\c@Maxaffil=\count87
+\c@authors=\count88
+\c@affil=\count89
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count87
-\Gm@cntv=\count88
-\c@Gm@tempcnt=\count89
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
 \Gm@bindingoffset=\dimen103
 \Gm@wd@mp=\dimen104
 \Gm@odd@mp=\dimen105
@@ -57,33 +65,33 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip43
+\@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen111
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen112
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count90
+\inf@bad=\count93
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count91
-\leftroot@=\count92
+\uproot@=\count94
+\leftroot@=\count95
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count93
-\DOTSCASE@=\count94
+\classnum@=\count96
+\DOTSCASE@=\count97
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -92,15 +100,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen113
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count95
-\c@MaxMatrixCols=\count96
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
 \dotsspace@=\muskip10
-\c@parentequation=\count97
-\dspbrk@lvl=\count98
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
 \tag@help=\toks17
-\row@=\count99
-\column@=\count100
-\maxfields@=\count101
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
 \andhelp@=\toks18
 \eqnshift@=\dimen114
 \alignsep@=\dimen115
@@ -109,70 +117,70 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \totwidth@=\dimen118
 \lineht@=\dimen119
 \@envbody=\toks19
-\multlinegap=\skip44
-\multlinetaggap=\skip45
+\multlinegap=\skip46
+\multlinetaggap=\skip47
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 142.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count102
+\Gread@gobject=\count105
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks21
 \thm@bodyfont=\toks22
 \thm@headfont=\toks23
 \thm@notefont=\toks24
 \thm@headpunct=\toks25
-\thm@preskip=\skip46
-\thm@postskip=\skip47
-\thm@headsep=\skip48
+\thm@preskip=\skip48
+\thm@postskip=\skip49
+\thm@headsep=\skip50
 \dth@everypar=\toks26
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
@@ -180,38 +188,38 @@ Package graphics Info: Driver file: pdftex.def on input line 94.
 \Gin@req@height=\dimen120
 \Gin@req@width=\dimen121
 )
-(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip49
+\labelindent=\skip51
 \enit@outerparindent=\dimen122
 \enit@toks=\toks27
 \enit@inbox=\box28
-\enitdp@description=\count103
+\enitdp@description=\count106
 )
-(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count104
-\c@@ppsavesec=\count105
-\c@@ppsaveapp=\count106
+\c@@pps=\count107
+\c@@ppsavesec=\count108
+\c@@ppsaveapp=\count109
 )
-(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen123
 \WF@size=\dimen124
-\c@WF@wrappedlines=\count107
+\c@WF@wrappedlines=\count110
 \WF@box=\box29
 \WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks29
 \verbatim@line=\toks30
 \verbatim@in@stream=\read1
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen125
@@ -222,26 +230,26 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \caption@parindent=\dimen130
 \caption@hangindent=\dimen131
 )
-\c@ContinuedFloat=\count108
+\c@ContinuedFloat=\count111
 Package caption Info: wrapfig package is loaded.
 )
-\c@theorem=\count109
+\c@theorem=\count112
 
 (./direct-wavelet.aux)
 \openout1 = `direct-wavelet.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 62.
-LaTeX Font Info:    ... okay on input line 62.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -277,24 +285,24 @@ LaTeX Font Info:    ... okay on input line 62.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
+\scratchcounter=\count113
 \scratchdimen=\dimen132
 \scratchbox=\box30
-\nofMPsegments=\count111
-\nofMParguments=\count112
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count113
+\MPscratchCnt=\count116
 \MPscratchDim=\dimen133
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks32
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -303,22 +311,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -330,29 +338,29 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\c@lem=\count116
-\c@thm=\count117
-\c@prop=\count118
-LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+\c@lem=\count119
+\c@thm=\count120
+\c@prop=\count121
+LaTeX Font Info:    Try loading font information for U+msa on input line 85.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+LaTeX Font Info:    Try loading font information for U+msb on input line 85.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (./intro.tex
 [1
 
-{/usr/share/texlive/texmf-dist/fonts/map/pdftex/updmap/pdftex.map}]) [2]
-(./setup.tex [3]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2]) (./setup.tex [3]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 33.
 
@@ -360,7 +368,7 @@ LaTeX Font Warning: Command \small invalid in math mode on input line 33.
 LaTeX Font Warning: Command \small invalid in math mode on input line 33.
 
 
-<./orth-frame/figure/shannon-marked-wcoord.jpg, id=30, 910.40125pt x 891.33pt>
+<./orth-frame/figure/shannon-marked-wcoord.jpg, id=29, 910.40125pt x 891.33pt>
 File: ./orth-frame/figure/shannon-marked-wcoord.jpg Graphic file (type jpg)
 
 <use ./orth-frame/figure/shannon-marked-wcoord.jpg>
@@ -368,7 +376,7 @@ Package pdftex.def Info: ./orth-frame/figure/shannon-marked-wcoord.jpg used on
 input line 53.
 (pdftex.def)             Requested size: 197.29623pt x 193.15547pt.
 
-<./orth-frame/figure/sublattice-2.jpg, id=31, 214.8025pt x 204.765pt>
+<./orth-frame/figure/sublattice-2.jpg, id=30, 214.8025pt x 204.765pt>
 File: ./orth-frame/figure/sublattice-2.jpg Graphic file (type jpg)
 
 <use ./orth-frame/figure/sublattice-2.jpg>
@@ -378,12 +386,12 @@ e 56.
  [4]
 LaTeX Font Info:    Try loading font information for U+bbm on input line 94.
 
-(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+(/usr/local/texlive/2015/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ))
 (./orthonormal.tex [5 <./orth-frame/figure/shannon-marked-wcoord.jpg> <./orth-f
 rame/figure/sublattice-2.jpg>] [6]
-<./orth-frame/figure/bdyclass.jpg, id=58, 226.2051pt x 226.9278pt>
+<./orth-frame/figure/bdyclass.jpg, id=59, 226.2051pt x 226.9278pt>
 File: ./orth-frame/figure/bdyclass.jpg Graphic file (type jpg)
 
 <use ./orth-frame/figure/bdyclass.jpg>
@@ -406,16 +414,16 @@ LaTeX Warning: Reference `eq: biorth MRA' on page 9 undefined on input line 31.
 LaTeX Warning: Reference `thm: biorth conds' on page 9 undefined on input line 
 35.
 
-[9] [10]
-<./bi-orth/figure/triangle-partition-new.png, id=76, 154.6578pt x 156.8259pt>
+[9] [10] [11]
+<./bi-orth/figure/triangle-partition-new.png, id=85, 154.6578pt x 156.8259pt>
 File: ./bi-orth/figure/triangle-partition-new.png Graphic file (type png)
 
 <use ./bi-orth/figure/triangle-partition-new.png>
 Package pdftex.def Info: ./bi-orth/figure/triangle-partition-new.png used on in
 put line 179.
-(pdftex.def)             Requested size: 187.89914pt x 190.53282pt.
- [11]
-<./bi-orth/figure/S_shifts2.png, id=86, 212.2329pt x 195.6108pt>
+(pdftex.def)             Requested size: 140.92793pt x 142.90321pt.
+
+<./bi-orth/figure/S_shifts2.png, id=87, 212.2329pt x 195.6108pt>
 File: ./bi-orth/figure/S_shifts2.png Graphic file (type png)
 
 <use ./bi-orth/figure/S_shifts2.png>
@@ -440,8 +448,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 497--515
 
  []
 
-[17] [18]
-<./bi-orth/figure/initialize_mdual.png, id=111, 890.32625pt x 533.995pt>
+[17] [18] [19]
+<./bi-orth/figure/initialize_mdual.png, id=116, 890.32625pt x 533.995pt>
 File: ./bi-orth/figure/initialize_mdual.png Graphic file (type png)
 
 <use ./bi-orth/figure/initialize_mdual.png>
@@ -449,14 +457,14 @@ Package pdftex.def Info: ./bi-orth/figure/initialize_mdual.png used on input li
 ne 576.
 (pdftex.def)             Requested size: 375.80544pt x 225.4008pt.
 
-<./bi-orth/figure/m0.png, id=112, 960.58875pt x 259.97125pt>
+<./bi-orth/figure/m0.png, id=117, 960.58875pt x 259.97125pt>
 File: ./bi-orth/figure/m0.png Graphic file (type png)
 
 <use ./bi-orth/figure/m0.png>
 Package pdftex.def Info: ./bi-orth/figure/m0.png used on input line 583.
 (pdftex.def)             Requested size: 469.75502pt x 127.13315pt.
 
-<./bi-orth/figure/smooth_m0dual.png, id=113, 331.2375pt x 145.29282pt>
+<./bi-orth/figure/smooth_m0dual.png, id=118, 331.2375pt x 145.29282pt>
 File: ./bi-orth/figure/smooth_m0dual.png Graphic file (type png)
 
 <use ./bi-orth/figure/smooth_m0dual.png>
@@ -464,7 +472,7 @@ Package pdftex.def Info: ./bi-orth/figure/smooth_m0dual.png used on input line
 590.
 (pdftex.def)             Requested size: 281.85587pt x 123.63692pt.
 
-<./bi-orth/figure/m_combined.png, id=114, 937.5025pt x 484.81125pt>
+<./bi-orth/figure/m_combined.png, id=119, 937.5025pt x 484.81125pt>
 File: ./bi-orth/figure/m_combined.png Graphic file (type png)
 
 <use ./bi-orth/figure/m_combined.png>
@@ -472,7 +480,7 @@ Package pdftex.def Info: ./bi-orth/figure/m_combined.png used on input line 606
 .
 (pdftex.def)             Requested size: 469.75502pt x 242.92285pt.
 
-<./bi-orth/figure/quincunx_wavelets.png, id=115, 374.90062pt x 274.77657pt>
+<./bi-orth/figure/quincunx_wavelets.png, id=120, 374.90062pt x 274.77657pt>
 File: ./bi-orth/figure/quincunx_wavelets.png Graphic file (type png)
 
 <use ./bi-orth/figure/quincunx_wavelets.png>
@@ -480,7 +488,7 @@ Package pdftex.def Info: ./bi-orth/figure/quincunx_wavelets.png used on input l
 ine 630.
 (pdftex.def)             Requested size: 328.82707pt x 241.02007pt.
 
-<./bi-orth/figure/smooth_extended_m0dual.png, id=116, 344.78813pt x 164.86594pt
+<./bi-orth/figure/smooth_extended_m0dual.png, id=121, 344.78813pt x 164.86594pt
 >
 File: ./bi-orth/figure/smooth_extended_m0dual.png Graphic file (type png)
  <use ./bi-orth/figure/smooth_extended_m0dual.png>
@@ -491,22 +499,23 @@ put line 637.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./bi-orth/figure/m_extended_m0dual.png, id=117, 699.36281pt x 170.88844pt>
+<./bi-orth/figure/m_extended_m0dual.png, id=122, 699.36281pt x 170.88844pt>
 File: ./bi-orth/figure/m_extended_m0dual.png Graphic file (type png)
 
 <use ./bi-orth/figure/m_extended_m0dual.png>
 Package pdftex.def Info: ./bi-orth/figure/m_extended_m0dual.png used on input l
 ine 644.
 (pdftex.def)             Requested size: 469.75502pt x 114.7867pt.
-) (./conclusion.tex [19] [20 <./bi-orth/figure/initialize_mdual.png> <./bi-orth
-/figure/m0.png> <./bi-orth/figure/smooth_m0dual.png>] [21 <./bi-orth/figure/m_c
-ombined.png> <./bi-orth/figure/quincunx_wavelets.png>]) [22 <./bi-orth/figure/s
-mooth_extended_m0dual.png> <./bi-orth/figure/m_extended_m0dual.png>] [23] (./pa
-rseval-cond.tex [24
+) (./conclusion.tex [20 <./bi-orth/figure/initialize_mdual.png>] [21 <./bi-orth
+/figure/m0.png> <./bi-orth/figure/smooth_m0dual.png> <./bi-orth/figure/m_combin
+ed.png>]) [22 <./bi-orth/figure/quincunx_wavelets.png>] [23 <./bi-orth/figure/s
+mooth_extended_m0dual.png> <./bi-orth/figure/m_extended_m0dual.png>] (./parseva
+l-cond.tex [24
 
 ]) (./lemmas.tex
 LaTeX Font Info:    Try loading font information for U+euf on input line 31.
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [25]
 Overfull \hbox (5.01483pt too wide) in paragraph at lines 63--64
@@ -529,21 +538,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 229--231
  []
 
 [30]) (./QCQP.tex [31]) (./m0-opt.tex
-<./bi-orth/figure/filters.jpg, id=165, 562.1pt x 421.575pt>
+<./bi-orth/figure/filters.jpg, id=166, 562.1pt x 421.575pt>
 File: ./bi-orth/figure/filters.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/filters.jpg>
 Package pdftex.def Info: ./bi-orth/figure/filters.jpg used on input line 6.
 (pdftex.def)             Requested size: 187.89914pt x 140.92133pt.
 
-<./bi-orth/figure/m-funcs.jpg, id=166, 562.1pt x 421.575pt>
+<./bi-orth/figure/m-funcs.jpg, id=167, 562.1pt x 421.575pt>
 File: ./bi-orth/figure/m-funcs.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/m-funcs.jpg>
 Package pdftex.def Info: ./bi-orth/figure/m-funcs.jpg used on input line 18.
 (pdftex.def)             Requested size: 211.38832pt x 158.54051pt.
 
-<./bi-orth/figure/1d-m-compare.jpg, id=167, 546.04pt x 265.99374pt>
+<./bi-orth/figure/1d-m-compare.jpg, id=168, 546.04pt x 265.99374pt>
 File: ./bi-orth/figure/1d-m-compare.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/1d-m-compare.jpg>
@@ -551,7 +560,7 @@ Package pdftex.def Info: ./bi-orth/figure/1d-m-compare.jpg used on input line 2
 5.
 (pdftex.def)             Requested size: 211.38832pt x 102.97409pt.
 
-<./bi-orth/figure/1d-filter-compare.jpg, id=168, 527.9725pt x 231.86626pt>
+<./bi-orth/figure/1d-filter-compare.jpg, id=169, 527.9725pt x 231.86626pt>
 File: ./bi-orth/figure/1d-filter-compare.jpg Graphic file (type jpg)
 
 <use ./bi-orth/figure/1d-filter-compare.jpg>
@@ -560,7 +569,7 @@ ine 26.
 (pdftex.def)             Requested size: 211.38832pt x 92.8333pt.
  [32 <./bi-orth/figure/filters.jpg>] [33 <./bi-orth/figure/m-funcs.jpg> <./bi-o
 rth/figure/1d-m-compare.jpg> <./bi-orth/figure/1d-filter-compare.jpg>]
-<./bi-orth/figure/2d-m-compare-vanilla.png, id=175, 1351.0475pt x 297.11pt>
+<./bi-orth/figure/2d-m-compare-vanilla.png, id=176, 1351.0475pt x 297.11pt>
 File: ./bi-orth/figure/2d-m-compare-vanilla.png Graphic file (type png)
 
 <use ./bi-orth/figure/2d-m-compare-vanilla.png>
@@ -568,7 +577,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-vanilla.png used on inpu
 t line 71.
 (pdftex.def)             Requested size: 422.77664pt x 92.97357pt.
 
-<./bi-orth/figure/2d-m-compare-weightedl2.png, id=176, 1352.05125pt x 300.12125
+<./bi-orth/figure/2d-m-compare-weightedl2.png, id=177, 1352.05125pt x 300.12125
 pt>
 File: ./bi-orth/figure/2d-m-compare-weightedl2.png Graphic file (type png)
  <use ./bi-orth/figure/2d-m-compare-weightedl2.png>
@@ -576,7 +585,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-m-compare-weightedl2.png used on i
 nput line 78.
 (pdftex.def)             Requested size: 422.77664pt x 93.8426pt.
 
-<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=177, 1351.0475pt x 294.0
+<./bi-orth/figure/2d-filter-compare-weightedl2.png, id=178, 1351.0475pt x 294.0
 9875pt>
 File: ./bi-orth/figure/2d-filter-compare-weightedl2.png Graphic file (type png)
 
@@ -585,7 +594,7 @@ Package pdftex.def Info: ./bi-orth/figure/2d-filter-compare-weightedl2.png used
  on input line 79.
 (pdftex.def)             Requested size: 422.77664pt x 92.03128pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 69--115
+Underfull \hbox (badness 10000) in paragraph at lines 69--125
 
  []
 
@@ -601,61 +610,65 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4959 strings out of 495005
- 75001 string characters out of 6181431
- 151459 words of memory out of 5000000
- 8028 multiletter control sequences out of 15000+600000
- 25455 words of font info for 98 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 5034 strings out of 493089
+ 76390 string characters out of 6134842
+ 154012 words of memory out of 5000000
+ 8346 multiletter control sequences out of 15000+600000
+ 26496 words of font info for 101 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
  38i,19n,38p,1354b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/grad/rachel/.texlive2015/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.6
-00pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy5.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy6.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msbm7.pfb>
-Output written on direct-wavelet.pdf (35 pages, 1073125 bytes).
+ </Users/RujieYin/Library/texlive/2015/texmf-var/fonts/pk/ljfour/public/bbm/b
+bm10.600pk></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmex
+tra/cmbsy5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cmextra/cmbsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cmextra/cmbsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmbxti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cmextra/cmex7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cmextra/cmex8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cmextra/cmex9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmib10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmmib6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cmextra/cmmib7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cmextra/cmmib8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols
+/msbm7.pfb>
+Output written on direct-wavelet.pdf (35 pages, 1086403 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
+ 332 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -34,7 +34,7 @@ Let $\mhat{0}$ be the approximation of $\m{0}$, which is solution of the followi
 \begin{align}
 \min_{\xvec}\; \Vert \V{D}\xvec\Vert^2 + \Vert \xvec\Vert^2,\quad s.t. \; \V{A}\xvec = \mathbf{1} \label{eq: opt-1d}
 \end{align}
-where $\V{A}$ in the constraint is the matrix generated from \eqref{eq: identity-cond} (in 1D, only a single shift of $\pi$ appears in the condition, so each row of $\V{A}$ has two non-zero entries). 
+where $\V{A}$ in the constraint is the matrix generated from $m_0\overlinespace{\widetilde{m_0}}(\omega) + m_0\overlinespace{\widetilde{m_0}}(\omega+\pi) = 1$, the 1D version of \eqref{eq: identity-cond}. Since only a single shift of $\pi$ appears in the condition, each row of $\V{A}$ has two non-zero entries. 
 %Notice that no symmetry constraint is imposed here, nevertheless, 
 Figure \ref{fig: 1d-compare} compares the solution of \eqref{eq: opt-1d} and the ground truth. The support of the solution is slightly more spread out than the ground truth.
 %The support of the solution shown in Fig.\ref{fig: 1d-compare} is almost symmetric. On the other hand, its support in the time domain is not as compact as that of $\m{0}$, see the bottom of Fig.\ref{fig: 1d-compare}.

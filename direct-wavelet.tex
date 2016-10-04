@@ -1,10 +1,13 @@
 \documentclass[]{article}
 
+\usepackage{authblk}
+\setcounter{Maxaffil}{0}
+\renewcommand\Affilfont{\itshape\small}
+
 \usepackage{setspace}
 \doublespacing
 
 \usepackage[letterpaper, margin=1in]{geometry}
-
 
 \renewcommand\abstractname{\textit{Abstract}}
 \usepackage[cmex10]{amsmath}
@@ -73,14 +76,18 @@
 \belowdisplayshortskip=2pt
 
 
-\title{Directional Wavelet Bases Construction on Dyadic Quincunx Lattice}
-\author{Rujie Yin, Ingrid Daubechies}
+\title{Directional Wavelet Bases Constructions \\with Dyadic Quincunx Subsampling}
+\author[1]{Rujie Yin}
+\author[2]{Ingrid Daubechies}
+\affil[1]{Department of Mathematics, Duke University, rujie.yin@duke.edu}
+\affil[2]{Department of Mathematics, Duke University, ingrid@math.duke.edu}
+\date{}
 \maketitle
 
 \begin{abstract}
-We construct directional wavelet systems that will enable building efficient signal representation schemes with good direction selectivity. In particular, we focus on wavelet bases on a dyadic quincunx lattice.
+We construct directional wavelet systems that will enable building efficient signal representation schemes with good direction selectivity. In particular, we focus on wavelet bases with dyadic quincunx subsampling.
 %; dilated quincunx downsampling is used to construct orthonormal and bi-orthogonal bases and standard dyadic downsampling for low-redundancy frames. 
-In our previous work \cite{yin2014orthshear}, We show that the supports of orthonormal wavelets in our framework are discontinuous in the frequency domain, yet this irregularity constraint can be avoided in frames, even with redundancy factor less than 2. In this paper, we focus on the extension of orthonormal wavelets to biorthogonal wavelets and show that the same obstruction of regularity as in orthonormal schemes exists in bi-orthogonal schemes. In addition, we provide a numerical algorithm for biorthogonal wavelets construction where the dual wavelets can be optimized, though at the cost of deteriorating the primal wavelets due to the intrinsic irregularity of biorthogonal schemes.
+In our previous work \cite{yin2014orthshear}, We show that the supports of orthonormal wavelets in our framework are discontinuous in the frequency domain, yet this irregularity constraint can be avoided in frames, even with redundancy factor less than 2. In this paper, we focus on the extension of orthonormal wavelets to biorthogonal wavelets and show that the same obstruction of regularity as in orthonormal schemes exists in biorthogonal schemes. In addition, we provide a numerical algorithm for biorthogonal wavelets construction where the dual wavelets can be optimized, though at the cost of deteriorating the primal wavelets due to the intrinsic irregularity of biorthogonal schemes.
 \end{abstract}
 
 \input{intro}
@@ -101,6 +108,9 @@ In our previous work \cite{yin2014orthshear}, We show that the supports of ortho
 \input{conclusion}
 %\include{conclusion}
 %\section{Conclusion}\label{sec: end}
+
+\section{Acknowledgment}
+This work is support by the NSF grant 1516988.
 
 \clearpage
 \newpage

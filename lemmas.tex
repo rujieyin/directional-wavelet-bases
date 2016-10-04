@@ -122,14 +122,14 @@ Let $\widetilde{S_\rho} + \V{\pi}_3 = \{\V{\omega} + \V{\pi}_3,\, \V{\omega}\in 
 On the other hand, $rank(\,\mrow{3}(\V{\omega}),\,\mrow{5}(\V{\omega})\,)= 1$ on $\widetilde{S_\rho}$, hence $\widetilde{m_3}(\V{\omega}+\V{\pi}_3)\widetilde{m_4}(\V{\omega}+\V{\pi}_5) = \widetilde{m_3}(\V{\omega}+\V{\pi}_5)\widetilde{m_4}(\V{\omega}+\V{\pi}_3)$, which contradicts the previous two inequalities.\qed
 
 \begin{lemma}\label{lem: concentrate}
-If $\m{1} \;(\m{6})$ concentrates in $T_1 (T_6)$, then $|\m{6}| > |\m{1}|\,$ a.e. on $T_6\bigcap \text{supp}(\widetilde{m_6})$ \rm{(}$|\m{1}| > |\m{6}|$ 
-a.e. on $T_1\bigcap\text{supp}(\widetilde{m_1})$\rm{)}.
+If $\m{1} $ {\rm (}respectively, $\m{6}${\rm)} concentrates in $T_1$ {\rm(}respectively, $T_6${\rm)}, then $|\m{6}| > |\m{1}|\,$ a.e. on $T_6\bigcap \text{supp}(\widetilde{m_6})$ {\rm (}respectively, $|\m{1}| > |\m{6}|$ 
+a.e. on $T_1\bigcap\text{supp}(\widetilde{m_1})${\rm )}.
 \end{lemma}
 \noindent{\it Proof.}
 Let $B_6=\{\V{\omega}: |\m{6}| \leq |\m{1}|\}\bigcap T_6\bigcap supp(\widetilde{m_1})$ and $B_1$ be the set symmetric to $B_6$ with respect to $\omega_1 = \omega_2$ and suppose $|B_6|>0$, then $\int_{B_6}|\m{6}|\leq \int_{B_6}|\m{1}|$. On the other hand, since $\m{1}$ concentrates in $T_1$, we know $\int_{B_1}|\m{1}| > \int_{B_6}|\m{1}|$. Moreover, due to the symmetry of $\m{1},\m{6}$ and $B_1,B_6$, $\int_{B_1}|\m{1}| = \int_{B_6}|\m{6}|$, hence $\int_{B_6}|\m{1}| \geq\int_{B_6}|\m{6}| = \int_{B_1}|\m{1}| $ which results in contradiction.\qed
 
 \begin{proposition}\label{prop: zero-corner}
-If  $\m{1}\,(\m{6})$ concentrates within $T_1\,(T_6)$, then $\m{1} = \m{6} = 0,\, a.e. $ on $ S_\rho + \V{\pi}_1$.
+If  $\m{1}$ {\rm(}respectively, $\m{6}${\rm)} concentrates in $T_1$ {\rm(}respectively, $T_6${\rm)}, then $\m{1} = \m{6} = 0,\, a.e. $ on $ S_\rho + \V{\pi}_1$.
 \end{proposition}
 \noindent{\it Proof.}
 Consider frequency domain $S_\rho' = S_\rho\bigcap\{\omega_1<\omega_2\}.$ By Lemma \ref{lem: rank1}, $\exists\,\alpha_{\V{\omega}}\in\mathbb{C}, s.t.\,\mrow{1}(\V{\omega}) = \alpha_{\V{\omega}}\,\mrow{7}(\V{\omega}),\,$ $\forall\, \V{\omega}\in S_\rho',$ i.e. $\widetilde{m_1}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_1}(\V{\omega} + \V{\pi}_7)$ and $\widetilde{m_6}(\V{\omega} + \V{\pi}_1) = \alpha_{\V{\omega}}\cdot\widetilde{m_6}(\V{\omega} + \V{\pi}_7)$. On the other hand, Lemma \ref{lem: concentrate} implies that $|\widetilde{m_1}(\V{\omega} + \V{\pi}_7)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_7)|$, hence $|\widetilde{m_1}(\V{\omega} + \V{\pi}_1)| \geq |\widetilde{m_6}(\V{\omega} + \V{\pi}_1)|$. Let $\Omega_6'\doteq (S_\rho+\V{\pi}_1)\bigcap T_6$, then $\int_{\Omega_6'}|\m{1}| \geq\int_{\Omega_6'}|\m{6}|$, which will contradict Lemma \ref{lem: concentrate} unless $|\Omega_6'\bigcap\text{supp}(\widetilde{m_6})| = 0$, or equivalently $\alpha_{\V{\omega}}=0$ and so $\m{6} = \m{1} = 0,\,a.e.$ on $\Omega_6'$. By symmetry, $\m{6}=\m{1} = 0,\,a.e. $ on $(S_\rho+\V{\pi}_1)\setminus \Omega_6'$ as well.\qed
