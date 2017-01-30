@@ -1,2 +1,8 @@
+*.blg
+*.gz
+*.aux
+*.bbl
+*.zip
 *.log
 *.f*
+JFAA-submit/
