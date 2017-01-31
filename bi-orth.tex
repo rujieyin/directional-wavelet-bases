@@ -213,7 +213,7 @@ Lemma \ref{lem: rank1} can be proved by analyzing the linear dependency and inde
 For the full proof of Lemma \ref{lem: rank1}, see Appendix \ref{app: lemmas}.
 
 The concentration of $\m{3}$ and $\m{4}$ in $T_3$ and $T_4$ and their symmetry together imply that  $rank(\mrow{3},\mrow{5}) \neq 1\; a.e.$ on $S_\rho$ (see Lemma \ref{lem: full-rank-m35} in Appendix \ref{app: discontinuity}), hence $rank(\,\mrow{1}(\V{\omega}),\mrow{7}(\V{\omega})\,) = 1\; a.e.$ on $S_\rho$.
-Therefore, $\mp{1}{1}, \mp{6}{1}$ in $\mrow{1}(\V{\omega})$ and the corresponding $\mp{1}{7}, \mp{6}{7}$ in $\mrow{7}(\V{\omega})$ on $S_\rho$ are linearly related. Furthermore, we can show that $\m{6}=0\; a.e.$ on $S_\rho + \V{\pi}_1\cap \{\omega_1 < \omega_2\}$ (see Proposition \ref{prop: zero-corner} in Appendix \ref{app: discontinuity}), if $\m{0}$, $\m{1}$ and $\m{6}$ concentrate in $C_0$, $T_1$ and $T_6$ respectively. Therefore, if $\m{6}$ is continuous, $\widetilde{m_6}(\dfrac{\pi}{2},\dfrac{\pi}{2}) = 0$; the same holds for $\m{1}$ and for $(-\dfrac{\pi}{2},-\dfrac{\pi}{2})$ as well by symmetry.% and by symmetry $\m{1}$ and $\m{6}$ will be zero at $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$ if they are continuous.% at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
+Therefore, $\mp{1}{1}, \mp{6}{1}$ in $\mrow{1}(\V{\omega})$ and the corresponding $\mp{1}{7}, \mp{6}{7}$ in $\mrow{7}(\V{\omega})$ on $S_\rho$ are linearly related. Furthermore, we can show that $\m{6}=0\; a.e.$ on $S_\rho + \V{\pi}_1\cap \{\omega_1 < \omega_2\}$ (see Proposition \ref{prop: zero-corner} in Appendix \ref{app: discontinuity}), if $\m{0}$, $\m{1}$ and $\m{6}$ concentrate in $C_0$, $T_1$ and $T_6$ respectively. Therefore, if $\m{6}$ is continuous, $\widetilde{m_6}(\dfrac{\pi}{2},\dfrac{\pi}{2}) = 0$; the same holds for $\m{1}$ and for $(-\dfrac{\pi}{2},-\dfrac{\pi}{2})$ as well by symmetry. % and by symmetry $\m{1}$ and $\m{6}$ will be zero at $(\frac{\pi}{2},\frac{\pi}{2})$ and $(-\frac{\pi}{2},-\frac{\pi}{2})$ if they are continuous.% at $(\frac{\pi}{2},\frac{\pi}{2})$ or $(-\frac{\pi}{2},-\frac{\pi}{2})$.
 The following theorem summarizes our main result.
 \begin{theorem}\label{thm: thm}
 %\begin{proposition}\label{prop: continuity}
@@ -229,7 +229,7 @@ Therefore, $\mrow{1}(\V{0}) = \mrow{7}(\V{0}) = \mathbf{0}$ at the origin which 
 %\end{theorem}
 
 \section{Numerical construction of biorthogonal bases}\label{sec: solve-quincunx}
-In this section, we develop a numerical construction of biorthogonal bases on a dyadic quincunx lattice following an approach similar to Cohen et al. We first design $\m{j},\,j = 1,\cdots,6,$ on the canonical frequency square $S_0 = [-\pi,\pi)\times[-\pi,\pi)$associated with the lattice $\mathbb{Z}^2$, then solve for $m_0,\widetilde{m_0}$ and $m_j$ on $S_0$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
+In this section, we develop a numerical construction of biorthogonal bases on a dyadic quincunx lattice following an approach similar to Cohen et al. We first design $\m{j},\,j = 1,\cdots,6,$ on the canonical frequency square $S_0 = [-\pi,\pi)\times[-\pi,\pi)$ associated with the lattice $\mathbb{Z}^2$, then solve for $m_0,\widetilde{m_0}$ and $m_j$ on $S_0$ in order with respect to \eqref{eq: LS-new} and \eqref{eq: identity-cond}.
 %we focus on solving $m_i$'s and $\widetilde{m_0}$ in \eqref{eq: LS-new} given pre-designed $\m{i},\,i=1,\cdots,6$. %Assume $\m{i},\,i=1,\cdots,6$ satisfy weak constraints on the direction selectivity of their support.
 
 \subsection{Design of input $\m{j}$}\label{sec: phase-design}
@@ -563,7 +563,7 @@ In particular, we let $\widetilde{m_0}'$ be the low pass filter of a 2D tensor w
 
 \noindent{\it Remarks.} 
 \begin{itemize}
-\item[1.]If we use the above $m_0'$ derived from a known $\m{0}$ and solve \eqref{eq: opt} for $\m{0}$ as in step 4. of \ref{alg}, we obtain a solution $\widetilde{m_0}'(\V{\omega})$ not exact the same but close to the known $\m{0}$. Moreover, we numerically verify that $m_0'(\V{\omega})\overlinespace{\widetilde{m_0}'}(\V{\omega})=\mathbbm{1}_{C_0}$ as they should be.
+\item[1.]If we use the above $m_0'$ derived from a known $\m{0}$ and solve \eqref{eq: opt} for $\m{0}$ as in step 4. of \ref{alg}, we obtain a solution $\widetilde{m_0}'(\V{\omega})$ not exactly the same but close to the known $\m{0}$. Moreover, we numerically verify that $m_0'(\V{\omega})\overlinespace{\widetilde{m_0}'}(\V{\omega})=\mathbbm{1}_{C_0}$ as they should be.
 \item[2.]There is no restriction on the support of $\m{0}$ as long as \eqref{eq: identity-cond} is satisfied. Although a slower decay of $\m{0}$ on $S_0$ increases the regularity $m_0'(\V{\omega})$ on $C_0$, see Figure \ref{fig: smooth_m0dual-slow}, the resulting $m_j$ solved in the final step do not have ideal direction selectivity, see Figure \ref{fig: m_j-slow}.
 \end{itemize}
 
@@ -577,7 +577,9 @@ Although using a different set of $\widetilde{m_j}$ as input paired with a caref
 \begin{figure}
 \centering
 \includegraphics[width=.8\textwidth]{initialize_mdual.png}
-\caption{ Input $|\m{j}|$ constructed in the same way as shearlets.}
+\caption{ \textcolor{blue}{First row: input $|\widetilde{m_j}|$ in the vertical cone constructed by shearing the vertical generator (middle). Second row: input $|\widetilde{m_j}|$ in the horizontal cone constructed by rotation of those in the vertical cone.}
+%Input $|\m{j}|$ constructed in the same way as shearlets.
+}
 \label{fig: mjdual}
 \end{figure}
 
