@@ -32,7 +32,7 @@ Substitute \eqref{eq:eq1} into the previous expression and notice $|\Gamma_0| = 
 \begin{align*}
 \sum_{\V{\beta}\in B}\sum_{\V{k}'\in \{\V{\beta}\}}\langle f,\phi_{\V{k}'}\rangle\sum_{\V{\pi}\in\Gamma_0}\overlinespace{m_0}(\V{\omega}+\V{\pi})\;e^{-i\V{\beta}^\top\V{\pi}}\,e^{-i\V{\omega}^\top\V{k}'}m_0(\V{\omega})\hat{\phi}(\V{\omega}).
 \end{align*}
-Since $e^{i \V{\pi}^\top\V{\beta}}=e^{i\V{\pi}^\top\V{k}'},\; \forall \V{k}'\in \{\V{\beta}\} $, we can rewrite the double sum $\sum_{\V{\beta}\in B}\sum_{\V{k}'\in \{\V{\beta}\}} $  back to a unit sum over $\mathbb{Z}^2$ as follows.
+Since $e^{i \V{\pi}^\top\V{\beta}}=e^{i\V{\pi}^\top\V{k}'},$ for $\V{k}'\in \{\V{\beta}\} $, we can rewrite the double sum $\sum_{\V{\beta}\in B}\sum_{\V{k}'\in \{\V{\beta}\}} $  back to a unit sum over $\mathbb{Z}^2$ as follows.
 \begin{align*}
 \sum_{\V{k}'}\langle f,\phi_{\V{k}'}\rangle e^{-i\V{\omega} ^\top\V{k}'}\hat{\phi}(\V{\omega})\Big(\sum_{\V{\pi}\in\Gamma_0}\overlinespace{m_0}(\V{\omega}+\V{\pi})m_0(\V{\omega})e^{-i\V{\pi}^\top\V{k}'} \Big).
 \end{align*}
@@ -47,7 +47,7 @@ based on the following equality analogous to \eqref{eq:eq1}
 \end{align}
 where $\{\V{\alpha}\} \doteq \V{QD}\mathbb{Z}^2 + \V{\alpha}$ for $\V{\alpha}\in A,\, s.t.\, \bigcup_{\V{\alpha}\in A} \{\V{\alpha}\} = \mathbb{Z}^2$.
 (For Theorem \ref{thm: frame-conds} on frame construction, the summation of shifts $\V{\pi}$ is over $\Gamma_0$ instead of $\Gamma_1$.) 
-Combining the two terms on the R.H.S. of \eqref{eq: PR}, and compare the coefficients of $\langle f,\phi_{\V{k}'}\rangle e^{-i\V{\omega}^\top \V{k}'}\hat{\phi}(\V{\omega})$ on both sides, the perfect reconstruction condition is then equivalent to $\forall \V{k}'$,
+Combining the two terms on the R.H.S. of \eqref{eq: PR}, and compare the coefficients of $\langle f,\phi_{\V{k}'}\rangle e^{-i\V{\omega}^\top \V{k}'}\hat{\phi}(\V{\omega})$ on both sides, the perfect reconstruction condition is then equivalent to for all $\V{k}'$,
 \begin{align*}
 \sum_{\V{\pi}\in\Gamma_0}e^{-i\V{\pi}^\top\V{k}'}\overlinespace{m_0}(\V{\omega}+\V{\pi})m_0(\V{\omega}) + \sum_j\sum_{\V{\pi}\in\Gamma_1} e^{-i\V{\pi}^\top\V{k}'}\overlinespace{m_j}(\V{\omega}+\V{\pi})m_j(\V{\omega}) = 1. 
 %\sum_{l=0}^{3}e^{-i\gamma_l^\top(k'-k_0)}\overline{M_0(\xi+\gamma_l)}M_0(\xi) + \sum_j\sum_{s=0}^7 e^{-i\nu_s^\top(k'-k_j)}\overline{M_j(\xi+\nu_s)}M_j(\xi) = 1. 

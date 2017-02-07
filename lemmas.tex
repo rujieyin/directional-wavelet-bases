@@ -4,7 +4,7 @@
 \subsection{Discontinuity of $\m{j}$}\label{app: discontinuity}
 \begin{lemma}\label{lem: subM-singular-sys}
 Define $d_{i,j}(\V{\omega}) = \det([\mrow{k_1}(\V{\omega})^\top,\cdots,\mrow{k_6}(\V{\omega})^\top]),\;$ where $0\leq k_1<\cdots<k_6\leq 7,\, s.t.\, k_l\neq i,j.$
-\eqref{eq: LS-new} is solvable $\forall \V{\omega}$ if and only if \vspace{.5em}
+\eqref{eq: LS-new} is solvable for all $\V{\omega}$ if and only if \vspace{.5em}
 \begin{align}
 \label{eq: singular-cond}
 \mathfrak{D}(\V{\omega})\begin{bmatrix}
@@ -61,12 +61,12 @@ Similarly, the second to fourth equations can be obtained by rewriting the singu
 The identity constraint \eqref{eq: identity-cond} on $m_0$ and the singularity condition \eqref{eq: singular-cond} together imply the following proposition,
 %Due to the periodic wrapping of the frequency square $S_0$, we only need to consider \eqref{eq: singular-cond} and \eqref{eq: identity-cond} on $S_1$ and they imply the following proposition,
 \begin{proposition}\label{prop: feasibility}
-Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: identity-cond} has no solution for $\widetilde{m_0}$, if $\exists\,\V{\omega}, \,s.t. \; [m_0(\V{\omega}), m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)]$ is a linear combination of the rows of $\mathfrak{D}(\V{\omega})$.% in \eqref{eq: singular-cond}.
+Given $\widetilde{m_i}, i = 1,\cdots,6$, \eqref{eq: identity-cond} has no solution for $\widetilde{m_0}$, if there exists $\V{\omega}, \,s.t. \; [m_0(\V{\omega}), m_0(\V{\omega}+\V{\pi}_2),m_0(\V{\omega}+\V{\pi}_4),m_0(\V{\omega}+\V{\pi}_6)]$ is a linear combination of the rows of $\mathfrak{D}(\V{\omega})$.% in \eqref{eq: singular-cond}.
 \end{proposition}
 
 \noindent{\bf Proof of Lemma \ref{lem: rank1}}:\\[.2em]
 {\bf Lemma \ref{lem: rank1}}. {\it 
-If $\V{\omega}\in S_\rho$ s.t. \eqref{eq: identity-cond} holds and $\M[\widehat{0},:](\V{\omega})$ is singular, then  $rank(\mrow{1},\mrow{7}) = 1$ and $rank(\mrow{3},\mrow{5}) = 2$ or $rank(\mrow{3},\mrow{5}) = 1$ and $rank(\mrow{1},\mrow{7}) = 2$.
+If $\V{\omega}\in S_\rho$ such that \eqref{eq: identity-cond} holds and $\M[\widehat{0},:](\V{\omega})$ is singular, then  $rank(\mrow{1},\mrow{7}) = 1$ and $rank(\mrow{3},\mrow{5}) = 2$ or $rank(\mrow{3},\mrow{5}) = 1$ and $rank(\mrow{1},\mrow{7}) = 2$.
 }\\[1em]
 \noindent{\it Proof.}
 When $\rho$ is small enough, due to the concentration property, $\m{i}$ is zero on all but a few sets $S_\rho + \V{\pi}_j$ (see Fig.\ref{fig: S-shifts} for reference of $S_\rho$ and its shifts), thus $\mrow{i}(\V{\omega})$ is sparse on $S_\rho$ and $\M[:,\widehat{0}]$ takes the following form
@@ -120,7 +120,7 @@ As $rank(\mrow{1},\mrow{6},\mrow{7},\mrow{3},\mrow{5}) = 4$, we must have $rank(
 Let $\widetilde{S_\rho} = S_\rho\cap\{\V{\omega}:\, rank(\,\mrow{3}(\V{\omega}),\,\mrow{5}(\V{\omega})\,)= 1\}$, if $\m{3}$ and $\m{4}$ concentrate in $T_3$ and $T_4$ respectively, then $|\widetilde{S_\rho}|=0$.
 \end{lemma}
 \noindent{\it Proof.}
-Let $\widetilde{S_\rho} + \V{\pi}_3 = \{\V{\omega} + \V{\pi}_3,\, \V{\omega}\in \widetilde{S_\rho}\}$ and $\Omega'$ be the set symmetric to a set $\Omega\subset S_0$ with respect to the diagonal $\omega_1 = -\omega_2$. If $|\widetilde{S_\rho}|>0$, by the concentration of $\m{3}$ in $T_3$, $\forall\, \Omega\subset \widetilde{S_\rho} + \V{\pi}_3\subset T_3$ s.t. $|\Omega|> 0$, $\int_{\Omega}|\widetilde{m_3}| > \int_{\Omega'}|\widetilde{m_3}|$. Due to the symmetry between $|\widetilde{m_3}|$ and $|\widetilde{m_4}|$ defined in \eqref{eq: sym-m34}, $\int_{\Omega'}|\widetilde{m_3}| = \int_{\Omega}|\widetilde{m_4}|$. Therefore, $\int_{\Omega}|\widetilde{m_3}| >  \int_\Omega|\widetilde{m_4}|$ which implies that $|\m{3}| > |\m{4}|\; a.e.$ on $\widetilde{S_\rho}+\V{\pi}_3$ or equivalently $|\widetilde{m_3}(\V{\omega}+\V{\pi}_3)| > |\widetilde{m_4}(\V{\omega}+\V{\pi}_3)|\; a.e.$ on $\widetilde{S_\rho}$. Similarly, we have $|\widetilde{m_4}(\V{\omega}+\V{\pi}_5)| > |\widetilde{m_3}(\V{\omega}+\V{\pi}_5)|\; a.e.$ on $\widetilde{S_\rho}$ following the same analysis on $\widetilde{S_\rho}+\V{\pi}_5\subset T_4$.
+Let $\widetilde{S_\rho} + \V{\pi}_3 = \{\V{\omega} + \V{\pi}_3,\, \V{\omega}\in \widetilde{S_\rho}\}$ and $\Omega'$ be the set symmetric to a set $\Omega\subset S_0$ with respect to the diagonal $\omega_1 = -\omega_2$. If $|\widetilde{S_\rho}|>0$, by the concentration of $\m{3}$ in $T_3$, for any $\Omega\subset \widetilde{S_\rho} + \V{\pi}_3\subset T_3$ s.t. $|\Omega|> 0$, $\int_{\Omega}|\widetilde{m_3}| > \int_{\Omega'}|\widetilde{m_3}|$. Due to the symmetry between $|\widetilde{m_3}|$ and $|\widetilde{m_4}|$ defined in \eqref{eq: sym-m34}, $\int_{\Omega'}|\widetilde{m_3}| = \int_{\Omega}|\widetilde{m_4}|$. Therefore, $\int_{\Omega}|\widetilde{m_3}| >  \int_\Omega|\widetilde{m_4}|$ which implies that $|\m{3}| > |\m{4}|\; a.e.$ on $\widetilde{S_\rho}+\V{\pi}_3$ or equivalently $|\widetilde{m_3}(\V{\omega}+\V{\pi}_3)| > |\widetilde{m_4}(\V{\omega}+\V{\pi}_3)|\; a.e.$ on $\widetilde{S_\rho}$. Similarly, we have $|\widetilde{m_4}(\V{\omega}+\V{\pi}_5)| > |\widetilde{m_3}(\V{\omega}+\V{\pi}_5)|\; a.e.$ on $\widetilde{S_\rho}$ following the same analysis on $\widetilde{S_\rho}+\V{\pi}_5\subset T_4$.
 On the other hand, $rank(\,\mrow{3}(\V{\omega}),\,\mrow{5}(\V{\omega})\,)= 1$ on $\widetilde{S_\rho}$, hence $\widetilde{m_3}(\V{\omega}+\V{\pi}_3)\widetilde{m_4}(\V{\omega}+\V{\pi}_5) = \widetilde{m_3}(\V{\omega}+\V{\pi}_5)\widetilde{m_4}(\V{\omega}+\V{\pi}_3)$, which contradicts the previous two inequalities.\qed
 
 \begin{lemma}\label{lem: concentrate}
@@ -149,7 +149,7 @@ Therefore, $S_\rho'\cap\{\V{\omega},\widetilde{m_1}(\V{\omega}+\V{\pi}_7)\neq 0\
 \subsection{Design of input $\m{j}$}\label{app: input design}
 {\bf Proof of Lemma \ref{lem: phase-ineq}}:\\[.2em]
 {\bf Lemma \ref{lem: phase-ineq}.} 
-{\it If $\exists\,\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2},0)\},\,s.t. \,|m_0(\V{\omega})|\neq 0,$ then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}\,2\pi)$. 
+{\it If there exist $\V{\omega}\in D_1:=\{\omega_1=\omega_2,\,\omega_1\in(-\frac{\pi}{2},0)\},\,s.t. \,|m_0(\V{\omega})|\neq 0,$ then $(\V{\eta}_1-\V{\eta}_6)^\top (\V{\pi}_6-\V{\pi}_7)\neq 0(\text{mod}\,2\pi)$. 
 }\\ [1em]
 \noindent {\it Proof.}
 As $\m{1}$ and $\m{6}$ concentrate in $T_1$ and $T_6$ respectively, $\widetilde{m_1}(\V{\omega} + \V{\pi}_i) = 0$ and  $\widetilde{m_6}(\V{\omega} + \V{\pi}_i) = 0$, $i = 1,\cdots, 5$. Due to symmetry, $|\widetilde{m_1}(\V{\omega})| = |\widetilde{m_6}(\V{\omega})|$ on $\{\omega_1=\omega_2\}$. Let $A = |\widetilde{m_1}(\V{\omega}+\V{\pi}_7)| = |\widetilde{m_6}(\V{\omega}+\V{\pi}_7)|$ and $B=|\widetilde{m_1}(\V{\omega}+\V{\pi}_6)| = |\widetilde{m_6}(\V{\omega}+\V{\pi}_6)|$, then the first and the last columns of $\Msub$ are
@@ -243,7 +243,7 @@ If \eqref{eq: identity-cond} holds, then by Lemma \ref{lem: null-space}, $\meven
 
 \noindent{\bf Proof of Proposition \ref{prop: m0_formula}}:\\[.2em]
 \noindent{\bf Proposition \ref{prop: m0_formula}.} 
-{\it Let $\M[odd,\widehat{0}](\V{\omega}),\M[even,\widehat{0}](\V{\omega})\in\mathbb{C}^{4\times6}$ be the submatrices of $\M[:,\widehat{0}](\V{\omega})$ consisting of odd and even indexed rows respectively. $\forall\V{\omega}\in S_0$, suppose {\rm\ref{cond: i}} and \eqref{eq: identity-cond} are satisfied, then {\rm\ref{cond: ii}} holds if and only if $rank(\,\M[odd,\widehat{0}](\V{\omega})\,) = rank(\,\M[even,\widehat{0}](\V{\omega})\,) = 3$ and 
+{\it Let $\M[odd,\widehat{0}](\V{\omega}),\M[even,\widehat{0}](\V{\omega})\in\mathbb{C}^{4\times6}$ be the submatrices of $\M[:,\widehat{0}](\V{\omega})$ consisting of odd and even indexed rows respectively. For any $\V{\omega}\in S_0$, suppose {\rm\ref{cond: i}} and \eqref{eq: identity-cond} are satisfied, then {\rm\ref{cond: ii}} holds if and only if $rank(\,\M[odd,\widehat{0}](\V{\omega})\,) = rank(\,\M[even,\widehat{0}](\V{\omega})\,) = 3$ and 
 \begin{align}%\label{eq: m0-even-null}
 [m_0(\V{\omega}),m_0(\V{\omega}+\V{\pi}_2), m_0(\V{\omega} +\V{\pi}_4), m_0(\V{\omega}+\V{\pi}_6)]\, \M[even,\widehat{0}](\V{\omega}) = \V{0}, \tag{\ref{eq: m0-even-null}}
 \end{align}

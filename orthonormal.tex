@@ -10,7 +10,7 @@ We begin with the two key conditions, i.e. {\it identity summation} and {\it shi
 
 %\subsection{Identity summation and shift cancellation}
 \subsection{orthonormal conditions on $m_j$}\label{subsec: northonormal cond}
-In MRA, \eqref{eq: MRA} is PR if $\forall f\in L_2(\mathbb{R}^2)$,
+In MRA, \eqref{eq: MRA} is PR if for all $f\in L_2(\mathbb{R}^2)$,
 \begin{equation}
 %\textstyle 
 \sum_{\V{k}\in\mathbb{Z}^2}\langle f,\phi_{0,\V{k}}\rangle\phi_{0,\V{k}} = \sum_{\V{k}\in\mathbb{Z}^2}\langle f,\phi_{1,\V{k}}\rangle\phi_{1,\V{k}} + \sum_{j=1}^J\sum_{\V{k}'\in\V{Q}\mathbb{Z}^2}\langle f,\psi^{j}_{1,\V{k}'}\rangle\psi^j_{1,\V{k}'}.\label{eq: PR}
@@ -36,7 +36,7 @@ Theorem \ref{thm: conds} is a corollary of Proposition 1 and Proposition 2 in \c
 In Theorem \ref{thm: conds}, \eqref{eq: id-sum} is the {\it identity summation} condition, guaranteeing conservation of $l_2$ energy; \eqref{eq: shift-cancel} is the {\it shift cancellation} condition such that aliasing is canceled correctly in reconstruction from wavelet coefficients. %, such that downsampling of scaling and shearlet coefficients is valid. 
  %$\Lambda = \{(\frac{\pi}{2},\frac{\pi}{2}),(\frac{3\pi}{2},\frac{\pi}{2}),(\frac{\pi}{2},\frac{3\pi}{2}),(\frac{3\pi}{2},\frac{3\pi}{2}),$ $(0,0),(0,\pi),(\pi,0),(\pi,\pi)\},\Gamma = \{(0,0),(0,\pi),(\pi,0),(\pi,\pi)\}$ are the sets of shifts associated to quincunx-dyadic dilation $QD$ and dyadic dilation $D$ respectively.
 %Each $M_j$ contributes a term $M_j(\boldsymbol{omega})\overline{M_j(\boldsymbol{omega} + \boldsymbol{\nu})}$ in the cancellation condition of any shift $\boldsymbol{\nu}$ corresponding to the downsampling scheme of $M_j$.
-Because each $m_j$ is $(2\pi,2\pi)$ periodic, we only need to check these conditions $\forall \V{\omega}\in S_0$.
+Because each $m_j$ is $(2\pi,2\pi)$ periodic, we only need to check these conditions for $ \V{\omega}\in S_0$.
 
 %\subsection{Extra condition for basis}
 %By Theorem \ref{thm: conds}, the system \eqref{eq: MRA} is a Parseval frame ; 
@@ -44,7 +44,7 @@ Moreover, for  \eqref{eq: MRA} to be an orthonormal basis,  $\{\phi_{\boldsymbol
 This theorem generalizes to 2D in  e.g. \cite{yin2014orthshear}, as follows.
 \begin{thm}\label{thm: basis cond}
 Assume that $m_0$ is a trigonometric polynomial with $m_0(\V{0})=1$, and define $\hat{\phi}(\boldsymbol{\omega})$ as in \eqref{eq: phi-m0}.\\
-If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal, then $\exists K$ containing a neighborhood of 0, s.t. $\forall\boldsymbol{\omega}\in S_0,\,\boldsymbol{\omega}+2\pi\mathbf{n}\in K$ for some $\mathbf{n}\in\mathbb{Z}^2, $ and $\inf_{k>0,\,\boldsymbol{\omega}\in K}|m_0(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$. 
+If $\phi(\cdot - \boldsymbol{k}),\boldsymbol{k}\in\mathbb{Z}^2$ are orthonormal, then there exists $K$ containing a neighborhood of 0, such that for any $\boldsymbol{\omega}\in S_0,\,\boldsymbol{\omega}+2\pi\mathbf{n}\in K$ for some $\mathbf{n}\in\mathbb{Z}^2, $ and $\inf_{k>0,\,\boldsymbol{\omega}\in K}|m_0(\mathbf{D_2}^{-k}\boldsymbol{\omega})| >0$. 
  Further, if $\sum_{\boldsymbol{\V{\pi}}\in \Gamma_0} |m_0(\boldsymbol{\omega}+\boldsymbol{\pi})|^2 = 1$, then the inverse is true.
 \end{thm}
 %Theorem \ref{thm: basis cond} can be proved similarly to Cohen's theorem (\cite{cohen1992biorthogonal}).
